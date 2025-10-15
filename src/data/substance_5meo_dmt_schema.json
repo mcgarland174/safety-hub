@@ -1,0 +1,1579 @@
+{
+  "schemaVersion": "2.0",
+  "lastUpdated": "2025-01-09",
+  "substanceId": "5meo_dmt_001",
+  
+  "substance": {
+    "id": "5meo_dmt_001",
+    "name": "5-MeO-DMT",
+    "fullName": "5-Methoxy-N,N-dimethyltryptamine",
+    "aliases": ["5-MeO", "The Toad", "Bufo"],
+    "classification": {
+      "primary": "atypical_psychedelic",
+      "secondary": ["tryptamine", "non_selective_serotonin_agonist"],
+      "mechanism": "Non-selective serotonin receptor agonist",
+      "receptorAffinity": {
+        "5HT1A": "very_high",
+        "5HT2A": "moderate_to_high",
+        "distinctionNote": "Higher affinity for 5-HT1A than 5-HT2A, unlike typical psychedelics"
+      },
+      "comparisonToClassical": "Different mechanism and subjective profile than classical psychedelics"
+    },
+    "naturalSources": [
+      {
+        "source": "Incilius alvarius",
+        "commonName": "Sonoran Desert toad",
+        "component": "venom",
+        "concentration": "high",
+        "variability": "significant",
+        "additionalCompounds": ["bufotenine", "other_compounds"],
+        "ethicalConcerns": ["animal_welfare", "population_impact"]
+      },
+      {
+        "source": "various_plants",
+        "examples": ["Anadenanthera peregrina (yopo)", "Virola theiodora"],
+        "variability": "high"
+      },
+      {
+        "source": "fungi",
+        "specificity": "various_species",
+        "concentration": "variable"
+      }
+    ],
+    "syntheticProduction": {
+      "available": true,
+      "advantages": ["Consistent potency", "No animal harm", "Purity control"],
+      "risks": ["Impurities from synthesis", "Potential mislabeling"]
+    },
+    "prevalenceData": {
+      "lifetimeUse": [
+        {
+          "value": 1.2,
+          "unit": "percent",
+          "population": "US adults",
+          "timeframe": "2009-2013",
+          "substanceGroup": "psychedelic tryptamines (including DMT and 5-MeO-DMT)",
+          "citations": ["lancelotta_2020"]
+        }
+      ],
+      "demographics": {
+        "primaryUsers": "Caucasian males with history of other substance use",
+        "citations": ["lancelotta_2020"]
+      },
+      "usePatterns": {
+        "frequency": "Infrequent - most report once a year or less",
+        "primaryMotivation": "Spiritual exploration",
+        "therapeuticUse": "Improving PTSD, depression, anxiety, addiction symptoms",
+        "citations": ["davis_2018"]
+      },
+      "globalData": {
+        "availability": "limited",
+        "reason": "Not typically included in epidemiological surveys",
+        "grouping": "Often grouped with other tryptamines and synthetic cathinones",
+        "citations": ["davis_2018"]
+      },
+      "needForCare": {
+        "association": "Strongest association with perceived need for care among psychedelics",
+        "reason": "Elevated risk of contraindications",
+        "citations": ["engel_2024"]
+      }
+    },
+    "legalStatus": {
+      "international": "Schedule I (USA) and controlled in many countries",
+      "variability": "Legal status varies by jurisdiction"
+    }
+  },
+
+  "subjectiveEffects": {
+    "generalCharacteristics": {
+      "intensity": "More intense than other psychedelics",
+      "uniqueness": "Distinctly different from classical psychedelics",
+      "unpredictability": "Highly variable between individuals",
+      "citations": ["dourron_2023", "rucker_2024"]
+    },
+    "coreExperiences": [
+      {
+        "effect": "ego_dissolution",
+        "intensity": "profound",
+        "frequency": "very_common",
+        "description": "Complete loss of sense of self"
+      },
+      {
+        "effect": "mystical_type_experiences",
+        "comparability": "Comparable to psilocybin in some contexts",
+        "citations": ["dourron_2023", "rucker_2023"]
+      },
+      {
+        "effect": "peak_experiences",
+        "intensity": "profound",
+        "description": "Intense transcendent experiences"
+      },
+      {
+        "effect": "loss_of_control",
+        "frequency": "common",
+        "intensity": "profound"
+      },
+      {
+        "effect": "nothingness_whiteout",
+        "description": "Experience of void or complete absence",
+        "uniqueness": "More common with 5-MeO-DMT than other psychedelics",
+        "mayInclude": ["subjective_void", "amnesia_of_experience"],
+        "citations": ["dourron_2023"]
+      },
+      {
+        "effect": "death_experience",
+        "description": "Feeling of being dead or dying",
+        "frequency": "reported_by_some",
+        "intensity": "profound",
+        "citations": ["lancelotta_2020"]
+      }
+    ],
+    "comparisonToOtherPsychedelics": {
+      "intensity": "Described as 'more intense'",
+      "visualCharacter": "Less visual than DMT, more void-like",
+      "duration": "Shorter than most psychedelics",
+      "mysticalQualities": "Can induce mystical experiences comparable to psilocybin",
+      "citations": ["dourron_2023", "rucker_2023"]
+    },
+    "firstTimeUserData": {
+      "challengingEffects": {
+        "prevalence": 37,
+        "unit": "percent",
+        "effects": [
+          "heart_beating",
+          "fear",
+          "body_shaking",
+          "anxiety",
+          "feeling_like_dying",
+          "pressure_on_chest",
+          "panic"
+        ],
+        "citations": ["lancelotta_2020"]
+      }
+    }
+  },
+
+  "dosing": {
+    "researchLimitations": {
+      "note": "Less data available than other psychedelics",
+      "humanDoseStudies": "Not extensively conducted in volunteers",
+      "uncertainty": "Difficult to define safe dosage ranges",
+      "citations": ["engel_2024"]
+    },
+    "clinicalDoses": {
+      "intranasal": {
+        "min": 1,
+        "max": 12,
+        "unit": "mg",
+        "doseResponseObserved": true,
+        "note": "Subjective effects and intensity increase with dose",
+        "citations": ["rucker_2023"]
+      }
+    },
+    "recreationalDoses": {
+      "inhaled": {
+        "min": 6,
+        "max": 20,
+        "unit": "mg",
+        "citations": ["engel_2024"]
+      },
+      "intravenous": {
+        "min": 0.7,
+        "max": 3.1,
+        "unit": "mg",
+        "citations": ["engel_2024"]
+      }
+    },
+    "doseResponseCurve": {
+      "characteristic": "steep",
+      "implication": "Small dose increases can cause large effect increases",
+      "riskImplication": "Increases risk for users",
+      "citations": ["lancelotta_2020"]
+    },
+    "uncertaintyFactors": [
+      "Variable user knowledge of dose consumed",
+      "Difficulty measuring precise amounts",
+      "Source variability (toad vs synthetic)",
+      "Lack of standardization"
+    ],
+    "weightDependence": "Not well characterized"
+  },
+
+  "pharmacokinetics": {
+    "routeDependent": {
+      "variability": "Significant differences by route",
+      "impact": "Affects onset, intensity, and duration",
+      "citations": ["rucker_2024"]
+    },
+    "inhalation": {
+      "onset": {
+        "time": "seconds to 1 minute",
+        "speed": "very_rapid"
+      },
+      "peak": {
+        "time": {"min": 2, "max": 5, "unit": "minutes"}
+      },
+      "duration": {
+        "time": {"min": 15, "max": 20, "unit": "minutes"}
+      },
+      "intensity": "very_high",
+      "citations": ["engel_2024", "rucker_2023"]
+    },
+    "intranasal": {
+      "onset": {
+        "time": "rapid",
+        "peakConcentration": {"min": 6, "max": 15.2, "unit": "minutes"}
+      },
+      "peak": {
+        "time": {"min": 5, "max": 7, "unit": "minutes"}
+      },
+      "duration": {
+        "time": {"value": 45, "unit": "minutes"}
+      },
+      "citations": ["engel_2024", "rucker_2023"]
+    },
+    "intravenous": {
+      "onset": {
+        "time": "almost immediate",
+        "speed": "extremely_rapid"
+      },
+      "intensity": "extremely_high",
+      "bioavailability": "complete",
+      "riskLevel": "very_high",
+      "citations": ["reckweg_2022"]
+    },
+    "intramuscular": {
+      "onset": {
+        "time": "slightly slower than IV",
+        "speed": "rapid"
+      },
+      "intensity": "less than IV",
+      "reactivationRisk": "lower than inhaled",
+      "citations": ["barker_2022", "falchi-carvalho_2024", "ramaekers_2025"]
+    },
+    "oral": {
+      "withoutMAOI": {
+        "activity": "generally inactive",
+        "reason": "Rapid breakdown by MAO enzymes in gut/liver",
+        "citations": ["rafael_dos_santos_2024", "lowe_2022", "rucker_2024"]
+      },
+      "withMAOI": {
+        "activity": "active",
+        "riskLevel": "critical",
+        "specificRisk": "Serotonin toxicity",
+        "exposureIncrease": "Up to sixfold",
+        "contraindicationType": "absolute_without_medical_supervision",
+        "citations": ["malcolm_2022"]
+      }
+    },
+    "sublingual": {
+      "subjectiveIntensity": "lower",
+      "dataAvailability": "limited",
+      "citations": ["engel_2024"]
+    },
+    "rectal": {
+      "dataAvailability": "limited",
+      "citations": ["rucker_2024"]
+    },
+    "metabolism": {
+      "primaryMetabolite": "bufotenine",
+      "metaboliteActivity": "Yes - also psychoactive",
+      "individualVariability": {
+        "cytochromeP450": "Genetic polymorphisms affect metabolism",
+        "implications": "Variable drug exposure and susceptibility to adverse effects",
+        "citations": ["dourron_2023"]
+      },
+      "uncertainties": [
+        "Unclear if bufotenine from metabolism produces notable effects",
+        "Individual differences may influence bufotenine buildup",
+        "Potential for unexpected effects from metabolite accumulation"
+      ]
+    }
+  },
+
+  "therapeuticApplications": {
+    "investigationalUses": [
+      {
+        "condition": "treatment_resistant_depression",
+        "status": "under_investigation",
+        "evidence": "May reduce symptoms for at least one week",
+        "evidenceQuality": "preliminary",
+        "citations": ["dourron_2023"]
+      }
+    ],
+    "patientReportedBenefits": [
+      "PTSD symptom improvement",
+      "Depression reduction",
+      "Anxiety reduction",
+      "Addiction support"
+    ],
+    "citations": ["davis_2018"]
+  },
+
+  "riskFactors": [
+    {
+      "id": "rf_5meo_potency_001",
+      "name": "High Potency and Steep Dose-Response",
+      "category": "pharmacological",
+      "severity": "high",
+      "description": "5-MeO-DMT is highly potent with steep dose-response curve",
+      "implications": [
+        "Small increases in dose cause large increases in effects",
+        "Easy to accidentally overdose",
+        "Difficult to control intensity",
+        "Users often uncertain about dose consumed"
+      ],
+      "prevalence": "Many users uncertain of dose",
+      "citations": ["lancelotta_2020", "bremler_2023"],
+      "harmReduction": [
+        "Precise measurement essential",
+        "Start with lower doses",
+        "Use volumetric dosing if possible",
+        "Obtain from trusted sources with known potency"
+      ]
+    },
+    {
+      "id": "rf_5meo_intensity_001",
+      "name": "Extreme Intensity of Experience",
+      "category": "psychological",
+      "severity": "high",
+      "description": "Experiences often described as more intense than other psychedelics",
+      "specificRisks": [
+        "Overwhelming for unprepared users",
+        "Challenging experiences",
+        "Anxiety and fear",
+        "Sense of dying or death"
+      ],
+      "firstTimeUsers": {
+        "challengingEffects": 37,
+        "unit": "percent",
+        "citations": ["lancelotta_2020"]
+      },
+      "preparation": "Extra preparation crucial for managing intensity",
+      "citations": ["dourron_2023", "lancelotta_2020"]
+    },
+    {
+      "id": "rf_5meo_loss_control_001",
+      "name": "Loss of Control and Unpredictable Behavior",
+      "category": "behavioral",
+      "severity": "moderate_to_high",
+      "description": "Users may exhibit unexpected behaviors and lack awareness",
+      "specificBehaviors": [
+        "Vomiting",
+        "Screaming",
+        "Removing clothes",
+        "Muscle jerking and twitching",
+        "Abnormal vocalizations",
+        "Self-injurious behavior (rare)",
+        "Spontaneous orgasms",
+        "Involuntary movements"
+      ],
+      "awareness": "Users often lack awareness or memory of behaviors during acute effects",
+      "physicalDanger": "May pose physical danger due to involuntary movements",
+      "citations": ["dourron_2023"],
+      "requiredSupport": [
+        "Experienced trip sitter essential",
+        "Safe physical environment",
+        "Monitoring throughout experience"
+      ]
+    },
+    {
+      "id": "rf_5meo_reactivations_001",
+      "name": "Flashbacks/Reactivations",
+      "category": "perceptual",
+      "severity": "moderate_to_high",
+      "description": "Brief re-experiences of drug effects after acute effects worn off",
+      "prevalence": {
+        "naturalistic": {
+          "range": {"min": 27, "max": 73},
+          "unit": "percent",
+          "context": "Variable across studies",
+          "citations": ["dourron_2023", "ortiz_bernal_2022"]
+        },
+        "clinical": {
+          "value": 25,
+          "unit": "percent",
+          "context": "Treatment resistant depression participants",
+          "distribution": "Across all dosing categories",
+          "citations": ["dourron_2023"]
+        },
+        "structured_setting": {
+          "value": 73,
+          "unit": "percent",
+          "context": "Users in structured ceremonial setting",
+          "citations": ["dourron_2023"]
+        },
+        "general_population_sample": {
+          "value": 27,
+          "unit": "percent",
+          "citations": ["dourron_2023"]
+        }
+      },
+      "frequencyComparison": "More frequent with 5-MeO-DMT than typical psychedelics",
+      "characteristics": {
+        "duration": "Brief (seconds)",
+        "components": "Visual, auditory, or emotional",
+        "valence": "Most positive or neutral, some negative",
+        "timing": "May be more common at night or when falling asleep",
+        "spontaneity": "Spontaneous occurrence"
+      },
+      "negativeReactivations": {
+        "ceremonialUsers": 4,
+        "generalUsers": 7,
+        "unit": "percent",
+        "distress": "Some seek psychological help",
+        "citations": ["dourron_2023"]
+      },
+      "routeAssociation": {
+        "vaporized": "More likely to cause reactivations",
+        "intramuscular": "Lower prevalence",
+        "citations": ["dourron_2023", "ortiz_bernal_2022", "ramaekers_2025"]
+      },
+      "duration": {
+        "typical": "Days to weeks",
+        "prolonged": "Some anecdotal reports of months",
+        "citations": ["ortiz_bernal_2022"]
+      },
+      "mechanism": {
+        "hypothesis": "May relate to epileptiform activity in temporal lobes",
+        "citations": ["dourron_2023"]
+      },
+      "requiredResearch": "Long-term follow-up needed to determine true frequency, intensity, duration, and impairment"
+    },
+    {
+      "id": "rf_5meo_sensitization_001",
+      "name": "Sensitization Rather Than Tolerance",
+      "category": "pharmacological",
+      "severity": "moderate",
+      "description": "Repeated use may increase rather than decrease effects",
+      "mechanism": "Opposite of tolerance - effects become stronger with repeated use",
+      "evidence": [
+        "Animal studies show behavioral sensitization",
+        "May explain higher peak experiences with individualized dosing regimens"
+      ],
+      "implications": [
+        "Unpredictable outcomes with repeated use",
+        "Higher doses after previous exposure may be dangerous",
+        "Different pattern from typical psychedelics"
+      ],
+      "citations": ["dourron_2003"],
+      "harmReduction": "Caution with repeated use, don't assume tolerance"
+    },
+    {
+      "id": "rf_5meo_seizure_risk_001",
+      "name": "Potential for Seizure Activity",
+      "category": "neurological",
+      "severity": "moderate_to_high",
+      "description": "Unique pharmacology may increase seizure risk",
+      "mechanisms": [
+        "White-outs may relate to seizure-like activity",
+        "5-HT1A receptor action in medial temporal lobes",
+        "May precipitate epileptiform activity"
+      ],
+      "manifestations": [
+        "Muscle jerking",
+        "Twitching",
+        "Abnormal vocalizations",
+        "Occasional self-injurious behavior",
+        "Seizure-like behaviors"
+      ],
+      "evidence": [
+        "Animal studies document seizure-like behaviors",
+        "Some case reports in humans"
+      ],
+      "citations": ["dourron_2023"],
+      "contraindication": "History of seizures or epilepsy"
+    },
+    {
+      "id": "rf_5meo_metabolism_variability_001",
+      "name": "Individual Metabolic Differences",
+      "category": "pharmacogenetic",
+      "severity": "moderate",
+      "description": "Genetic variations affect 5-MeO-DMT metabolism",
+      "specificFactors": [
+        "Cytochrome P450 enzyme polymorphisms",
+        "Variable drug exposure",
+        "Different susceptibility to adverse effects",
+        "Potential bufotenine accumulation"
+      ],
+      "implications": [
+        "Unpredictable individual responses",
+        "Some may experience unexpected effects from metabolites",
+        "Difficult to predict safe dosing"
+      ],
+      "citations": ["dourron_2023"]
+    },
+    {
+      "id": "rf_5meo_maoi_interaction_001",
+      "name": "Dangerous MAOI Interactions",
+      "category": "drug_interaction",
+      "severity": "critical",
+      "description": "Combining with MAOIs can be fatal",
+      "mechanism": [
+        "MAOIs inhibit breakdown of 5-MeO-DMT",
+        "Increases exposure up to sixfold",
+        "Can lead to fatal serotonin syndrome"
+      ],
+      "specificCombinations": [
+        {
+          "substance": "harmala_alkaloids",
+          "found_in": "ayahuasca, Syrian rue",
+          "examples": ["harmine", "harmaline", "tetrahydroharmine"],
+          "exposureIncrease": "Up to sixfold",
+          "outcome": "Fatal serotonin toxicity documented",
+          "citations": ["malcolm_2022"]
+        },
+        {
+          "substance": "pharmaceutical_MAOIs",
+          "examples": ["moclobemide", "phenelzine", "tranylcypromine"],
+          "outcome": "Severe to fatal serotonin syndrome"
+        },
+        {
+          "substance": "other_tryptamines",
+          "outcome": "Serotonin toxicity and death when combined with harmala alkaloids",
+          "citations": ["malcolm_2022"]
+        }
+      ],
+      "contraindicationType": "absolute",
+      "deathsReported": true,
+      "note": "Safety profile with MAOIs different from classical tryptamines",
+      "citations": ["malcolm_2022"]
+    },
+    {
+      "id": "rf_5meo_source_variability_001",
+      "name": "Source-Related Variability",
+      "category": "quality",
+      "severity": "high",
+      "description": "Different experiences based on toad-derived vs synthetic source",
+      "toadDerived": {
+        "variability": "Significant concentration variability",
+        "additionalCompounds": [
+          "bufotenine",
+          "other_bufotoxins"
+        ],
+        "uncertainEffects": "Unclear if bufotenine in venom significantly impacts effects",
+        "dosing": "Inconsistent and dangerous",
+        "ethical": "Animal welfare concerns",
+        "citations": ["neumann_2024", "dourron_2023"]
+      },
+      "synthetic": {
+        "advantages": ["Consistent potency", "No bufotenine", "No animal harm"],
+        "risks": ["Synthesis impurities", "Potential mislabeling", "Adulteration"]
+      },
+      "userReports": "Differences in reported experiences between toad and synthetic",
+      "citations": ["ortiz_bernal_2022", "dourron_2023"]
+    }
+  ],
+
+  "contraindications": {
+    "absolute": [
+      {
+        "id": "contra_5meo_maoi_001",
+        "condition": "Concurrent use of MAOIs",
+        "severity": "critical",
+        "rationale": "Fatal serotonin syndrome risk",
+        "includes": [
+          "Pharmaceutical MAOIs",
+          "Reversible MAOIs (moclobemide)",
+          "Harmala alkaloids (ayahuasca, Syrian rue)",
+          "Natural MAOIs"
+        ],
+        "outcome": "Potentially fatal",
+        "evidenceQuality": "strong",
+        "citations": ["malcolm_2022"]
+      },
+      {
+        "id": "contra_5meo_psychosis_001",
+        "condition": "Personal history of psychotic disorders",
+        "severity": "high",
+        "includes": [
+          "Schizophrenia",
+          "Schizophreniform disorders",
+          "Psychotic depression",
+          "Active mania"
+        ],
+        "rationale": "Risk of long-lasting psychotic reactions",
+        "citations": ["sabe_2024", "white_2024"]
+      },
+      {
+        "id": "contra_5meo_family_psychosis_001",
+        "condition": "Family history of psychotic disorders",
+        "severity": "high",
+        "includes": [
+          "First or second-degree relatives with schizophrenia",
+          "Family history of bipolar disorder with psychosis"
+        ],
+        "rationale": "Elevated risk of adverse reactions",
+        "citations": ["sabe_2024", "white_2024"]
+      }
+    ],
+    "relative": [
+      {
+        "id": "contra_5meo_cardiovascular_001",
+        "condition": "Cardiovascular conditions",
+        "severity": "moderate_to_high",
+        "rationale": "Effects on cardiovascular system not well understood",
+        "specificRisks": [
+          "Strong G-protein binding activation",
+          "Dose-dependent blood pressure increases",
+          "Dose-dependent heart rate increases"
+        ],
+        "requiredAssessment": "Careful medical evaluation and monitoring",
+        "citations": ["malcolm_2022", "james_2024"]
+      },
+      {
+        "id": "contra_5meo_psych_vulnerabilities_001",
+        "condition": "Prior psychological vulnerabilities",
+        "severity": "moderate",
+        "includes": [
+          "History of anxiety",
+          "History of depression",
+          "Trauma history"
+        ],
+        "specificRisk": "87% experienced worsening anxiety in one study",
+        "requiredPrecautions": [
+          "Careful screening",
+          "Enhanced preparation",
+          "Increased support"
+        ],
+        "citations": ["bremler_2023"]
+      },
+      {
+        "id": "contra_5meo_uncontrolled_setting_001",
+        "condition": "Uncontrolled settings",
+        "severity": "high",
+        "rationale": "Unpredictable nature makes it less safe without controls",
+        "requiredFactors": [
+          "Proper dose control",
+          "Appropriate setting",
+          "Mindset management",
+          "Professional or experienced support"
+        ],
+        "citations": ["bremler_2023"]
+      },
+      {
+        "id": "contra_5meo_recreational_001",
+        "condition": "Recreational use",
+        "severity": "moderate_to_high",
+        "rationale": "Lacks safety measures of clinical or ceremonial settings",
+        "risks": [
+          "Dosage uncertainty",
+          "Adulterants",
+          "Lack of support",
+          "Inappropriate setting"
+        ],
+        "citations": ["gomez-escolar_2024"]
+      },
+      {
+        "id": "contra_5meo_polydrug_001",
+        "condition": "Mixing with other substances",
+        "severity": "high",
+        "specificallyDangerous": [
+          "Other serotonergic substances",
+          "Stimulants",
+          "Alcohol"
+        ],
+        "outcome": "Increased risk of serotonin toxicity and other adverse events",
+        "citations": ["malcolm_2022", "barnett_2021"]
+      }
+    ]
+  },
+
+  "adverseEvents": {
+    "acute": {
+      "psychological": [
+        {
+          "id": "ae_5meo_anxiety_001",
+          "name": "Anxiety and Fear",
+          "severity": "mild_to_severe",
+          "prevalence": "common",
+          "timing": "Particularly prior to and during onset (first 10-15 minutes)",
+          "characteristics": [
+            "Can be intense",
+            "Often subsides as experience progresses",
+            "More common in unprepared users"
+          ],
+          "citations": ["ramaekers_2025", "rucker_2024", "kwasny_2024"]
+        },
+        {
+          "id": "ae_5meo_distress_001",
+          "name": "Psychological Distress",
+          "severity": "variable",
+          "description": "Challenging emotions during experience",
+          "note": "While some experiences are cathartic, they can be psychologically distressing",
+          "citations": ["ramaekers_2025"]
+        },
+        {
+          "id": "ae_5meo_confusion_001",
+          "name": "Confusional States",
+          "severity": "moderate",
+          "prevalence": "reported in studies",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_hallucinations_001",
+          "name": "Hallucinations",
+          "severity": "variable",
+          "prevalence": "reported",
+          "specificity": "Nature not always detailed",
+          "citations": ["kwasny_2024", "dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_depression_acute_001",
+          "name": "Depressive Symptoms",
+          "severity": "mild_to_moderate",
+          "timing": "acute phase",
+          "prevalence": "Some cases reported",
+          "citations": ["kwasny_2024"]
+        },
+        {
+          "id": "ae_5meo_ego_dissolution_001",
+          "name": "Ego Dissolution",
+          "severity": "profound",
+          "valence": "Can be positive or distressing",
+          "description": "Strong sense of ego dissolution, detachment from body, altered self-perception",
+          "citations": ["falchi-carvalho_2024", "dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_mystical_overwhelming_001",
+          "name": "Overwhelming Mystical Experiences",
+          "severity": "profound",
+          "valence": "Often positive but can be challenging",
+          "characteristics": [
+            "Awe",
+            "Amazement",
+            "Loss of time and space",
+            "Ineffability"
+          ],
+          "intensity": "Can be overwhelming for some",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_whiteout_001",
+          "name": "White-out Experiences",
+          "severity": "profound",
+          "description": "Loss of awareness, void experience",
+          "characteristics": [
+            "Disorienting",
+            "Loss of control",
+            "Amnesia for parts of experience"
+          ],
+          "citations": ["dourron_2023"]
+        }
+      ],
+      "physiological": [
+        {
+          "id": "ae_5meo_cardiovascular_001",
+          "name": "Cardiovascular Changes",
+          "severity": "mild_to_moderate",
+          "manifestations": [
+            {
+              "effect": "increased_blood_pressure",
+              "severity": "transient",
+              "duration": "during_experience"
+            },
+            {
+              "effect": "increased_heart_rate",
+              "severity": "transient",
+              "duration": "during_experience"
+            }
+          ],
+          "citations": ["ramaekers_2025", "white_2024", "rucker_2023", "kwasny_2024", "falchi-carvalho_2024"]
+        },
+        {
+          "id": "ae_5meo_nausea_001",
+          "name": "Gastrointestinal Effects",
+          "severity": "mild_to_moderate",
+          "manifestations": [
+            "nausea",
+            "headache",
+            "vomiting"
+          ],
+          "frequency": "common",
+          "citations": ["ramaekers_2025", "rucker_2024", "white_2024"]
+        },
+        {
+          "id": "ae_5meo_nasal_discomfort_001",
+          "name": "Nasal Discomfort",
+          "severity": "mild",
+          "route": "intranasal administration",
+          "frequency": "common",
+          "citations": ["rucker_2024"]
+        },
+        {
+          "id": "ae_5meo_muscle_001",
+          "name": "Muscle Effects",
+          "severity": "mild_to_moderate",
+          "manifestations": [
+            "muscle_spasms",
+            "muscle_discomfort"
+          ],
+          "citations": ["kwasny_2024"]
+        },
+        {
+          "id": "ae_5meo_serotonin_syndrome_001",
+          "name": "Serotonin Toxicity",
+          "severity": "critical",
+          "description": "Life-threatening serotonin syndrome",
+          "triggers": [
+            "Combination with MAOIs",
+            "Combination with harmala alkaloids"
+          ],
+          "mechanism": "Excessive serotonin accumulation",
+          "outcome": "Can be fatal",
+          "prevention": "Absolute contraindication for MAOI combinations",
+          "citations": ["malcolm_2022"]
+        },
+        {
+          "id": "ae_5meo_sensory_001",
+          "name": "Sensory Disturbances",
+          "severity": "mild_to_moderate",
+          "manifestations": [
+            {
+              "symptom": "hyperacusis",
+              "description": "Increased sensitivity to sound"
+            },
+            {
+              "symptom": "blurred_vision"
+            }
+          ],
+          "citations": ["kwasny_2024"]
+        },
+        {
+          "id": "ae_5meo_temperature_001",
+          "name": "Temperature Dysregulation",
+          "severity": "mild",
+          "manifestations": [
+            "feeling_hot",
+            "discomfort"
+          ],
+          "citations": ["kwasny_2024"]
+        },
+        {
+          "id": "ae_5meo_fatigue_001",
+          "name": "Fatigue",
+          "severity": "mild",
+          "timing": "Often following peak experience",
+          "citations": ["kwasny_2024"]
+        },
+        {
+          "id": "ae_5meo_clumsiness_001",
+          "name": "Clumsiness",
+          "severity": "mild",
+          "timing": "During acute effects",
+          "citations": ["kwasny_2024"]
+        }
+      ],
+      "behavioral": [
+        {
+          "id": "ae_5meo_loss_control_001",
+          "name": "Loss of Behavioral Control",
+          "severity": "moderate_to_high",
+          "manifestations": [
+            "unusual_movements",
+            "twitching",
+            "abnormal_vocalizations"
+          ],
+          "citations": ["dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_unpredictable_behavior_001",
+          "name": "Unpredictable Behaviors",
+          "severity": "moderate",
+          "examples": [
+            "vomiting",
+            "screaming",
+            "removing_clothes"
+          ],
+          "citations": ["dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_self_injury_001",
+          "name": "Self-Injurious Behavior",
+          "severity": "high",
+          "frequency": "rare",
+          "description": "Anecdotal reports of self-harm",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_involuntary_movement_001",
+          "name": "Involuntary Movements",
+          "severity": "moderate",
+          "description": "Involuntary bodily movements, seizure-like behaviors",
+          "citations": ["dourron_2003"]
+        },
+        {
+          "id": "ae_5meo_lack_awareness_001",
+          "name": "Lack of Awareness",
+          "severity": "moderate_to_high",
+          "description": "Users may lack awareness or memory of behaviors during acute effects",
+          "riskImplication": "Cannot monitor own safety",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_hypersexual_001",
+          "name": "Hypersexual Experiences",
+          "severity": "variable",
+          "manifestations": [
+            "Highly sensual experiences",
+            "Spontaneous orgasms"
+          ],
+          "frequency": "Anecdotally reported",
+          "citations": ["dourron_2023"]
+        }
+      ],
+      "clinicalTrialSafety": {
+        "seriousAdverseEvents": {
+          "prevalence": "None reported",
+          "context": "Controlled clinical trials",
+          "citations": ["rucker_2023", "hinkle_2024", "kwasny_2024"]
+        },
+        "withdrawal": {
+          "prevalence": "No adverse events led to participant withdrawal",
+          "citations": ["kwasny_2024"]
+        },
+        "mostFrequentIntranasal": [
+          "nasal_discomfort",
+          "nausea",
+          "headache",
+          "vomiting"
+        ],
+        "vitalSigns": {
+          "observation": "No clinically relevant changes",
+          "monitoring": ["vital_signs", "ECG", "telemetry", "laboratory_safety_tests"]
+        },
+        "nasalMucosa": {
+          "observation": "No observed effects"
+        },
+        "citations": ["rucker_2023"]
+      },
+      "firstTimeUserData": {
+        "challengingEffects": {
+          "prevalence": 37,
+          "unit": "percent",
+          "effects": [
+            "heart_beating",
+            "fear",
+            "body_shaking",
+            "anxiety",
+            "feeling_like_dying",
+            "pressure_on_chest",
+            "panic"
+          ],
+          "citations": ["lancelotta_2020"]
+        }
+      }
+    },
+    "longTerm": {
+      "psychological": [
+        {
+          "id": "ae_5meo_reactivations_lt_001",
+          "name": "Flashbacks/Reactivations",
+          "severity": "variable",
+          "description": "Spontaneous re-experiencing of drug effects",
+          "prevalence": {
+            "naturalistic": {
+              "structured_setting": 73,
+              "general_sample": 27,
+              "unit": "percent"
+            },
+            "clinical": {
+              "value": 25,
+              "unit": "percent",
+              "context": "Treatment resistant depression study",
+              "distribution": "Across all dosing categories"
+            }
+          },
+          "characteristics": {
+            "duration": "Brief (seconds)",
+            "components": ["Visual", "Emotional", "Cognitive"],
+            "timing": "May be more common at night/falling asleep",
+            "spontaneity": true
+          },
+          "valence": {
+            "mostCommon": "Positive or neutral",
+            "negative": {
+              "ceremonial": 4,
+              "naturalistic": 7,
+              "unit": "percent"
+            }
+          },
+          "distress": {
+            "someSeekHelp": true,
+            "comparisonToClassical": "Higher rate than LSD/psilocybin (1.4%)"
+          },
+          "typicalResolution": "Days to weeks",
+          "prolongedCases": "Some anecdotal reports of months",
+          "routeAssociation": {
+            "vaporized": "More likely",
+            "intramuscular": "Lower prevalence"
+          },
+          "mechanism": {
+            "hypothesis": "May relate to epileptiform activity",
+            "location": "Temporal lobes"
+          },
+          "citations": ["ortiz_bernal_2022", "dourron_2023", "ramaekers_2025"],
+          "researchNeeded": "Long-term follow-up to determine frequency, intensity, duration, impairment"
+        },
+        {
+          "id": "ae_5meo_hppd_lt_001",
+          "name": "Hallucinogen Persisting Perception Disorder (HPPD)",
+          "severity": "variable",
+          "evidence": "Not explicitly linked in same way as other psychedelics",
+          "type1": {
+            "description": "Short term, reversible, benign",
+            "comparison": "Reactivations may be similar to Type 1 HPPD"
+          },
+          "type2": {
+            "description": "More severe and long-term",
+            "documentation": "No studies documenting HPPD specifically from 5-MeO-DMT"
+          },
+          "symptoms": [
+            "Visual disturbances (flashes, intensified colors, palinopsia)",
+            "False perceptions of movement",
+            "Recurrent synesthesia",
+            "Dissociation",
+            "Depersonalization"
+          ],
+          "note": "Theoretical risk based on other psychedelics",
+          "citations": ["ramaekers_2024", "scala_2024", "ortiz_bernal_2022"]
+        },
+        {
+          "id": "ae_5meo_sensitization_lt_001",
+          "name": "Sensitization with Repeated Use",
+          "severity": "moderate",
+          "description": "Effects may become stronger rather than weaker with repeated use",
+          "mechanism": "Opposite of tolerance",
+          "evidence": [
+            "Animal studies show behavioral sensitization",
+            "Individualized dosing regimens show higher peak experiences"
+          ],
+          "implication": "Users may become more sensitive after repeated use",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_memory_lt_001",
+          "name": "Memory Impairment",
+          "severity": "unknown",
+          "evidence": "Transient impairment documented with psychedelics generally",
+          "specificTo5MeO": "No specific indication of long-term memory impairment",
+          "citations": ["kuypers_2005"]
+        },
+        {
+          "id": "ae_5meo_addiction_lt_001",
+          "name": "Addiction Potential",
+          "severity": "low",
+          "evidence": "Similar to classic psychedelics",
+          "lifetimeUse": "Rare",
+          "note": "While compulsive use risk is low, some may repeatedly use despite undesirable experiences",
+          "citations": ["kwasny_2024", "dourron_2023"]
+        },
+        {
+          "id": "ae_5meo_negative_emotions_lt_001",
+          "name": "Persistent Negative Emotional States",
+          "severity": "moderate",
+          "duration": "Can persist months",
+          "prevalence": "Some cases",
+          "clinicalSignificance": "May lead to clinically significant problems",
+          "citations": ["dourron_2023", "ortiz_bernal_2022"]
+        },
+        {
+          "id": "ae_5meo_psychiatric_dx_lt_001",
+          "name": "Emergence of Psychiatric Diagnoses",
+          "severity": "moderate_to_high",
+          "prevalence": {
+            "value": 37.5,
+            "unit": "percent",
+            "context": "Study of negative psychological responses to psychedelics",
+            "note": "Diagnosis emerged after psychedelic experience"
+          },
+          "anxietyWorsening": {
+            "value": 87,
+            "unit": "percent",
+            "context": "Anxiety symptoms arose or worsened"
+          },
+          "uncertainties": [
+            "Causal relationship unclear",
+            "Pre-existing vulnerabilities may be factor"
+          ],
+          "citations": ["bremler_2023"]
+        },
+        {
+          "id": "ae_5meo_professional_help_lt_001",
+          "name": "Need for Professional Assistance",
+          "severity": "variable",
+          "prevalence": {
+            "ayahuasca": {
+              "value": 12,
+              "unit": "percent",
+              "context": "Ayahuasca users seeking mental health assistance"
+            }
+          },
+          "note": "Specific data for 5-MeO-DMT not provided but likely similar",
+          "citations": ["evans_2023", "robinson_2024"]
+        }
+      ],
+      "evidenceLimitations": [
+        "Limited long-term follow-up studies",
+        "Most data from naturalistic use",
+        "Clinical trials are short-term",
+        "Underreporting likely"
+      ]
+    }
+  },
+
+  "qualityContaminationRisks": [
+    {
+      "id": "quality_5meo_dosing_uncertainty_001",
+      "name": "Dosing Uncertainty",
+      "category": "quality",
+      "severity": "high",
+      "description": "Lack of standardization leads to uncertain dosing",
+      "factors": [
+        "No regulatory oversight",
+        "Dose varies significantly in products",
+        "Users cannot gauge amount consumed",
+        "Steep dose-response increases risk"
+      ],
+      "citations": ["lancelotta_2020"]
+    },
+    {
+      "id": "quality_5meo_purity_variability_001",
+      "name": "Purity Variability",
+      "category": "quality",
+      "severity": "high",
+      "description": "Inconsistent purity leads to unpredictable effects",
+      "factors": [
+        "Unregulated markets",
+        "Variable extraction processes",
+        "Storage conditions affect potency",
+        "Difficult to determine safe dose"
+      ],
+      "citations": ["glynos_2023", "edwards_2023", "coyle_nd"]
+    },
+    {
+      "id": "quality_5meo_toad_variability_001",
+      "name": "Toad-Derived Variability",
+      "category": "source",
+      "severity": "high",
+      "description": "Venom from Incilius alvarius varies significantly",
+      "specificFactors": [
+        {
+          "factor": "variable_concentrations",
+          "description": "5-MeO-DMT concentration varies in toad venom",
+          "implication": "Inconsistent and dangerous dosing",
+          "citations": ["neumann_2024"]
+        },
+        {
+          "factor": "bufotenine_presence",
+          "description": "Bufotenine also present in venom",
+          "psychoactivity": "Also has psychoactive properties",
+          "adverseEffects": "Can cause adverse effects",
+          "uncertainty": "Unclear if bufotenine from venom significantly impacts effects vs. from 5-MeO-DMT metabolism",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "factor": "other_compounds",
+          "description": "Multiple compounds in toad venom beyond 5-MeO-DMT and bufotenine"
+        }
+      ],
+      "ethicalConcerns": [
+        "Ethical treatment of toads",
+        "Environmental impact on toad populations"
+      ]
+    },
+    {
+      "id": "quality_5meo_synthetic_risks_001",
+      "name": "Synthetic Production Risks",
+      "category": "source",
+      "severity": "moderate",
+      "description": "Risks associated with synthetic 5-MeO-DMT",
+      "risks": [
+        {
+          "risk": "synthesis_impurities",
+          "description": "Byproducts and impurities if synthesis not done properly",
+          "citations": ["bremler_2023"]
+        },
+        {
+          "risk": "adulteration",
+          "description": "Intentional adulteration with other substances"
+        },
+        {
+          "risk": "mislabeling",
+          "description": "Synthetic versions may be misrepresented",
+          "consequence": "Users unknowingly consume different substance",
+          "citations": ["bremler_2023"]
+        }
+      ],
+      "advantages": [
+        "More consistent potency than toad-derived",
+        "No animal harm",
+        "No bufotenine (unless intentionally added)"
+      ]
+    },
+    {
+      "id": "quality_5meo_potency_inconsistency_001",
+      "name": "Potency Inconsistencies Within Batches",
+      "category": "quality",
+      "severity": "high",
+      "description": "Even within single batch, potency can vary",
+      "implication": "Unintentionally consuming much higher dose than intended",
+      "riskFactor": "Accidental overdose",
+      "commonAdulterants": "More potent adulterants increase risk",
+      "citations": ["petranker_2022", "hirschfeld_2021", "palamar_2020"]
+    },
+    {
+      "id": "quality_5meo_misidentification_001",
+      "name": "Substance Misidentification",
+      "category": "contamination",
+      "severity": "critical",
+      "description": "Substances sold as 5-MeO-DMT may not contain it",
+      "examples": [
+        {
+          "soldAs": "5-MeO-DMT",
+          "actualContent": "Other synthetic tryptamines",
+          "similarSubstances": ["5-MeO-AMT"],
+          "knownIssues": "Sold as LSD, responsible for emergency cases",
+          "citations": ["calina_2021"]
+        }
+      ],
+      "consequences": [
+        "Unexpected effects",
+        "Potentially harmful effects",
+        "Unknown toxicological profiles"
+      ],
+      "citations": ["hirschfeld_2021", "petranker_2022", "coyle_nd", "bremler_2023", "calina_2021"]
+    },
+    {
+      "id": "quality_5meo_adulterants_001",
+      "name": "Adulteration with Unknown Substances",
+      "category": "contamination",
+      "severity": "high",
+      "description": "Presence of other psychoactive substances",
+      "risks": [
+        "Unpredictable effects",
+        "Different safety profiles",
+        "More dangerous than 5-MeO-DMT alone"
+      ],
+      "citations": ["glynos_2023", "hirschfeld_2021", "petranker_2022", "strassman_1984"]
+    },
+    {
+      "id": "quality_5meo_manufacturing_contamination_001",
+      "name": "Manufacturing Byproducts",
+      "category": "contamination",
+      "severity": "moderate",
+      "description": "Inadequate cleaning of production equipment in illicit labs",
+      "consequences": [
+        "Byproducts in final product",
+        "Impurities from previous batches",
+        "Cross-contamination"
+      ],
+      "citations": ["aakerøy_2021"]
+    },
+    {
+      "id": "quality_5meo_unintended_substances_001",
+      "name": "Cross-Contamination",
+      "category": "contamination",
+      "severity": "moderate_to_high",
+      "description": "Unintended substances from production process",
+      "citations": ["hirschfeld_2021", "petranker_2022", "coyle_nd", "aakerøy_2021", "strassman_1984"]
+    },
+    {
+      "id": "quality_5meo_serotonergic_contamination_001",
+      "name": "Contamination with Serotonergic Agents",
+      "category": "contamination",
+      "severity": "critical",
+      "description": "Combination of 5-MeO-DMT with other serotonergic substances",
+      "outcome": "Serotonin toxicity (serotonin syndrome)",
+      "severity": "Potentially life-threatening",
+      "citations": ["malcolm_2022"]
+    },
+    {
+      "id": "quality_5meo_research_chemicals_001",
+      "name": "Research Chemical Misrepresentation",
+      "category": "sourcing",
+      "severity": "high",
+      "description": "Substances sold as 'research chemicals' may be misrepresented",
+      "risks": [
+        "Unknown compounds",
+        "Byproducts and contaminants",
+        "No quality control"
+      ],
+      "citations": ["coyle_nd"]
+    },
+    {
+      "id": "quality_5meo_longterm_health_001",
+      "name": "Long-term Health Risks from Contaminants",
+      "category": "health",
+      "severity": "unknown",
+      "description": "Chronic exposure to contaminants or impure 5-MeO-DMT",
+      "evidence": "Not well understood due to lack of data",
+      "citations": ["hirschfeld_2021", "ghaznavi_2025"]
+    },
+    {
+      "id": "quality_5meo_testing_limitations_001",
+      "name": "Lack of Accurate Testing",
+      "category": "harm_reduction",
+      "severity": "high",
+      "description": "Limited access to accurate testing methods",
+      "issues": [
+        "Drug test kits often unreliable",
+        "Cannot detect all adulterants",
+        "Cannot accurately measure amount",
+        "Cannot predict individual response"
+      ],
+      "citations": ["glynos_2023", "petranker_2022"]
+    }
+  ],
+
+  "harmReductionStrategies": [
+    {
+      "id": "hr_5meo_screening_001",
+      "category": "preparation",
+      "strategy": "Comprehensive Medical and Psychiatric Screening",
+      "importance": "critical",
+      "components": [
+        "Personal and family psychiatric history",
+        "Cardiovascular assessment",
+        "Medication review (especially MAOIs)",
+        "Substance use history",
+        "Seizure history"
+      ],
+      "effectiveness": "high"
+    },
+    {
+      "id": "hr_5meo_experienced_sitter_001",
+      "category": "supervision",
+      "strategy": "Experienced Trip Sitter",
+      "importance": "critical",
+      "rationale": "Intense physical and psychological reactions require experienced support",
+      "qualifications": [
+        "Relevant experience with 5-MeO-DMT",
+        "Ability to manage challenging experiences",
+        "Knowledge of when to seek emergency help"
+      ],
+      "citations": ["engel_2022"]
+    },
+    {
+      "id": "hr_5meo_dose_control_001",
+      "category": "dosing",
+      "strategy": "Precise Dose Measurement",
+      "importance": "critical",
+      "methods": [
+        "Volumetric dosing when possible",
+        "Accurate scales (0.001g precision)",
+        "Starting with lower doses",
+        "Avoiding dose escalation without proper spacing"
+      ],
+      "rationale": "Steep dose-response curve makes precision essential"
+    },
+    {
+      "id": "hr_5meo_substance_testing_001",
+      "category": "quality_control",
+      "strategy": "Substance Testing",
+      "importance": "high",
+      "methods": [
+        "Reagent test kits",
+        "Drug checking services if available",
+        "Testing new batches"
+      ],
+      "limitations": [
+        "Cannot detect all adulterants",
+        "Cannot measure exact potency",
+        "Limited availability"
+      ]
+    },
+    {
+      "id": "hr_5meo_trusted_sources_001",
+      "category": "sourcing",
+      "strategy": "Obtain from Trusted Sources",
+      "importance": "high",
+      "rationale": "Reduces risk of adulteration and unknown substances",
+      "preferSynthetic": "Generally more consistent than toad-derived",
+      "citations": ["lancelotta_2020"]
+    },
+    {
+      "id": "hr_5meo_maoi_avoidance_001",
+      "category": "drug_interactions",
+      "strategy": "Absolute Avoidance of MAOIs",
+      "importance": "critical",
+      "timeframe": "At least 2 weeks before and after 5-MeO-DMT use",
+      "includes": [
+        "Pharmaceutical MAOIs",
+        "Harmala alkaloids",
+        "Syrian rue",
+        "Ayahuasca",
+        "Natural MAOIs"
+      ],
+      "rationale": "Fatal serotonin syndrome risk"
+    },
+    {
+      "id": "hr_5meo_polydrug_avoidance_001",
+      "category": "drug_interactions",
+      "strategy": "Avoid Polydrug Use",
+      "importance": "high",
+      "specificallyAvoid": [
+        "Other serotonergic substances",
+        "Stimulants",
+        "Alcohol",
+        "Other psychedelics"
+      ]
+    },
+    {
+      "id": "hr_5meo_setting_001",
+      "category": "environment",
+      "strategy": "Safe, Controlled Setting",
+      "importance": "high",
+      "characteristics": [
+        "Comfortable, secure environment",
+        "Free from hazards",
+        "Private",
+        "Supportive",
+        "Temperature controlled"
+      ]
+    },
+    {
+      "id": "hr_5meo_preparation_001",
+      "category": "psychological",
+      "strategy": "Thorough Psychological Preparation",
+      "importance": "high",
+      "components": [
+        "Education about effects",
+        "Intention setting",
+        "Anxiety management techniques",
+        "Surrender and acceptance practice",
+        "Understanding of potential intensity"
+      ]
+    },
+    {
+      "id": "hr_5meo_route_selection_001",
+      "category": "administration",
+      "strategy": "Careful Route Selection",
+      "importance": "moderate_to_high",
+      "considerations": [
+        "Intranasal or IM may have lower reactivation risk than vaporized",
+        "IV route has highest intensity and risk",
+        "Sublingual has lower intensity",
+        "Never combine with MAOIs for oral route"
+      ]
+    },
+    {
+      "id": "hr_5meo_integration_001",
+      "category": "post_experience",
+      "strategy": "Integration Support",
+      "importance": "high",
+      "components": [
+        "Processing experience with therapist or guide",
+        "Peer support groups",
+        "Journaling",
+        "Time for reflection",
+        "Addressing reactivations if they occur"
+      ]
+    },
+    {
+      "id": "hr_5meo_emergency_access_001",
+      "category": "safety",
+      "strategy": "Access to Emergency Support",
+      "importance": "critical",
+      "resources": [
+        "Psychedelic crisis helplines (e.g., Fireside Project)",
+        "Emergency medical services contact information",
+        "Benzodiazepines available if in clinical setting"
+      ]
+    },
+    {
+      "id": "hr_5meo_repeat_use_caution_001",
+      "category": "use_patterns",
+      "strategy": "Caution with Repeated Use",
+      "importance": "moderate",
+      "rationale": "Sensitization may occur rather than tolerance",
+      "recommendation": "Do not assume tolerance; may need lower doses with repeated use"
+    }
+  ],
+
+  "emergencyProtocols": {
+    "nonPharmacological": [
+      {
+        "intervention": "reassurance",
+        "description": "Verbal reassurance that experience is temporary and they are safe",
+        "effectiveness": "Usually sufficient for psychological distress"
+      },
+      {
+        "intervention": "calm_presence",
+        "description": "Sitter maintains calm, grounded demeanor"
+      },
+      {
+        "intervention": "environmental_adjustment",
+        "description": "Quiet, dimly lit, comfortable environment"
+      },
+      {
+        "intervention": "breathing_guidance",
+        "description": "Guide slow, deep breathing"
+      },
+      {
+        "intervention": "physical_safety",
+        "description": "Prevent injury from involuntary movements"
+      }
+    ],
+    "pharmacological": [
+      {
+        "medication": "benzodiazepines",
+        "indication": "Severe anxiety or agitation unresponsive to reassurance",
+        "note": "Should be available in clinical settings"
+      }
+    ],
+    "emergencyServices": {
+      "when": [
+        "Seizure activity",
+        "Cardiovascular emergency",
+        "Suspected serotonin syndrome",
+        "Severe behavioral disturbance",
+        "Self-harm risk",
+        "Condition not improving"
+      ]
+    }
+  },
+
+  "researchNeeds": [
+    "Long-term safety studies",
+    "Systematic dose-finding studies in humans",
+    "Standardized protocols for different routes",
+    "Better understanding of reactivations/flashbacks",
+    "Mechanism of sensitization",
+    "Optimal integration practices",
+    "Cardiovascular safety in at-risk populations",
+    "Comparison of toad-derived vs synthetic preparations",
+    "Pharmacogenetic studies",
+    "Larger diverse population studies"
+  ],
+
+  "metadata": {
+    "substanceSpecificCitations": 150,
+    "primaryDataSources": [
+      "Clinical trials (limited)",
+      "Observational studies",
+      "Surveys of naturalistic users",
+      "Case reports",
+      "Animal studies"
+    ],
+    "dataQuality": "Limited compared to classical psychedelics",
+    "geographicScope": "Primarily North American data",
+    "keyLimitations": [
+      "Limited human dosing studies",
+      "Most data from naturalistic use",
+      "Small sample sizes in clinical research",
+      "Lack of long-term follow-up",
+      "Source variability (toad vs synthetic) confounds data",
+      "Underreporting likely",
+      "Limited diversity in studied populations"
+    ],
+    "majorKnowledgeGaps": [
+      "Optimal therapeutic dosing",
+      "Long-term effects",
+      "True prevalence of reactivations",
+      "Mechanisms of unique effects",
+      "Cardiovascular safety profile",
+      "Comparison to classical psychedelics in therapeutic settings"
+    ]
+  }
+}

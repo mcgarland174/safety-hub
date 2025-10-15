@@ -1,0 +1,1390 @@
+{
+  "schemaVersion": "2.0",
+  "lastUpdated": "2025-01-09",
+  
+  "substance": {
+    "id": "mdma_001",
+    "name": "MDMA",
+    "aliases": [
+      "Ecstasy",
+      "Molly",
+      "Adam",
+      "XTC",
+      "Mandy",
+      "The Love Drug"
+    ],
+    "classification": {
+      "primary": "entactogen_empathogen",
+      "secondary": ["stimulant_psychedelic", "phenethylamine"],
+      "mechanism": "monoamine_transporter_reversal",
+      "receptorAffinity": {
+        "SERT": "high",
+        "NET": "high",
+        "DAT": "moderate",
+        "5HT": "moderate",
+        "DA": "moderate",
+        "muscarinic": "low",
+        "histamine": "low",
+        "adrenergic": "low"
+      },
+      "notClassicalPsychedelic": true,
+      "structuralSimilarity": ["amphetamines", "mescaline"]
+    },
+    "neurotransmitterEffects": {
+      "increasesExtracellular": [
+        {
+          "neurotransmitter": "serotonin",
+          "mechanism": "reverses_SERT"
+        },
+        {
+          "neurotransmitter": "norepinephrine",
+          "mechanism": "reverses_NET"
+        },
+        {
+          "neurotransmitter": "dopamine",
+          "mechanism": "reverses_DAT"
+        }
+      ],
+      "hormonalEffects": [
+        {
+          "hormone": "cortisol",
+          "effect": "increases"
+        },
+        {
+          "hormone": "arginine_vasopressin",
+          "effect": "increases"
+        },
+        {
+          "hormone": "oxytocin",
+          "effect": "releases",
+          "note": "May explain empathic and pro-social effects"
+        }
+      ]
+    },
+    "prevalenceData": {
+      "switzerland": {
+        "value": 3.5,
+        "unit": "percent",
+        "population": "15-34 year-olds",
+        "context": "At least one recreational dose",
+        "citations": ["vollenweider_1998"]
+      },
+      "england": {
+        "value": {"min": 4.5, "max": 6},
+        "unit": "percent",
+        "population": "14-15 year-olds",
+        "citations": ["vollenweider_1998"]
+      },
+      "emergencyRoomVisits": {
+        "rate": 1,
+        "unit": "percent",
+        "year": 2020,
+        "context": "Of all users seeking emergency care",
+        "citations": ["canady_2023"]
+      },
+      "globalStatus": "Among most commonly used illicit substances worldwide",
+      "toxicityPresentations": "Growing availability, unknown composition, megadoses (up to 300mg/pill), higher purity, higher total dose consumed (500mg/session)"
+    },
+    "dosing": {
+      "therapeutic": {
+        "range": {"min": 75, "max": 225, "unit": "mg"},
+        "route": "oral",
+        "context": "Psychedelic-assisted therapy",
+        "citations": ["sarparast_2022"]
+      },
+      "clinical": {
+        "range": {"min": 70, "max": 150, "unit": "mg"},
+        "perKg": {"min": 1.35, "max": 1.8, "unit": "mg/kg"},
+        "preparation": "25mg opaque gelatin capsules of pharmaceutically pure MDMA hydrochloride",
+        "commonDoses": [
+          {"value": 100, "unit": "mg", "capsules": 4},
+          {"value": 125, "unit": "mg", "capsules": 5}
+        ],
+        "citations": ["papaseit_2018", "atila_2024"]
+      },
+      "recreational": {
+        "typical": {"min": 75, "max": 150, "unit": "mg"},
+        "perKg": {"min": 1, "max": 2, "unit": "mg/kg"},
+        "common": {"min": 75, "max": 125, "unit": "mg"},
+        "approximately": {"value": 125, "unit": "mg"},
+        "citations": ["baumeister_2015", "papaseit_2018", "henriquez_2023"]
+      },
+      "investigational": {
+        "healthyVolunteers": {"value": 1.7, "unit": "mg/kg"},
+        "context": "Examining acute effects in MDMA-naive volunteers",
+        "citations": ["vollenweider_1998"]
+      },
+      "doseResponseRelationship": {
+        "linearity": "non_linear",
+        "note": "No simple correlation between dose ingested and physiological effects",
+        "mechanism": "Inhibits its own metabolism",
+        "citations": ["henriquez_2023", "papaseit_2018"]
+      },
+      "illicitMarketConcern": {
+        "increasingPotency": "Tablets often contain 2-3x typical recreational dose",
+        "megadosePills": "Up to 300mg/pill",
+        "highSessionDose": "Up to 500mg/session reported",
+        "citations": ["papaseit_2018"]
+      },
+      "redosingRisk": {
+        "concern": "high",
+        "mechanism": "Non-linear kinetics and self-inhibition of metabolism",
+        "consequence": "Significantly increased toxicity risk",
+        "citations": ["dourron_2023", "henriquez_2023", "papaseit_2018", "poyatos_2023"]
+      },
+      "addictionPotential": {
+        "highDose": {
+          "threshold": "≥3 mg/kg",
+          "risk": "May have addictive potential",
+          "citation": "pantoni_2022"
+        },
+        "amnesia": "High doses can produce amnesia",
+        "generalRisk": "Lower than many substances but present"
+      }
+    },
+    "pharmacokinetics": {
+      "absorption": {
+        "route": "oral_primary",
+        "bioavailability": "variable"
+      },
+      "metabolism": {
+        "primaryEnzyme": "CYP2D6",
+        "otherEnzymes": ["CYP1A2", "CYP2B6", "CYP2C19"],
+        "geneticPolymorphisms": {
+          "relevant": true,
+          "poorMetabolizers": {
+            "frequency": "5-10% of population",
+            "effect": "Higher plasma concentrations of MDMA",
+            "consequence": "Increased risk of toxicity",
+            "citations": ["sarparast_2022", "papaseit_2018"]
+          },
+          "ultraRapidMetabolizers": {
+            "frequency": "1-2% of population",
+            "effect": "Lower plasma concentrations",
+            "consequence": "Potentially reduced effects"
+          }
+        },
+        "selfInhibition": {
+          "description": "MDMA inhibits its own metabolism",
+          "consequence": "Non-linear pharmacokinetics",
+          "implication": "Repeated dosing dramatically increases exposure",
+          "citations": ["henriquez_2023", "papaseit_2018"]
+        }
+      },
+      "onset": {
+        "oral": {"min": 30, "max": 60, "unit": "minutes"}
+      },
+      "peak": {
+        "oral": {"min": 60, "max": 120, "unit": "minutes"}
+      },
+      "duration": {
+        "acute": {"min": 3, "max": 6, "unit": "hours"},
+        "aftereffects": {"min": 24, "max": 72, "unit": "hours"}
+      },
+      "elimination": "renal"
+    },
+    "subjectiveEffects": {
+      "characteristic": [
+        "euphoria",
+        "well_being",
+        "increased_empathy",
+        "pro_social_effects",
+        "emotional_openness",
+        "enhanced_sensory_perception",
+        "altered_mood",
+        "altered_perception",
+        "altered_cognition"
+      ],
+      "variability": {
+        "high": true,
+        "factors": ["individual_sensitivity", "genetic_polymorphisms", "setting", "dose"]
+      }
+    },
+    "therapeuticApplications": {
+      "ptsd": {
+        "status": "FDA_breakthrough_therapy_designation",
+        "evidence": "Strong from clinical trials",
+        "format": "MDMA-assisted psychotherapy"
+      },
+      "otherConditions": [
+        "anxiety",
+        "depression",
+        "relationship_issues"
+      ],
+      "mechanism": "Empathogenic effects facilitate therapeutic processing"
+    },
+    "toleranceDevelopment": {
+      "rate": "moderate",
+      "note": "Some users report need for higher doses with regular use",
+      "crossTolerance": "minimal_with_classical_psychedelics"
+    }
+  },
+
+  "riskFactors": [
+    {
+      "id": "rf_mdma_high_dose_001",
+      "name": "High Dose",
+      "category": "dosage",
+      "severity": "high",
+      "description": "Higher doses significantly increase risk of adverse events",
+      "specificRisks": [
+        "hyperthermia",
+        "hyponatremia",
+        "serotonin_syndrome",
+        "cardiovascular_complications",
+        "neurotoxicity",
+        "cognitive_impairment",
+        "amnesia"
+      ],
+      "doseThresholds": {
+        "increasedRisk": ">150 mg",
+        "highRisk": ">200 mg",
+        "addictionPotential": "≥3 mg/kg (~210mg for 70kg person)"
+      },
+      "citations": ["dourron_2023", "bremler_2023", "henriquez_2023", "pantoni_2022"]
+    },
+    {
+      "id": "rf_mdma_repeated_dosing_001",
+      "name": "Repeated Consumption/Redosing",
+      "category": "behavioral",
+      "severity": "very_high",
+      "description": "Taking multiple doses in short period dramatically increases toxicity risk",
+      "mechanism": "Non-linear kinetics and self-inhibition of metabolism",
+      "consequence": "Exponential increase in plasma levels and adverse effects",
+      "citations": ["dourron_2023", "henriquez_2023", "papaseit_2018", "poyatos_2023"]
+    },
+    {
+      "id": "rf_mdma_female_sex_001",
+      "name": "Female Sex",
+      "category": "demographic",
+      "subcategory": "biological_sex",
+      "severity": "moderate_to_high",
+      "description": "Women more susceptible to negative effects of MDMA",
+      "specificEffects": {
+        "plasmaConcentrations": "Higher than men",
+        "subjectiveEffects": "More intense",
+        "perceptualChanges": "More frequent and intense",
+        "anxiety": "More frequent and intense",
+        "depression": "More frequent and intense",
+        "acuteAdverseEffects": "More frequent",
+        "subacuteAdverseEffects": "More frequent",
+        "comedownEffects": "More adverse mood effects",
+        "hyponatremiaRisk": {
+          "elevated": true,
+          "mechanism": "Higher plasma MDMA concentrations in women with lower BMIs"
+        }
+      },
+      "citations": ["papaseit_2018", "atila_2024", "parrott_2014"]
+    },
+    {
+      "id": "rf_mdma_low_bmi_001",
+      "name": "Low Body Mass Index",
+      "category": "physiological",
+      "severity": "moderate_to_high",
+      "description": "Lower BMI associated with higher hyponatremia risk",
+      "mechanism": "Higher plasma MDMA concentrations",
+      "interactionWithSex": "Particularly relevant for women",
+      "specificRisk": "hyponatremia",
+      "citations": ["atila_2024"]
+    },
+    {
+      "id": "rf_mdma_hot_environment_001",
+      "name": "High Temperature Environment",
+      "category": "environmental",
+      "severity": "high",
+      "description": "Hot environments dramatically increase hyperthermia risk",
+      "typicalSettings": ["nightclubs", "music_festivals", "raves"],
+      "mechanism": [
+        "MDMA inhibits brain's temperature regulation",
+        "Physical exertion (dancing) generates heat",
+        "Crowded environments reduce heat dissipation",
+        "Dehydration"
+      ],
+      "specificRisks": [
+        "hyperthermia",
+        "dehydration",
+        "hyponatremia_from_overhydration"
+      ],
+      "citations": ["barnett_2021", "vollenweider_1998", "atila_2024", "papaseit_2018"]
+    },
+    {
+      "id": "rf_mdma_physical_exertion_001",
+      "name": "Physical Exertion",
+      "category": "behavioral",
+      "severity": "high",
+      "description": "Prolonged dancing or physical activity increases risks",
+      "typicalContext": "Dancing in clubs/festivals",
+      "specificRisks": [
+        "hyperthermia",
+        "dehydration",
+        "hyponatremia",
+        "exhaustion"
+      ],
+      "interactionsWith": ["rf_mdma_hot_environment_001"],
+      "citations": ["barnett_2021", "atila_2024"]
+    },
+    {
+      "id": "rf_mdma_overhydration_001",
+      "name": "Overhydration with Hypotonic Fluids",
+      "category": "behavioral",
+      "severity": "high",
+      "description": "Drinking excessive water leads to severe hyponatremia",
+      "mechanism": [
+        "MDMA causes inappropriate ADH secretion",
+        "Increased water retention",
+        "Dilutional hyponatremia"
+      ],
+      "prevalence": {
+        "unrestricted": {
+          "value": 37,
+          "unit": "percent",
+          "context": "With unrestricted fluid intake in controlled study",
+          "citation": "atila_2024"
+        },
+        "restricted": {
+          "value": 31,
+          "unit": "percent",
+          "context": "With fluid restriction intervention",
+          "citation": "atila_2024"
+        }
+      },
+      "severeCases": {
+        "sodiumRange": {"min": 101, "max": 130, "unit": "mEq/L"},
+        "presentation": "Life-threatening",
+        "citation": "atila_2024"
+      },
+      "citations": ["barnett_2021", "atila_2024", "edwards_2023"]
+    },
+    {
+      "id": "rf_mdma_psychiatric_history_001",
+      "name": "Pre-existing Mental Health Conditions",
+      "category": "psychiatric",
+      "severity": "moderate_to_high",
+      "description": "History of psychiatric disorders increases vulnerability",
+      "specificConditions": [
+        "depression",
+        "anxiety_disorders",
+        "psychotic_disorders",
+        "bipolar_disorder"
+      ],
+      "risks": [
+        "exacerbation_of_symptoms",
+        "prolonged_psychotic_episodes",
+        "increased_depression_post_use",
+        "suicidal_ideation"
+      ],
+      "citations": ["parrott_2014", "ghaznavi_2025", "strassman_1984"]
+    },
+    {
+      "id": "rf_mdma_cardiovascular_001",
+      "name": "Pre-existing Cardiovascular Conditions",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "severity": "critical",
+      "description": "Heart conditions pose serious risk with MDMA",
+      "mechanism": "MDMA increases heart rate and blood pressure",
+      "specificConditions": [
+        "uncontrolled_hypertension",
+        "coronary_artery_disease",
+        "arrhythmias",
+        "recent_myocardial_infarction",
+        "heart_failure",
+        "labile_hypertonia"
+      ],
+      "specificRisks": [
+        "myocardial_infarction",
+        "hypertensive_crisis",
+        "arrhythmia",
+        "sudden_cardiac_death"
+      ],
+      "contraindicationType": "absolute_if_severe",
+      "citations": ["vollenweider_1998", "makunts_2023", "expert_opinion_nd"]
+    },
+    {
+      "id": "rf_mdma_polydrug_001",
+      "name": "Polydrug Use",
+      "category": "behavioral",
+      "subcategory": "substance_use",
+      "severity": "very_high",
+      "description": "Combining MDMA with other substances dramatically increases risk",
+      "prevalence": {
+        "alcoholCoUse": {
+          "value": 81,
+          "unit": "percent",
+          "context": "Ecstasy users who also consume alcohol",
+          "citation": "edwards_2023"
+        },
+        "deathsInvolvingOtherDrugs": {
+          "value": 66,
+          "unit": "percent",
+          "context": "MDMA/ecstasy-related deaths in England and Wales",
+          "citation": "edwards_2023"
+        }
+      },
+      "dangerousCombinations": [
+        {
+          "substances": ["MDMA", "alcohol"],
+          "risk": "Increased adverse effects, dehydration, impaired judgment"
+        },
+        {
+          "substances": ["MDMA", "stimulants"],
+          "risk": "Severe cardiovascular stress, hyperthermia"
+        },
+        {
+          "substances": ["MDMA", "SSRIs"],
+          "risk": "Serotonin syndrome",
+          "severity": "critical"
+        },
+        {
+          "substances": ["MDMA", "MAOIs"],
+          "risk": "Severe serotonin syndrome",
+          "severity": "fatal",
+          "contraindicationType": "absolute"
+        },
+        {
+          "substances": ["MDMA", "antiretrovirals"],
+          "specific": "ritonavir",
+          "risk": "Overdose due to liver metabolism interactions",
+          "severity": "critical"
+        }
+      ],
+      "citations": ["sarparast_2022", "makunts_2023", "atila_2024", "papaseit_2018", "barnett_2021", "piercey_2024"]
+    },
+    {
+      "id": "rf_mdma_fatigue_001",
+      "name": "Fatigue and Exhaustion",
+      "category": "physiological",
+      "severity": "moderate",
+      "description": "Pre-existing fatigue predisposes to negative outcomes",
+      "citations": ["vollenweider_1998"]
+    },
+    {
+      "id": "rf_mdma_illicit_drug_history_001",
+      "name": "History of Illicit Drug Abuse",
+      "category": "psychiatric",
+      "subcategory": "substance_use",
+      "severity": "moderate_to_high",
+      "description": "History of drug abuse increases risk for MDMA-related sequelae",
+      "contraindicationType": "relative",
+      "citations": ["vollenweider_1998"]
+    }
+  ],
+
+  "contraindications": {
+    "absolute": [
+      {
+        "id": "contra_mdma_abs_001",
+        "condition": "Severe cardiovascular disease",
+        "description": "Including recent MI, unstable angina, severe arrhythmias, uncontrolled hypertension",
+        "rationale": "MDMA increases heart rate and blood pressure, risking life-threatening complications",
+        "citations": ["baumeister_2015", "vollenweider_1998", "expert_opinion_nd"]
+      },
+      {
+        "id": "contra_mdma_abs_002",
+        "condition": "Active psychotic disorders",
+        "description": "Including schizophrenia, schizoaffective disorder, bipolar with psychotic features",
+        "rationale": "Can exacerbate symptoms and trigger prolonged psychotic episodes",
+        "citations": ["ghaznavi_2025", "strassman_1984", "parrott_2014"]
+      },
+      {
+        "id": "contra_mdma_abs_003",
+        "condition": "Active suicidality",
+        "description": "Recent suicide attempts or active suicidal ideation",
+        "rationale": "Risk of increased depression and potential for suicide, especially during comedown",
+        "citations": ["parrott_2014", "sarparast_2022"]
+      },
+      {
+        "id": "contra_mdma_abs_004",
+        "condition": "Concurrent use of MAOIs",
+        "description": "Monoamine oxidase inhibitors including moclobemide",
+        "rationale": "Can lead to severe, potentially fatal serotonin syndrome",
+        "severity": "critical",
+        "citations": ["barnett_2021", "malcolm_2022"]
+      },
+      {
+        "id": "contra_mdma_abs_005",
+        "condition": "Pregnancy",
+        "rationale": "Potential risks to fetal development unknown",
+        "citations": ["baumeister_2015"]
+      },
+      {
+        "id": "contra_mdma_abs_006",
+        "condition": "Breastfeeding",
+        "rationale": "Potential risks to infant, drug may pass into breast milk",
+        "citations": ["friguls_2010"]
+      }
+    ],
+    "relative": [
+      {
+        "id": "contra_mdma_rel_001",
+        "condition": "History of seizures",
+        "description": "Epilepsy or seizure disorder",
+        "rationale": "MDMA can lower seizure threshold",
+        "requiredPrecautions": ["Careful evaluation", "Medical supervision", "Risk-benefit assessment"],
+        "citations": ["baumeister_2015", "atila_2024"]
+      },
+      {
+        "id": "contra_mdma_rel_002",
+        "condition": "Liver or kidney disease",
+        "description": "Hepatic or renal impairment",
+        "rationale": "MDMA metabolized in liver and excreted by kidneys; impairment may increase adverse effects",
+        "requiredPrecautions": ["Medical evaluation", "Dose adjustment", "Monitoring"],
+        "citations": ["baumeister_2015"]
+      },
+      {
+        "id": "contra_mdma_rel_003",
+        "condition": "Anxiety disorders",
+        "description": "Pre-existing anxiety disorders",
+        "rationale": "MDMA can potentially exacerbate anxiety symptoms",
+        "requiredPrecautions": ["Careful monitoring", "Therapeutic support"],
+        "citations": ["breeksema_2022", "parrott_2014"]
+      },
+      {
+        "id": "contra_mdma_rel_004",
+        "condition": "Depression",
+        "description": "Major depressive disorder",
+        "rationale": "Temporary period of depression, anxiety, insomnia after acute effects; may increase suicidal thoughts",
+        "requiredPrecautions": ["Careful screening", "Post-session monitoring", "Integration support"],
+        "citations": ["lacroix_2024", "parrott_2014"]
+      },
+      {
+        "id": "contra_mdma_rel_005",
+        "condition": "Use of SSRIs or serotonergic medications",
+        "description": "Concurrent use of medications affecting serotonin",
+        "rationale": "Increased risk of serotonin syndrome",
+        "requiredPrecautions": ["Medical supervision", "Possible dose adjustment", "Careful monitoring"],
+        "citations": ["barnett_2021", "baggott_nd"]
+      },
+      {
+        "id": "contra_mdma_rel_006",
+        "condition": "Mild to moderate cardiovascular issues",
+        "description": "Controlled hypertension, mild heart conditions",
+        "rationale": "Potential for increased blood pressure and heart rate",
+        "requiredPrecautions": ["Careful monitoring", "Risk assessment", "Medical clearance"],
+        "citations": ["vollenweider_1998", "hysek_2010"]
+      },
+      {
+        "id": "contra_mdma_rel_007",
+        "condition": "Electrolyte imbalances",
+        "description": "History of electrolyte imbalances",
+        "rationale": "Increased risk of hyponatremia",
+        "requiredPrecautions": ["Baseline electrolyte testing", "Fluid restriction", "Monitoring"],
+        "citations": ["expert_opinion_nd"]
+      },
+      {
+        "id": "contra_mdma_rel_008",
+        "condition": "Antiretroviral medication use",
+        "description": "Particularly ritonavir",
+        "rationale": "Liver metabolism interactions can lead to overdose",
+        "requiredPrecautions": ["Dose adjustment", "Medical supervision"],
+        "citations": ["sarparast_2022"]
+      }
+    ]
+  },
+
+  "adverseEvents": {
+    "acute": {
+      "psychological": [
+        {
+          "id": "ae_mdma_anxiety_acute_001",
+          "name": "Anxiety",
+          "severity": "mild_to_moderate",
+          "prevalence": "Most common psychological adverse event in acute phase",
+          "description": "Anxiety during or shortly after MDMA administration",
+          "management": ["Reassurance", "Calm environment", "Breathing exercises"],
+          "citations": ["breeksema_2022"]
+        },
+        {
+          "id": "ae_mdma_mood_changes_001",
+          "name": "Mood Changes",
+          "description": "Both positive and negative mood alterations",
+          "manifestations": {
+            "positive": ["emotional_excitement", "heightened_mood", "sensitivity"],
+            "negative": ["apprehensiveness", "anxiety", "fear_of_losing_control"]
+          },
+          "severeCases": ["paranoia", "fear", "thoughts_of_death", "panic"],
+          "citations": ["parrott_2014"]
+        },
+        {
+          "id": "ae_mdma_memory_acute_001",
+          "name": "Memory Impairment",
+          "timeframe": "acute",
+          "description": "Transient memory impairment during effects",
+          "specificity": "Primarily affects memory; executive functions and attention mostly unaffected",
+          "types": [
+            {
+              "type": "false_memories",
+              "description": "Increased for similar but less important details",
+              "timing": "After delay"
+            },
+            {
+              "type": "true_memory_impairment",
+              "description": "Decreased accuracy of actual memories"
+            }
+          ],
+          "risk": "May lead to dangerous re-dosing due to uncertainty about amount consumed",
+          "citations": ["basedow_2024", "kloft_2022", "kuypers_2005"]
+        },
+        {
+          "id": "ae_mdma_other_psych_acute_001",
+          "name": "Other Psychological Symptoms",
+          "symptoms": [
+            "lack_of_appetite",
+            "balance_issues",
+            "restlessness",
+            "restless_legs",
+            "difficulty_concentrating",
+            "muscle_aches",
+            "fatigue"
+          ],
+          "citations": ["papaseit_2018", "hysek_2010", "breeksema_2022"]
+        }
+      ],
+      "physiological": [
+        {
+          "id": "ae_mdma_cardiovascular_acute_001",
+          "name": "Cardiovascular Effects",
+          "description": "Transient increases in heart rate and blood pressure",
+          "severity": "moderate",
+          "typicalEffects": {
+            "heartRate": "increased",
+            "bloodPressure": "increased_moderately"
+          },
+          "severeCases": [
+            {
+              "condition": "hypertension",
+              "description": "Significant blood pressure elevation"
+            },
+            {
+              "condition": "myocardial_infarction",
+              "rarity": "rare_but_documented"
+            },
+            {
+              "condition": "arrhythmia",
+              "rarity": "uncommon"
+            },
+            {
+              "condition": "severe_hypertensive_reaction",
+              "prevalence": "One subject in study",
+              "citation": "vollenweider_1998"
+            }
+          ],
+          "citations": ["makunts_2021", "makunts_2023", "breeksema_2022", "hysek_2010", "vollenweider_1998"]
+        },
+        {
+          "id": "ae_mdma_hyperthermia_001",
+          "name": "Hyperthermia",
+          "severity": "critical",
+          "description": "Dangerous increase in body temperature",
+          "dangerLevel": "Leading cause of MDMA-related deaths",
+          "canOccurWith": "Even modest doses",
+          "mechanism": "Inhibition of brain's temperature regulation center",
+          "exacerbatingFactors": [
+            "hot_environments",
+            "physical_exertion",
+            "dancing",
+            "crowded_spaces",
+            "dehydration"
+          ],
+          "otherSymptoms": [
+            "feeling_cold",
+            "hot_flashes",
+            "increased_sweating"
+          ],
+          "citations": ["curry_2018", "papaseit_2018", "hysek_2010", "vollenweider_1998"]
+        },
+        {
+          "id": "ae_mdma_hyponatremia_001",
+          "name": "Hyponatremia",
+          "severity": "severe",
+          "description": "Dangerously low sodium levels",
+          "clinicalDefinition": "Plasma sodium <135 mEq/L",
+          "prevalence": [
+            {
+              "value": 37,
+              "unit": "percent",
+              "context": "Single dose, unrestricted fluid intake in controlled study",
+              "citation": "atila_2024"
+            },
+            {
+              "value": 31,
+              "unit": "percent",
+              "context": "With fluid restriction intervention",
+              "citation": "atila_2024"
+            }
+          ],
+          "severeCases": {
+            "sodiumRange": {"min": 101, "max": 130, "unit": "mEq/L"},
+            "presentation": "Life-threatening",
+            "canOccurFrom": "Single dose"
+          },
+          "mechanism": [
+            "Inappropriate ADH secretion",
+            "Excessive water intake",
+            "Increased water retention",
+            "Physical exertion with hypotonic fluid replacement"
+          ],
+          "riskFactors": [
+            "Female sex",
+            "Low BMI",
+            "Hot environments",
+            "Overhydration"
+          ],
+          "symptoms": {
+            "mild": ["nausea", "headache", "confusion"],
+            "moderate": ["vomiting", "muscle_weakness"],
+            "severe": ["seizures", "coma", "death"]
+          },
+          "prevention": [
+            "Fluid restriction during session",
+            "Education about appropriate hydration",
+            "Avoid hypotonic fluids",
+            "Monitor environment temperature"
+          ],
+          "citations": ["atila_2024", "barnett_2021", "edwards_2023"]
+        },
+        {
+          "id": "ae_mdma_serotonin_syndrome_001",
+          "name": "Serotonin Syndrome",
+          "severity": "critical",
+          "description": "Potentially life-threatening condition from excessive serotonin",
+          "prevalence": "Rare in clinical settings; more common with polydrug use",
+          "symptoms": {
+            "autonomic": [
+              "hyperthermia",
+              "tachycardia",
+              "hypertension",
+              "diaphoresis"
+            ],
+            "neuromuscular": [
+              "muscle_rigidity",
+              "tremor",
+              "hyperreflexia"
+            ],
+            "cognitive": [
+              "agitation",
+              "confusion"
+            ],
+            "severe": [
+              "seizures",
+              "death"
+            ]
+          },
+          "triggeringCombinations": [
+            "MDMA + SSRIs",
+            "MDMA + MAOIs",
+            "MDMA + other serotonergic drugs"
+          ],
+          "citations": ["maxwell_2005", "makunts_2023", "piercey_2024"]
+        },
+        {
+          "id": "ae_mdma_nausea_001",
+          "name": "Nausea",
+          "severity": "mild_to_moderate",
+          "prevalence": "common",
+          "citations": ["papaseit_2018"]
+        }
+      ]
+    },
+    "longTerm": {
+      "psychological": [
+        {
+          "id": "ae_mdma_cognitive_lt_001",
+          "name": "Cognitive Impairment",
+          "timeframe": "long_term",
+          "controversy": "Remains under debate",
+          "prevalence": "Primarily in heavy users if exists",
+          "specificDeficits": [
+            "memory_deficits",
+            "attention_problems",
+            "verbal_learning_impairment",
+            "non_verbal_learning_impairment",
+            "psychomotor_function_deficits",
+            "executive_function_deficits",
+            "short_term_memory_issues",
+            "working_memory_issues"
+          ],
+          "duration": "Can persist up to two years after cessation",
+          "metaAnalysisFindings": "Deficits in memory and higher cognition documented",
+          "citations": ["parrott_2014", "mithoefer_2013", "baumeister_2015", "barnett_2021"]
+        },
+        {
+          "id": "ae_mdma_psychiatric_lt_001",
+          "name": "Psychiatric Problems",
+          "timeframe": "long_term",
+          "description": "Various psychiatric issues with regular use",
+          "conditions": [
+            {
+              "condition": "sleep_disturbances",
+              "prevalence": "common"
+            },
+            {
+              "condition": "mood_disorders",
+              "prevalence": "common"
+            },
+            {
+              "condition": "anxiety_disorders",
+              "prevalence": "common"
+            },
+            {
+              "condition": "increased_impulsivity",
+              "prevalence": "documented"
+            },
+            {
+              "condition": "depression",
+              "prevalence": "common"
+            }
+          ],
+          "surveyFindings": {
+            "lowMood": {
+              "value": 83,
+              "unit": "percent",
+              "context": "Regular MDMA users between sessions"
+            },
+            "impairedConcentration": {
+              "value": 80,
+              "unit": "percent",
+              "context": "Regular MDMA users between sessions"
+            }
+          },
+          "adolescentRisk": "May manifest as persistent depression or increased vulnerability to neuropsychiatric conditions",
+          "citations": ["parrott_2014", "maxwell_2005"]
+        },
+        {
+          "id": "ae_mdma_comedown_001",
+          "name": "Post-MDMA 'Blues' or 'Midweek Blues'",
+          "timeframe": "subacute",
+          "timing": "Following period of mood activation",
+          "description": "Period of neurochemical depletion",
+          "symptoms": [
+            "anhedonia",
+            "lethargy",
+            "anger",
+            "depression",
+            "low_mood"
+          ],
+          "sexDifferences": "Women report more adverse mood effects than men",
+          "observedIn": "Both MDMA and placebo groups but more pronounced with MDMA",
+          "citations": ["parrott_2014", "breeksema_2022"]
+        },
+        {
+          "id": "ae_mdma_dependence_001",
+          "name": "Dependence and Problematic Use",
+          "description": "Sense of use being 'out of control' or difficulty stopping",
+          "prevalence": {
+            "outOfControl": {
+              "value": 8,
+              "unit": "percent",
+              "context": "Participants using MDMA at least monthly in previous 6 months",
+              "comparison": "1% of those using less than monthly"
+            }
+          },
+          "addictionPotential": {
+            "highDose": "≥3 mg/kg may have addictive potential",
+            "general": "Not considered as addictive as many other drugs"
+          },
+          "citations": ["banta-green_2005", "pantoni_2022"]
+        },
+        {
+          "id": "ae_mdma_tolerance_001",
+          "name": "Tolerance",
+          "description": "Some users report need for higher doses with repeated use",
+          "citations": ["ingrosso_2024", "bonnet_2015"]
+        }
+      ],
+      "physiological": [
+        {
+          "id": "ae_mdma_neurotoxicity_001",
+          "name": "Neurotoxicity",
+          "description": "Particularly to serotonergic neurons",
+          "evidence": "Documented in laboratory animals",
+          "humanEvidence": "Some studies suggest persistent serotonergic neurotoxicity",
+          "consequence": "Long-lasting brain dysfunction",
+          "controversy": "Extent in humans debated",
+          "citations": ["curry_2018", "parrott_2014"]
+        },
+        {
+          "id": "ae_mdma_hormonal_001",
+          "name": "Hormonal Changes",
+          "description": "Powerful neurohormonal effects",
+          "affectedHormones": [
+            "cortisol (increased)",
+            "oxytocin (increased)",
+            "testosterone (increased)"
+          ],
+          "citations": ["parrott_2014"]
+        }
+      ]
+    }
+  },
+
+  "drugInteractions": [
+    {
+      "id": "interaction_mdma_ssri_001",
+      "drug1": "MDMA",
+      "drug2": "SSRIs",
+      "severity": "high",
+      "risk": "Serotonin syndrome",
+      "mechanism": "Excessive serotonin accumulation",
+      "contraindicationType": "relative",
+      "requiredPrecautions": ["Medical supervision", "Dose adjustment", "Close monitoring"],
+      "citations": ["barnett_2021", "baggott_nd"]
+    },
+    {
+      "id": "interaction_mdma_maoi_001",
+      "drug1": "MDMA",
+      "drug2": "MAOIs",
+      "severity": "critical",
+      "risk": "Severe serotonin syndrome",
+      "mechanism": "Profound increase in serotonin levels",
+      "outcome": "Potentially fatal",
+      "contraindicationType": "absolute",
+      "includingDrugs": ["moclobemide", "traditional_MAOIs"],
+      "documentation": "Repeatedly documented cases including with moclobemide for strategic potentiation",
+      "citations": ["barnett_2021", "malcolm_2022"]
+    },
+    {
+      "id": "interaction_mdma_antiretroviral_001",
+      "drug1": "MDMA",
+      "drug2": "Antiretrovirals",
+      "specific": "ritonavir",
+      "severity": "critical",
+      "risk": "Overdose",
+      "mechanism": "Liver metabolism interactions",
+      "citations": ["sarparast_2022"]
+    },
+    {
+      "id": "interaction_mdma_adrenergic_001",
+      "drug1": "MDMA",
+      "drug2": "Adrenergic agents",
+      "severity": "uncertain",
+      "note": "Interaction warrants additional research",
+      "relevance": "Hypertension and antipyretic management",
+      "citations": ["sarparast_2022"]
+    },
+    {
+      "id": "interaction_mdma_polydrug_001",
+      "drug1": "MDMA",
+      "drug2": "Multiple substances",
+      "severity": "very_high",
+      "description": "Polydrug use dramatically increases adverse effects",
+      "commonCombinations": [
+        {
+          "substance": "alcohol",
+          "prevalence": "81% of users",
+          "risks": ["dehydration", "impaired_judgment", "increased_toxicity"]
+        },
+        {
+          "substance": "stimulants",
+          "risks": ["severe_cardiovascular_stress", "hyperthermia"]
+        },
+        {
+          "substance": "cannabis",
+          "prevalence": "common"
+        }
+      ],
+      "deathStatistics": {
+        "value": 66,
+        "unit": "percent",
+        "context": "MDMA deaths in England/Wales involved another drug besides alcohol"
+      },
+      "citations": ["sarparast_2022", "makunts_2023", "atila_2024", "edwards_2023"]
+    }
+  ],
+
+  "routesOfAdministration": [
+    {
+      "id": "roa_mdma_oral_001",
+      "route": "Oral",
+      "status": "most_common",
+      "description": "Primary route for both recreational and therapeutic use",
+      "forms": ["tablets", "capsules", "powder", "crystals"],
+      "onset": {"min": 30, "max": 60, "unit": "minutes"},
+      "peak": {"min": 60, "max": 120, "unit": "minutes"},
+      "duration": {"min": 3, "max": 6, "unit": "hours"},
+      "advantages": [
+        "Convenient",
+        "Predictable onset",
+        "Standard for clinical use"
+      ],
+      "risks": [
+        {
+          "risk": "hyponatremia",
+          "context": "Especially in hot environments with dancing",
+          "mechanism": "Overhydration with hypotonic fluids",
+          "citations": ["edwards_2023", "barnett_2021", "malcolm_2022"]
+        },
+        {
+          "risk": "hyperthermia",
+          "context": "Nightclubs, festivals",
+          "mechanism": "Prolonged dancing in hot environments",
+          "citations": ["barnett_2021"]
+        }
+      ],
+      "citations": ["edwards_2023", "henriquez_2023"]
+    },
+    {
+      "id": "roa_mdma_intranasal_001",
+      "route": "Intranasal (Insufflation)",
+      "status": "less_common",
+      "description": "Being explored in clinical settings",
+      "onset": "Potentially faster than oral",
+      "duration": "Potentially shorter than oral",
+      "advantages": [
+        "Faster onset",
+        "Shorter duration of action"
+      ],
+      "risks": [
+        {
+          "risk": "potential_for_misuse",
+          "severity": "elevated",
+          "context": "In real-world settings lacking supervision",
+          "citation": "sapkota_2021"
+        },
+        {
+          "risk": "increased_road_traffic_accidents",
+          "mechanism": "Dissociation and impaired hand-eye coordination",
+          "citation": "sapkota_2021"
+        },
+        {
+          "risk": "elevated_blood_pressure",
+          "consequence": "May increase risk of heart failure and MI",
+          "citation": "sapkota_2021"
+        },
+        {
+          "risk": "nasal_irritation",
+          "severity": "mild_to_moderate"
+        }
+      ],
+      "limitedData": true,
+      "citations": ["rucker_2024", "sapkota_2021"]
+    },
+    {
+      "id": "roa_mdma_other_001",
+      "route": "Other Routes",
+      "types": ["intravenous", "intramuscular", "rectal", "sublingual", "inhalation"],
+      "status": "rare",
+      "description": "Not well-studied routes",
+      "risks": [
+        "Rapid onset potentially increasing acute adverse reactions",
+        "Unpredictable effects",
+        "Unknown safety profile"
+      ],
+      "note": "May lead to more rapid onset, increasing risk",
+      "citations": ["rucker_2024", "henriquez_2023", "dourron_2023"]
+    }
+  ],
+
+  "qualityContaminationFactors": [
+    {
+      "id": "contam_mdma_variability_001",
+      "name": "Variable MDMA Content",
+      "category": "quality",
+      "severity": "high",
+      "description": "Amount of MDMA in tablets varies significantly",
+      "prevalence": {
+        "actualMDMA": {
+          "value": 63,
+          "unit": "percent",
+          "description": "Pills contained MDMA or related analog"
+        },
+        "otherDrugs": {
+          "value": 29,
+          "unit": "percent",
+          "description": "Pills contained other identifiable drugs"
+        }
+      },
+      "trends": {
+        "increasingPotency": "Average MDMA content increasing over past decade",
+        "megadoses": "Often 2-3x typical recreational dose",
+        "highDosePills": "Up to 300mg/pill documented"
+      },
+      "consequences": [
+        "Difficult to gauge dosage",
+        "Increased risk of accidental overdose",
+        "Unpredictable effects"
+      ],
+      "citations": ["edwards_2023", "banta-green_2005"]
+    },
+    {
+      "id": "contam_mdma_adulterants_001",
+      "name": "Adulteration",
+      "category": "contamination",
+      "severity": "critical",
+      "description": "Pills sold as MDMA may contain other substances",
+      "commonAdulterants": [
+        {
+          "adulterant": "PMMA",
+          "fullName": "paramethoxymethamphetamine",
+          "risk": "More toxic than MDMA",
+          "outcome": "Fatalities documented",
+          "citation": "haden_2016"
+        },
+        {
+          "adulterant": "fentanyl",
+          "risk": "Overdose and death",
+          "prevalence": "Significant concern",
+          "citation": "rajwani_2022"
+        },
+        {
+          "adulterant": "other_opioids",
+          "risk": "Overdose and death"
+        },
+        {
+          "adulterant": "NBOMe_compounds",
+          "risk": "Severe toxicity"
+        },
+        {
+          "adulterant": "cathinones",
+          "risk": "Unpredictable effects"
+        }
+      ],
+      "citations": ["haden_2016", "rajwani_2022", "edwards_2023"]
+    },
+    {
+      "id": "contam_mdma_sourcing_001",
+      "name": "Unregulated Market Sourcing",
+      "category": "sourcing",
+      "severity": "high",
+      "description": "Illicit MDMA lacks quality control",
+      "risks": [
+        "Unknown purity",
+        "Variable potency",
+        "Presence of adulterants",
+        "Misrepresentation",
+        "No safety guarantees"
+      ],
+      "consequences": [
+        "Unpredictable effects",
+        "Increased toxicity risk",
+        "Difficulty with safe dosing"
+      ],
+      "citations": ["edwards_2023", "haden_2016"]
+    },
+    {
+      "id": "contam_mdma_testing_001",
+      "name": "Lack of Testing",
+      "category": "harm_reduction",
+      "severity": "moderate",
+      "description": "Limited access to drug testing",
+      "issues": [
+        "Drug test kits unreliable",
+        "Cannot detect all adulterants",
+        "Cannot accurately measure amount",
+        "Cannot predict individual response"
+      ],
+      "solutions": [
+        "Drug checking services",
+        "Reagent testing",
+        "Trusted sources",
+        "Test doses"
+      ]
+    }
+  ],
+
+  "harmReductionStrategies": [
+    {
+      "id": "hr_mdma_001",
+      "strategy": "Dose Management",
+      "practices": [
+        "Start with lower doses",
+        "Avoid redosing",
+        "Be aware that non-linear kinetics make redosing especially dangerous",
+        "Understand pills may contain 2-3x expected dose"
+      ]
+    },
+    {
+      "id": "hr_mdma_002",
+      "strategy": "Hydration Management",
+      "practices": [
+        "Avoid overhydration",
+        "Limit to ~500mL water per hour",
+        "Avoid hypotonic fluids",
+        "Consider fluid restriction strategies in clinical settings"
+      ],
+      "rationale": "Prevent hyponatremia",
+      "citations": ["atila_2024", "barnett_2021"]
+    },
+    {
+      "id": "hr_mdma_003",
+      "strategy": "Temperature Management",
+      "practices": [
+        "Avoid hot environments",
+        "Take cooling breaks",
+        "Monitor body temperature",
+        "Reduce physical exertion"
+      ],
+      "rationale": "Prevent hyperthermia",
+      "citations": ["curry_2018", "barnett_2021"]
+    },
+    {
+      "id": "hr_mdma_004",
+      "strategy": "Avoid Polydrug Use",
+      "emphasis": "critical",
+      "avoid": [
+        "Alcohol",
+        "Stimulants",
+        "SSRIs",
+        "MAOIs (absolute)",
+        "Other serotonergic drugs"
+      ],
+      "rationale": "Dramatically reduces risk of adverse events and death"
+    },
+    {
+      "id": "hr_mdma_005",
+      "strategy": "Substance Testing",
+      "practices": [
+        "Use reagent test kits",
+        "Access drug checking services where available",
+        "Take test doses",
+        "Purchase from trusted sources"
+      ]
+    },
+    {
+      "id": "hr_mdma_006",
+      "strategy": "Setting Management",
+      "practices": [
+        "Use in safe, controlled environments",
+        "Have trusted support person present",
+        "Avoid situations requiring driving or machinery operation",
+        "Ensure access to medical care if needed"
+      ]
+    },
+    {
+      "id": "hr_mdma_007",
+      "strategy": "Frequency Limitation",
+      "practice": "Avoid regular/frequent use",
+      "rationale": "Reduce neurotoxicity and dependence risk",
+      "recommendation": "Minimum several weeks between uses"
+    }
+  ],
+
+  "emergencyResponseProtocols": [
+    {
+      "id": "emergency_mdma_hyponatremia_001",
+      "condition": "Hyponatremia",
+      "severity": "critical",
+      "recognition": [
+        "Confusion",
+        "Nausea/vomiting",
+        "Headache",
+        "Muscle weakness",
+        "Seizures (severe)"
+      ],
+      "immediateActions": [
+        "Stop fluid intake",
+        "Seek immediate medical attention",
+        "Monitor vital signs",
+        "Hospital admission for severe cases"
+      ],
+      "treatment": [
+        "Fluid restriction",
+        "Hypertonic saline if severe",
+        "Electrolyte monitoring",
+        "ICU care if needed"
+      ]
+    },
+    {
+      "id": "emergency_mdma_hyperthermia_001",
+      "condition": "Hyperthermia",
+      "severity": "critical",
+      "recognition": [
+        "Body temperature >40°C (104°F)",
+        "Confusion",
+        "Rapid heart rate",
+        "Dry skin or profuse sweating"
+      ],
+      "immediateActions": [
+        "Move to cool environment",
+        "Remove excess clothing",
+        "Apply cooling measures (ice packs, cool water)",
+        "Call emergency services",
+        "Monitor vital signs continuously"
+      ],
+      "citations": ["curry_2018"]
+    },
+    {
+      "id": "emergency_mdma_serotonin_syndrome_001",
+      "condition": "Serotonin Syndrome",
+      "severity": "critical",
+      "recognition": [
+        "Agitation",
+        "Confusion",
+        "Rapid heart rate",
+        "High blood pressure",
+        "Muscle rigidity",
+        "Tremor",
+        "Hyperthermia"
+      ],
+      "immediateActions": [
+        "Discontinue all serotonergic agents",
+        "Call emergency services",
+        "Supportive care",
+        "Benzodiazepines for agitation",
+        "Cooling measures",
+        "IV fluids"
+      ],
+      "treatment": [
+        "ICU admission if severe",
+        "Serotonin antagonists (cyproheptadine)",
+        "Intubation if needed"
+      ]
+    }
+  ],
+
+  "therapeuticConsiderations": {
+    "mdmaAssistedPsychotherapy": {
+      "indication": "PTSD (FDA breakthrough therapy designation)",
+      "format": "MDMA administered in conjunction with psychotherapy",
+      "sessions": "Typically 2-3 MDMA sessions with preparatory and integration sessions",
+      "mechanism": "Empathogenic effects facilitate therapeutic processing of trauma",
+      "evidence": "Strong from clinical trials",
+      "otherApplications": ["anxiety", "depression", "relationship issues"]
+    },
+    "clinicalProtocols": {
+      "screening": "Comprehensive medical and psychiatric screening required",
+      "preparation": "Multiple preparation sessions to build therapeutic alliance",
+      "session": [
+        "Comfortable, safe environment",
+        "Two therapists present",
+        "Continuous monitoring",
+        "Support as needed"
+      ],
+      "integration": "Multiple integration sessions following MDMA session",
+      "monitoring": [
+        "Vital signs",
+        "Hydration status",
+        "Psychological state",
+        "Body temperature"
+      ]
+    }
+  },
+
+  "researchGaps": [
+    "Long-term effects of therapeutic MDMA use",
+    "Optimal dosing protocols",
+    "Individual differences in response",
+    "Mechanisms of neurotoxicity in humans",
+    "Long-term cognitive effects",
+    "Sex differences in effects and risks",
+    "Genetic factors influencing response",
+    "Comparative safety of different routes of administration",
+    "Effectiveness of harm reduction strategies",
+    "Prevention and treatment of comedown/blues"
+  ],
+
+  "metadata": {
+    "substanceName": "MDMA",
+    "schemaCreatedFrom": "Psychedelic Safety Institute Literature Review",
+    "primarySources": "400+ citations",
+    "lastUpdated": "2025-01-09",
+    "coverageQuality": "comprehensive_clinical_and_observational",
+    "knownLimitations": [
+      "Limited diversity in research populations",
+      "Underreporting of adverse events likely in recreational contexts",
+      "Variable methodology across studies",
+      "Limited long-term follow-up data",
+      "Most data from controlled settings; naturalistic use less studied"
+    ]
+  }
+}

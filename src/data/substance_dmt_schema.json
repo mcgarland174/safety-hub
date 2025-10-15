@@ -1,0 +1,2691 @@
+{
+  "schemaVersion": "2.0",
+  "lastUpdated": "2025-01-10",
+  
+  "substances": [
+    {
+      "id": "dmt_001",
+      "name": "N,N-Dimethyltryptamine (DMT)",
+      "aliases": ["DMT", "Dimitri", "Businessman's Trip", "Spirit Molecule"],
+      "classification": {
+        "primary": "classical_serotonergic_psychedelic",
+        "secondary": ["tryptamine", "atypical_psychedelic"],
+        "mechanism": "5-HT2A_agonist",
+        "receptorAffinity": {
+          "5HT2A": "moderate_to_high",
+          "5HT1A": "moderate",
+          "note": "Lower 5-HT2A affinity compared to 5-MeO-DMT, considered 'atypical' by some"
+        }
+      },
+      "naturalSources": [
+        {
+          "source": "Amazonian plant species",
+          "traditional_use": "Shamanic rituals, ayahuasca brew",
+          "regions": ["South America"]
+        },
+        {
+          "source": "endogenous_production",
+          "description": "Produced endogenously in mammalian brains",
+          "status": "endogenous_neurotransmitter"
+        }
+      ],
+      "syntheticProduction": {
+        "available": true,
+        "note": "Can be produced synthetically in laboratory settings"
+      },
+      "prevalenceData": {
+        "generalPopulation": {
+          "status": "relatively_low",
+          "note": "Lower prevalence compared to other psychedelics",
+          "citations": ["lancelotta_2020"]
+        },
+        "emergencyRoomVisits": {
+          "note": "Deaths from DMT alone are rare",
+          "citations": ["neumann_2024", "kopra_2025"]
+        }
+      },
+      "dosing": {
+        "oral": {
+          "note": "Inactive without MAOI co-administration",
+          "ayahuasca_daily_dose": {
+            "min": 33,
+            "max": 36,
+            "unit": "mg",
+            "context": "Total daily dose in ayahuasca brew",
+            "citations": ["neumann_2024"]
+          },
+          "requirement": "Must be combined with MAOI for oral bioavailability"
+        },
+        "intravenous": {
+          "research_range": {
+            "min": 0.05,
+            "max": 0.4,
+            "unit": "mg/kg"
+          },
+          "common_doses": [
+            {
+              "dose_range": {"min": 7, "max": 20, "unit": "mg"},
+              "per_kg_range": {"min": 0.1, "max": 0.28, "unit": "mg/kg"},
+              "tolerability": "well-tolerated",
+              "context": "Healthy volunteers"
+            }
+          ],
+          "effects_by_dose": [
+            {
+              "dose": 0.05,
+              "unit": "mg/kg",
+              "effects": "Mostly somaesthetic effects"
+            },
+            {
+              "dose": 0.1,
+              "unit": "mg/kg",
+              "effects": "Mostly somaesthetic effects"
+            },
+            {
+              "dose": 0.2,
+              "unit": "mg/kg",
+              "effects": "Strong hallucinogenic effects"
+            },
+            {
+              "dose": 0.4,
+              "unit": "mg/kg",
+              "effects": "Strong hallucinogenic effects"
+            }
+          ],
+          "onset": "Almost immediate",
+          "peak": {"value": 2, "unit": "minutes"},
+          "duration": {"value": 20, "unit": "minutes"},
+          "citations": ["strassman_1994", "engel_2024"]
+        },
+        "intramuscular": {
+          "onset": "Slightly slower than IV",
+          "intensity": "Generally less intense than IV route",
+          "citations": ["barker_2022", "falchi-carvalho_2024"]
+        },
+        "intranasal": {
+          "note": "Free-base DMT is inactive intranasally",
+          "time_to_peak": {"min": 8, "max": 10, "unit": "minutes"},
+          "promise": "Promising for parenteral applications",
+          "citations": ["rucker_2024", "barker_2022"]
+        },
+        "inhalation": {
+          "recreational_typical": {"min": 6, "max": 20, "unit": "mg"},
+          "research_range": {"min": 5, "max": 60, "unit": "mg"},
+          "onset": "Seconds to minutes",
+          "note": "Most common route outside research contexts",
+          "citations": ["engel_2024", "falchi-carvalho_2024"]
+        },
+        "minimum_research_dose": {
+          "value": 1,
+          "unit": "mg",
+          "context": "Lowest dose identified for research settings",
+          "citations": ["rucker_2023"]
+        },
+        "dose_response_characteristics": {
+          "curve": "steep",
+          "note": "Steep dose-response curve",
+          "citations": ["lancelotta_2020", "engel_2024"]
+        },
+        "weightDependence": true,
+        "notes": "Dosing often calculated per kilogram body weight in clinical settings"
+      },
+      "pharmacokinetics": {
+        "absorption": {
+          "routes": [
+            "oral_with_MAOI",
+            "intravenous",
+            "intramuscular",
+            "intranasal",
+            "inhalation"
+          ],
+          "note": "Route significantly affects onset and duration"
+        },
+        "onset": {
+          "inhalation": {"min": 0, "max": 2, "unit": "minutes"},
+          "intravenous": {"min": 0, "max": 1, "unit": "minutes"},
+          "intramuscular": {"value": 2, "max": 5, "unit": "minutes"},
+          "intranasal": {"value": 8, "max": 10, "unit": "minutes"},
+          "oral_with_MAOI": {"min": 30, "max": 60, "unit": "minutes"}
+        },
+        "peak": {
+          "inhalation": {"value": 2, "unit": "minutes"},
+          "intravenous": {"value": 2, "unit": "minutes"}
+        },
+        "duration": {
+          "inhalation": {"min": 10, "max": 60, "unit": "minutes"},
+          "intravenous": {"min": 10, "max": 30, "unit": "minutes"},
+          "oral_with_MAOI": {"min": 240, "max": 360, "unit": "minutes"}
+        },
+        "metabolism": "Rapid metabolism via monoamine oxidase",
+        "elimination": "renal",
+        "unique_characteristics": [
+          "Brief duration of action",
+          "Extreme subjective intensity relative to dosage",
+          "Rapid metabolism",
+          "Requires MAOI for oral bioavailability"
+        ]
+      },
+      "subjectiveEffectTimeline": {
+        "acute": {
+          "timeframe": "0-30 minutes",
+          "predominantEffects": [
+            "breakthrough_experiences",
+            "extreme_alterations_spatiotemporal_perception",
+            "sense_of_transportation",
+            "immersion_in_alternate_dimensions",
+            "entity_encounters",
+            "mystical_experiences",
+            "ego_death",
+            "complex_dynamic_visuals",
+            "heightened_emotion",
+            "increased_self_awareness"
+          ]
+        },
+        "subacute": {
+          "timeframe": "Minutes to hours post-experience",
+          "predominantEffects": [
+            "afterglow",
+            "continued_processing",
+            "emotional_integration"
+          ]
+        },
+        "longTerm": {
+          "timeframe": "Days to weeks post",
+          "effects": [
+            "potential_reactivations",
+            "flashbacks",
+            "integration_challenges",
+            "behavior_change_opportunities"
+          ]
+        }
+      },
+      "toleranceDevelopment": {
+        "rate": "minimal",
+        "crossTolerance": ["psilocybin", "LSD", "mescaline"],
+        "note": "May lead to sensitization rather than tolerance with repeated use",
+        "duration": "Unknown reset period",
+        "citations": ["dourron_2023"]
+      },
+      "addictionPotential": "minimal",
+      "physiologicalDependence": "none_to_minimal",
+      "psychologicalDependence": "minimal",
+      "therapeuticApplications": {
+        "investigated_conditions": [
+          "treatment_resistant_depression",
+          "mood_disorders"
+        ],
+        "advantages": [
+          "Rapid onset",
+          "Short duration",
+          "Reliably produces mystical experiences",
+          "Cost and time-effective potential",
+          "More scalable than longer-acting psychedelics"
+        ],
+        "status": "Under investigation",
+        "citations": ["falchi-carvalho_2024", "eckernas_2022", "dourron_2023"]
+      }
+    }
+  ],
+
+  "riskFactors": [
+    {
+      "id": "rf_dmt_dosage_001",
+      "name": "High Dosage and Unknown Potency",
+      "category": "dosing",
+      "subcategory": "dmt_specific",
+      "description": "Higher doses and unknown quantities/purity of DMT",
+      "severity": "high",
+      "substanceInteractions": [
+        {
+          "substanceId": "dmt_001",
+          "mechanism": "Steep dose-response curve increases risk of overwhelming experiences",
+          "riskLevel": "high",
+          "specificRisks": [
+            "Challenging experiences",
+            "Extreme psychological distress",
+            "Accidental overdosing",
+            "Unpredictable effects from variable purity"
+          ],
+          "context": "Extreme dosing may indicate reckless behavior or underlying mental health issues",
+          "illicitMarketRisks": [
+            "Lack of quality control",
+            "Variable potency",
+            "Difficulty in accurate dosing",
+            "Accidental overdose"
+          ],
+          "citations": ["bremler_2023", "malcolm_2022", "lancelotta_2020", "engel_2024"],
+          "evidenceQuality": "moderate_to_strong"
+        }
+      ],
+      "prevalenceInTrials": "Controlled dosing in research settings",
+      "clinicalSignificance": "Critical factor in recreational use adverse events",
+      "monitoringRecommendations": [
+        "Use pharmaceutical-grade DMT when possible",
+        "Employ accurate dosing methods",
+        "Start with lower doses",
+        "Test substances for purity"
+      ]
+    },
+    {
+      "id": "rf_dmt_psychiatric_001",
+      "name": "Psychiatric History",
+      "category": "psychiatric",
+      "subcategory": "dmt_specific",
+      "description": "History of psychiatric illness or treatment as DMT risk factor",
+      "severity": "high",
+      "substanceInteractions": [
+        {
+          "substanceId": "dmt_001",
+          "mechanism": "DMT may trigger or exacerbate underlying psychiatric conditions",
+          "riskLevel": "high",
+          "specificConditions": [
+            {
+              "condition": "schizophrenia",
+              "contraindicationType": "absolute",
+              "severity": "critical"
+            },
+            {
+              "condition": "schizoaffective_disorder",
+              "contraindicationType": "absolute",
+              "severity": "critical"
+            },
+            {
+              "condition": "psychotic_depression",
+              "contraindicationType": "absolute",
+              "severity": "critical"
+            },
+            {
+              "condition": "mania",
+              "contraindicationType": "absolute_if_active",
+              "severity": "critical"
+            },
+            {
+              "condition": "poorer_premorbid_adjustment",
+              "contraindicationType": "relative",
+              "severity": "moderate_to_high",
+              "note": "Increases potential risk of adverse reactions"
+            }
+          ],
+          "citations": ["sabe_2024", "white_2024"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "recommendations": [
+        "Comprehensive psychiatric screening required",
+        "Avoid use in active psychotic or manic states",
+        "Careful consideration of family history",
+        "Enhanced monitoring if proceeding with relative contraindications"
+      ]
+    },
+    {
+      "id": "rf_dmt_polydrug_001",
+      "name": "DMT Polysubstance Use",
+      "category": "behavioral",
+      "subcategory": "substance_use",
+      "description": "Concurrent use of DMT with other substances",
+      "severity": "high_to_critical",
+      "substanceInteractions": [
+        {
+          "substanceId": "dmt_001",
+          "mechanism": "Unpredictable and dangerous interactions",
+          "riskLevel": "high_to_critical",
+          "specificCombinations": [
+            {
+              "substances": ["DMT", "MDMA"],
+              "effect": "Fatal adverse events documented",
+              "severity": "critical",
+              "citations": ["malcolm_2022", "kopra_2025"]
+            },
+            {
+              "substances": ["DMT", "5-MeO-DMT"],
+              "effect": "Fatal adverse events documented",
+              "severity": "critical",
+              "citations": ["malcolm_2022", "kopra_2025"]
+            },
+            {
+              "substances": ["DMT", "MAOIs"],
+              "effect": "Serotonin syndrome risk",
+              "severity": "critical",
+              "note": "Unless part of controlled ayahuasca preparation",
+              "citations": ["malcolm_2022", "dos_santos_2024"]
+            },
+            {
+              "substances": ["DMT", "tyramine_containing_foods"],
+              "effect": "Hypertension when combined with MAOIs",
+              "severity": "high",
+              "citations": ["dos_santos_2024"]
+            },
+            {
+              "substances": ["DMT", "other_substances_of_abuse"],
+              "effect": "Increased risk of adverse events",
+              "severity": "high",
+              "citations": ["white_2024", "dos_santos_2018", "morton_2023"]
+            }
+          ],
+          "citations": ["kopra_2025", "malcolm_2022"]
+        }
+      ],
+      "deathData": {
+        "note": "Most psychedelic-related deaths involve multiple implicated drugs",
+        "polydrugInvolvement": "Primary theme in psychedelic-related deaths",
+        "citations": ["kopra_2025"]
+      },
+      "harmReductionStrategies": [
+        "Avoid combining DMT with other substances",
+        "Substance testing",
+        "Education about dangerous interactions",
+        "Medication review before use",
+        "Special caution with MAOIs and SSRIs"
+      ]
+    },
+    {
+      "id": "rf_dmt_behavioral_001",
+      "name": "DMT-Specific Behavioral Risks",
+      "category": "behavioral",
+      "subcategory": "dmt_unique",
+      "description": "Unique behavioral risks associated with DMT use",
+      "severity": "moderate_to_high",
+      "specificRisks": [
+        {
+          "risk": "lack_of_awareness",
+          "description": "Users may lack awareness or memory of behaviors during acute effects",
+          "consequence": "Unsafe actions without realization",
+          "prevalence": "Common",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "risk": "odd_behaviors",
+          "description": "Muscle jerking, twitching, abnormal vocalizations",
+          "consequences": ["Potential injury", "Distress to observers"],
+          "citations": ["dourron_2023"]
+        },
+        {
+          "risk": "extreme_behaviors",
+          "description": "Vomiting, screaming, removing clothes",
+          "context": "Can occur during acute effects",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "risk": "hypersexual_experiences",
+          "description": "Highly sensual or hypersexual experiences, spontaneous orgasms",
+          "note": "Anecdotal reports",
+          "boundary_concerns": "May increase vulnerability to exploitation",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "risk": "self_injurious_behavior",
+          "description": "Self-harm during experience",
+          "prevalence": "Rare but documented",
+          "severity": "high",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "risk": "physical_danger",
+          "description": "Risk of physical harm due to involuntary bodily movements",
+          "mitigation": "Supervision and safe environment crucial",
+          "citations": ["dourron_2023"]
+        }
+      ],
+      "reactivationsFlashbacks": {
+        "description": "Re-experiencing drug effects after acute experience subsided",
+        "prevalence": {
+          "variableEstimates": {"min": 15, "max": 77, "unit": "percent"},
+          "naturalisticSettings": {"min": 27, "max": 73, "unit": "percent"},
+          "clinicalSettings": {"value": 25, "unit": "percent", "study": "treatment-resistant depression"},
+          "note": "More common with DMT than typical psychedelics"
+        },
+        "characteristics": {
+          "duration": "Brief (seconds)",
+          "components": ["Visual", "Auditory", "Emotional"],
+          "onset": "Can be spontaneous",
+          "timing": "More frequent at night or when drifting to sleep",
+          "valence": "Most positive or neutral, some negatively valanced"
+        },
+        "clinicalSignificance": {
+          "distress": "Minority report distress prompting psychological help",
+          "persistence": "Some reports of continued flashbacks months after use"
+        },
+        "routeAssociation": {
+          "note": "May be more common after vaporized administration"
+        },
+        "citations": ["dourron_2023", "ortiz_bernal_2022", "ramaekers_2025"]
+      },
+      "recommendations": [
+        "Never use DMT alone",
+        "Have trained facilitator or sitter present",
+        "Ensure safe physical environment",
+        "Remove hazards from setting",
+        "Continuous monitoring during session",
+        "Education about potential behavioral effects"
+      ]
+    },
+    {
+      "id": "rf_dmt_route_001",
+      "name": "Route of Administration Risks",
+      "category": "pharmacological",
+      "subcategory": "administration",
+      "description": "Specific risks associated with different DMT administration routes",
+      "severity": "variable",
+      "routes": [
+        {
+          "route": "smoking_vaporizing",
+          "risks": [
+            {
+              "risk": "rapid_overwhelming_onset",
+              "severity": "high",
+              "description": "Very fast onset and intense effects",
+              "consequences": [
+                "Overwhelming experience especially for inexperienced users",
+                "Heightened anxiety or panic",
+                "Difficulty preparing psychologically"
+              ],
+              "citations": ["fradkin_2024", "bodnar_2019", "james_2024", "white_2024"]
+            },
+            {
+              "risk": "dosing_difficulty",
+              "severity": "high",
+              "description": "Difficult to accurately measure dose",
+              "consequences": [
+                "Accidental overdosing",
+                "Unpredictable effects",
+                "Variable potency between uses"
+              ],
+              "citations": ["engel_2024", "miller_2024"]
+            },
+            {
+              "risk": "respiratory_irritation",
+              "severity": "low_to_moderate",
+              "description": "Harsh on airways",
+              "consequences": [
+                "Coughing during inhalation",
+                "Mild hoarseness",
+                "Airway hyperresponsiveness",
+                "Not always well-tolerated"
+              ],
+              "citations": ["barker_2022", "falchi-carvalho_2024", "engel_2024"]
+            }
+          ],
+          "recommendations": [
+            "Use electric combustion methods over flame combustion",
+            "Inhale while seated",
+            "Have sitter present for immediate onset",
+            "Start with lower doses"
+          ]
+        },
+        {
+          "route": "intravenous",
+          "risks": [
+            {
+              "risk": "extremely_rapid_intense_onset",
+              "severity": "high",
+              "description": "Most rapid onset and intense effects of any route",
+              "consequences": [
+                "Very high intensity experience",
+                "Shortest duration but most intense",
+                "Highest risk of acute cardiovascular reactions"
+              ],
+              "citations": ["barker_2022", "falchi-carvalho_2024", "fradkin_2024"]
+            },
+            {
+              "risk": "cardiovascular_stress",
+              "severity": "moderate_to_high",
+              "description": "Rapid increase in plasma concentration",
+              "consequences": [
+                "Acute cardiovascular reactions",
+                "Sudden blood pressure changes",
+                "Rapid heart rate increase"
+              ],
+              "citations": ["barker_2022"]
+            }
+          ],
+          "recommendations": [
+            "Only in controlled clinical settings",
+            "Continuous cardiovascular monitoring",
+            "Medical personnel present",
+            "Emergency protocols in place"
+          ]
+        },
+        {
+          "route": "intramuscular",
+          "risks": [
+            {
+              "risk": "moderately_rapid_onset",
+              "severity": "moderate",
+              "description": "Slightly slower than IV but still rapid",
+              "consequences": [
+                "Less intense than IV",
+                "More controlled than IV but still powerful"
+              ],
+              "citations": ["barker_2022", "falchi-carvalho_2024"]
+            }
+          ],
+          "recommendations": [
+            "Clinical setting preferred",
+            "Medical supervision",
+            "Monitoring during and after administration"
+          ]
+        },
+        {
+          "route": "intranasal",
+          "risks": [
+            {
+              "risk": "variable_absorption",
+              "severity": "low_to_moderate",
+              "description": "Free-base DMT is inactive intranasally",
+              "note": "Rapid absorption with appropriate formulation",
+              "citations": ["barker_2022", "rucker_2024"]
+            }
+          ],
+          "promise": "Promising route for parenteral applications with proper formulation"
+        },
+        {
+          "route": "oral",
+          "risks": [
+            {
+              "risk": "requires_MAOI",
+              "severity": "critical",
+              "description": "Not effective without MAOI co-administration",
+              "specificRisks": [
+                "Serotonin syndrome when combined with MAOIs",
+                "Dangerous drug interactions",
+                "Hypertensive crisis with tyramine-containing foods",
+                "Longer duration increases supervision needs"
+              ],
+              "contraindicationType": "absolute_without_proper_supervision",
+              "citations": ["engel_2024", "james_2024", "dos_santos_2024", "malcolm_2022", "barker_2022"]
+            }
+          ],
+          "recommendations": [
+            "Only in controlled ayahuasca ceremony or clinical setting",
+            "Dietary restrictions (tyramine-free diet)",
+            "Medication review for contraindications",
+            "Longer duration requires extended supervision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rf_dmt_context_001",
+      "name": "Lack of Proper Preparation and Guidance",
+      "category": "contextual",
+      "subcategory": "preparation",
+      "description": "Insufficient preparation for DMT experience",
+      "severity": "moderate_to_high",
+      "specificRisks": [
+        "Unprepared for extreme intensity and rapid onset",
+        "Lack of understanding of unique DMT phenomenology",
+        "Insufficient rapport with facilitator",
+        "Inadequate set and setting considerations"
+      ],
+      "substanceInteractions": [
+        {
+          "substanceId": "dmt_001",
+          "riskLevel": "moderate_to_high",
+          "note": "Particularly problematic for first-time users given DMT's unique characteristics",
+          "citations": ["white_2024", "ramaekers_2025"]
+        }
+      ]
+    }
+  ],
+
+  "medicalConditions": [
+    {
+      "id": "cond_dmt_cardiovascular_001",
+      "name": "Cardiovascular Conditions (DMT-Specific)",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "icd10": "I00-I99",
+      "description": "Unstable or severe cardiovascular disease as contraindication for DMT",
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "absolute_if_unstable",
+          "relativeIfStable": false,
+          "specificRisks": [
+            {
+              "risk": "acute_cardiovascular_events",
+              "severity": "critical",
+              "mechanism": "DMT causes increases in blood pressure and heart rate"
+            }
+          ],
+          "physiologicalEffects": {
+            "bloodPressure": {
+              "increase": "moderate",
+              "nature": "Generally mild and transient",
+              "monitoring": "Real-time cardiovascular monitoring critical"
+            },
+            "heartRate": {
+              "increase": "moderate",
+              "nature": "Generally mild and transient",
+              "habituation": "Heart rate increases habituated within 15 minutes in extended DMT infusion study"
+            },
+            "bodyTemperature": {
+              "increase": "mild"
+            }
+          },
+          "sympathomimeticEffects": {
+            "present": true,
+            "note": "DMT has sympathomimetic effects requiring cardiovascular monitoring"
+          },
+          "citations": ["falchi-carvalho_2024", "bodnar_2019", "ramaekers_2025", "strassman_1994", "luan_2024"],
+          "evidenceQuality": "moderate_to_strong"
+        }
+      ],
+      "screening": "Cardiovascular assessment mandatory",
+      "recommendations": [
+        "Absolute contraindication if cardiovascular disease is unstable",
+        "Real-time cardiovascular monitoring during sessions",
+        "Medical personnel present",
+        "Emergency protocols in place",
+        "Baseline cardiovascular assessment"
+      ]
+    },
+    {
+      "id": "cond_dmt_epilepsy_001",
+      "name": "Epilepsy",
+      "category": "neurological",
+      "icd10": "G40",
+      "description": "Epilepsy as absolute contraindication for DMT",
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "absolute",
+          "specificRisks": [
+            {
+              "risk": "seizure_induction",
+              "severity": "critical",
+              "note": "Theoretical concern, basis for exclusion from trials"
+            }
+          ],
+          "citations": ["bodnar_2019"],
+          "evidenceQuality": "theoretical_strong_consensus"
+        }
+      ],
+      "familyHistory": {
+        "relevant": true,
+        "contraindicationType": "relative",
+        "note": "Family history of epilepsy also warrants caution"
+      }
+    },
+    {
+      "id": "cond_dmt_pregnancy_001",
+      "name": "Pregnancy",
+      "category": "reproductive",
+      "icd10": "Z33",
+      "description": "Pregnancy as absolute contraindication for DMT",
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "absolute",
+          "specificRisks": [
+            {
+              "risk": "abortifacient_effects",
+              "severity": "critical",
+              "evidence": "Animal models with higher ayahuasca doses",
+              "citations": ["white_2024"]
+            },
+            {
+              "risk": "teratogenic_effects",
+              "severity": "critical",
+              "evidence": "Animal models with higher ayahuasca doses",
+              "citations": ["white_2024"]
+            }
+          ],
+          "citations": ["bodnar_2019", "white_2024"],
+          "evidenceQuality": "strong"
+        }
+      ]
+    },
+    {
+      "id": "cond_dmt_breastfeeding_001",
+      "name": "Breastfeeding",
+      "category": "reproductive",
+      "description": "Breastfeeding as relative contraindication for DMT",
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "relative",
+          "specificRisks": [
+            {
+              "risk": "unknown_transfer_to_breast_milk",
+              "severity": "moderate_to_high",
+              "note": "Not known whether DMT passes into breast milk or its effect on infant"
+            }
+          ],
+          "citations": ["marazziti_2024"],
+          "evidenceQuality": "insufficient_data",
+          "recommendation": "Use should be avoided during breastfeeding"
+        }
+      ]
+    },
+    {
+      "id": "cond_dmt_psychotic_disorders_001",
+      "name": "Psychotic Disorders",
+      "category": "psychiatric",
+      "icd10": "F20-F29",
+      "description": "Psychotic disorders as absolute contraindication for DMT",
+      "subtypes": [
+        {
+          "type": "Schizophrenia",
+          "icd10": "F20",
+          "contraindicationType": "absolute",
+          "riskLevel": "critical"
+        },
+        {
+          "type": "Schizoaffective disorder",
+          "icd10": "F25",
+          "contraindicationType": "absolute",
+          "riskLevel": "critical"
+        },
+        {
+          "type": "Psychotic depression",
+          "icd10": "F32.3/F33.3",
+          "contraindicationType": "absolute",
+          "riskLevel": "critical"
+        }
+      ],
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "absolute",
+          "specificRisks": [
+            {
+              "risk": "psychotic_episode_exacerbation",
+              "prevalence": "Minimal risk of psychosis from DMT alone",
+              "severity": "critical",
+              "vulnerablePopulations": [
+                "Pre-existing psychiatric vulnerabilities",
+                "Family history of psychosis",
+                "Concurrent substance use"
+              ]
+            }
+          ],
+          "citations": ["sabe_2024", "white_2024", "henningfield_2023", "bodnar_2019"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "familyHistory": {
+        "relevant": true,
+        "contraindicationType": "absolute_for_first_degree",
+        "note": "First or second-degree relatives with psychosis",
+        "citations": ["rosenblat_2023"]
+      }
+    },
+    {
+      "id": "cond_dmt_bipolar_001",
+      "name": "Bipolar Disorder (DMT-Specific)",
+      "category": "psychiatric",
+      "icd10": "F31",
+      "subtypes": [
+        {
+          "type": "Active mania or hypomania",
+          "contraindicationType": "absolute",
+          "riskLevel": "critical"
+        },
+        {
+          "type": "Non-psychotic bipolar disorder (stable)",
+          "contraindicationType": "relative",
+          "riskLevel": "moderate_to_high",
+          "note": "Cautious approach warranted; documented evidence of switch to mania with psilocybin"
+        }
+      ],
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "absolute_if_active",
+          "relativeIfStable": true,
+          "specificRisks": [
+            {
+              "risk": "manic_episode_induction",
+              "severity": "high",
+              "note": "Risk extrapolated from other psychedelics; similar risk may exist with DMT"
+            }
+          ],
+          "citations": ["morton_2023", "bodnar_2019"],
+          "evidenceQuality": "moderate_extrapolated"
+        }
+      ],
+      "familyHistory": {
+        "relevant": true,
+        "contraindicationType": "absolute_for_first_degree",
+        "riskMultiplier": "elevated"
+      }
+    },
+    {
+      "id": "cond_dmt_anxiety_disorders_001",
+      "name": "Anxiety Disorders",
+      "category": "psychiatric",
+      "icd10": "F40-F48",
+      "description": "Pre-existing anxiety disorders as relative contraindication",
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "relative",
+          "specificRisks": [
+            {
+              "risk": "transient_anxiety_exacerbation",
+              "prevalence": "Common, especially prior to administration and during onset",
+              "severity": "moderate",
+              "note": "While DMT is being investigated for reducing anxiety, it may cause transient anxiety"
+            }
+          ],
+          "citations": ["ramaekers_2025", "white_2024"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "recommendations": [
+        "Careful risk-benefit assessment",
+        "Enhanced preparation",
+        "Anxiety management techniques training",
+        "Close monitoring during session"
+      ]
+    },
+    {
+      "id": "cond_dmt_organic_cerebral_001",
+      "name": "Organic-Toxic Cerebral Disorder",
+      "category": "neurological",
+      "description": "Organic-toxic cerebral disorder as absolute contraindication",
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "absolute",
+          "citations": ["bodnar_2019"],
+          "evidenceQuality": "strong_consensus"
+        }
+      ]
+    },
+    {
+      "id": "cond_dmt_maoi_use_001",
+      "name": "Concomitant MAOI Use",
+      "category": "pharmacological",
+      "description": "Use of MAOIs as contraindication unless in controlled protocol",
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "absolute_unless_controlled",
+          "specificRisks": [
+            {
+              "risk": "serotonin_syndrome",
+              "severity": "critical",
+              "mechanism": "Excessive serotonin accumulation",
+              "exception": "MAOIs are part of controlled ayahuasca preparation"
+            }
+          ],
+          "citations": ["dos_santos_2024", "malcolm_2022", "barker_2022"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "medications": [
+        "Many antidepressants (MAOIs)",
+        "Certain Parkinson's medications",
+        "Other medications with MAOI activity"
+      ],
+      "recommendations": [
+        "Comprehensive medication review required",
+        "Absolute contraindication unless part of controlled ayahuasca protocol",
+        "If ayahuasca context: experienced supervision, dietary restrictions",
+        "Clear protocols for MAOI washout period if transitioning"
+      ]
+    },
+    {
+      "id": "cond_dmt_unstable_medical_001",
+      "name": "Unstable Medical Conditions",
+      "category": "physiological",
+      "description": "Various unstable medical conditions as relative contraindications",
+      "substanceRisks": [
+        {
+          "substanceId": "dmt_001",
+          "contraindicationType": "relative",
+          "conditions": [
+            "Uncontrolled respiratory issues",
+            "Severe liver impairment",
+            "Severe kidney impairment",
+            "Uncontrolled diabetes",
+            "Other unstable systemic conditions"
+          ],
+          "citations": ["marazziti_2024"],
+          "evidenceQuality": "moderate_consensus"
+        }
+      ],
+      "recommendations": [
+        "Comprehensive medical evaluation",
+        "Risk-benefit assessment",
+        "Medical monitoring if proceeding",
+        "Stabilization of condition preferred before use"
+      ]
+    }
+  ],
+
+  "adverseEvents": [
+    {
+      "id": "ae_dmt_anxiety_001",
+      "name": "Acute Anxiety (DMT-Specific)",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Transient anxiety during DMT experience",
+      "temporalPattern": {
+        "onset": "Prior to administration and during onset of effects",
+        "duration": "Typically resolves as experience progresses",
+        "peak": "First 5-10 minutes of experience"
+      },
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "prevalence": {
+            "description": "Frequently reported",
+            "timing": "Particularly prior to administration and during onset",
+            "context": "More common in first 10-15 minutes"
+          },
+          "extendedInfusion": {
+            "finding": "Anxiety ratings remained low during extended DMT experiences",
+            "citation": "luan_2024"
+          },
+          "management": {
+            "primary": "reassurance_and_grounding",
+            "effectiveness": "Usually sufficient",
+            "techniques": [
+              "Verbal reassurance",
+              "Breathing guidance",
+              "Calm presence of facilitator"
+            ]
+          },
+          "citations": ["white_2024", "ramaekers_2025", "luan_2024"]
+        }
+      ],
+      "riskFactors": [
+        "First-time use",
+        "High dose",
+        "Rapid onset",
+        "Lack of preparation",
+        "History of anxiety disorders"
+      ],
+      "clinicalSignificance": "Usually transient; rarely requires pharmacological intervention"
+    },
+    {
+      "id": "ae_dmt_altered_perceptions_001",
+      "name": "Altered Perceptions and Hallucinations",
+      "category": "perceptual",
+      "timeframe": "acute",
+      "severity": "moderate_to_high_intensity",
+      "description": "Visual and sensory alterations during DMT experience",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "manifestations": [
+            {
+              "type": "visual_illusions",
+              "description": "Distortions of visual perception",
+              "prevalence": "Very common"
+            },
+            {
+              "type": "hallucinations",
+              "description": "Complex visual hallucinations, entity encounters",
+              "prevalence": "Very common",
+              "uniqueness": "Particularly characteristic of DMT"
+            },
+            {
+              "type": "body_image_distortion",
+              "description": "Altered sense of body and physical boundaries",
+              "prevalence": "Common"
+            },
+            {
+              "type": "breakthrough_experiences",
+              "description": "Sense of transportation to alternate dimensions",
+              "prevalence": "Common at higher doses"
+            },
+            {
+              "type": "entity_encounters",
+              "description": "Perception of sentient presences or beings",
+              "prevalence": "Common",
+              "uniqueness": "Particularly characteristic of DMT"
+            },
+            {
+              "type": "white_out",
+              "description": "Complete visual whiteness, loss of normal perception",
+              "prevalence": "Less common",
+              "severity": "High intensity"
+            }
+          ],
+          "citations": ["falchi-carvalho_2024", "barker_2022", "dourron_2023", "luan_2024", "fradkin_2024"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "clinicalSignificance": "Expected effects; part of therapeutic/experiential process",
+      "management": [
+        "Preparation about what to expect",
+        "Safe, supervised environment",
+        "Reassurance during experience",
+        "Integration support after"
+      ]
+    },
+    {
+      "id": "ae_dmt_behavioral_changes_001",
+      "name": "Odd Behavioral Changes",
+      "category": "behavioral",
+      "timeframe": "acute",
+      "severity": "moderate",
+      "description": "Unusual behaviors during DMT experience",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "manifestations": [
+            {
+              "behavior": "abnormal_vocalizations",
+              "prevalence": "Common",
+              "examples": ["Unusual sounds", "Vocalization without words"]
+            },
+            {
+              "behavior": "screaming",
+              "prevalence": "Less common",
+              "severity": "Moderate"
+            },
+            {
+              "behavior": "removing_clothes",
+              "prevalence": "Uncommon",
+              "severity": "Moderate",
+              "risk": "Vulnerability, exposure"
+            },
+            {
+              "behavior": "vomiting",
+              "prevalence": "More common with oral ayahuasca",
+              "context": "Particularly with MAOI combination"
+            },
+            {
+              "behavior": "spontaneous_orgasms",
+              "prevalence": "Rare",
+              "context": "Anecdotal reports of hypersexual experiences",
+              "risk": "Vulnerability to exploitation"
+            },
+            {
+              "behavior": "self_injurious_behavior",
+              "prevalence": "Rare",
+              "severity": "High",
+              "risk": "Physical harm"
+            }
+          ],
+          "lossOfControl": {
+            "description": "Users may lack awareness or memory of behaviors",
+            "implications": "Unable to regulate actions during acute effects",
+            "safety": "Requires close supervision"
+          },
+          "citations": ["dourron_2023"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "riskFactors": [
+        "High doses",
+        "Lack of supervision",
+        "Unsafe environment",
+        "Polysubstance use"
+      ],
+      "prevention": [
+        "Continuous supervision",
+        "Safe physical environment",
+        "Removal of hazards",
+        "Clear boundaries communicated beforehand"
+      ],
+      "clinicalSignificance": "Generally transient but requires active management"
+    },
+    {
+      "id": "ae_dmt_paranoia_001",
+      "name": "Paranoia",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Brief paranoid thoughts during DMT session",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "prevalence": {
+            "value": 10,
+            "unit": "percent",
+            "comparison": "less_than",
+            "description": "Affects fewer than 10% of patients",
+            "duration": "Brief"
+          },
+          "citations": ["sabe_2024"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "management": [
+        "Reassurance",
+        "Grounding techniques",
+        "Calm environment"
+      ]
+    },
+    {
+      "id": "ae_dmt_derealization_001",
+      "name": "Derealization",
+      "category": "psychological",
+      "timeframe": "acute_and_potentially_extended",
+      "severity": "moderate",
+      "description": "Loss of connection with reality during and potentially after DMT use",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "acute": {
+            "prevalence": "Common during acute experience",
+            "nature": "Expected part of psychedelic state"
+          },
+          "extended": {
+            "prevalence": "Some users report long-term feeling",
+            "context": "Among those with negative experiences",
+            "citations": ["bremler_2023"]
+          }
+        }
+      ],
+      "riskFactors": [
+        "Challenging experiences",
+        "Lack of integration support",
+        "Pre-existing dissociative tendencies"
+      ],
+      "management": [
+        "Psychoeducation about transient nature",
+        "Integration therapy",
+        "Grounding practices"
+      ]
+    },
+    {
+      "id": "ae_dmt_cardiovascular_001",
+      "name": "Cardiovascular Effects",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Transient increases in heart rate and blood pressure",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "effects": {
+            "heartRate": {
+              "change": "increase",
+              "magnitude": "moderate",
+              "nature": "Generally mild and transient",
+              "habituation": "Habituated within 15 minutes in extended infusion study",
+              "citations": ["luan_2024"]
+            },
+            "bloodPressure": {
+              "change": "increase",
+              "magnitude": "moderate",
+              "nature": "Generally mild and transient"
+            },
+            "bradycardia": {
+              "prevalence": "Rare",
+              "type": "Asymptomatic",
+              "citation": "white_2024"
+            }
+          },
+          "monitoring": {
+            "requirement": "Real-time cardiovascular monitoring critical",
+            "reason": "DMT's sympathomimetic effects"
+          },
+          "citations": ["ramaekers_2025", "strassman_1994", "falchi-carvalho_2024", "white_2024"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "riskFactors": [
+        "Pre-existing cardiovascular disease",
+        "High doses",
+        "Rapid IV administration"
+      ],
+      "clinicalSignificance": "Usually benign in healthy individuals; concerning in those with cardiovascular disease",
+      "management": [
+        "Pre-screening for cardiovascular conditions",
+        "Continuous monitoring during session",
+        "Medical personnel availability",
+        "Emergency protocols"
+      ]
+    },
+    {
+      "id": "ae_dmt_headache_001",
+      "name": "Headache",
+      "category": "physiological",
+      "subcategory": "neurological",
+      "timeframe": "acute_and_postacute",
+      "severity": "mild",
+      "description": "Transient headaches during and after DMT",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "timing": [
+            "During onset of effects",
+            "After resolution of effects"
+          ],
+          "nature": "Transient",
+          "prevalence": "Sometimes reported",
+          "citations": ["white_2024", "rucker_2023"]
+        }
+      ],
+      "management": [
+        "Usually self-limiting",
+        "Standard analgesics if needed",
+        "Hydration"
+      ]
+    },
+    {
+      "id": "ae_dmt_nausea_vomiting_001",
+      "name": "Nausea and Vomiting",
+      "category": "physiological",
+      "subcategory": "gastrointestinal",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Gastrointestinal distress during DMT experience",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "prevalence": {
+            "description": "Commonly reported adverse effect",
+            "route_specific": "Particularly with oral ayahuasca consumption"
+          },
+          "citations": ["white_2024", "rucker_2023"]
+        }
+      ],
+      "routeSpecific": {
+        "oral_ayahuasca": {
+          "prevalence": "Very common",
+          "cultural_context": "Sometimes considered purgative/cleansing in traditional contexts"
+        },
+        "other_routes": {
+          "prevalence": "Less common but can occur"
+        }
+      },
+      "management": [
+        "Antiemetics if severe",
+        "Comfortable positioning",
+        "Preparation for possibility",
+        "Bucket/basin available"
+      ]
+    },
+    {
+      "id": "ae_dmt_neuromuscular_001",
+      "name": "Neuromuscular Effects",
+      "category": "physiological",
+      "subcategory": "neuromuscular",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Muscle-related effects during DMT",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "manifestations": [
+            {
+              "effect": "tremors",
+              "prevalence": "Common"
+            },
+            {
+              "effect": "muscle_fasciculation",
+              "prevalence": "Common"
+            },
+            {
+              "effect": "muscle_jerking",
+              "prevalence": "Common"
+            },
+            {
+              "effect": "twitching",
+              "prevalence": "Common"
+            },
+            {
+              "effect": "fainting",
+              "prevalence": "Rare"
+            },
+            {
+              "effect": "seizures",
+              "prevalence": "Rare",
+              "severity": "High"
+            }
+          ],
+          "citations": ["falchi-carvalho_2024", "dourron_2023", "white_2024"]
+        }
+      ],
+      "riskFactors": [
+        "Epilepsy history",
+        "High doses"
+      ],
+      "clinicalSignificance": "Usually benign; severe reactions rare",
+      "management": [
+        "Safe environment free of hazards",
+        "Soft surfaces",
+        "Supervision",
+        "Medical attention if seizures occur"
+      ]
+    },
+    {
+      "id": "ae_dmt_respiratory_001",
+      "name": "Respiratory Irritation",
+      "category": "physiological",
+      "subcategory": "respiratory",
+      "timeframe": "acute",
+      "severity": "mild",
+      "description": "Airway irritation from inhaled DMT",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "route": "inhalation",
+          "manifestations": [
+            {
+              "effect": "coughing",
+              "timing": "During inhalation"
+            },
+            {
+              "effect": "hoarseness",
+              "severity": "Mild",
+              "duration": "Transient"
+            },
+            {
+              "effect": "airway_hyperresponsiveness",
+              "prevalence": "Less common"
+            }
+          ],
+          "note": "Respiratory effects less frequently reported overall",
+          "citations": ["falchi-carvalho_2024", "white_2024"]
+        }
+      ],
+      "prevention": [
+        "Use vaporizers rather than smoking if possible",
+        "Proper inhalation technique",
+        "Electric combustion over flame combustion"
+      ]
+    },
+    {
+      "id": "ae_dmt_temperature_001",
+      "name": "Temperature Regulation Issues",
+      "category": "physiological",
+      "subcategory": "thermoregulation",
+      "timeframe": "acute",
+      "severity": "mild",
+      "description": "Altered temperature perception and regulation",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "manifestations": [
+            {
+              "effect": "feeling_cold",
+              "note": "May occur even without objective temperature change"
+            },
+            {
+              "effect": "elevated_body_temperature",
+              "prevalence": "Can occur"
+            }
+          ],
+          "citations": ["falchi-carvalho_2024", "strassman_1994"]
+        }
+      ],
+      "management": [
+        "Comfortable ambient temperature",
+        "Blankets available",
+        "Monitoring of actual body temperature if concerns"
+      ]
+    },
+    {
+      "id": "ae_dmt_other_physical_001",
+      "name": "Other Acute Physical Effects",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild",
+      "description": "Additional physical effects during DMT",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "effects": [
+            {
+              "effect": "pupil_dilation",
+              "prevalence": "Common"
+            },
+            {
+              "effect": "increased_sweating",
+              "prevalence": "Common"
+            }
+          ],
+          "citations": ["strassman_1994", "papaseit_2018"]
+        }
+      ]
+    },
+    {
+      "id": "ae_dmt_flashbacks_001",
+      "name": "Flashbacks and Reactivations",
+      "category": "perceptual",
+      "timeframe": "subacute_to_long_term",
+      "severity": "variable",
+      "description": "Re-experiencing DMT effects after acute experience has ended",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "prevalence": {
+            "variableEstimates": {"min": 15, "max": 77, "unit": "percent"},
+            "naturalisticSettings": {"min": 27, "max": 73, "unit": "percent"},
+            "clinicalSettings": {"value": 25, "unit": "percent"},
+            "note": "Notable concern; more frequent with DMT than typical psychedelics"
+          },
+          "characteristics": {
+            "duration": "Brief (on the order of seconds)",
+            "components": ["Visual", "Auditory", "Emotional"],
+            "spontaneity": "Can be spontaneous",
+            "timing": "More frequent at night or when drifting to sleep"
+          },
+          "valence": {
+            "most": "Positive or neutral",
+            "some": "Negatively valanced",
+            "distressing": "Minority report distress prompting psychological help"
+          },
+          "persistence": {
+            "some": "Reports of continued flashbacks months after initial use"
+          },
+          "routeAssociation": {
+            "note": "May occur more frequently with vaporized administration"
+          },
+          "citations": ["ramaekers_2025", "ortiz_bernal_2022", "dourron_2023", "ona_2018", "pflieger_2005"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "differentialDiagnosis": [
+        "HPPD (though less common with DMT than LSD)",
+        "Anxiety-related intrusive imagery",
+        "Sleep-related phenomena"
+      ],
+      "clinicalSignificance": "Usually benign; small minority experience distress",
+      "management": [
+        "Reassurance about transient nature",
+        "Integration support",
+        "Psychological support if distressing",
+        "Rarely requires pharmacological intervention"
+      ]
+    },
+    {
+      "id": "ae_dmt_psychotic_symptoms_001",
+      "name": "Psychotic Symptoms",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "moderate_to_severe",
+      "description": "Prolonged psychotic symptoms following DMT use",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "prevalence": {
+            "general": "Risk minimal with DMT alone",
+            "vulnerable": "Primarily in individuals with pre-existing vulnerabilities"
+          },
+          "riskFactors": [
+            "Pre-existing psychiatric vulnerabilities",
+            "Family history of psychosis",
+            "Concurrent use with other substances"
+          ],
+          "citations": ["sabe_2024", "white_2024"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "vulnerablePopulations": [
+        "Personal history of psychosis",
+        "Family history of schizophrenia or psychotic disorders",
+        "Active mental health symptoms",
+        "Polysubstance users"
+      ],
+      "clinicalSignificance": "Rare but serious; requires psychiatric intervention",
+      "prevention": [
+        "Thorough screening",
+        "Exclusion of high-risk individuals",
+        "Controlled setting",
+        "Professional supervision"
+      ],
+      "management": [
+        "Psychiatric evaluation",
+        "Antipsychotic medication if needed",
+        "Ongoing psychiatric care",
+        "Support for family/caregivers"
+      ]
+    },
+    {
+      "id": "ae_dmt_anxiety_depression_longterm_001",
+      "name": "Prolonged Anxiety and Depression",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "moderate",
+      "description": "Persistent anxiety or depression following DMT use",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "prevalence": {
+            "description": "Some users report as long-term side effects"
+          },
+          "citations": ["ona_2018"]
+        }
+      ],
+      "riskFactors": [
+        "Pre-existing anxiety or depression",
+        "Challenging experiences",
+        "Lack of integration support",
+        "Trauma history"
+      ],
+      "management": [
+        "Psychotherapy",
+        "Integration support",
+        "Psychiatric evaluation",
+        "May require pharmacological treatment"
+      ]
+    },
+    {
+      "id": "ae_dmt_cognitive_001",
+      "name": "Cognitive Effects",
+      "category": "cognitive",
+      "timeframe": "long_term",
+      "severity": "unclear",
+      "description": "Potential long-term cognitive impacts",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "evidence": {
+            "current": "No evidence of long-term cognitive deficits from DMT use",
+            "citations": ["white_2024"]
+          }
+        }
+      ],
+      "note": "Current evidence suggests no long-term cognitive impairment"
+    },
+    {
+      "id": "ae_dmt_dependence_001",
+      "name": "Dependence and Addiction",
+      "category": "behavioral",
+      "timeframe": "long_term",
+      "severity": "minimal",
+      "description": "Potential for dependence on DMT",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "dependencePotential": "Minimal",
+          "mechanism": [
+            "Classic psychedelics have low abuse potential",
+            "Rapid development of tolerance",
+            "Self-administration studies in animals generally unsuccessful"
+          ],
+          "hallucinogenUseDisorder": {
+            "lifetimePrevalence": {"value": 0.6, "unit": "percent"},
+            "twelveMonthPrevalence": {"value": 0.05, "unit": "percent"},
+            "amongUsers": {
+              "lifetime": {"value": 6.4, "unit": "percent"},
+              "twelveMonth": {"value": 8.1, "unit": "percent"}
+            }
+          },
+          "citations": ["sabe_2024", "ghaznavi_2025"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "clinicalSignificance": "Risk is very low compared to other substances of abuse"
+    },
+    {
+      "id": "ae_dmt_sensitization_001",
+      "name": "Sensitization",
+      "category": "pharmacological",
+      "timeframe": "with_repeated_use",
+      "severity": "unclear",
+      "description": "Potential sensitization rather than tolerance with repeated DMT use",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "phenomenon": "Repeated administration might lead to sensitization (increased effects) rather than tolerance",
+          "note": "More research needed",
+          "citations": ["dourron_2023"]
+        }
+      ],
+      "clinicalSignificance": "Unclear; requires further research"
+    },
+    {
+      "id": "ae_dmt_professional_help_001",
+      "name": "Need for Professional Mental Health Assistance",
+      "category": "composite",
+      "timeframe": "post_experience",
+      "severity": "variable",
+      "description": "Requirement for professional support following adverse DMT experience",
+      "substanceOccurrence": [
+        {
+          "substanceId": "dmt_001",
+          "prevalence": {
+            "ayahuasca_users": {
+              "value": 12,
+              "unit": "percent",
+              "context": "Reported seeking professional mental health assistance for adverse effects",
+              "citations": ["evans_2023", "robinson_2024"]
+            }
+          }
+        }
+      ],
+      "clinicalSignificance": "Highlights importance of integration support and access to mental health services"
+    }
+  ],
+
+  "contaminationQualityFactors": [
+    {
+      "id": "contam_dmt_potency_001",
+      "name": "Variability in Potency and Dosing Inaccuracy",
+      "category": "quality",
+      "severity": "high",
+      "description": "Inconsistent DMT concentration and dosing challenges",
+      "mechanisms": [
+        "Illicit production lacks quality control",
+        "Variable purity in recreational sources",
+        "Difficult to determine safe dosages",
+        "Less consideration of contextual factors in recreational use"
+      ],
+      "consequences": [
+        "Unintended overdoses",
+        "Unpredictable effects",
+        "Increased risk of adverse reactions"
+      ],
+      "citations": ["glynos_2023", "gomez-escolar_2024", "bremler_2023", "edwards_2023", "hirschfeld_2021"],
+      "evidenceQuality": "strong"
+    },
+    {
+      "id": "contam_dmt_sourcing_001",
+      "name": "Unregulated Market Sourcing",
+      "category": "sourcing",
+      "severity": "high",
+      "description": "Risks from obtaining DMT from unregulated sources",
+      "specificRisks": [
+        {
+          "risk": "misrepresentation",
+          "description": "Substance may not be what it is purported to be",
+          "prevalence": "Common concern",
+          "citations": ["glynos_2023", "coyle_nd"]
+        },
+        {
+          "risk": "research_chemicals",
+          "description": "Substances sold as 'research chemicals' prone to misrepresentation",
+          "contains": "May contain different or unknown compounds",
+          "citations": ["coyle_nd"]
+        },
+        {
+          "risk": "cheaper_substitutes",
+          "description": "DMT may contain cheaper substitutes with more dangerous side effects",
+          "citations": ["petranker_2022"]
+        }
+      ],
+      "harmReduction": [
+        "Obtain from trusted sources when possible",
+        "Use substance testing services",
+        "Start with test doses",
+        "Educate about risks"
+      ]
+    },
+    {
+      "id": "contam_dmt_adulteration_001",
+      "name": "Adulteration and Contaminants",
+      "category": "contamination",
+      "severity": "high",
+      "description": "Presence of adulterants in illicit DMT",
+      "commonContaminants": [
+        {
+          "contaminant": "amphetamines",
+          "prevalence": "Documented as trace contaminants",
+          "source": "Inadequate cleaning of production equipment or negligent manufacturing",
+          "citations": ["aakerøy_2021"]
+        },
+        {
+          "contaminant": "MDMA",
+          "prevalence": "Documented as trace contaminants",
+          "source": "Inadequate cleaning of production equipment or negligent manufacturing",
+          "citations": ["aakerøy_2021"]
+        }
+      ],
+      "consequences": [
+        "Unpredictable effects",
+        "Potentially harmful interactions",
+        "Increased toxicity risk",
+        "False attribution of effects to DMT"
+      ],
+      "citations": ["glynos_2023", "aakerøy_2021", "hirschfeld_2021"],
+      "evidenceQuality": "moderate"
+    },
+    {
+      "id": "contam_dmt_testing_001",
+      "name": "Lack of Access to Testing",
+      "category": "harm_reduction_infrastructure",
+      "severity": "high",
+      "description": "Limited access to accurate substance testing",
+      "barriers": [
+        {
+          "barrier": "limited_access_to_testing_services",
+          "description": "Many users lack access to drug-testing services or kits"
+        },
+        {
+          "barrier": "test_kit_limitations",
+          "description": "Available test kits cannot detect all adulterants or accurately measure drug amount"
+        },
+        {
+          "barrier": "lack_of_advanced_analysis",
+          "description": "Advanced techniques like LC/GC-MS not readily available to most checking services",
+          "techniques": [
+            "Liquid chromatography",
+            "Gas chromatography",
+            "Mass spectrometry"
+          ]
+        }
+      ],
+      "consequences": [
+        "Users cannot identify potential contaminants",
+        "Difficult to determine actual composition",
+        "Cannot predict individual response accurately"
+      ],
+      "citations": ["glynos_2023", "petranker_2022", "hirschfeld_2021"],
+      "recommendations": [
+        "Increase availability of drug checking services",
+        "Educate about test kit use and limitations",
+        "Advocate for advanced testing availability",
+        "Promote harm reduction testing policies"
+      ]
+    }
+  ],
+
+  "doseResponseCurves": [
+    {
+      "substanceId": "dmt_001",
+      "route": "intravenous",
+      "effectMeasure": "somaesthetic_vs_hallucinogenic",
+      "relationship": "threshold_effect",
+      "dataPoints": [
+        {
+          "dose": 0.05,
+          "unit": "mg/kg",
+          "effects": "Mostly somaesthetic effects"
+        },
+        {
+          "dose": 0.1,
+          "unit": "mg/kg",
+          "effects": "Mostly somaesthetic effects"
+        },
+        {
+          "dose": 0.2,
+          "unit": "mg/kg",
+          "effects": "Strong hallucinogenic effects present"
+        },
+        {
+          "dose": 0.4,
+          "unit": "mg/kg",
+          "effects": "Strong hallucinogenic effects"
+        }
+      ],
+      "interpretation": "Clear threshold around 0.2 mg/kg for hallucinogenic effects",
+      "citations": ["engel_2024", "strassman_1994"],
+      "evidenceQuality": "strong"
+    },
+    {
+      "substanceId": "dmt_001",
+      "route": "intravenous",
+      "effectMeasure": "mystical_experience_probability",
+      "relationship": "dose_dependent",
+      "dataPoints": [
+        {
+          "dose": 0.07,
+          "unit": "mg/kg",
+          "mysticalExperience": "Rare"
+        },
+        {
+          "dose": 0.14,
+          "unit": "mg/kg",
+          "mysticalExperience": "Uncommon"
+        },
+        {
+          "dose": 0.29,
+          "unit": "mg/kg",
+          "mysticalExperience": "More common"
+        },
+        {
+          "dose": 0.43,
+          "unit": "mg/kg",
+          "mysticalExperience": "Common"
+        }
+      ],
+      "note": "Reliable production of mystical experiences at higher doses",
+      "interpretation": "DMT reliably produces mystical experiences at higher dose ranges",
+      "citations": ["lancelotta_2020"],
+      "evidenceQuality": "moderate"
+    },
+    {
+      "substanceId": "dmt_001",
+      "characteristic": "steep_dose_response",
+      "description": "DMT has a steep dose-response curve",
+      "implications": [
+        "Small dose increases can produce large effect increases",
+        "Precise dosing critical",
+        "Higher risk of accidental overdose with imprecise measuring"
+      ],
+      "citations": ["lancelotta_2020", "engel_2024"],
+      "evidenceQuality": "strong"
+    }
+  ],
+
+  "complexInteractions": [
+    {
+      "id": "interact_dmt_maoi_001",
+      "factors": [
+        {"type": "substance", "id": "dmt_001"},
+        {"type": "drug_interaction", "category": "MAOI"},
+        {"type": "route", "value": "oral"}
+      ],
+      "riskMultiplier": "critical",
+      "specificOutcome": "Serotonin syndrome - potentially fatal",
+      "mechanism": [
+        "MAOIs required for oral DMT bioavailability",
+        "Excessive serotonin accumulation",
+        "Dangerous with concurrent MAOI medications",
+        "Risk with tyramine-containing foods"
+      ],
+      "deathsReported": true,
+      "exceptions": [
+        "Controlled ayahuasca ceremony with proper protocols",
+        "Dietary restrictions (tyramine-free diet)",
+        "Medical supervision",
+        "Traditional preparation methods"
+      ],
+      "contraindicationType": "absolute_unless_controlled_protocol",
+      "evidenceQuality": "strong",
+      "citations": ["malcolm_2022", "dos_santos_2024", "barker_2022"]
+    },
+    {
+      "id": "interact_dmt_mdma_001",
+      "factors": [
+        {"type": "substance", "id": "dmt_001"},
+        {"type": "substance", "name": "MDMA"},
+        {"type": "setting", "context": "recreational"}
+      ],
+      "riskMultiplier": "critical",
+      "specificOutcome": "Fatal adverse events documented",
+      "mechanism": [
+        "Unpredictable pharmacological interaction",
+        "Synergistic serotonergic effects",
+        "Cardiovascular stress",
+        "Hyperthermia risk"
+      ],
+      "deathsReported": true,
+      "contraindicationType": "absolute",
+      "evidenceQuality": "strong",
+      "citations": ["malcolm_2022", "kopra_2025"]
+    },
+    {
+      "id": "interact_dmt_5meodmt_001",
+      "factors": [
+        {"type": "substance", "id": "dmt_001"},
+        {"type": "substance", "name": "5-MeO-DMT"}
+      ],
+      "riskMultiplier": "critical",
+      "specificOutcome": "Fatal adverse events documented",
+      "mechanism": [
+        "Combined serotonergic effects",
+        "Unpredictable interaction",
+        "Possible serotonin syndrome"
+      ],
+      "deathsReported": true,
+      "contraindicationType": "absolute",
+      "evidenceQuality": "moderate",
+      "citations": ["malcolm_2022", "kopra_2025"]
+    },
+    {
+      "id": "interact_dmt_psychosis_history_001",
+      "factors": [
+        {"type": "substance", "id": "dmt_001"},
+        {"type": "medical_condition", "category": "psychotic_disorders"},
+        {"type": "risk_factor", "category": "family_history_psychosis"}
+      ],
+      "riskMultiplier": "critical",
+      "specificOutcome": "Prolonged psychotic reaction or exacerbation",
+      "mechanism": [
+        "DMT may trigger latent psychotic tendencies",
+        "Intense alterations in perception and consciousness",
+        "Stress on psychological stability"
+      ],
+      "contraindicationType": "absolute",
+      "evidenceQuality": "strong",
+      "citations": ["sabe_2024", "white_2024", "henningfield_2023"]
+    },
+    {
+      "id": "interact_dmt_cardiovascular_rapid_route_001",
+      "factors": [
+        {"type": "substance", "id": "dmt_001"},
+        {"type": "medical_condition", "id": "cond_dmt_cardiovascular_001"},
+        {"type": "route", "value": "intravenous_or_smoked"},
+        {"type": "risk_factor", "category": "rapid_onset"}
+      ],
+      "riskMultiplier": "high",
+      "specificOutcome": "Acute cardiovascular event",
+      "mechanism": [
+        "Rapid increase in plasma DMT concentration",
+        "Sudden cardiovascular stress",
+        "Sympathomimetic effects",
+        "Blood pressure and heart rate spikes"
+      ],
+      "mitigatingFactors": [
+        "Slower routes of administration (IM)",
+        "Pre-existing cardiovascular stability",
+        "Continuous monitoring",
+        "Medical supervision"
+      ],
+      "contraindicationType": "absolute_if_unstable_cardiovascular",
+      "evidenceQuality": "moderate",
+      "citations": ["barker_2022", "falchi-carvalho_2024"]
+    }
+  ],
+
+  "emergencyResponseProtocols": [
+    {
+      "id": "emergency_dmt_nonpharm_001",
+      "name": "Non-Pharmacological Interventions for DMT",
+      "category": "crisis_management",
+      "priority": "first_line",
+      "substanceSpecific": "dmt_001",
+      "interventions": [
+        {
+          "intervention": "continuous_monitoring_supervision",
+          "description": "Especially critical given DMT's rapid onset and intensity",
+          "frequency": "Continuous throughout session",
+          "rationale": "Users may lack awareness of behaviors during acute effects",
+          "citations": ["dourron_2023", "carbonaro_2016"]
+        },
+        {
+          "intervention": "rapid_reassurance",
+          "description": "Quick verbal reassurance given rapid onset of effects",
+          "effectiveness": "Sufficient for most anxiety/distress",
+          "technique": "Calm, immediate, empathetic response to fast-emerging distress",
+          "timing": "Especially important during onset (first 2-5 minutes)"
+        },
+        {
+          "intervention": "physical_safety",
+          "description": "Ensure physical safety given risk of involuntary movements",
+          "actions": [
+            "Soft surfaces",
+            "Remove hazards",
+            "Prevent falls",
+            "Protect from self-injury"
+          ],
+          "rationale": "DMT can cause involuntary bodily movements and loss of awareness",
+          "citations": ["dourron_2023"]
+        },
+        {
+          "intervention": "brief_session_support",
+          "description": "Recognize that intense effects are brief (10-60 minutes)",
+          "technique": "Remind participant of transient nature given short duration",
+          "advantage": "Shorter supervision period than other psychedelics"
+        }
+      ],
+      "effectiveness": "High - manages most cases of distress",
+      "citations": ["johnson_2008", "davis_2022"]
+    },
+    {
+      "id": "emergency_dmt_cardiovascular_001",
+      "name": "Cardiovascular Monitoring for DMT",
+      "category": "physiological_monitoring",
+      "priority": "continuous",
+      "substanceSpecific": "dmt_001",
+      "monitoring": {
+        "parameters": [
+          "Heart rate",
+          "Blood pressure",
+          "Oxygen saturation",
+          "Body temperature"
+        ],
+        "frequency": "Real-time continuous monitoring",
+        "rationale": "DMT's sympathomimetic effects require cardiovascular vigilance",
+        "equipment": [
+          "Blood pressure monitor",
+          "Pulse oximeter",
+          "ECG if available",
+          "Thermometer"
+        ]
+      },
+      "thresholds": {
+        "heartRate": {
+          "concern": ">120 bpm sustained",
+          "action": "Increase monitoring frequency, reassurance, consider medical intervention"
+        },
+        "bloodPressure": {
+          "concern": "Systolic >160 or Diastolic >100",
+          "action": "Medical assessment, potential pharmacological intervention"
+        },
+        "bradycardia": {
+          "note": "Rare asymptomatic bradycardia documented",
+          "action": "Monitor but usually benign"
+        }
+      },
+      "citations": ["falchi-carvalho_2024", "ramaekers_2025", "luan_2024", "white_2024"]
+    },
+    {
+      "id": "emergency_dmt_behavioral_001",
+      "name": "Managing DMT Behavioral Manifestations",
+      "category": "behavioral_crisis",
+      "priority": "immediate",
+      "substanceSpecific": "dmt_001",
+      "challenges": [
+        {
+          "challenge": "loss_of_awareness",
+          "description": "User may not be aware of their actions",
+          "response": [
+            "Do not leave user unattended",
+            "Gentle physical guidance if needed",
+            "Protect from hazards",
+            "Prevent dangerous actions"
+          ]
+        },
+        {
+          "challenge": "odd_vocalizations",
+          "description": "Unusual sounds or screaming",
+          "response": [
+            "Remain calm",
+            "Reassure other people present",
+            "Do not restrain unless necessary for safety",
+            "Recognize as transient effect"
+          ]
+        },
+        {
+          "challenge": "removing_clothes",
+          "description": "User may remove clothing",
+          "response": [
+            "Gentle redirection",
+            "Protect dignity and privacy",
+            "Ensure appropriate room temperature",
+            "Do not force unless safety concern"
+          ]
+        },
+        {
+          "challenge": "self_injurious_behavior",
+          "description": "Rare but potential for self-harm",
+          "response": [
+            "Immediate intervention",
+            "Gentle physical restraint if necessary",
+            "Remove sharp objects preemptively",
+            "Medical assessment after",
+            "Psychiatric follow-up"
+          ]
+        }
+      ],
+      "preparation": [
+        "Clear room of hazards before session",
+        "Have two facilitators present if possible",
+        "Discuss behavioral boundaries in preparation",
+        "Have plan for physical safety"
+      ],
+      "citations": ["dourron_2023"]
+    },
+    {
+      "id": "emergency_dmt_route_specific_001",
+      "name": "Route-Specific Emergency Considerations",
+      "category": "route_dependent",
+      "substanceSpecific": "dmt_001",
+      "routes": [
+        {
+          "route": "inhalation",
+          "emergencies": [
+            {
+              "emergency": "respiratory_distress",
+              "response": [
+                "Fresh air",
+                "Sitting position",
+                "Reassurance",
+                "Oxygen if available",
+                "Medical assessment if severe"
+              ]
+            },
+            {
+              "emergency": "coughing_fit",
+              "response": [
+                "Water available",
+                "Calm breathing guidance",
+                "Usually self-limiting"
+              ]
+            }
+          ]
+        },
+        {
+          "route": "intravenous",
+          "emergencies": [
+            {
+              "emergency": "rapid_intense_reaction",
+              "response": [
+                "Medical personnel must be present",
+                "Continuous monitoring",
+                "Benzodiazepines readily available",
+                "Emergency equipment on hand"
+              ]
+            },
+            {
+              "emergency": "cardiovascular_crisis",
+              "response": [
+                "Immediate medical intervention",
+                "Antihypertensives if needed",
+                "Transfer to emergency care if necessary"
+              ]
+            }
+          ]
+        },
+        {
+          "route": "oral_with_MAOI",
+          "emergencies": [
+            {
+              "emergency": "serotonin_syndrome",
+              "response": [
+                "Recognize symptoms: hyperthermia, muscle rigidity, altered mental status",
+                "Discontinue all serotonergic agents",
+                "Immediate medical transport",
+                "Cooling measures",
+                "Benzodiazepines",
+                "ICU level care may be needed"
+              ]
+            },
+            {
+              "emergency": "hypertensive_crisis",
+              "response": [
+                "From tyramine interaction",
+                "Immediate blood pressure management",
+                "Emergency medical services",
+                "Antihypertensive medication"
+              ]
+            },
+            {
+              "emergency": "prolonged_effects",
+              "response": [
+                "Recognize longer duration with ayahuasca",
+                "Extended supervision required",
+                "May need 4-6 hour monitoring period"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "preparationPractices": [
+    {
+      "id": "prep_dmt_specific_education_001",
+      "name": "DMT-Specific Psychoeducation",
+      "category": "education",
+      "timing": "pre_session",
+      "substanceSpecific": "dmt_001",
+      "content": [
+        {
+          "topic": "unique_phenomenology",
+          "details": [
+            "Extremely rapid onset (especially inhaled/IV)",
+            "Very intense but brief experience",
+            "Potential for 'breakthrough' experiences",
+            "Entity encounters common",
+            "Sense of alternate dimensions/realities",
+            "Complete ego dissolution possible",
+            "Differs significantly from other psychedelics"
+          ]
+        },
+        {
+          "topic": "route_specific_effects",
+          "details": [
+            "Inhalation: seconds onset, 10-60 min duration",
+            "IV: immediate onset, 10-30 min duration",
+            "Oral with MAOI: slower onset, 4-6 hour duration",
+            "IM: slightly slower than IV",
+            "Different routes produce different experience profiles"
+          ]
+        },
+        {
+          "topic": "behavioral_effects",
+          "details": [
+            "May lack awareness during peak",
+            "Possible unusual vocalizations",
+            "Muscle jerking/twitching possible",
+            "Loss of behavioral control briefly",
+            "Importance of supervision"
+          ]
+        },
+        {
+          "topic": "reactivations_flashbacks",
+          "details": [
+            "Brief re-experiences possible days/weeks later",
+            "More common with DMT than other psychedelics",
+            "Usually positive or neutral",
+            "Brief (seconds) in duration",
+            "May occur more at night",
+            "Usually not distressing"
+          ]
+        },
+        {
+          "topic": "ayahuasca_specific",
+          "details": [
+            "Requires MAOI for oral activity",
+            "Longer duration (4-6 hours)",
+            "Purging (vomiting) common and culturally significant",
+            "Dietary restrictions essential",
+            "Medication interactions critical to review"
+          ]
+        }
+      ],
+      "effectiveness": "high",
+      "citations": ["white_2024", "dourron_2023", "ramaekers_2025"]
+    },
+    {
+      "id": "prep_dmt_rapid_onset_001",
+      "name": "Preparation for Rapid Onset",
+      "category": "psychological",
+      "timing": "pre_session",
+      "substanceSpecific": "dmt_001",
+      "uniqueChallenge": "Extremely rapid onset leaves little time for psychological adjustment during experience",
+      "strategies": [
+        {
+          "strategy": "mental_preparation_immediacy",
+          "description": "Prepare for immediate onset with inhalation/IV routes",
+          "techniques": [
+            "Practice surrender before administration",
+            "Be mentally ready before dose",
+            "No opportunity to 'ease into' experience",
+            "Commit to the experience fully beforehand"
+          ]
+        },
+        {
+          "strategy": "breathing_pre_administration",
+          "description": "Practice calming breath before administration",
+          "rationale": "Establish calm state as baseline before rapid onset",
+          "timing": "5-10 minutes before administration"
+        },
+        {
+          "strategy": "body_position",
+          "description": "Optimal positioning before administration",
+          "recommendation": "Lying down or well-supported sitting position",
+          "rationale": "No time to adjust position once effects begin",
+          "safety": "Prevents falls during rapid onset"
+        },
+        {
+          "strategy": "environment_ready",
+          "description": "Ensure environment completely prepared before administration",
+          "checklist": [
+            "All hazards removed",
+            "Comfortable temperature",
+            "Music/silence preference set",
+            "Eyeshades ready if desired",
+            "Facilitator positioned",
+            "No planned interruptions"
+          ]
+        }
+      ],
+      "citations": ["fradkin_2024", "white_2024", "james_2024"]
+    },
+    {
+      "id": "prep_dmt_route_selection_001",
+      "name": "Route Selection Counseling",
+      "category": "practical",
+      "timing": "pre_session",
+      "substanceSpecific": "dmt_001",
+      "importance": "Critical given different risk profiles of routes",
+      "considerations": [
+        {
+          "factor": "experience_level",
+          "guidance": [
+            "First-time users: Consider slower routes (IM) or very low inhaled dose",
+            "Experienced users: May choose based on desired intensity/duration",
+            "Never IV for first-time psychedelic users"
+          ]
+        },
+        {
+          "factor": "medical_considerations",
+          "guidance": [
+            "Cardiovascular concerns: Avoid IV/inhaled routes",
+            "Respiratory issues: Avoid inhalation",
+            "Taking MAOIs or SSRIs: Avoid oral DMT with MAOI",
+            "Epilepsy: Avoid all routes"
+          ]
+        },
+        {
+          "factor": "therapeutic_goals",
+          "guidance": [
+            "Brief insight-oriented: Inhalation may be suitable",
+            "Deep psychological work: IM or ayahuasca ceremony",
+            "Research setting: Usually IV for control",
+            "Spiritual/ceremonial: Traditional ayahuasca"
+          ]
+        },
+        {
+          "factor": "practical_considerations",
+          "guidance": [
+            "Time available: Inhalation/IV if limited time",
+            "Supervision availability: Extended for ayahuasca",
+            "Legal context: Ayahuasca churches in some jurisdictions",
+            "Cultural context: Respect traditional ayahuasca use"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prep_dmt_medication_review_001",
+      "name": "Comprehensive Medication Review",
+      "category": "safety_screening",
+      "timing": "pre_session",
+      "substanceSpecific": "dmt_001",
+      "criticality": "Essential, especially for ayahuasca",
+      "screening": [
+        {
+          "category": "MAOIs",
+          "medications": [
+            "Phenelzine",
+            "Tranylcypromine",
+            "Isocarboxazid",
+            "Selegiline (at higher doses)"
+          ],
+          "contraindicationType": "absolute_unless_controlled_ayahuasca",
+          "washoutPeriod": "Minimum 2 weeks"
+        },
+        {
+          "category": "SSRIs_SNRIs",
+          "medications": [
+            "Fluoxetine",
+            "Sertraline",
+            "Paroxetine",
+            "Citalopram",
+            "Venlafaxine",
+            "Duloxetine"
+          ],
+          "risk": "Serotonin syndrome especially with MAOI-containing preparations",
+          "contraindicationType": "relative_to_absolute",
+          "washoutPeriod": "Variable by medication; fluoxetine 4-6 weeks"
+        },
+        {
+          "category": "other_serotonergic",
+          "medications": [
+            "Triptans (migraine medications)",
+            "Tramadol",
+            "Certain cough medications (dextromethorphan)",
+            "St. John's Wort"
+          ],
+          "risk": "Serotonin syndrome",
+          "recommendation": "Discontinue with appropriate washout"
+        },
+        {
+          "category": "cardiovascular_medications",
+          "assessment": "Review for interactions and assess cardiovascular stability"
+        }
+      ],
+      "ayahuascaSpecific": {
+        "dietaryRestrictions": [
+          "Tyramine-free diet essential",
+          "Avoid: aged cheeses, cured meats, fermented foods, alcohol",
+          "Typically 1-2 days before and after",
+          "Risk of hypertensive crisis with tyramine + MAOI"
+        ]
+      },
+      "citations": ["dos_santos_2024", "malcolm_2022", "barker_2022"]
+    }
+  ],
+
+  "integrationPractices": [
+    {
+      "id": "int_dmt_rapid_integration_001",
+      "name": "Rapid-Onset Integration",
+      "category": "therapeutic",
+      "timing": "immediate_post_session",
+      "substanceSpecific": "dmt_001",
+      "uniqueAspect": "Very brief but extremely intense experience requires immediate processing",
+      "structure": {
+        "immediate": {
+          "timing": "Within minutes to hours post-session",
+          "rationale": "Experience fresh in memory but may fade quickly",
+          "activities": [
+            "Verbal processing while memory vivid",
+            "Initial journaling or recording",
+            "Discussing with facilitator while present",
+            "Capturing ineffable elements before they fade"
+          ]
+        },
+        "same_day": {
+          "timing": "Later same day",
+          "activities": [
+            "More structured reflection",
+            "Artistic expression",
+            "Written narrative",
+            "Discussion with facilitator or integration therapist"
+          ]
+        },
+        "ongoing": {
+          "timing": "Days to weeks",
+          "activities": [
+            "Standard integration practices",
+            "Processing entity encounters if occurred",
+            "Making meaning of breakthrough experiences",
+            "Addressing any flashbacks/reactivations"
+          ]
+        }
+      },
+      "citations": ["bathje_2022", "garcia-romeu_2018"]
+    },
+    {
+      "id": "int_dmt_ineffability_001",
+      "name": "Addressing Ineffability",
+      "category": "meaning_making",
+      "timing": "post_session",
+      "substanceSpecific": "dmt_001",
+      "challenge": "DMT experiences often described as uniquely difficult to verbalize",
+      "approaches": [
+        {
+          "approach": "multiple_modalities",
+          "description": "Use various forms of expression",
+          "modalities": [
+            "Verbal description",
+            "Visual art",
+            "Music",
+            "Movement/dance",
+            "Poetry",
+            "Metaphor"
+          ],
+          "rationale": "No single modality may capture experience"
+        },
+        {
+          "approach": "gradual_articulation",
+          "description": "Allow understanding to emerge over time",
+          "process": [
+            "Initial raw impressions",
+            "Gradual refinement of description",
+            "Emergence of personal meaning",
+            "Integration of insights"
+          ]
+        },
+        {
+          "approach": "shared_language",
+          "description": "Connect with others who have had DMT experiences",
+          "benefit": "Common vocabulary and understanding",
+          "caution": "Avoid adopting others' interpretations wholesale"
+        },
+        {
+          "approach": "acceptance_of_mystery",
+          "description": "Allow some aspects to remain mysterious",
+          "wisdom": "Not everything needs to be fully articulated",
+          "focus": "What can be integrated and applied"
+        }
+      ]
+    },
+    {
+      "id": "int_dmt_entity_encounters_001",
+      "name": "Processing Entity Encounters",
+      "category": "phenomenological",
+      "timing": "post_session",
+      "substanceSpecific": "dmt_001",
+      "uniqueAspect": "Entity encounters particularly common with DMT",
+      "approaches": [
+        {
+          "approach": "open_exploration",
+          "description": "Explore without imposing interpretations",
+          "questions": [
+            "What was the quality of the encounter?",
+            "What emotions did it evoke?",
+            "Was there communication? What was conveyed?",
+            "How did the entity appear?",
+            "What personal meaning does it hold?"
+          ]
+        },
+        {
+          "approach": "multiple_frameworks",
+          "description": "Consider various interpretive frameworks",
+          "frameworks": [
+            "Psychological (projections, archetypes)",
+            "Neurological (brain activity patterns)",
+            "Spiritual (actual beings or dimensions)",
+            "Agnostic (phenomenological description without ontological claims)"
+          ],
+          "guidance": "Support individual's framework while acknowledging uncertainty"
+        },
+        {
+          "approach": "personal_meaning",
+          "description": "Focus on personal significance",
+          "emphasis": "What matters is not 'what it was' but 'what it means to you'"
+        },
+        {
+          "approach": "avoid_spiritual_bypassing",
+          "description": "Ensure experience is genuinely processed",
+          "caution": "Don't use 'spiritual' interpretation to avoid psychological work"
+        }
+      ],
+      "citations": ["luan_2024", "fradkin_2024"]
+    },
+    {
+      "id": "int_dmt_reactivations_001",
+      "name": "Managing Reactivations/Flashbacks",
+      "category": "symptom_management",
+      "timing": "post_session_ongoing",
+      "substanceSpecific": "dmt_001",
+      "prevalence": "More common with DMT than other psychedelics",
+      "integration": [
+        {
+          "aspect": "normalization",
+          "description": "Educate that reactivations are common and usually benign",
+          "reassurance": "Most are brief, positive or neutral, and decrease over time"
+        },
+        {
+          "aspect": "tracking",
+          "description": "Encourage keeping log of reactivations",
+          "tracking": [
+            "Frequency",
+            "Duration",
+            "Content",
+            "Context (time of day, activity)",
+            "Emotional valence"
+          ],
+          "benefit": "Identify patterns, monitor decrease over time"
+        },
+        {
+          "aspect": "non_reactivity",
+          "description": "Practice observing without alarming",
+          "technique": "Mindful awareness, noting reactivation without resistance",
+          "rationale": "Resistance may increase distress"
+        },
+        {
+          "aspect": "when_to_seek_help",
+          "description": "Indicators that professional support needed",
+          "red_flags": [
+            "Increasing frequency over time",
+            "Causing significant distress",
+            "Interfering with daily functioning",
+            "Accompanied by other concerning symptoms"
+          ]
+        },
+        {
+          "aspect": "positive_reframe",
+          "description": "For positive reactivations, can be seen as reminders",
+          "perspective": "Brief reconnection with insights from experience"
+        }
+      ],
+      "citations": ["dourron_2023", "ortiz_bernal_2022", "ramaekers_2025"]
+    },
+    {
+      "id": "int_dmt_ayahuasca_specific_001",
+      "name": "Ayahuasca-Specific Integration",
+      "category": "ceremonial_context",
+      "timing": "post_ceremony",
+      "substanceSpecific": "oral_dmt_with_maoi",
+      "culturalContext": "Respect traditional integration practices",
+      "components": [
+        {
+          "component": "community_integration",
+          "description": "Integration within ceremony community if applicable",
+          "practices": [
+            "Sharing circles",
+            "Group integration sessions",
+            "Ongoing community connection"
+          ]
+        },
+        {
+          "component": "dietary_continuation",
+          "description": "Some traditions recommend dietary practices post-ceremony",
+          "duration": "Variable (days to weeks)",
+          "purpose": "Support integration, maintain 'dieta' practice"
+        },
+        {
+          "component": "somatic_integration",
+          "description": "Body-based integration particularly important for ayahuasca",
+          "practices": [
+            "Yoga",
+            "Breathwork",
+            "Dance/movement",
+            "Somatic psychotherapy"
+          ],
+          "rationale": "Purging and physical aspects of experience require body-based processing",
+          "citations": ["cowley-court_2023"]
+        },
+        {
+          "component": "cultural_respect",
+          "description": "Honor indigenous traditions",
+          "considerations": [
+            "Acknowledge source of practice",
+            "Respect ceremonial context",
+            "Avoid appropriation",
+            "Support source communities when possible"
+          ]
+        },
+        {
+          "component": "extended_duration",
+          "description": "Longer experience requires extended processing",
+          "note": "4-6 hour journey provides more material to integrate than brief DMT experience"
+        }
+      ],
+      "citations": ["bathje_2022", "cowley-court_2023"]
+    }
+  ],
+
+  "metadata": {
+    "documentSource": "DMT Literature Review - Psychedelic Safety Institute",
+    "substanceFocus": "N,N-Dimethyltryptamine (DMT)",
+    "totalSections": "Comprehensive coverage",
+    "primaryResearchTypes": [
+      "clinical_trials",
+      "case_reports",
+      "observational_studies",
+      "literature_reviews",
+      "traditional_use_documentation"
+    ],
+    "geographicScope": "Global, with emphasis on clinical research settings and Amazonian traditional use",
+    "lastLiteratureSearch": "2024-2025",
+    "qualityAssessment": "Variable - strong clinical data, limited long-term follow-up, emerging research area",
+    "knownLimitations": [
+      "Limited large-scale clinical trials compared to psilocybin/LSD",
+      "Underreporting of adverse events likely in recreational contexts",
+      "Limited diversity in research populations",
+      "Few long-term follow-up studies",
+      "Ayahuasca research complicated by multiple active compounds",
+      "Entity encounter phenomenology difficult to study systematically",
+      "Route-specific effects not fully characterized",
+      "Reactivation/flashback mechanism poorly understood",
+      "Optimal integration protocols still being developed"
+    ],
+    "uniqueAspectsOfDMT": [
+      "Extremely brief duration compared to other psychedelics",
+      "Very rapid onset especially with inhalation/IV routes",
+      "Reliably produces 'breakthrough' experiences at higher doses",
+      "Entity encounters particularly characteristic",
+      "Higher prevalence of reactivations than other psychedelics",
+      "Requires MAOI for oral bioavailability",
+      "Traditional use in ayahuasca ceremonies",
+      "Potential for sensitization rather than tolerance",
+      "May be more scalable therapeutically due to short duration",
+      "Steep dose-response curve"
+    ],
+    "emergingResearchAreas": [
+      "Extended-state DMT (continuous infusion)",
+      "Therapeutic applications for depression",
+      "Neurobiological mechanisms of entity encounters",
+      "Intranasal DMT formulations",
+      "Optimal integration protocols",
+      "Long-term cognitive effects",
+      "Reactivation mechanisms",
+      "Comparative studies with other psychedelics"
+    ],
+    "citations_note": "All citations referenced throughout are from the source literature review document"
+  }
+}

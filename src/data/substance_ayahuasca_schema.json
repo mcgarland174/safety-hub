@@ -1,0 +1,1722 @@
+{
+  "schemaVersion": "2.0",
+  "lastUpdated": "2025-01-09",
+  
+  "substances": [
+    {
+      "id": "ayahuasca_001",
+      "name": "Ayahuasca",
+      "aliases": ["Yagé", "Hoasca", "Daime", "La Purga"],
+      "description": "Psychoactive brew traditionally used for therapeutic and ritual purposes by indigenous groups in Northwestern Amazonian countries",
+      "classification": {
+        "primary": "classical_serotonergic_psychedelic",
+        "secondary": ["plant_medicine", "traditional_medicine"],
+        "mechanism": "5-HT1A/2A_partial_agonist_plus_MAOI",
+        "components": [
+          {
+            "plant": "Psychotria viridis",
+            "part": "leaves",
+            "activeCompound": "DMT",
+            "role": "primary_psychoactive"
+          },
+          {
+            "plant": "Banisteriopsis caapi",
+            "part": "stalks",
+            "activeCompounds": ["harmine", "harmaline", "tetrahydroharmine"],
+            "role": "MAOI",
+            "function": "blocks MAO enzyme in gut, permits DMT absorption"
+          }
+        ],
+        "receptorAffinity": {
+          "5HT1A": "moderate_to_high",
+          "5HT2A": "high"
+        }
+      },
+      "activeCompounds": [
+        {
+          "name": "N,N-DMT",
+          "type": "tryptamine",
+          "source": "Psychotria viridis leaves",
+          "function": "primary psychoactive component",
+          "mechanism": "5-HT1A/2A partial agonist"
+        },
+        {
+          "name": "harmine",
+          "type": "beta-carboline",
+          "source": "Banisteriopsis caapi stalks",
+          "function": "MAO inhibitor",
+          "mechanism": "reversible MAO-A inhibitor"
+        },
+        {
+          "name": "harmaline",
+          "type": "beta-carboline",
+          "source": "Banisteriopsis caapi stalks",
+          "function": "MAO inhibitor",
+          "mechanism": "reversible MAO-A inhibitor",
+          "note": "Higher concentrations associated with stronger, more challenging effects"
+        },
+        {
+          "name": "tetrahydroharmine",
+          "type": "beta-carboline",
+          "source": "Banisteriopsis caapi stalks",
+          "function": "MAO inhibitor"
+        }
+      ],
+      "prevalenceData": {
+        "geographicOrigin": "Northwestern Amazonian countries",
+        "traditionalUse": "Indigenous ceremonial and healing practices",
+        "contemporaryUse": {
+          "contexts": [
+            "traditional ceremonies",
+            "religious contexts (Santo Daime, União do Vegetal)",
+            "retreat centers",
+            "therapeutic settings",
+            "underground/unregulated use"
+          ]
+        }
+      },
+      "dosing": {
+        "ceremonial_therapeutic": {
+          "DMT": {"value": 0.85, "unit": "mg/kg"},
+          "harmine": {"value": 1.4, "unit": "mg/kg"},
+          "harmaline": {"value": 0.09, "unit": "mg/kg"},
+          "tetrahydroharmine": {"value": 1.16, "unit": "mg/kg"},
+          "context": "Most research focuses on single or occasional high doses",
+          "citations": ["engel_2024", "bouso_2022"]
+        },
+        "clinical_depression_study": {
+          "preparation": {
+            "DMT": {"value": 0.36, "unit": "mg/mL"},
+            "harmine": {"value": 1.86, "unit": "mg/mL"},
+            "harmaline": {"value": 0.24, "unit": "mg/mL"},
+            "tetrahydroharmine": {"value": 1.20, "unit": "mg/mL"}
+          },
+          "indication": "treatment-refractory depression",
+          "citations": ["engel_2024"]
+        },
+        "dmt_nexus_recommended": {
+          "MAOI": {"value": 100, "unit": "mg", "compound": "harmaline", "perKg": 1.4},
+          "DMT": {"value": 15, "unit": "mg", "perKg": 0.2},
+          "citations": ["engel_2024"]
+        },
+        "variabilityFactors": [
+          "Preparation method",
+          "Plant material quality and origin",
+          "Brewing technique and duration",
+          "Proportions of ingredients",
+          "Traditional vs. non-traditional preparation"
+        ],
+        "notes": "Dosing is highly variable and difficult to standardize due to traditional preparation methods"
+      },
+      "pharmacokinetics": {
+        "absorption": {
+          "route": "oral",
+          "mechanism": "MAOIs from B. caapi prevent DMT degradation in gut, allowing absorption",
+          "bioavailability": "Significantly enhanced by MAOI presence"
+        },
+        "onset": {"min": 20, "max": 60, "unit": "minutes"},
+        "peak": {"min": 60, "max": 120, "unit": "minutes"},
+        "duration": {"min": 4, "max": 6, "unit": "hours"},
+        "metabolism": "DMT metabolized by MAO enzymes; harmala alkaloids inhibit this process",
+        "elimination": "renal"
+      },
+      "toleranceDevelopment": {
+        "rate": "rapid for DMT component",
+        "crossTolerance": ["other classical psychedelics"],
+        "duration": "few days for reset",
+        "note": "Traditional use patterns typically involve infrequent dosing"
+      },
+      "addictionPotential": "minimal",
+      "physiologicalDependence": "none reported in traditional use contexts",
+      "psychologicalDependence": "rare, though some users report cravings",
+      "traditionalContext": {
+        "importance": "critical",
+        "elements": [
+          "Ceremonial setting",
+          "Experienced facilitator/shaman",
+          "Dietary restrictions (avoiding tyramine-rich foods)",
+          "Spiritual/healing intentions",
+          "Community support",
+          "Integration of vomiting as purging/cleansing"
+        ]
+      }
+    }
+  ],
+
+  "riskFactors": [
+    {
+      "id": "rf_ayahuasca_maoi_001",
+      "name": "MAOI Drug and Food Interactions",
+      "category": "pharmacological",
+      "subcategory": "drug_interactions",
+      "severity": "critical",
+      "description": "The harmala alkaloids in ayahuasca act as MAOIs, creating dangerous interactions with various substances and foods",
+      "mechanism": "MAO inhibition prevents breakdown of tyramine and serotonin, leading to accumulation",
+      "specificInteractions": [
+        {
+          "interaction": "tyramine_rich_foods",
+          "substances": [
+            "aged cheeses",
+            "cured meats",
+            "fermented products",
+            "certain wines",
+            "soy sauce",
+            "overripe fruits"
+          ],
+          "risk": "hypertensive_crisis",
+          "severity": "critical",
+          "mechanism": "Tyramine buildup causes dangerous blood pressure elevation",
+          "citations": ["dos_santos_2024", "gomez-escolar_2024"]
+        },
+        {
+          "interaction": "serotonergic_medications",
+          "medications": [
+            "SSRIs",
+            "SNRIs",
+            "MAOIs (pharmaceutical)",
+            "Tricyclic antidepressants",
+            "Psychostimulants",
+            "MDMA",
+            "St. John's Wort"
+          ],
+          "risk": "serotonin_syndrome",
+          "severity": "critical",
+          "mechanism": "Excessive serotonin accumulation",
+          "contraindicationType": "absolute",
+          "citations": ["dos_santos_2024", "gomez-escolar_2024", "white_2024"]
+        },
+        {
+          "interaction": "other_medications",
+          "medications": [
+            "Sympathomimetics",
+            "Dextromethorphan",
+            "Certain opioids (tramadol, meperidine)"
+          ],
+          "risk": "various_serious_reactions",
+          "severity": "high",
+          "citations": ["dos_santos_2024"]
+        }
+      ],
+      "preventionStrategies": [
+        "Dietary restrictions 24-48 hours before and after",
+        "Medication review and washout period",
+        "Clear participant education",
+        "Medical screening"
+      ],
+      "citations": ["dos_santos_2024", "gomez-escolar_2024", "white_2024"]
+    },
+    {
+      "id": "rf_ayahuasca_preparation_001",
+      "name": "Non-Traditional Preparation and Supervision",
+      "category": "setting",
+      "subcategory": "context",
+      "severity": "high",
+      "description": "Using ayahuasca in non-supervised and non-traditional contexts significantly increases risk",
+      "prevalenceData": {
+        "increasedRisk": {
+          "contexts": ["non-supervised", "non-traditional supervised"],
+          "effects": ["arthromyalgical", "mental health"],
+          "citations": ["bouso_2022", "evans_2023"]
+        }
+      },
+      "specificRisks": [
+        "Inadequate screening",
+        "Improper brewing techniques",
+        "Incorrect plant identification",
+        "Lack of emergency protocols",
+        "Absence of experienced facilitation",
+        "Inappropriate setting"
+      ],
+      "citations": ["bouso_2022", "evans_2023", "white_2024"]
+    },
+    {
+      "id": "rf_ayahuasca_frequency_001",
+      "name": "Increased Lifetime Use",
+      "category": "behavioral",
+      "subcategory": "usage_patterns",
+      "severity": "moderate_to_high",
+      "description": "Increased lifetime ayahuasca use positively related to higher risk of adverse effects",
+      "specificRisks": [
+        "adverse_physical_effects",
+        "adverse_neurological_effects"
+      ],
+      "evidenceQuality": "moderate",
+      "citations": ["bouso_2022"]
+    },
+    {
+      "id": "rf_ayahuasca_age_first_use_001",
+      "name": "Older Age at First Use",
+      "category": "demographic",
+      "subcategory": "age",
+      "severity": "moderate",
+      "description": "First ayahuasca use at an older age increases risk of adverse effects",
+      "specificRisks": [
+        "adverse_physical_effects",
+        "general_symptom_effects"
+      ],
+      "citations": ["bouso_2022"]
+    },
+    {
+      "id": "rf_ayahuasca_gender_001",
+      "name": "Female Sex",
+      "category": "demographic",
+      "subcategory": "sex_gender",
+      "severity": "moderate_to_high",
+      "description": "Being female increases risk of certain adverse effects",
+      "specificRisks": [
+        {
+          "risk": "general_adverse_effects",
+          "elevation": "increased probability",
+          "citations": ["bouso_2022"]
+        },
+        {
+          "risk": "sexual_assault_reexperiencing",
+          "prevalence": "high",
+          "context": "during ayahuasca ceremonies",
+          "severity": "high",
+          "citations": ["weiss_2023"]
+        }
+      ],
+      "citations": ["bouso_2022", "weiss_2023"]
+    },
+    {
+      "id": "rf_ayahuasca_physical_health_001",
+      "name": "Pre-existing Physical Health Conditions",
+      "category": "physiological",
+      "subcategory": "medical_history",
+      "severity": "high",
+      "description": "Having physical health conditions increases risk of adverse effects",
+      "specificRisks": [
+        {
+          "type": "adverse_physical_effects",
+          "riskLevel": "elevated"
+        },
+        {
+          "type": "general_symptom_effects",
+          "riskLevel": "elevated"
+        },
+        {
+          "type": "adverse_neurological_effects",
+          "riskLevel": "significantly_elevated",
+          "oddsRatio": 1.37
+        }
+      ],
+      "citations": ["bouso_2022"]
+    },
+    {
+      "id": "rf_ayahuasca_substance_use_history_001",
+      "name": "History of Substance Use Disorder",
+      "category": "psychiatric",
+      "subcategory": "substance_use",
+      "severity": "moderate_to_high",
+      "description": "History of substance use disorder increases risk of adverse physical effects",
+      "specificRisks": ["adverse_physical_effects"],
+      "citations": ["bouso_2022"]
+    },
+    {
+      "id": "rf_ayahuasca_spiritual_intensity_001",
+      "name": "Intensity of Acute Spiritual Experience",
+      "category": "experiential",
+      "subcategory": "subjective_effects",
+      "severity": "moderate",
+      "description": "Stronger acute spiritual experiences positively associated with adverse effects",
+      "relationship": "positive_correlation",
+      "specificRisks": [
+        "adverse_mental_health_effects",
+        "arthromyalgical_effects"
+      ],
+      "nuance": "May reflect intensity of overall experience rather than spiritual content per se",
+      "citations": ["bouso_2022"]
+    },
+    {
+      "id": "rf_ayahuasca_preparation_method_001",
+      "name": "Deviations from Traditional Preparation",
+      "category": "quality",
+      "subcategory": "preparation",
+      "severity": "high",
+      "description": "Improper brewing techniques alter chemical composition and increase risk",
+      "specificRisks": [
+        {
+          "risk": "altered_chemical_composition",
+          "examples": [
+            "incorrect proportions of ingredients",
+            "inadequate boiling times",
+            "higher harmaline concentrations"
+          ],
+          "consequences": [
+            "unpredictable potency",
+            "stronger, more challenging effects",
+            "increased adverse reactions"
+          ]
+        }
+      ],
+      "citations": ["white_2024", "marcus_2023"]
+    }
+  ],
+
+  "medicalConditions": [
+    {
+      "id": "cond_ayahuasca_psychotic_disorders_001",
+      "name": "Psychotic Disorders (Ayahuasca-Specific)",
+      "category": "psychiatric",
+      "icd10": "F20-F29",
+      "description": "Personal or family history of schizophrenia, schizophreniform disorders, or psychotic depression",
+      "substanceRisks": [
+        {
+          "substanceId": "ayahuasca_001",
+          "contraindicationType": "absolute",
+          "specificRisks": [
+            {
+              "risk": "psychotic_episode",
+              "severity": "critical",
+              "context": "Ongoing manic or psychotic symptomatology"
+            }
+          ],
+          "familyHistory": {
+            "relevant": true,
+            "contraindicationType": "absolute"
+          },
+          "citations": ["sabe_2024", "aday_2020"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ayahuasca_bipolar_001",
+      "name": "Bipolar Disorder (Ayahuasca-Specific)",
+      "category": "psychiatric",
+      "icd10": "F31",
+      "substanceRisks": [
+        {
+          "substanceId": "ayahuasca_001",
+          "contraindicationType": "absolute_if_active",
+          "specificRisks": [
+            {
+              "risk": "manic_episode",
+              "severity": "high",
+              "context": "Ongoing mania"
+            }
+          ],
+          "citations": ["sabe_2024"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ayahuasca_anxiety_001",
+      "name": "Anxiety Disorders (Ayahuasca-Specific)",
+      "category": "psychiatric",
+      "icd10": "F40-F48",
+      "substanceRisks": [
+        {
+          "substanceId": "ayahuasca_001",
+          "contraindicationType": "relative",
+          "specificRisks": [
+            {
+              "risk": "challenging_experiences",
+              "prevalence": "elevated",
+              "severity": "moderate_to_high"
+            }
+          ],
+          "citations": ["breeksema_2022"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ayahuasca_cardiovascular_001",
+      "name": "Cardiovascular Conditions (Ayahuasca-Specific)",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "substanceRisks": [
+        {
+          "substanceId": "ayahuasca_001",
+          "contraindicationType": "relative",
+          "mechanism": "Transient increases in blood pressure and heart rate",
+          "specificConditions": [
+            {
+              "condition": "uncontrolled_hypertension",
+              "severity": "high"
+            },
+            {
+              "condition": "coronary_artery_disease",
+              "severity": "high"
+            },
+            {
+              "condition": "arrhythmias",
+              "severity": "high"
+            }
+          ],
+          "citations": ["dos_santos_2024"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ayahuasca_seizure_001",
+      "name": "Seizure Disorders (Ayahuasca-Specific)",
+      "category": "neurological",
+      "substanceRisks": [
+        {
+          "substanceId": "ayahuasca_001",
+          "contraindicationType": "relative",
+          "specificRisks": [
+            {
+              "risk": "seizure_induction",
+              "prevalence": {
+                "value": 1.3,
+                "unit": "percent",
+                "context": "participants reporting fits or seizures"
+              },
+              "severity": "high"
+            }
+          ],
+          "citations": ["bouso_2022", "white_2024"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ayahuasca_pregnancy_001",
+      "name": "Pregnancy and Breastfeeding",
+      "category": "reproductive",
+      "substanceRisks": [
+        {
+          "substanceId": "ayahuasca_001",
+          "contraindicationType": "relative",
+          "evidenceQuality": "limited_human_data",
+          "animalStudies": {
+            "findings": "abortifacient and teratogenic effects at higher doses",
+            "applicability": "uncertain translation to humans"
+          },
+          "recommendedApproach": "avoid_due_to_insufficient_safety_data",
+          "citations": ["white_2024"]
+        }
+      ]
+    }
+  ],
+
+  "adverseEvents": [
+    {
+      "id": "ae_ayahuasca_vomiting_001",
+      "name": "Vomiting and Nausea",
+      "category": "physiological",
+      "subcategory": "gastrointestinal",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Most common physical effect of ayahuasca",
+      "prevalenceData": [
+        {
+          "value": 69.9,
+          "unit": "percent",
+          "context": "participants reporting acute physical health adverse effects",
+          "citations": ["bouso_2022"]
+        }
+      ],
+      "culturalContext": {
+        "traditional_interpretation": "Viewed as positive purging and cleansing effect",
+        "therapeutic_significance": "Often considered part of the healing process",
+        "citations": ["bouso_2022", "breeksema_2022"]
+      },
+      "physiologicalConsequences": [
+        {
+          "consequence": "dehydration",
+          "severity": "moderate",
+          "risk": "especially if severe or prolonged"
+        },
+        {
+          "consequence": "electrolyte_imbalances",
+          "severity": "moderate"
+        },
+        {
+          "consequence": "esophageal_damage",
+          "severity": "low_to_moderate",
+          "context": "with repeated vomiting"
+        },
+        {
+          "consequence": "dental_damage",
+          "severity": "low",
+          "context": "with repeated vomiting"
+        }
+      ],
+      "drugInteractions": {
+        "impaired_absorption": "Vomiting and diarrhea can impair absorption of other oral medications"
+      },
+      "management": [
+        "Hydration support",
+        "Electrolyte monitoring if severe",
+        "Reassurance about cultural normalcy",
+        "Monitoring for complications"
+      ],
+      "citations": ["bouso_2022", "dos_santos_2024", "white_2024"]
+    },
+    {
+      "id": "ae_ayahuasca_cardiovascular_001",
+      "name": "Cardiovascular Effects",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Transient increases in blood pressure and heart rate",
+      "effects": [
+        "increased_blood_pressure",
+        "increased_heart_rate"
+      ],
+      "duration": "transient",
+      "clinicalSignificance": "Generally well-tolerated in healthy individuals; concerning for those with cardiovascular conditions",
+      "citations": ["dos_santos_2024"]
+    },
+    {
+      "id": "ae_ayahuasca_other_physical_001",
+      "name": "Other Physical Effects",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "effects": [
+        {
+          "effect": "headache",
+          "prevalence": {"value": 17.8, "unit": "percent"}
+        },
+        {
+          "effect": "abdominal_pain",
+          "prevalence": {"value": 12.8, "unit": "percent"}
+        },
+        {
+          "effect": "breathing_difficulties",
+          "prevalence": {"value": 7.3, "unit": "percent"}
+        },
+        {
+          "effect": "chest_pains",
+          "prevalence": {"value": 4.7, "unit": "percent"}
+        },
+        {
+          "effect": "fainting",
+          "prevalence": {"value": 4.1, "unit": "percent"}
+        },
+        {
+          "effect": "fits_or_seizures",
+          "prevalence": {"value": 1.3, "unit": "percent"},
+          "severity": "high"
+        }
+      ],
+      "citations": ["bouso_2022", "white_2024"]
+    },
+    {
+      "id": "ae_ayahuasca_anxiety_acute_001",
+      "name": "Acute Anxiety and Psychological Distress",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_severe",
+      "description": "Anxiety, transient paranoia, confusion, despair, and psychological distress during ayahuasca experience",
+      "manifestations": [
+        "anxiety",
+        "transient_paranoia",
+        "confusion",
+        "despair",
+        "psychological_distress",
+        "feeling_disconnected_or_alone",
+        "nightmares_disturbing_thoughts",
+        "feeling_nervous_anxious_on_edge"
+      ],
+      "prevalenceData": [
+        {
+          "effect": "feeling_disconnected_or_alone",
+          "value": 21.0,
+          "unit": "percent",
+          "citations": ["bouso_2022"]
+        },
+        {
+          "effect": "nightmares_disturbing_thoughts_feelings_sensations",
+          "value": 19.2,
+          "unit": "percent",
+          "citations": ["bouso_2022"]
+        },
+        {
+          "effect": "feeling_nervous_anxious_on_edge",
+          "value": 18.9,
+          "unit": "percent",
+          "citations": ["bouso_2022"]
+        }
+      ],
+      "culturalContext": {
+        "traditional_interpretation": "Sometimes perceived as part of therapeutic process",
+        "variable_severity": "Can range from manageable discomfort to intense distress"
+      },
+      "management": [
+        "Reassurance",
+        "Grounding techniques",
+        "Experienced facilitator support",
+        "Safe, supportive environment"
+      ],
+      "citations": ["breeksema_2022", "bouso_2022"]
+    },
+    {
+      "id": "ae_ayahuasca_perceptual_001",
+      "name": "Visual and Auditory Distortions",
+      "category": "perceptual",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Altered perception of visual and auditory stimuli",
+      "culturalContext": {
+        "traditional_interpretation": "Often interpreted positively within ceremonial context",
+        "therapeutic_value": "May provide insights or facilitate healing process"
+      },
+      "citations": ["bouso_2022"]
+    },
+    {
+      "id": "ae_ayahuasca_challenging_experience_001",
+      "name": "Challenging Experiences",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "moderate_to_severe",
+      "description": "Intensely distressing psychological experiences during ayahuasca session",
+      "characteristics": [
+        "Intense fear or terror",
+        "Confrontation with trauma",
+        "Ego dissolution distress",
+        "Overwhelming emotions",
+        "Sense of dying or losing control"
+      ],
+      "culturalContext": {
+        "traditional_interpretation": "Often perceived as part of therapeutic process",
+        "nuance": "Can be intensely distressing despite potential therapeutic value"
+      },
+      "riskFactors": [
+        "rf_ayahuasca_preparation_001",
+        "rf_trauma_history_001",
+        "rf_anxiety_history_001",
+        "rf_unprepared_001"
+      ],
+      "citations": ["bouso_2022"]
+    },
+    {
+      "id": "ae_ayahuasca_hppd_001",
+      "name": "Hallucinogen Persisting Perception Disorder (HPPD)",
+      "category": "perceptual",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "description": "Persistent perceptual disturbances after ayahuasca use",
+      "prevalence": "rare",
+      "evidenceQuality": "limited",
+      "citations": ["bouso_2022"]
+    },
+    {
+      "id": "ae_ayahuasca_persistent_adverse_001",
+      "name": "Persistent Adverse Effects",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "moderate_to_high",
+      "description": "Ongoing adverse effects requiring professional support",
+      "prevalenceData": [
+        {
+          "value": 11.9,
+          "unit": "percent",
+          "context": "users experiencing persistent adverse effects",
+          "citations": ["robinson_2024"]
+        }
+      ],
+      "manifestations": [
+        "anxiety",
+        "depression",
+        "perceptual_disturbances",
+        "cognitive_changes",
+        "emotional_dysregulation"
+      ],
+      "riskFactors": [
+        "history_of_trauma",
+        "pre-existing_mental_health_conditions",
+        "non-supervised_settings"
+      ],
+      "requiredSupport": [
+        "professional_psychological_support",
+        "integration_therapy",
+        "community_support"
+      ],
+      "citations": ["robinson_2024", "evans_2023", "bouso_2022"]
+    },
+    {
+      "id": "ae_ayahuasca_cognitive_effects_001",
+      "name": "Subjective Cognitive Changes",
+      "category": "cognitive",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "description": "Changes in thinking style and cognitive functioning",
+      "evidenceQuality": "mixed",
+      "findings": {
+        "objective_testing": "No evidence of long-term cognitive impairment",
+        "subjective_reports": [
+          "altered_thinking_styles",
+          "increased_mindfulness",
+          "changes_in_creativity"
+        ],
+        "memory": "Some studies suggest improved memory and preserved global cognitive function"
+      },
+      "citations": ["forstmann_2021", "bouso_2022", "kocarova_2021", "lowe_2022", "walther_2024", "dos_santos_2024"]
+    },
+    {
+      "id": "ae_ayahuasca_seizures_001",
+      "name": "Seizures",
+      "category": "neurological",
+      "timeframe": "acute",
+      "severity": "high",
+      "description": "Convulsive episodes during or after ayahuasca use",
+      "prevalenceData": [
+        {
+          "value": 1.3,
+          "unit": "percent",
+          "context": "participants reporting fits or seizures",
+          "citations": ["white_2024"]
+        },
+        {
+          "value": 1.4,
+          "unit": "percent",
+          "context": "participants in large study",
+          "citations": ["white_2024"]
+        }
+      ],
+      "riskFactors": [
+        "history_of_epilepsy",
+        "history_of_seizures",
+        "pre-existing_neurological_conditions"
+      ],
+      "citations": ["white_2024", "palitsky_nd", "bouso_2022"]
+    },
+    {
+      "id": "ae_ayahuasca_sexual_trauma_reexperiencing_001",
+      "name": "Sexual Trauma Re-experiencing",
+      "category": "psychological",
+      "subcategory": "trauma",
+      "timeframe": "acute",
+      "severity": "high",
+      "description": "Re-experiencing of past sexual assault during ayahuasca ceremonies",
+      "prevalenceData": {
+        "population": "women",
+        "prevalence": "high",
+        "context": "ayahuasca ceremonies",
+        "citations": ["weiss_2023"]
+      },
+      "considerations": [
+        "Requires trauma-informed approach",
+        "Specialized support needed",
+        "Safety planning essential",
+        "Gender-sensitive facilitation"
+      ],
+      "citations": ["weiss_2023"]
+    },
+    {
+      "id": "ae_ayahuasca_hypertensive_crisis_001",
+      "name": "Hypertensive Crisis",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "timeframe": "acute",
+      "severity": "critical",
+      "description": "Dangerous elevation in blood pressure due to MAOI-tyramine interaction",
+      "mechanism": "Consumption of tyramine-rich foods while MAOIs present in system",
+      "triggeringSubstances": [
+        "aged_cheeses",
+        "cured_meats",
+        "fermented_products",
+        "certain_wines",
+        "soy_sauce"
+      ],
+      "symptoms": [
+        "severe_headache",
+        "chest_pain",
+        "nausea",
+        "vomiting",
+        "confusion",
+        "seizures",
+        "stroke_risk"
+      ],
+      "prevention": [
+        "Strict dietary restrictions before and after ayahuasca",
+        "Clear participant education",
+        "Monitoring of food intake"
+      ],
+      "treatment": "Medical emergency requiring immediate intervention",
+      "citations": ["dos_santos_2024", "gomez-escolar_2024"]
+    },
+    {
+      "id": "ae_ayahuasca_serotonin_syndrome_001",
+      "name": "Serotonin Syndrome",
+      "category": "physiological",
+      "subcategory": "neurotoxicity",
+      "timeframe": "acute",
+      "severity": "critical",
+      "description": "Life-threatening condition from excessive serotonin due to MAOI-serotonergic drug interaction",
+      "mechanism": "Combination of ayahuasca MAOIs with serotonergic medications",
+      "triggeringMedications": [
+        "SSRIs",
+        "SNRIs",
+        "MAOIs (pharmaceutical)",
+        "Tricyclic_antidepressants",
+        "MDMA",
+        "St_Johns_Wort",
+        "Psychostimulants"
+      ],
+      "symptoms": [
+        "hyperthermia",
+        "agitation",
+        "confusion",
+        "rapid_heart_rate",
+        "high_blood_pressure",
+        "dilated_pupils",
+        "muscle_rigidity",
+        "tremor",
+        "seizures",
+        "death"
+      ],
+      "contraindicationType": "absolute",
+      "prevention": [
+        "Medication screening",
+        "Washout period for serotonergic medications",
+        "Clear warnings to participants"
+      ],
+      "treatment": "Medical emergency requiring immediate intervention",
+      "citations": ["dos_santos_2024", "gomez-escolar_2024", "white_2024"]
+    }
+  ],
+
+  "therapeuticAlliance": [
+    {
+      "id": "alliance_ayahuasca_shaman_001",
+      "name": "Shaman/Facilitator Relationship",
+      "category": "relational",
+      "description": "Quality of relationship with traditional shaman or ceremony facilitator",
+      "importance": "critical",
+      "traditionalContext": {
+        "role": "Experienced indigenous healers guide ceremony and provide support",
+        "training": "Years of apprenticeship and traditional knowledge",
+        "responsibilities": [
+          "Setting ceremonial space",
+          "Brewing ayahuasca properly",
+          "Guiding participants through experience",
+          "Providing protection and healing",
+          "Integration support"
+        ]
+      },
+      "modernContext": {
+        "variability": "Wide variation in training, experience, and ethical standards",
+        "risks": [
+          "Unqualified facilitators",
+          "Lack of traditional knowledge",
+          "Boundary violations",
+          "Cultural appropriation",
+          "Inadequate emergency protocols"
+        ]
+      },
+      "components": [
+        {
+          "component": "trust",
+          "importance": "Essential for feeling safe during vulnerable experience"
+        },
+        {
+          "component": "cultural_competence",
+          "importance": "Understanding traditional practices and their meaning"
+        },
+        {
+          "component": "experience",
+          "importance": "Ability to handle challenging experiences and emergencies"
+        },
+        {
+          "component": "ethical_boundaries",
+          "importance": "Maintaining appropriate relationships with participants"
+        }
+      ],
+      "citations": ["marcus_2023", "argyri_2024"]
+    }
+  ],
+
+  "boundaryViolations": [
+    {
+      "id": "boundary_ayahuasca_sexual_001",
+      "name": "Sexual Misconduct in Ayahuasca Ceremonies",
+      "category": "ethical_violation",
+      "severity": "critical",
+      "description": "Sexual misconduct by facilitators, shamans, or other participants",
+      "prevalenceData": [
+        {
+          "context": "underground_sitters_guides",
+          "finding": "46.3% of sexual misconduct perpetrators were underground sitters/guides",
+          "citations": ["kruger_2024"]
+        }
+      ],
+      "specificRisks": [
+        "Heightened vulnerability during ayahuasca state",
+        "Power dynamics with shaman/facilitator",
+        "Lack of oversight in unregulated settings",
+        "Cultural contexts that may normalize inappropriate touch",
+        "Retraumatization for sexual assault survivors"
+      ],
+      "prevention": [
+        "Clear ethical guidelines",
+        "Screening of facilitators",
+        "Same-gender options where appropriate",
+        "Multiple facilitators present",
+        "Reporting mechanisms",
+        "Legal accountability"
+      ],
+      "citations": ["kruger_2024", "weiss_2023"]
+    },
+    {
+      "id": "boundary_ayahuasca_cultural_appropriation_001",
+      "name": "Cultural Appropriation and Exploitation",
+      "category": "ethical_violation",
+      "severity": "high",
+      "description": "Appropriation of indigenous practices without respect or benefit to source communities",
+      "manifestations": [
+        "Non-indigenous facilitators claiming traditional authority",
+        "Commercialization without benefit-sharing",
+        "Trivialization of sacred practices",
+        "Environmental exploitation (overharvesting)",
+        "Economic exploitation of indigenous communities"
+      ],
+      "impacts": [
+        "Harm to indigenous communities",
+        "Loss of traditional knowledge",
+        "Environmental degradation",
+        "Perpetuation of colonial dynamics"
+      ],
+      "ethicalConsiderations": [
+        "Respect for traditional knowledge",
+        "Benefit-sharing with source communities",
+        "Environmental sustainability",
+        "Cultural humility",
+        "Recognition of indigenous sovereignty"
+      ],
+      "citations": ["bathje_2022", "barber_2023", "hartogsohn_2024"]
+    }
+  ],
+
+  "preparationPractices": [
+    {
+      "id": "prep_ayahuasca_dietary_001",
+      "name": "Dietary Restrictions (Dieta)",
+      "category": "physiological_preparation",
+      "timing": "24-48 hours before and after ceremony",
+      "importance": "critical",
+      "description": "Avoiding tyramine-rich foods and other substances to prevent dangerous interactions with MAOIs",
+      "restrictions": [
+        {
+          "category": "foods_to_avoid",
+          "items": [
+            "Aged cheeses",
+            "Cured/smoked meats",
+            "Fermented foods (sauerkraut, kimchi)",
+            "Certain wines (especially red)",
+            "Soy sauce and other fermented soy products",
+            "Overripe fruits (especially bananas)",
+            "Pickled foods",
+            "Yeast extracts"
+          ],
+          "reason": "High tyramine content can cause hypertensive crisis"
+        },
+        {
+          "category": "medications_to_avoid",
+          "items": [
+            "SSRIs/SNRIs",
+            "MAOIs",
+            "Stimulants",
+            "Certain pain medications"
+          ],
+          "reason": "Risk of serotonin syndrome",
+          "washoutPeriod": "Typically 2-6 weeks depending on medication"
+        },
+        {
+          "category": "traditional_dietary_restrictions",
+          "items": [
+            "Red meat",
+            "Pork",
+            "Spicy foods",
+            "Sugar",
+            "Salt",
+            "Alcohol",
+            "Sexual activity"
+          ],
+          "reason": "Traditional purification and preparation",
+          "cultural_significance": "Varies by tradition"
+        }
+      ],
+      "effectiveness": "critical_for_safety",
+      "citations": ["dos_santos_2024", "gomez-escolar_2024"]
+    },
+    {
+      "id": "prep_ayahuasca_medical_screening_001",
+      "name": "Medical and Psychiatric Screening",
+      "category": "assessment",
+      "timing": "pre_ceremony",
+      "importance": "critical",
+      "components": [
+        {
+          "area": "medication_review",
+          "focus": [
+            "Current medications (especially serotonergic)",
+            "Recent medication use",
+            "Washout period assessment",
+            "Supplement use"
+          ]
+        },
+        {
+          "area": "cardiovascular_screening",
+          "focus": [
+            "Blood pressure",
+            "Heart conditions",
+            "Cardiovascular disease history"
+          ]
+        },
+        {
+          "area": "psychiatric_history",
+          "focus": [
+            "Psychotic disorders",
+            "Bipolar disorder",
+            "Severe anxiety",
+            "Current psychological state"
+          ]
+        },
+        {
+          "area": "neurological_screening",
+          "focus": [
+            "Seizure history",
+            "Epilepsy",
+            "Neurological conditions"
+          ]
+        }
+      ],
+      "effectiveness": "high",
+      "citations": ["sabe_2024", "dos_santos_2024"]
+    },
+    {
+      "id": "prep_ayahuasca_traditional_preparation_001",
+      "name": "Traditional Ceremonial Preparation",
+      "category": "cultural_spiritual",
+      "timing": "days_to_weeks_before",
+      "description": "Traditional preparation practices to ready body, mind, and spirit",
+      "components": [
+        "Intention setting",
+        "Spiritual purification practices",
+        "Community connection",
+        "Learning about the medicine",
+        "Understanding ceremonial protocols"
+      ],
+      "culturalSignificance": "high",
+      "effectiveness": "moderate_to_high_for_traditional_contexts"
+    }
+  ],
+
+  "integrationPractices": [
+    {
+      "id": "int_ayahuasca_somatic_001",
+      "name": "Somatic Integration (Ayahuasca-Specific)",
+      "category": "mind_body",
+      "timing": "post_session_ongoing",
+      "importance": "especially_high_for_ayahuasca",
+      "practices": [
+        {
+          "practice": "yoga",
+          "relevance": "Particularly important for ayahuasca integration",
+          "benefits": [
+            "Embodiment",
+            "Trauma processing",
+            "Grounding",
+            "Processing physical purging experience"
+          ],
+          "citations": ["bathje_2022", "cowley-court_2023"]
+        },
+        {
+          "practice": "bodywork",
+          "types": ["massage", "somatic_experiencing"],
+          "benefits": ["Processing stored trauma", "Integration of experience"]
+        }
+      ],
+      "effectiveness": "high",
+      "specialRelevance": "Especially important for processing the intense physical component of ayahuasca",
+      "citations": ["bathje_2022", "cowley-court_2023"]
+    },
+    {
+      "id": "int_ayahuasca_community_001",
+      "name": "Community Integration Support",
+      "category": "social",
+      "timing": "post_ceremony_ongoing",
+      "description": "Integration support within ayahuasca community or integration circles",
+      "components": [
+        "Sharing circles",
+        "Peer support",
+        "Community rituals",
+        "Ongoing connection with facilitator/shaman"
+      ],
+      "benefits": [
+        "Reduced isolation",
+        "Shared understanding",
+        "Meaning-making support",
+        "Accountability"
+      ],
+      "risks": [
+        "Cult dynamics",
+        "Misinformation",
+        "Pressure to conform",
+        "Boundary violations"
+      ],
+      "bestPractices": [
+        "Multiple sources of support",
+        "Professional integration therapy",
+        "Critical thinking encouraged",
+        "Clear boundaries"
+      ],
+      "citations": ["cheung_nd", "robinson_2024"]
+    }
+  ],
+
+  "contaminationQualityFactors": [
+    {
+      "id": "contam_ayahuasca_botanical_001",
+      "name": "Botanical Misidentification",
+      "category": "sourcing",
+      "severity": "high",
+      "description": "Incorrect identification of plant species used in ayahuasca preparation",
+      "risks": [
+        {
+          "risk": "use_of_wrong_plant_species",
+          "consequences": [
+            "Inclusion of toxic compounds",
+            "Lack of desired psychoactive properties",
+            "Unpredictable effects",
+            "Poisoning"
+          ]
+        }
+      ],
+      "riskContexts": [
+        "Unregulated markets",
+        "Preparation by inexperienced individuals",
+        "Non-traditional sourcing",
+        "Commercial production without botanical expertise"
+      ],
+      "prevention": [
+        "Expert botanical identification",
+        "Sourcing from traditional/experienced preparers",
+        "Knowledge of proper plant morphology",
+        "Quality control procedures"
+      ],
+      "citations": ["white_2024"]
+    },
+    {
+      "id": "contam_ayahuasca_brewing_001",
+      "name": "Improper Brewing Techniques",
+      "category": "preparation",
+      "severity": "high",
+      "description": "Deviations from traditional preparation methods affecting chemical composition",
+      "specificIssues": [
+        {
+          "issue": "incorrect_proportions",
+          "consequence": "Altered alkaloid ratios, unpredictable effects"
+        },
+        {
+          "issue": "inadequate_boiling_time",
+          "consequence": "Incomplete extraction or excessive harmaline concentration"
+        },
+        {
+          "issue": "improper_technique",
+          "consequence": "Variable potency, increased risk of adverse effects"
+        },
+        {
+          "issue": "lack_of_traditional_knowledge",
+          "consequence": "Loss of safety features built into traditional methods"
+        }
+      ],
+      "highRiskPreparations": "Higher concentrations of harmaline associated with stronger and potentially more challenging effects",
+      "prevention": [
+        "Traditional preparation methods",
+        "Experienced preparers",
+        "Standardized protocols where appropriate",
+        "Quality control testing"
+      ],
+      "citations": ["white_2024", "marcus_2023"]
+    },
+    {
+      "id": "contam_ayahuasca_adulteration_001",
+      "name": "Adulteration with Other Substances",
+      "category": "contamination",
+      "severity": "high",
+      "description": "Addition of substances not traditionally part of ayahuasca",
+      "commonAdulterants": [
+        {
+          "adulterant": "synthetic_DMT",
+          "reason": "Enhance effects or reduce cost",
+          "risks": ["Unpredictable interactions", "Different safety profile"]
+        },
+        {
+          "adulterant": "other_plant_psychedelics",
+          "examples": ["Datura", "Brugmansia"],
+          "risks": ["Toxicity", "Dangerous anticholinergic effects"]
+        },
+        {
+          "adulterant": "NBOMe_compounds",
+          "risks": ["Severe toxicity", "Unpredictable effects", "Fatalities"]
+        }
+      ],
+      "riskContexts": [
+        "Non-traditional settings",
+        "Commercial production",
+        "Unregulated markets",
+        "Retreat centers without oversight"
+      ],
+      "consequences": [
+        "Unpredictable effects",
+        "Unknown interactions with ayahuasca components",
+        "Increased toxicity",
+        "Medical emergencies"
+      ],
+      "prevention": [
+        "Source from traditional/reputable preparers",
+        "Substance testing where available",
+        "Transparency about preparation",
+        "Regulation and oversight"
+      ],
+      "citations": ["dos_santos_2024", "malcolm_2022", "marcus_2023", "wells_2024"]
+    },
+    {
+      "id": "contam_ayahuasca_environmental_001",
+      "name": "Environmental Contamination",
+      "category": "contamination",
+      "severity": "moderate_to_high",
+      "description": "Contamination during harvesting, storage, or preparation",
+      "sources": [
+        {
+          "source": "pesticide_residues",
+          "risk": "From non-organic cultivation",
+          "consequences": ["Toxicity", "Allergic reactions"]
+        },
+        {
+          "source": "heavy_metals",
+          "risk": "Absorbed from soil",
+          "consequences": ["Chronic toxicity", "Neurological damage"]
+        },
+        {
+          "source": "microbial_contamination",
+          "risk": "Improper handling/storage",
+          "consequences": ["Gastrointestinal illness", "Infection"]
+        }
+      ],
+      "prevention": [
+        "Organic cultivation practices",
+        "Proper storage",
+        "Hygienic preparation",
+        "Quality testing"
+      ],
+      "citations": ["wells_2024"]
+    },
+    {
+      "id": "contam_ayahuasca_potency_variability_001",
+      "name": "Potency Variability",
+      "category": "quality",
+      "severity": "high",
+      "description": "Inconsistent alkaloid concentrations between batches",
+      "factors": [
+        "Plant material quality",
+        "Growing conditions",
+        "Harvest timing",
+        "Storage conditions",
+        "Preparation technique",
+        "Proportions used"
+      ],
+      "consequences": [
+        "Unpredictable dosing",
+        "Accidental under-dosing or over-dosing",
+        "Variable effects",
+        "Increased risk of adverse events"
+      ],
+      "challenge": "Difficult to standardize traditional preparations",
+      "harmReduction": [
+        "Experienced preparers",
+        "Consistent sourcing",
+        "Careful observation of effects",
+        "Starting with conservative doses in new contexts"
+      ]
+    }
+  ],
+
+  "emergencyResponseProtocols": [
+    {
+      "id": "emergency_ayahuasca_nonpharm_001",
+      "name": "Non-Pharmacological Interventions for Ayahuasca",
+      "category": "crisis_management",
+      "priority": "first_line",
+      "ayahuascaSpecificConsiderations": [
+        "Extended duration compared to other psychedelics",
+        "Physical component (vomiting) may complicate crisis",
+        "Traditional healing practices may be appropriate",
+        "Cultural context influences interpretation"
+      ],
+      "interventions": [
+        {
+          "intervention": "traditional_healing_practices",
+          "description": "Icaros (healing songs), tobacco smoke, spiritual protection",
+          "appropriateness": "In traditional contexts with experienced shaman",
+          "effectiveness": "High in culturally appropriate contexts"
+        },
+        {
+          "intervention": "physical_comfort",
+          "description": "Support during purging, cleaning, fresh air",
+          "importance": "High due to physical component"
+        },
+        {
+          "intervention": "verbal_reassurance",
+          "description": "Remind experience is temporary, medicine-related, safe",
+          "culturalAdaptation": "Frame within traditional understanding if appropriate"
+        }
+      ]
+    },
+    {
+      "id": "emergency_ayahuasca_medical_001",
+      "name": "Ayahuasca-Specific Medical Emergencies",
+      "category": "crisis_management",
+      "priority": "escalation",
+      "specificEmergencies": [
+        {
+          "emergency": "hypertensive_crisis",
+          "cause": "MAOI-tyramine interaction",
+          "symptoms": [
+            "Severe headache",
+            "Chest pain",
+            "Confusion",
+            "Dangerously elevated BP"
+          ],
+          "response": "Immediate medical attention required",
+          "treatment": "Antihypertensive medications, monitoring"
+        },
+        {
+          "emergency": "serotonin_syndrome",
+          "cause": "MAOI-serotonergic drug interaction",
+          "symptoms": [
+            "Hyperthermia",
+            "Agitation",
+            "Muscle rigidity",
+            "Confusion",
+            "Rapid heart rate"
+          ],
+          "response": "Medical emergency - call EMS",
+          "treatment": "Discontinue all serotonergic agents, supportive care, possible ICU"
+        },
+        {
+          "emergency": "severe_dehydration",
+          "cause": "Prolonged vomiting and diarrhea",
+          "symptoms": [
+            "Dizziness",
+            "Decreased urination",
+            "Confusion",
+            "Weakness"
+          ],
+          "response": "Hydration support, possible IV fluids if severe"
+        },
+        {
+          "emergency": "seizure",
+          "prevalence": "Rare but documented (1.3-1.4%)",
+          "response": "Protect from injury, time seizure, call EMS if prolonged or repeated"
+        }
+      ]
+    }
+  ],
+
+  "culturalSpiritualFactors": [
+    {
+      "id": "cultural_ayahuasca_indigenous_001",
+      "name": "Indigenous Traditional Context",
+      "category": "cultural",
+      "description": "Traditional indigenous use of ayahuasca in healing and spiritual ceremonies",
+      "importance": "foundational",
+      "elements": [
+        "Generations of accumulated knowledge",
+        "Specific ceremonial protocols",
+        "Healing traditions",
+        "Spiritual cosmology",
+        "Community practices",
+        "Environmental relationship"
+      ],
+      "ethicalConsiderations": [
+        "Respect for traditional knowledge",
+        "Intellectual property rights",
+        "Benefit-sharing",
+        "Avoiding appropriation",
+        "Environmental sustainability",
+        "Community consent"
+      ],
+      "citations": ["bathje_2022", "barber_2023", "marcus_2023"]
+    },
+    {
+      "id": "cultural_ayahuasca_western_adoption_001",
+      "name": "Western Adoption and Medicalization",
+      "category": "cultural",
+      "description": "Adoption of ayahuasca in Western medical and therapeutic contexts",
+      "tensions": [
+        "Medical model vs. traditional healing",
+        "Standardization vs. traditional variability",
+        "Individual therapy vs. communal ceremony",
+        "Clinical settings vs. traditional contexts"
+      ],
+      "risks": [
+        "Loss of cultural context",
+        "Trivialization of sacred practices",
+        "Appropriation without benefit-sharing",
+        "Imposition of Western frameworks",
+        "Environmental exploitation"
+      ],
+      "considerations": [
+        "How to honor traditional knowledge while adapting to new contexts",
+        "Ensuring indigenous communities benefit",
+        "Maintaining safety while respecting tradition",
+        "Avoiding colonization of indigenous practices"
+      ],
+      "citations": ["bathje_2022", "barber_2023", "hartogsohn_2024"]
+    },
+    {
+      "id": "cultural_ayahuasca_tourism_001",
+      "name": "Ayahuasca Tourism",
+      "category": "socioeconomic",
+      "description": "Commercial ayahuasca retreat industry, particularly in Peru",
+      "impacts": {
+        "negative": [
+          "Economic impacts on indigenous communities",
+          "Social disruption",
+          "Cultural commodification",
+          "Health impacts (lack of screening)",
+          "Environmental degradation (overharvesting)",
+          "Exploitation of participants"
+        ],
+        "reported_issues": "Negative economic, social, cultural, health, and environmental impacts in Peru"
+      },
+      "concerns": [
+        "Culturally and linguistically uninformed tourists",
+        "Unqualified facilitators claiming traditional authority",
+        "Safety compromised by profit motive",
+        "Lack of regulation and oversight"
+      ],
+      "citations": ["bathje_2022"]
+    },
+    {
+      "id": "cultural_ayahuasca_religious_001",
+      "name": "Syncretic Religious Movements",
+      "category": "spiritual",
+      "description": "Religious movements incorporating ayahuasca (Santo Daime, União do Vegetal)",
+      "characteristics": [
+        "Blend of indigenous, Christian, and other traditions",
+        "Formal organizational structures",
+        "Regular ceremonial use",
+        "Legal recognition in some countries",
+        "Developed safety protocols"
+      ],
+      "considerations": [
+        "Different risk profile than unregulated use",
+        "Community support and structure",
+        "Potential for dogmatic belief systems",
+        "Variable safety practices across groups"
+      ]
+    }
+  ],
+
+  "legalSocioeconomicFactors": [
+    {
+      "id": "legal_ayahuasca_status_001",
+      "name": "Legal Status of Ayahuasca",
+      "category": "legal",
+      "description": "Variable legal status across jurisdictions",
+      "complexity": "High - DMT is controlled but traditional ayahuasca use has exemptions in some places",
+      "statusByRegion": [
+        {
+          "region": "Brazil",
+          "status": "Legal for religious use",
+          "context": "Recognized religious/spiritual use"
+        },
+        {
+          "region": "Peru",
+          "status": "Legal, recognized as cultural heritage",
+          "context": "Traditional indigenous use protected"
+        },
+        {
+          "region": "United States",
+          "status": "DMT Schedule I; limited religious exemptions",
+          "context": "Santo Daime and UDV have specific exemptions"
+        },
+        {
+          "region": "Most_of_Europe",
+          "status": "Illegal (DMT controlled)",
+          "context": "Some countries considering religious exemptions"
+        }
+      ],
+      "impacts": [
+        "Drives underground, unregulated use",
+        "Creates barriers to research",
+        "Limits access to safer, regulated contexts",
+        "Complicates medical integration",
+        "Affects tourism industry"
+      ],
+      "citations": ["rajwani_2022", "barber_2023"]
+    },
+    {
+      "id": "socioeconomic_ayahuasca_access_001",
+      "name": "Socioeconomic Access Barriers",
+      "category": "socioeconomic",
+      "description": "Financial and resource barriers to safe ayahuasca use",
+      "barriers": [
+        {
+          "barrier": "retreat_costs",
+          "typical_cost": "$1000-$5000+ per retreat",
+          "impact": "Only wealthy can access legitimate retreat settings"
+        },
+        {
+          "barrier": "travel_costs",
+          "description": "Many retreats require international travel to Peru, Brazil, or other locations",
+          "impact": "Additional thousands in travel expenses"
+        },
+        {
+          "barrier": "time_off_work",
+          "description": "Retreats typically require 1-2 weeks minimum",
+          "impact": "Those with inflexible jobs cannot participate"
+        },
+        {
+          "barrier": "geographic_access",
+          "description": "Safe, legitimate access concentrated in certain regions",
+          "impact": "Rural and underserved populations lack access"
+        }
+      ],
+      "consequences": [
+        "Wealthy access safe contexts; poor relegated to unregulated use",
+        "Higher risk of unsafe use in lower SES populations",
+        "Health disparities amplified",
+        "Exploitation in cheaper, unsafe contexts"
+      ],
+      "citations": ["barber_2024", "wilson-poe_2024"]
+    }
+  ],
+
+  "complexInteractions": [
+    {
+      "id": "interact_ayahuasca_ssri_001",
+      "factors": [
+        {"type": "substance", "id": "ayahuasca_001"},
+        {"type": "medication", "category": "SSRI"},
+        {"type": "route", "id": "oral"}
+      ],
+      "riskMultiplier": "critical",
+      "specificOutcome": "Serotonin syndrome - potentially fatal",
+      "mechanism": [
+        "MAOIs in ayahuasca prevent serotonin breakdown",
+        "SSRIs increase serotonin availability",
+        "Combined effect causes dangerous serotonin accumulation"
+      ],
+      "contraindicationType": "absolute",
+      "requiredWashout": "2-6 weeks depending on specific SSRI",
+      "evidenceQuality": "strong",
+      "citations": ["dos_santos_2024", "gomez-escolar_2024", "white_2024"]
+    },
+    {
+      "id": "interact_ayahuasca_tyramine_001",
+      "factors": [
+        {"type": "substance", "id": "ayahuasca_001"},
+        {"type": "food", "category": "tyramine_rich"},
+        {"type": "route", "id": "oral"}
+      ],
+      "riskMultiplier": "critical",
+      "specificOutcome": "Hypertensive crisis",
+      "mechanism": [
+        "MAOIs prevent tyramine breakdown",
+        "Tyramine accumulation causes norepinephrine release",
+        "Dangerous blood pressure elevation"
+      ],
+      "prevention": [
+        "Strict dietary restrictions 24-48 hours before and after",
+        "Clear education about forbidden foods",
+        "Monitoring of participant compliance"
+      ],
+      "evidenceQuality": "strong",
+      "citations": ["dos_santos_2024", "gomez-escolar_2024"]
+    },
+    {
+      "id": "interact_ayahuasca_trauma_gender_001",
+      "factors": [
+        {"type": "substance", "id": "ayahuasca_001"},
+        {"type": "risk_factor", "id": "rf_trauma_history_001", "specific": "sexual_assault"},
+        {"type": "risk_factor", "id": "rf_ayahuasca_gender_001", "specific": "female"},
+        {"type": "setting", "id": "setting_ceremony_001"}
+      ],
+      "riskMultiplier": "high",
+      "specificOutcome": "Re-experiencing of sexual trauma",
+      "prevalence": "High among women with sexual assault history",
+      "mitigatingFactors": [
+        "Trauma-informed facilitation",
+        "Female facilitator options",
+        "Preparation for potential trauma emergence",
+        "Safety planning",
+        "Gender-sensitive environment",
+        "Specialized integration support"
+      ],
+      "evidenceQuality": "moderate",
+      "citations": ["weiss_2023"]
+    },
+    {
+      "id": "interact_ayahuasca_physical_age_001",
+      "factors": [
+        {"type": "substance", "id": "ayahuasca_001"},
+        {"type": "risk_factor", "id": "rf_ayahuasca_physical_health_001"},
+        {"type": "risk_factor", "id": "rf_ayahuasca_age_first_use_001"}
+      ],
+      "riskMultiplier": "high",
+      "specificOutcome": "Increased physical and neurological adverse effects",
+      "mechanism": [
+        "Age-related physiological changes",
+        "Higher likelihood of comorbid conditions",
+        "Increased cardiovascular vulnerability",
+        "Possible medication interactions"
+      ],
+      "recommendations": [
+        "Enhanced medical screening for older first-time users",
+        "Cardiovascular monitoring",
+        "Medication review",
+        "Starting with lower doses if possible",
+        "Close medical supervision"
+      ],
+      "evidenceQuality": "moderate",
+      "citations": ["bouso_2022"]
+    }
+  ],
+
+  "metadata": {
+    "documentSource": "Ayahuasca Literature Review - Psychedelic Safety Institute",
+    "substanceFocus": "Ayahuasca (DMT + MAOI plant brew)",
+    "primaryResearchTypes": [
+      "observational_studies",
+      "surveys",
+      "case_reports",
+      "clinical_trials",
+      "ethnographic_research"
+    ],
+    "geographicScope": "Global with emphasis on South America (origin), North America and Europe (contemporary use)",
+    "lastLiteratureSearch": "2024",
+    "qualityAssessment": "Comprehensive but limited by small sample sizes and lack of long-term studies",
+    "knownLimitations": [
+      "Most studies involve relatively small sample sizes",
+      "Limited diversity in research populations",
+      "Few long-term follow-up studies",
+      "Difficulty standardizing preparation methods",
+      "Variable methodology across studies",
+      "Underreporting of adverse events likely",
+      "Limited research in indigenous contexts",
+      "Most research focuses on single or occasional high-dose use",
+      "Lack of pharmacokinetic data",
+      "Traditional contexts underrepresented in formal research"
+    ],
+    "uniqueConsiderations": [
+      "Complex botanical preparation with multiple active compounds",
+      "MAOI component creates unique drug/food interaction risks",
+      "Strong cultural and spiritual context critical to understanding",
+      "Traditional indigenous knowledge essential but at risk of appropriation",
+      "Environmental sustainability concerns with increased demand",
+      "Significant physical component (purging) integral to experience",
+      "Extended duration compared to synthetic psychedelics",
+      "Tourism industry creates unique risks and ethical concerns"
+    ],
+    "criticalSafetyNotes": [
+      "MAOI interactions with tyramine-rich foods can be fatal",
+      "Serotonin syndrome risk with serotonergic medications is critical",
+      "Medication washout periods must be observed",
+      "Traditional preparation methods have built-in safety features",
+      "Cultural context significantly influences outcomes",
+      "Female participants have specific vulnerability (sexual trauma re-experiencing)",
+      "Quality control highly variable in unregulated settings",
+      "Botanical misidentification poses significant risks"
+    ]
+  }
+}

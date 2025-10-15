@@ -1,0 +1,1584 @@
+{
+  "schemaVersion": "2.0",
+  "lastUpdated": "2025-01-09",
+  
+  "substances": [
+    {
+      "id": "ibogaine_001",
+      "name": "Ibogaine",
+      "aliases": ["Iboga", "Tabernanthe iboga"],
+      "classification": {
+        "primary": "atypical_psychedelic",
+        "secondary": ["indole_alkaloid"],
+        "mechanism": "multi_receptor_interaction",
+        "receptorAffinity": {
+          "kappa_opioid": "high",
+          "mu_opioid": "moderate",
+          "NMDA": "moderate",
+          "sigma_2": "moderate",
+          "5HT2A": "low"
+        },
+        "note": "Not a classic serotonergic psychedelic; doesn't heavily rely on 5-HT2A receptor"
+      },
+      "metabolites": [
+        {
+          "name": "noribogaine",
+          "active": true,
+          "conversionSite": "liver",
+          "conversionEnzyme": "CYP2D6",
+          "conversionSpeed": "moderate",
+          "halfLife": {"value": 48, "unit": "hours", "note": "Significantly longer than ibogaine"},
+          "psychoactiveProperties": true,
+          "clinicalSignificance": "Effects can persist for up to 48 hours"
+        }
+      ],
+      "prevalenceData": {
+        "traditionalUse": {
+          "regions": ["Gabon", "Cameroon", "West Central Africa"],
+          "tradition": "Bwiti spiritual and medicinal practices",
+          "citations": ["cherian_2024", "knuijver_2022"]
+        },
+        "sustainabilityConcerns": {
+          "issue": "Increasing demand leading to overharvesting",
+          "risks": ["exploitation_of_indigenous_communities", "environmental_degradation"],
+          "citations": ["cherian_2024"]
+        },
+        "fatalitiesReviewed": {
+          "value": 19,
+          "context": "Ibogaine-related fatalities in literature review",
+          "withPreexistingHeartConditions": 6,
+          "citations": ["cherian_2024"]
+        }
+      },
+      "dosing": {
+        "therapeutic": {
+          "typical": {"min": 25, "max": 42, "unit": "mg/kg"},
+          "route": "oral",
+          "context": "For therapeutic purposes (e.g., addiction treatment)",
+          "citations": ["gomez-escolar_2024"]
+        },
+        "administration": {
+          "forms": ["powder", "extract", "hydrochloride"],
+          "route": "oral_primary",
+          "note": "Oral administration is standard; other routes should only occur in strictly controlled clinical settings"
+        },
+        "weightDependence": true,
+        "note": "Dosing is highly individual and weight-dependent"
+      },
+      "pharmacokinetics": {
+        "absorption": {
+          "route": "oral",
+          "formulations": ["powder", "extract", "hydrochloride"]
+        },
+        "onset": {"min": 30, "max": 120, "unit": "minutes"},
+        "peak": {"min": 2, "max": 4, "unit": "hours"},
+        "duration": {"min": 4, "max": 8, "unit": "hours"},
+        "metaboliteDuration": {"min": 24, "max": 48, "unit": "hours", "metabolite": "noribogaine"},
+        "metabolism": {
+          "primary": "Hepatic via CYP2D6 to noribogaine",
+          "geneticVariability": true,
+          "note": "Poor metabolizers at higher risk"
+        },
+        "elimination": "renal",
+        "pharmacokineticProfile": "complex"
+      },
+      "toleranceDevelopment": {
+        "rate": "unknown",
+        "crossTolerance": "unknown",
+        "note": "Limited research on tolerance patterns"
+      },
+      "addictionPotential": "low",
+      "physiologicalDependence": "none reported",
+      "psychologicalDependence": "minimal"
+    }
+  ],
+
+  "riskFactors": [
+    {
+      "id": "rf_ibogaine_cardiovascular_001",
+      "name": "Pre-existing Cardiovascular Conditions",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "description": "Heart conditions, QT prolongation, arrhythmias - CRITICAL for ibogaine",
+      "severity": "critical",
+      "substanceInteractions": [
+        {
+          "substanceId": "ibogaine_001",
+          "contraindicationType": "absolute",
+          "riskLevel": "critical",
+          "specificConditions": [
+            {
+              "condition": "cardiac_arrhythmias",
+              "severity": "critical",
+              "contraindicationType": "absolute"
+            },
+            {
+              "condition": "long_qt_syndrome",
+              "severity": "critical",
+              "contraindicationType": "absolute"
+            },
+            {
+              "condition": "prolonged_baseline_qt",
+              "severity": "critical",
+              "contraindicationType": "absolute",
+              "mechanism": "Can be induced by medications (antibiotics, antidepressants)"
+            },
+            {
+              "condition": "hERG_mutations",
+              "severity": "critical",
+              "contraindicationType": "absolute",
+              "association": "Long QT syndrome"
+            },
+            {
+              "condition": "coronary_artery_sclerosis",
+              "severity": "critical",
+              "riskType": "increased_fatality_risk"
+            },
+            {
+              "condition": "myocardial_infarct",
+              "severity": "critical",
+              "riskType": "increased_fatality_risk"
+            },
+            {
+              "condition": "cardiac_hypertrophy",
+              "severity": "critical",
+              "riskType": "increased_fatality_risk"
+            },
+            {
+              "condition": "dilated_cardiomyopathy",
+              "severity": "critical",
+              "riskType": "increased_fatality_risk"
+            }
+          ],
+          "physiologicalEffects": {
+            "qtProlongation": {
+              "severity": "critical",
+              "mechanism": "Direct cardiac effect",
+              "averageIncrease": {"value": 95, "unit": "ms", "range": {"min": 29, "max": 146}},
+              "clinicallySignificantThreshold": {"value": 500, "unit": "ms"},
+              "prevalenceAboveThreshold": {
+                "value": 50,
+                "unit": "percent",
+                "context": "Of participants in safety study"
+              },
+              "consequence": "Life-threatening Torsade de pointes (TdP) arrhythmia",
+              "citations": ["knuijver_2022", "glue_2016", "koenig_2015"]
+            },
+            "bradycardia": {
+              "severity": "high",
+              "description": "Slow heart rate",
+              "riskWindow": "Within first 72 hours",
+              "association": "Sudden death risk"
+            }
+          },
+          "fatalityData": {
+            "reviewedDeaths": 19,
+            "withPreexistingHeartConditions": 6,
+            "citation": "cherian_2024"
+          },
+          "requiredMonitoring": [
+            "Continuous ECG monitoring during administration",
+            "Post-administration ECG monitoring",
+            "Medical supervision essential",
+            "Baseline ECG required"
+          ],
+          "citations": ["cherian_2024", "koenig_2015", "glue_2016", "rocha_2023", "baumeister_2015"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "clinicalSignificance": "Ibogaine has unique and severe cardiovascular risks not seen with classical psychedelics",
+      "monitoringRecommendations": [
+        "Pre-screening ECG mandatory",
+        "Continuous ECG monitoring during session",
+        "Post-session monitoring for 72 hours minimum",
+        "Electrolyte panel before administration",
+        "Medical emergency response capability required"
+      ]
+    },
+    {
+      "id": "rf_ibogaine_electrolytes_001",
+      "name": "Electrolyte Imbalances",
+      "category": "physiological",
+      "subcategory": "metabolic",
+      "description": "Abnormal potassium or magnesium levels",
+      "severity": "critical",
+      "substanceInteractions": [
+        {
+          "substanceId": "ibogaine_001",
+          "contraindicationType": "absolute_if_uncorrected",
+          "riskLevel": "critical",
+          "specificImbalances": [
+            {
+              "imbalance": "hypokalemia",
+              "description": "Low potassium",
+              "severity": "critical",
+              "mechanism": "Increases cardiac risk with ibogaine",
+              "contraindicationType": "absolute_if_uncorrected"
+            },
+            {
+              "imbalance": "hypomagnesemia",
+              "description": "Low magnesium",
+              "severity": "critical",
+              "mechanism": "Increases cardiac risk with ibogaine",
+              "contraindicationType": "absolute_if_uncorrected"
+            }
+          ],
+          "consequences": [
+            "Elevated risk of cardiac arrhythmias",
+            "Increased QT prolongation",
+            "Higher fatality risk"
+          ],
+          "requiredScreening": [
+            "Baseline electrolyte panel",
+            "Correction of imbalances before administration",
+            "Monitoring during session"
+          ],
+          "citations": ["koenig_2015"],
+          "evidenceQuality": "moderate_to_strong"
+        }
+      ]
+    },
+    {
+      "id": "rf_ibogaine_genetic_metabolism_001",
+      "name": "CYP2D6 Genetic Variations",
+      "category": "physiological",
+      "subcategory": "pharmacogenetics",
+      "description": "Genetic variations affecting ibogaine metabolism",
+      "severity": "high",
+      "specificGeneticFactors": [
+        {
+          "gene": "CYP2D6",
+          "relevantSubstances": ["ibogaine_001"],
+          "variants": [
+            {
+              "type": "poor_metabolizer",
+              "frequency": "5-10% of population",
+              "effect": "Impaired metabolism of ibogaine",
+              "consequence": "Higher plasma concentrations, increased toxicity risk",
+              "interaction": "Methadone inhibits CYP2D6, creating similar risk"
+            }
+          ],
+          "citations": ["koenig_2015"]
+        }
+      ],
+      "clinicalImplications": "May require dose adjustment or additional monitoring; genetic testing may be beneficial",
+      "drugInteractions": {
+        "methadone": {
+          "mechanism": "Inhibits CYP2D6 enzyme",
+          "consequence": "Impaired ibogaine metabolism",
+          "riskLevel": "critical",
+          "contraindicationType": "absolute_if_current_use"
+        }
+      }
+    },
+    {
+      "id": "rf_ibogaine_opioid_use_001",
+      "name": "Current Opioid Use",
+      "category": "behavioral",
+      "subcategory": "substance_use",
+      "description": "Active use of opioids, especially long-acting",
+      "severity": "critical",
+      "substanceInteractions": [
+        {
+          "substanceId": "ibogaine_001",
+          "contraindicationType": "absolute_for_long_acting",
+          "riskLevel": "critical",
+          "specificOpioids": [
+            {
+              "opioid": "methadone",
+              "severity": "critical",
+              "contraindicationType": "absolute",
+              "mechanisms": [
+                "Inhibits CYP2D6, impairing ibogaine metabolism",
+                "Dangerous drug interaction",
+                "Overdose risk"
+              ],
+              "requirement": "Complete withdrawal before ibogaine administration"
+            },
+            {
+              "opioid": "long_acting_opioids",
+              "severity": "critical",
+              "examples": ["buprenorphine", "extended_release_formulations"],
+              "contraindicationType": "absolute",
+              "requirement": "Complete withdrawal before administration"
+            }
+          ],
+          "shortActingOpioids": {
+            "riskLevel": "moderate_to_high",
+            "requirement": "Appropriate washout period before ibogaine"
+          },
+          "consequences": [
+            "Potentially fatal drug interactions",
+            "Increased overdose risk",
+            "Unpredictable effects"
+          ],
+          "citations": ["cherian_2024"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "fatalityData": {
+        "multipleAddictions": "Some fatality cases involved concurrent addiction to cocaine, alcohol, methamphetamine, and heroin",
+        "citation": "cherian_2024"
+      }
+    },
+    {
+      "id": "rf_ibogaine_polydrug_complex_001",
+      "name": "Polydrug Use Patterns",
+      "category": "behavioral",
+      "subcategory": "substance_use",
+      "description": "Use of multiple substances with ibogaine",
+      "severity": "high_to_critical",
+      "substanceInteractions": [
+        {
+          "substanceId": "ibogaine_001",
+          "riskLevel": "high_to_critical",
+          "dangerousCombinations": [
+            {
+              "substances": ["ibogaine", "stimulants"],
+              "examples": ["cocaine", "methamphetamine"],
+              "riskLevel": "high",
+              "consequences": ["Increased cardiovascular burden", "Unpredictable interactions"]
+            },
+            {
+              "substances": ["ibogaine", "alcohol"],
+              "riskLevel": "high",
+              "consequences": ["Increased adverse event risk", "Liver burden"]
+            },
+            {
+              "substances": ["ibogaine", "qt_prolonging_drugs"],
+              "riskLevel": "critical",
+              "mechanism": "Additive QT prolongation",
+              "consequence": "Severe arrhythmia risk",
+              "contraindicationType": "absolute"
+            }
+          ],
+          "fatalityCases": {
+            "description": "Some deaths involved individuals addicted to multiple drugs",
+            "substances": ["cocaine", "alcohol", "methamphetamine", "heroin"],
+            "citation": "cherian_2024"
+          },
+          "citations": ["cherian_2024", "bremler_2023", "rocha_2023", "koenig_2015"]
+        }
+      ],
+      "harmReductionStrategies": [
+        "Complete substance use history",
+        "Appropriate washout periods",
+        "Avoid all contraindicated substances",
+        "Medical supervision"
+      ]
+    },
+    {
+      "id": "rf_ibogaine_psychiatric_001",
+      "name": "Pre-existing Mental Illness",
+      "category": "psychiatric",
+      "description": "History of psychosis, bipolar disorder, or other severe mental illness",
+      "severity": "high",
+      "substanceInteractions": [
+        {
+          "substanceId": "ibogaine_001",
+          "contraindicationType": "relative",
+          "activeState": "absolute",
+          "riskLevel": "high",
+          "specificConditions": [
+            {
+              "condition": "psychosis",
+              "contraindicationType": "absolute_if_active",
+              "relativeIfHistory": true,
+              "risks": ["Psychotic episode", "Mania", "Severe psychiatric decompensation"]
+            },
+            {
+              "condition": "bipolar_disorder",
+              "contraindicationType": "absolute_if_active",
+              "relativeIfHistory": true,
+              "risks": ["Manic episode induction", "Severe mood destabilization"]
+            }
+          ],
+          "surveyData": {
+            "psychiatricDiagnosisPostUse": {
+              "questionnaire": 37.5,
+              "interview": 33,
+              "unit": "percent",
+              "context": "Among those with negative psychological responses lasting 72+ hours",
+              "citation": "bremler_2023"
+            },
+            "anxietyWorseningOrOnset": {
+              "questionnaire": 87,
+              "interview": 93,
+              "unit": "percent",
+              "context": "Among those with negative responses",
+              "citation": "bremler_2023"
+            }
+          },
+          "requiredPrecautions": [
+            "Comprehensive psychiatric screening",
+            "Specialist consultation",
+            "Extreme caution",
+            "Enhanced monitoring",
+            "Psychiatric support during and after"
+          ],
+          "citations": ["cherian_2024", "tabaac_2024", "honk_2024", "rosenblat_2023", "bremler_2023"],
+          "evidenceQuality": "moderate"
+        }
+      ]
+    },
+    {
+      "id": "rf_ibogaine_pregnancy_001",
+      "name": "Pregnancy and Breastfeeding",
+      "category": "demographic",
+      "subcategory": "reproductive",
+      "description": "Use during pregnancy or while breastfeeding",
+      "severity": "high",
+      "substanceInteractions": [
+        {
+          "substanceId": "ibogaine_001",
+          "contraindicationType": "relative_to_absolute",
+          "riskLevel": "high",
+          "recommendation": "Generally advisable to avoid",
+          "citations": ["white_2024", "izmi_2024"]
+        }
+      ]
+    },
+    {
+      "id": "rf_ibogaine_uncontrolled_setting_001",
+      "name": "Uncontrolled Settings",
+      "category": "environmental",
+      "description": "Use outside of medical or therapeutic supervision",
+      "severity": "critical",
+      "substanceInteractions": [
+        {
+          "substanceId": "ibogaine_001",
+          "contraindicationType": "relative",
+          "riskLevel": "critical",
+          "specificRisks": [
+            "Sudden death without medical intervention",
+            "Inability to manage cardiac complications",
+            "No monitoring for adverse events",
+            "Delayed or absent emergency response"
+          ],
+          "riskWindow": "Particularly first 72 hours post-administration",
+          "requiredSupport": [
+            "Medical supervision",
+            "ECG monitoring capability",
+            "Emergency response capability",
+            "Proper screening",
+            "Supportive environment"
+          ],
+          "citations": ["knuijver_2022", "rocha_2023"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "note": "Given ibogaine's cardiac risks, unsupervised use is particularly dangerous"
+    },
+    {
+      "id": "rf_ibogaine_seizure_history_001",
+      "name": "History of Seizures",
+      "category": "physiological",
+      "subcategory": "neurological",
+      "description": "Personal history of seizure disorder",
+      "severity": "moderate_to_high",
+      "substanceInteractions": [
+        {
+          "substanceId": "ibogaine_001",
+          "contraindicationType": "relative",
+          "riskLevel": "moderate_to_high",
+          "specificRisk": "Increased risk of seizure activity",
+          "caseReports": {
+            "description": "Man developed generalized seizures after taking 38 grams ibogaine for spiritual cleansing (purchased online)",
+            "citation": "rocha_2023"
+          },
+          "citations": ["rocha_2023"]
+        }
+      ]
+    }
+  ],
+
+  "medicalConditions": [
+    {
+      "id": "cond_ibogaine_cardiovascular_001",
+      "name": "Cardiovascular Conditions (Ibogaine-Specific)",
+      "category": "cardiovascular",
+      "icd10": ["I00-I99"],
+      "description": "Various heart and vascular conditions - ABSOLUTE contraindication for ibogaine",
+      "severity": "critical",
+      "subtypes": [
+        {
+          "condition": "Long QT Syndrome",
+          "icd10": "I45.81",
+          "contraindicationType": "absolute",
+          "mechanism": "Ibogaine further prolongs QT interval",
+          "consequence": "Fatal arrhythmias"
+        },
+        {
+          "condition": "Cardiac Arrhythmias",
+          "contraindicationType": "absolute",
+          "consequence": "Exacerbation, potentially fatal outcomes"
+        },
+        {
+          "condition": "Coronary Artery Disease",
+          "contraindicationType": "absolute_if_severe",
+          "relativeIfControlled": "requires_extreme_caution"
+        }
+      ],
+      "substanceRisks": [
+        {
+          "substanceId": "ibogaine_001",
+          "contraindicationType": "absolute",
+          "specificRisks": [
+            {
+              "risk": "sudden_cardiac_death",
+              "mechanism": "QT prolongation leading to Torsade de pointes",
+              "prevalence": "6 of 19 reviewed fatalities had pre-existing heart conditions",
+              "severity": "fatal"
+            },
+            {
+              "risk": "severe_arrhythmia",
+              "timeframe": "Within 72 hours of administration",
+              "severity": "critical"
+            }
+          ],
+          "requiredPrecautions": [
+            "Absolute exclusion if uncontrolled",
+            "If any cardiac history: extensive evaluation",
+            "Continuous cardiac monitoring",
+            "Immediate access to emergency cardiac care"
+          ],
+          "citations": ["cherian_2024", "koenig_2015", "glue_2016", "rocha_2023", "baumeister_2015"]
+        }
+      ],
+      "prevalence": "Variable by specific condition and age"
+    }
+  ],
+
+  "contraindications": {
+    "absolute": [
+      {
+        "id": "contra_ibogaine_absolute_001",
+        "condition": "Pre-existing heart conditions",
+        "description": "Cardiac arrhythmias, long QT syndrome, or other significant cardiovascular conditions",
+        "severity": "critical",
+        "rationale": "High risk of fatal arrhythmias",
+        "citations": ["cherian_2024", "fonzo_2025", "koenig_2015"]
+      },
+      {
+        "id": "contra_ibogaine_absolute_002",
+        "condition": "Prolonged baseline QT interval",
+        "severity": "critical",
+        "rationale": "Ibogaine further prolongs QT, risking fatal arrhythmias",
+        "citations": ["koenig_2015"]
+      },
+      {
+        "id": "contra_ibogaine_absolute_003",
+        "condition": "Concurrent use of QT-prolonging medications",
+        "severity": "critical",
+        "rationale": "Additive QT prolongation",
+        "examples": ["Certain antibiotics", "Antipsychotics", "Antiarrhythmics"],
+        "citations": ["koenig_2015"]
+      },
+      {
+        "id": "contra_ibogaine_absolute_004",
+        "condition": "Severe electrolyte imbalances",
+        "specificImbalances": ["Uncorrected hypokalemia", "Uncorrected hypomagnesemia"],
+        "severity": "critical",
+        "rationale": "Increases cardiac risk",
+        "requirement": "Must be corrected before administration",
+        "citations": ["koenig_2015"]
+      },
+      {
+        "id": "contra_ibogaine_absolute_005",
+        "condition": "Current use of long-acting opioids",
+        "specificSubstances": ["Methadone", "Buprenorphine"],
+        "severity": "critical",
+        "rationale": "Fatal drug interactions",
+        "requirement": "Complete withdrawal required before ibogaine",
+        "citations": ["cherian_2024"]
+      }
+    ],
+    "relative": [
+      {
+        "id": "contra_ibogaine_relative_001",
+        "condition": "History of mental illness",
+        "specificConditions": ["Psychosis", "Bipolar disorder", "Severe depression"],
+        "severity": "high",
+        "rationale": "Risk of psychiatric decompensation",
+        "requirements": [
+          "Comprehensive psychiatric evaluation",
+          "Risk-benefit assessment",
+          "Enhanced monitoring",
+          "Psychiatric support available"
+        ],
+        "citations": ["cherian_2024", "tabaac_2024", "honk_2024", "rosenblat_2023"]
+      },
+      {
+        "id": "contra_ibogaine_relative_002",
+        "condition": "Pregnancy and breastfeeding",
+        "severity": "high",
+        "recommendation": "Generally advisable to avoid",
+        "citations": ["white_2024", "izmi_2024"]
+      },
+      {
+        "id": "contra_ibogaine_relative_003",
+        "condition": "Poly-substance use",
+        "severity": "high",
+        "specificConcerns": ["Stimulants", "Alcohol"],
+        "rationale": "Increased adverse event risk due to drug interactions",
+        "citations": ["cherian_2024", "bremler_2023"]
+      },
+      {
+        "id": "contra_ibogaine_relative_004",
+        "condition": "Use in uncontrolled settings",
+        "severity": "critical",
+        "rationale": "Lack of medical supervision, monitoring, and emergency response",
+        "requirement": "Should only be used in controlled medical settings",
+        "citations": ["knuijver_2022", "rocha_2023"]
+      },
+      {
+        "id": "contra_ibogaine_relative_005",
+        "condition": "Moderate cardiovascular disease",
+        "severity": "high",
+        "requirement": "Extreme caution and close medical supervision",
+        "citations": ["koenig_2015"]
+      },
+      {
+        "id": "contra_ibogaine_relative_006",
+        "condition": "History of seizures",
+        "severity": "moderate_to_high",
+        "rationale": "Increased risk of seizure activity",
+        "citations": ["rocha_2023"]
+      }
+    ]
+  },
+
+  "adverseEvents": [
+    {
+      "id": "ae_ibogaine_nausea_001",
+      "name": "Gastrointestinal Distress",
+      "category": "physiological",
+      "subcategory": "gastrointestinal",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Nausea, vomiting, and diarrhea",
+      "prevalence": {
+        "nausea_vomiting": {
+          "value": 62,
+          "unit": "percent",
+          "context": "Most common acute adverse effect",
+          "specificContext": "In ayahuasca users (containing ibogaine)",
+          "citation": "bouso_2022"
+        },
+        "status": "Most common acute adverse effect of ibogaine"
+      },
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "symptoms": ["Nausea", "Vomiting", "Diarrhea"],
+          "onset": "Early in experience",
+          "duration": "Hours",
+          "management": [
+            "Antiemetics may be considered",
+            "Hydration",
+            "Supportive care"
+          ],
+          "citations": ["rocha_2023", "ables_2024", "andersen_2021", "bender_2022", "griffin_2024"]
+        }
+      ],
+      "clinicalSignificance": "Usually manageable but can be distressing"
+    },
+    {
+      "id": "ae_ibogaine_qt_prolongation_001",
+      "name": "QT Interval Prolongation",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "timeframe": "acute",
+      "severity": "critical",
+      "description": "Prolongation of QT interval on ECG",
+      "mechanism": "Direct cardiac effect of ibogaine",
+      "clinicalSignificance": "Can lead to life-threatening arrhythmias",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "prevalence": {
+            "averageIncrease": {
+              "value": 95,
+              "unit": "milliseconds",
+              "range": {"min": 29, "max": 146}
+            },
+            "clinicallySignificantThreshold": {
+              "value": 500,
+              "unit": "milliseconds",
+              "description": "QTc >500ms considered dangerous"
+            },
+            "percentageAboveThreshold": {
+              "value": 50,
+              "unit": "percent",
+              "context": "Of participants reached QTc >500ms during observation",
+              "citation": "knuijver_2022"
+            }
+          },
+          "timeframe": "During and up to 72 hours post-administration",
+          "consequence": "Torsade de pointes arrhythmia (potentially fatal)",
+          "metaboliteEffect": {
+            "metabolite": "noribogaine",
+            "effect": "Also exhibits concentration-dependent QTcI increase",
+            "citation": "glue_2016"
+          },
+          "requiredMonitoring": [
+            "Continuous ECG monitoring",
+            "Medical supervision",
+            "Emergency cardiac intervention capability"
+          ],
+          "citations": ["rocha_2023", "koenig_2015", "knuijver_2022", "glue_2016"]
+        }
+      ],
+      "riskFactors": [
+        "Pre-existing QT prolongation",
+        "Electrolyte imbalances",
+        "Concurrent QT-prolonging medications",
+        "Genetic factors (hERG mutations)"
+      ]
+    },
+    {
+      "id": "ae_ibogaine_bradycardia_001",
+      "name": "Bradycardia",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "timeframe": "acute",
+      "severity": "moderate_to_critical",
+      "description": "Abnormally slow heart rate",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "mechanism": "Direct cardiac effect",
+          "timeframe": "Within first 72 hours",
+          "clinicalSignificance": "Associated with sudden death risk",
+          "requiredMonitoring": "Continuous cardiac monitoring",
+          "citations": ["rocha_2023"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_hypertension_001",
+      "name": "Hypertension",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "timeframe": "acute",
+      "severity": "moderate_to_high",
+      "description": "Elevated blood pressure",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "prevalence": "Some individuals develop systolic BP >160 mmHg and diastolic >100 mmHg",
+          "riskFactors": ["Older patients", "Underlying medical conditions"],
+          "citations": ["bender_2022"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_ataxia_001",
+      "name": "Ataxia",
+      "category": "physiological",
+      "subcategory": "neurological",
+      "timeframe": "acute",
+      "severity": "moderate",
+      "description": "Loss of coordination and balance",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "prevalence": {
+            "value": 100,
+            "unit": "percent",
+            "context": "All patients in opioid use disorder detoxification study",
+            "citation": "knuijver_2022"
+          },
+          "duration": "During and shortly after effects",
+          "functionalImpact": "Difficulty with movement and balance",
+          "management": "Ensure safe environment, prevent falls",
+          "citations": ["bender_2022", "rocha_2023", "knuijver_2022"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_seizures_001",
+      "name": "Seizures",
+      "category": "physiological",
+      "subcategory": "neurological",
+      "timeframe": "acute",
+      "severity": "high",
+      "description": "Convulsive episodes",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "prevalence": "Documented in case reports",
+          "caseExample": {
+            "description": "Generalized seizures after 38 grams ibogaine (purchased online)",
+            "context": "Taken for spiritual cleansing",
+            "citation": "rocha_2023"
+          },
+          "riskFactors": [
+            "Very high doses",
+            "History of seizure disorder",
+            "Unknown purity/content"
+          ],
+          "citations": ["rocha_2023"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_neuro_other_001",
+      "name": "Other Neurological Effects",
+      "category": "physiological",
+      "subcategory": "neurological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "symptoms": [
+            "Tremor",
+            "Dizziness",
+            "Agitation"
+          ],
+          "citations": ["bender_2022", "ables_2024"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_anxiety_001",
+      "name": "Acute Anxiety",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Transient anxiety during experience",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "prevalence": "Frequently reported",
+          "characteristics": "Transient",
+          "citations": ["andersen_2021"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_confusion_001",
+      "name": "Confusion and Disorientation",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "symptoms": [
+            "Confusion",
+            "Disorientation",
+            "Agitation",
+            "Derealization"
+          ],
+          "prevalence": "Reported in several studies",
+          "citations": ["rocha_2023", "ables_2024", "rossi_2023", "ona_2022"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_perceptual_001",
+      "name": "Perceptual Changes",
+      "category": "psychological",
+      "subcategory": "perceptual",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "description": "Altered perceptions during experience",
+          "citations": ["rocha_2023"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_autonomic_001",
+      "name": "Autonomic Effects",
+      "category": "physiological",
+      "subcategory": "autonomic",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "symptoms": [
+            "Feeling cold",
+            "Motor agitation/restlessness",
+            "Hyperhidrosis (excessive sweating)",
+            "Urinary incontinence",
+            "Orthostatic hypotension (low blood pressure upon standing)"
+          ],
+          "citations": ["rocha_2023"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_persistent_psych_001",
+      "name": "Persistent Psychological Effects",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "description": "Long-term psychological effects following ibogaine use",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "prevalence": "Small percentage may experience",
+          "specificEffects": [
+            "Anxiety",
+            "Depression",
+            "Persistent perceptual disturbances (HPPD)"
+          ],
+          "riskFactors": [
+            "Pre-existing mental health conditions",
+            "Challenging or traumatic experiences during session"
+          ],
+          "traumaReexperiencing": {
+            "prevalence": {
+              "ptsd": 37.5,
+              "unit": "percent",
+              "context": "Of those with self-reported PTSD in ayahuasca study",
+              "citation": "weiss_2023"
+            }
+          },
+          "generalPopulation": {
+            "functionalImpairment": {
+              "value": 8.9,
+              "unit": "percent",
+              "context": "Lifetime classic psychedelic users",
+              "citation": "ghaznavi_2025"
+            },
+            "soughtHelp": {
+              "value": 2.6,
+              "unit": "percent",
+              "context": "Sought medical/psychiatric/psychological assistance",
+              "citation": "ghaznavi_2025"
+            }
+          },
+          "citations": ["weiss_2023", "ghaznavi_2025"]
+        }
+      ],
+      "support": [
+        "Integration therapy",
+        "Psychiatric follow-up",
+        "Trauma-informed care if needed"
+      ]
+    },
+    {
+      "id": "ae_ibogaine_hppd_001",
+      "name": "Hallucinogen Persisting Perception Disorder (HPPD)",
+      "category": "perceptual",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "description": "Persistent perceptual disturbances after ibogaine",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "prevalence": "Unknown; documented cases exist",
+          "symptoms": [
+            "Visual disturbances",
+            "Geometric patterns",
+            "Halos",
+            "Trails"
+          ],
+          "note": "Less studied than HPPD from classical psychedelics",
+          "citations": ["knuijver_2018"]
+        }
+      ]
+    },
+    {
+      "id": "ae_ibogaine_sudden_death_001",
+      "name": "Sudden Death",
+      "category": "physiological",
+      "subcategory": "fatal",
+      "timeframe": "acute",
+      "severity": "fatal",
+      "description": "Cardiac arrest and death",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "mechanism": [
+            "Bradycardia",
+            "QT prolongation leading to Torsade de pointes",
+            "Cardiac arrhythmias"
+          ],
+          "timeframe": "Particularly within first 72 hours",
+          "prevalenceData": {
+            "fatalitiesReviewed": 19,
+            "withPreexistingHeartConditions": 6
+          },
+          "riskFactors": [
+            "Pre-existing cardiovascular conditions",
+            "Electrolyte imbalances",
+            "Polydrug use",
+            "Lack of medical monitoring",
+            "Uncontrolled settings"
+          ],
+          "prevention": [
+            "Comprehensive cardiovascular screening",
+            "Continuous cardiac monitoring",
+            "Medical supervision",
+            "Electrolyte management",
+            "Emergency response capability"
+          ],
+          "citations": ["rocha_2023", "cherian_2024", "koenig_2015"]
+        }
+      ],
+      "clinicalSignificance": "Ibogaine has unique fatality risk not seen with classical psychedelics"
+    }
+  ],
+
+  "contaminationQualityFactors": [
+    {
+      "id": "contam_ibogaine_purity_001",
+      "name": "Variable Purity and Potency",
+      "category": "quality",
+      "severity": "high",
+      "description": "Wide variation in ibogaine content across preparations",
+      "substanceExamples": [
+        {
+          "substance": "ibogaine_extract",
+          "purityRange": {"min": 8.2, "max": 32.9, "unit": "percent"},
+          "consequence": "Difficult to determine accurate dosing",
+          "risk": "Accidental overdose or underdosing",
+          "citation": "rocha_2023"
+        },
+        {
+          "substance": "ibogaine_hydrochloride",
+          "purityRange": {"min": 61.5, "max": 73.4, "unit": "percent"},
+          "consequence": "More consistent but still variable",
+          "citation": "rocha_2023"
+        }
+      ],
+      "specificRisks": [
+        "Unknown potency makes dosing dangerous",
+        "Overdose risk with high-purity samples",
+        "Sub-therapeutic effects with low-purity samples"
+      ],
+      "caseExample": {
+        "description": "Some samples found to contain no ibogaine or unidentified substances",
+        "citation": "rocha_2023"
+      },
+      "harmReduction": [
+        "Purchase from reputable sources with quality control",
+        "Laboratory testing when possible",
+        "Start with lower doses",
+        "Medical supervision"
+      ]
+    },
+    {
+      "id": "contam_ibogaine_adulterants_001",
+      "name": "Adulteration and Unknown Contents",
+      "category": "contamination",
+      "severity": "high_to_critical",
+      "description": "Presence of unknown substances or complete absence of ibogaine",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "findings": [
+            "Some samples contained no ibogaine",
+            "Unidentified substances present",
+            "Variable composition"
+          ],
+          "source": "Unregulated markets, online purchases",
+          "consequences": [
+            "Unpredictable effects",
+            "Toxicity from unknown substances",
+            "Complete ineffectiveness"
+          ],
+          "citations": ["rocha_2023"]
+        }
+      ],
+      "harmReduction": [
+        "Avoid online purchases without verification",
+        "Use regulated pharmaceutical-grade when possible",
+        "Laboratory testing",
+        "Trusted suppliers with quality control"
+      ]
+    },
+    {
+      "id": "contam_ibogaine_storage_001",
+      "name": "Processing and Storage Issues",
+      "category": "quality",
+      "severity": "moderate",
+      "description": "Impurities from processing or storage",
+      "substanceOccurrence": [
+        {
+          "substanceId": "ibogaine_001",
+          "issue": "Impurities introduced during processing or storage",
+          "consequence": "Can contribute to adverse events",
+          "citations": ["alper_2008"]
+        }
+      ]
+    }
+  ],
+
+  "harmReductionStrategies": [
+    {
+      "id": "harm_ibogaine_screening_001",
+      "name": "Comprehensive Medical Screening",
+      "category": "preparation",
+      "priority": "critical",
+      "description": "Extensive pre-use medical evaluation",
+      "components": [
+        {
+          "component": "cardiovascular_screening",
+          "requirements": [
+            "Baseline ECG mandatory",
+            "Cardiac history assessment",
+            "Evaluation for QT-prolonging medications",
+            "Assessment for structural heart disease"
+          ]
+        },
+        {
+          "component": "electrolyte_panel",
+          "requirements": [
+            "Potassium levels",
+            "Magnesium levels",
+            "Correction of any imbalances before administration"
+          ]
+        },
+        {
+          "component": "medication_review",
+          "requirements": [
+            "Complete list of all medications",
+            "Identification of contraindicated drugs",
+            "Appropriate washout periods for opioids",
+            "Discontinuation of QT-prolonging medications"
+          ]
+        },
+        {
+          "component": "psychiatric_screening",
+          "requirements": [
+            "Mental health history",
+            "Current psychiatric status",
+            "Risk assessment for psychotic disorders"
+          ]
+        },
+        {
+          "component": "substance_use_history",
+          "requirements": [
+            "Current substance use",
+            "Opioid use patterns",
+            "Polydrug use assessment",
+            "Appropriate cessation timelines"
+          ]
+        }
+      ],
+      "absoluteRequirement": true,
+      "citations": ["cherian_2024", "koenig_2015", "rocha_2023"]
+    },
+    {
+      "id": "harm_ibogaine_monitoring_001",
+      "name": "Continuous Medical Monitoring",
+      "category": "session_management",
+      "priority": "critical",
+      "description": "Real-time physiological monitoring during and after administration",
+      "requirements": [
+        {
+          "parameter": "ecg_monitoring",
+          "type": "continuous",
+          "duration": "During session and 72 hours post",
+          "purpose": "Detect QT prolongation and arrhythmias",
+          "critical": true
+        },
+        {
+          "parameter": "vital_signs",
+          "measurements": ["Heart rate", "Blood pressure", "Temperature", "Respiratory rate"],
+          "frequency": "Continuous or very frequent",
+          "duration": "Throughout session"
+        },
+        {
+          "parameter": "medical_supervision",
+          "requirements": [
+            "Physician or qualified medical professional present",
+            "Emergency medical equipment available",
+            "Ability to manage cardiac emergencies"
+          ]
+        }
+      ],
+      "environment": "Medical facility or appropriately equipped setting",
+      "citations": ["glue_2016", "koenig_2015", "knuijver_2022"]
+    },
+    {
+      "id": "harm_ibogaine_dosing_001",
+      "name": "Careful Dosing",
+      "category": "substance_preparation",
+      "priority": "high",
+      "strategies": [
+        {
+          "strategy": "weight_based_dosing",
+          "description": "Calculate dose based on body weight",
+          "typicalRange": {"min": 25, "max": 42, "unit": "mg/kg"},
+          "note": "Medical supervision required"
+        },
+        {
+          "strategy": "pharmaceutical_grade",
+          "description": "Use pharmaceutical-grade ibogaine hydrochloride when possible",
+          "rationale": "More consistent purity (61.5-73.4%) than extracts (8.2-32.9%)"
+        },
+        {
+          "strategy": "avoid_unknown_sources",
+          "description": "Never use ibogaine from unknown or unverified sources",
+          "rationale": "High risk of adulteration or absence of active compound"
+        }
+      ],
+      "citations": ["gomez-escolar_2024", "rocha_2023"]
+    },
+    {
+      "id": "harm_ibogaine_setting_001",
+      "name": "Controlled Medical Setting",
+      "category": "setting",
+      "priority": "critical",
+      "description": "Ibogaine should only be administered in appropriate medical settings",
+      "requirements": [
+        "Medical facility or clinical setting",
+        "Emergency medical equipment",
+        "Cardiac monitoring capability",
+        "Resuscitation equipment",
+        "Trained medical staff",
+        "24-hour monitoring capability"
+      ],
+      "rationale": "Cardiac risks require immediate medical intervention capability",
+      "uncontrolledSettings": {
+        "risk": "Critical - potentially fatal",
+        "recommendation": "Strongly contraindicated"
+      },
+      "citations": ["knuijver_2022", "rocha_2023"]
+    },
+    {
+      "id": "harm_ibogaine_integration_001",
+      "name": "Integration Support",
+      "category": "post_session",
+      "priority": "high",
+      "description": "Post-session support for processing experience",
+      "components": [
+        "Psychological support",
+        "Integration therapy",
+        "Follow-up medical monitoring",
+        "Psychiatric support if needed"
+      ],
+      "duration": "Weeks to months post-experience",
+      "specialConsiderations": [
+        "May be particularly important for those using for addiction treatment",
+        "Address any psychological distress",
+        "Support behavioral changes"
+      ]
+    },
+    {
+      "id": "harm_ibogaine_education_001",
+      "name": "Education and Informed Consent",
+      "category": "preparation",
+      "priority": "high",
+      "description": "Comprehensive education about ibogaine risks",
+      "topics": [
+        "Cardiac risks including sudden death",
+        "QT prolongation and arrhythmias",
+        "Importance of medical screening",
+        "Necessity of medical monitoring",
+        "Drug interactions, especially opioids",
+        "Psychiatric risks",
+        "What to expect during experience",
+        "Requirement for controlled medical setting"
+      ],
+      "format": [
+        "Verbal education",
+        "Written materials",
+        "Opportunity for questions",
+        "Documented informed consent"
+      ],
+      "emphasis": "Unique and serious cardiac risks"
+    }
+  ],
+
+  "emergencyResponseProtocols": [
+    {
+      "id": "emergency_ibogaine_cardiac_001",
+      "name": "Cardiac Emergency Response",
+      "category": "medical_emergency",
+      "priority": "critical",
+      "applicableEvents": [
+        "Severe QT prolongation (>500ms)",
+        "Torsade de pointes",
+        "Cardiac arrhythmias",
+        "Bradycardia with hemodynamic compromise",
+        "Cardiac arrest"
+      ],
+      "immediateActions": [
+        {
+          "action": "continuous_ecg_monitoring",
+          "note": "Should already be in place"
+        },
+        {
+          "action": "activate_emergency_response",
+          "note": "Call code team if in hospital"
+        },
+        {
+          "action": "ensure_airway_breathing_circulation",
+          "note": "Basic life support principles"
+        },
+        {
+          "action": "check_electrolytes",
+          "specificChecks": ["Potassium", "Magnesium", "Calcium"],
+          "correction": "Correct any abnormalities immediately"
+        }
+      ],
+      "medications": [
+        {
+          "medication": "magnesium_sulfate",
+          "indication": "Torsade de pointes",
+          "dosing": "Per ACLS protocols",
+          "priority": "first_line"
+        },
+        {
+          "medication": "isoproterenol",
+          "indication": "Bradycardia, Torsade de pointes",
+          "note": "May be needed for rate support"
+        },
+        {
+          "medication": "atropine",
+          "indication": "Symptomatic bradycardia",
+          "note": "Per ACLS protocols"
+        }
+      ],
+      "equipment": [
+        "Defibrillator/AED",
+        "Pacing capability (transcutaneous or transvenous)",
+        "Advanced airway equipment",
+        "Emergency medications"
+      ],
+      "prevention": "This is why continuous cardiac monitoring and medical setting are mandatory"
+    },
+    {
+      "id": "emergency_ibogaine_seizure_001",
+      "name": "Seizure Management",
+      "category": "medical_emergency",
+      "priority": "high",
+      "immediateActions": [
+        {
+          "action": "protect_from_injury",
+          "details": ["Remove dangerous objects", "Position safely", "Do not restrain"]
+        },
+        {
+          "action": "maintain_airway",
+          "note": "Position to prevent aspiration"
+        },
+        {
+          "action": "time_seizure",
+          "note": "Duration important for treatment decisions"
+        },
+        {
+          "action": "monitor_vital_signs",
+          "note": "Especially oxygen saturation"
+        }
+      ],
+      "medications": [
+        {
+          "medication": "benzodiazepines",
+          "specific": ["lorazepam", "diazepam"],
+          "indication": "Prolonged seizure (>5 minutes) or status epilepticus",
+          "priority": "first_line"
+        }
+      ],
+      "postSeizure": [
+        "Recovery position",
+        "Monitor consciousness",
+        "Assess for injuries",
+        "Medical evaluation"
+      ]
+    },
+    {
+      "id": "emergency_ibogaine_psychological_001",
+      "name": "Acute Psychological Distress Management",
+      "category": "psychological_support",
+      "priority": "moderate_to_high",
+      "firstLine": [
+        {
+          "intervention": "reassurance",
+          "description": "Calm, supportive presence"
+        },
+        {
+          "intervention": "environmental_adjustment",
+          "actions": ["Quiet space", "Reduce stimulation"]
+        },
+        {
+          "intervention": "grounding_techniques",
+          "examples": ["Breathing exercises", "Physical grounding"]
+        }
+      ],
+      "pharmacological": [
+        {
+          "medication": "benzodiazepines",
+          "indication": "If non-pharmacological approaches insufficient",
+          "caution": "Be mindful of cardiovascular status"
+        }
+      ],
+      "note": "Psychological distress during ibogaine sessions should be managed carefully due to cardiac monitoring requirements"
+    }
+  ],
+
+  "clinicalConsiderations": [
+    {
+      "id": "clinical_ibogaine_unique_001",
+      "name": "Unique Risk Profile",
+      "description": "Ibogaine has a unique risk profile distinct from classical psychedelics",
+      "keyPoints": [
+        "Not a classical serotonergic psychedelic",
+        "Significant cardiovascular risks including sudden death",
+        "QT prolongation is near-universal and can be severe",
+        "Requires medical monitoring not necessary for substances like psilocybin or LSD",
+        "Cannot be safely used in recreational or unsupervised settings",
+        "Cardiac screening is mandatory, not optional"
+      ],
+      "implication": "Ibogaine requires a higher standard of medical care than other psychedelics"
+    },
+    {
+      "id": "clinical_ibogaine_addiction_001",
+      "name": "Addiction Treatment Context",
+      "description": "Ibogaine is often used for addiction treatment, particularly opioid use disorder",
+      "considerations": [
+        "Paradoxical contraindication: opioid users are target population but current opioid use is dangerous",
+        "Requires complete opioid withdrawal before administration",
+        "Methadone poses particular risk due to CYP2D6 inhibition",
+        "Complex medical management needed",
+        "High-risk population may have other health complications"
+      ],
+      "citations": ["cherian_2024", "knuijver_2022"]
+    },
+    {
+      "id": "clinical_ibogaine_regulation_001",
+      "name": "Regulatory Status",
+      "description": "Ibogaine regulatory status varies globally",
+      "status": {
+        "unscheduled": ["Many countries including Canada, Mexico"],
+        "scheduled": ["United States (Schedule I)", "Some European countries"],
+        "note": "Legal status affects access to medical settings and quality control"
+      },
+      "implication": "Users may travel internationally for treatment, complicating follow-up care"
+    },
+    {
+      "id": "clinical_ibogaine_research_gaps_001",
+      "name": "Research Gaps",
+      "description": "Significant gaps in ibogaine research",
+      "gaps": [
+        "Limited large-scale clinical trials",
+        "Few long-term outcome studies",
+        "Unclear prevalence of adverse events in uncontrolled settings",
+        "Optimal dosing not well established",
+        "Genetic screening protocols not standardized",
+        "Long-term cardiac effects unknown"
+      ],
+      "implication": "Risk-benefit profile less well characterized than classical psychedelics"
+    }
+  ],
+
+  "specialPopulations": [
+    {
+      "id": "pop_ibogaine_addiction_001",
+      "name": "Individuals with Substance Use Disorders",
+      "description": "Primary population seeking ibogaine treatment",
+      "specificConsiderations": [
+        "Often have complex medical histories",
+        "May have cardiovascular complications from drug use",
+        "Polydrug use common",
+        "Nutritional deficiencies possible",
+        "Electrolyte imbalances more common",
+        "Hepatic impairment possible",
+        "Higher baseline medical risk"
+      ],
+      "requiredPrecautions": [
+        "Comprehensive medical workup",
+        "Complete substance use history",
+        "Appropriate cessation/withdrawal protocols",
+        "Enhanced medical monitoring",
+        "Nutritional support",
+        "Electrolyte correction"
+      ]
+    },
+    {
+      "id": "pop_ibogaine_indigenous_001",
+      "name": "Indigenous and Traditional Users",
+      "description": "Bwiti and other traditional practitioners",
+      "context": {
+        "traditionalUse": "Spiritual and healing ceremonies in West Central Africa",
+        "preparation": "Often whole plant preparations rather than extracted ibogaine",
+        "culturalFramework": "Embedded in spiritual and cultural practices"
+      },
+      "considerations": [
+        "Respect for traditional knowledge and practices",
+        "Potential exploitation concerns",
+        "Sustainability of iboga plant",
+        "Different risk profile in traditional vs. clinical contexts"
+      ],
+      "ethicalConcerns": [
+        "Cultural appropriation",
+        "Benefit-sharing",
+        "Intellectual property",
+        "Environmental sustainability"
+      ],
+      "citations": ["cherian_2024"]
+    }
+  ],
+
+  "researchNeeds": [
+    {
+      "priority": "high",
+      "topic": "Cardiac safety protocols",
+      "description": "Optimize screening and monitoring to reduce cardiac risks"
+    },
+    {
+      "priority": "high",
+      "topic": "Pharmacogenetic screening",
+      "description": "Develop standardized genetic testing for CYP2D6 and hERG variants"
+    },
+    {
+      "priority": "high",
+      "topic": "Dose optimization",
+      "description": "Determine optimal dosing for efficacy while minimizing risks"
+    },
+    {
+      "priority": "high",
+      "topic": "Long-term outcomes",
+      "description": "Study long-term cardiac and psychological effects"
+    },
+    {
+      "priority": "moderate",
+      "topic": "Drug interactions",
+      "description": "Comprehensive mapping of dangerous interactions"
+    },
+    {
+      "priority": "moderate",
+      "topic": "Alternative formulations",
+      "description": "Develop safer analogs or formulations with reduced cardiac risk"
+    },
+    {
+      "priority": "moderate",
+      "topic": "Standardized adverse event reporting",
+      "description": "Create consistent reporting frameworks for ibogaine-related events"
+    }
+  ],
+
+  "metadata": {
+    "documentSource": "Psychedelic Safety Institute Literature Review - Iboga/Ibogaine Section",
+    "substanceFocus": "Ibogaine/Iboga",
+    "primaryDifference": "Not a classical psychedelic; unique cardiac risk profile",
+    "criticalWarning": "Ibogaine has significant cardiovascular risks including sudden death and requires medical monitoring",
+    "geographicScope": "Global with emphasis on West Central Africa (traditional use) and Western clinical contexts",
+    "lastLiteratureSearch": "2024",
+    "qualityAssessment": "Moderate - less research than classical psychedelics",
+    "knownLimitations": [
+      "Limited large-scale clinical trials",
+      "Many fatality reports but unclear denominator",
+      "Variable quality of case reports",
+      "Unregulated use contexts poorly documented",
+      "Long-term effects understudied"
+    ],
+    "uniqueConsiderations": [
+      "Cardiac monitoring mandatory",
+      "Cannot be used in recreational settings",
+      "Requires higher level of medical sophistication than other psychedelics",
+      "Often used by high-risk populations (addiction)",
+      "Legal status complicates access to quality-controlled substance"
+    ]
+  }
+}

@@ -1,0 +1,532 @@
+{
+  "registryVersion": "1.0",
+  "lastUpdated": "2025-01-09",
+  "description": "Master registry for interoperable psychedelic safety schemas",
+  
+  "schemas": [
+    {
+      "schemaId": "general_risks",
+      "filename": "general_risks_schema.json",
+      "schemaType": "universal",
+      "version": "2.0",
+      "description": "Universal risk factors, adverse events, and protocols",
+      "primaryKeys": {
+        "riskFactors": "rf_[category]_[number]",
+        "adverseEvents": "ae_[name]_[number]",
+        "boundaryViolations": "bv_[type]_[number]",
+        "emergencyProtocols": "erp_[type]_[number]",
+        "preparationPractices": "prep_[name]_[number]",
+        "integrationPractices": "int_[name]_[number]",
+        "assessmentTools": "tool_[name]_[number]"
+      },
+      "totalEntities": {
+        "riskFactors": 78,
+        "adverseEvents": 21,
+        "boundaryViolations": 4,
+        "emergencyProtocols": 6,
+        "preparationPractices": 5,
+        "integrationPractices": 6,
+        "assessmentTools": 3
+      }
+    },
+    {
+      "schemaId": "harm_reduction",
+      "filename": "harm_reduction_schema.json",
+      "schemaType": "universal",
+      "version": "2.0",
+      "description": "Harm reduction strategies, safety measures, and best practices",
+      "referencesGeneralSchema": true,
+      "referencesSubstanceSchemas": true,
+      "primaryKeys": {
+        "screeningConsent": "hr_screening_[name]_[number]",
+        "setting": "hr_setting_[name]_[number]",
+        "dosing": "hr_dosing_[name]_[number]",
+        "supervision": "hr_supervision_[name]_[number]",
+        "integration": "hr_integration_[name]_[number]",
+        "crisis": "hr_crisis_[name]_[number]",
+        "education": "hr_education_[name]_[number]",
+        "community": "hr_community_[name]_[number]",
+        "accessibility": "hr_accessibility_[name]_[number]"
+      },
+      "totalEntities": {
+        "screeningAndConsent": 2,
+        "settingOptimization": 3,
+        "dosingStrategies": 4,
+        "supervisionFacilitation": 4,
+        "integrationPractices": 1,
+        "crisisIntervention": 1,
+        "publicEducation": 1,
+        "onlineCommunities": 1,
+        "peerSupportNetworks": 1,
+        "accessibilityInclusion": 3
+      }
+    },
+    {
+      "schemaId": "substance_psilocybin",
+      "filename": "substance_psilocybin_schema.json",
+      "schemaType": "substance_specific",
+      "version": "2.0",
+      "substance": {
+        "id": "psilocybin_001",
+        "name": "Psilocybin",
+        "aliases": ["Magic Mushrooms", "Shrooms"]
+      },
+      "referencesGeneralSchema": true,
+      "primaryKeys": {
+        "substanceId": "psilocybin_001",
+        "metabolites": "metabolite_[name]_[number]",
+        "specificRisks": "sr_psilocybin_[category]_[number]",
+        "specificAdverseEvents": "sae_psilocybin_[name]_[number]"
+      }
+    },
+    {
+      "schemaId": "substance_lsd",
+      "filename": "substance_lsd_schema.json",
+      "schemaType": "substance_specific",
+      "version": "2.0",
+      "substance": {
+        "id": "lsd_001",
+        "name": "LSD",
+        "aliases": ["Acid", "Lysergic Acid Diethylamide"]
+      },
+      "referencesGeneralSchema": true,
+      "primaryKeys": {
+        "substanceId": "lsd_001",
+        "specificRisks": "sr_lsd_[category]_[number]",
+        "specificAdverseEvents": "sae_lsd_[name]_[number]"
+      }
+    },
+    {
+      "schemaId": "substance_mdma",
+      "filename": "substance_mdma_schema.json",
+      "schemaType": "substance_specific",
+      "version": "2.0",
+      "substance": {
+        "id": "mdma_001",
+        "name": "MDMA",
+        "aliases": ["Ecstasy", "Molly", "3,4-Methylenedioxymethamphetamine"]
+      },
+      "referencesGeneralSchema": true,
+      "primaryKeys": {
+        "substanceId": "mdma_001",
+        "specificRisks": "sr_mdma_[category]_[number]",
+        "specificAdverseEvents": "sae_mdma_[name]_[number]"
+      }
+    },
+    {
+      "schemaId": "substance_dmt",
+      "filename": "substance_dmt_schema.json",
+      "schemaType": "substance_specific",
+      "version": "2.0",
+      "substance": {
+        "id": "dmt_001",
+        "name": "DMT",
+        "aliases": ["N,N-Dimethyltryptamine", "Dimitri"]
+      },
+      "referencesGeneralSchema": true,
+      "primaryKeys": {
+        "substanceId": "dmt_001",
+        "specificRisks": "sr_dmt_[category]_[number]",
+        "specificAdverseEvents": "sae_dmt_[name]_[number]"
+      }
+    },
+    {
+      "schemaId": "substance_5meo_dmt",
+      "filename": "substance_5meo_dmt_schema.json",
+      "schemaType": "substance_specific",
+      "version": "2.0",
+      "substance": {
+        "id": "5meo_dmt_001",
+        "name": "5-MeO-DMT",
+        "aliases": ["5-Methoxy-N,N-Dimethyltryptamine", "The Toad"]
+      },
+      "referencesGeneralSchema": true,
+      "primaryKeys": {
+        "substanceId": "5meo_dmt_001",
+        "specificRisks": "sr_5meo_dmt_[category]_[number]",
+        "specificAdverseEvents": "sae_5meo_dmt_[name]_[number]"
+      }
+    },
+    {
+      "schemaId": "substance_ayahuasca",
+      "filename": "substance_ayahuasca_schema.json",
+      "schemaType": "substance_specific",
+      "version": "2.0",
+      "substance": {
+        "id": "ayahuasca_001",
+        "name": "Ayahuasca",
+        "aliases": ["Yagé", "Hoasca"]
+      },
+      "referencesGeneralSchema": true,
+      "primaryKeys": {
+        "substanceId": "ayahuasca_001",
+        "specificRisks": "sr_ayahuasca_[category]_[number]",
+        "specificAdverseEvents": "sae_ayahuasca_[name]_[number]"
+      }
+    },
+    {
+      "schemaId": "substance_mescaline",
+      "filename": "substance_mescaline_schema.json",
+      "schemaType": "substance_specific",
+      "version": "2.0",
+      "substance": {
+        "id": "mescaline_001",
+        "name": "Mescaline",
+        "aliases": ["Peyote", "San Pedro"]
+      },
+      "referencesGeneralSchema": true,
+      "primaryKeys": {
+        "substanceId": "mescaline_001",
+        "specificRisks": "sr_mescaline_[category]_[number]",
+        "specificAdverseEvents": "sae_mescaline_[name]_[number]"
+      }
+    },
+    {
+      "schemaId": "substance_ibogaine",
+      "filename": "substance_ibogaine_schema.json",
+      "schemaType": "substance_specific",
+      "version": "2.0",
+      "substance": {
+        "id": "ibogaine_001",
+        "name": "Ibogaine",
+        "aliases": ["Iboga"]
+      },
+      "referencesGeneralSchema": true,
+      "primaryKeys": {
+        "substanceId": "ibogaine_001",
+        "specificRisks": "sr_ibogaine_[category]_[number]",
+        "specificAdverseEvents": "sae_ibogaine_[name]_[number]"
+      }
+    },
+    {
+      "schemaId": "substance_ketamine",
+      "filename": "substance_ketamine_schema.json",
+      "schemaType": "substance_specific",
+      "version": "2.0",
+      "substance": {
+        "id": "ketamine_001",
+        "name": "Ketamine",
+        "aliases": ["Special K", "K", "Vitamin K"]
+      },
+      "referencesGeneralSchema": true,
+      "primaryKeys": {
+        "substanceId": "ketamine_001",
+        "specificRisks": "sr_ketamine_[category]_[number]",
+        "specificAdverseEvents": "sae_ketamine_[name]_[number]"
+      }
+    }
+  ],
+
+  "crossReferencePatterns": {
+    "substanceToGeneral": {
+      "description": "How substance schemas reference general risk factors",
+      "pattern": "general_risks.{entityType}.{entityId}",
+      "examples": [
+        "general_risks.rf_cardiovascular_001",
+        "general_risks.ae_acute_anxiety_001",
+        "general_risks.erp_nonpharm_001"
+      ]
+    },
+    "substanceToHarmReduction": {
+      "description": "How substance schemas reference harm reduction measures",
+      "pattern": "harm_reduction.{entityId}",
+      "examples": [
+        "harm_reduction.hr_screening_comprehensive_001",
+        "harm_reduction.hr_start_low_go_slow_001",
+        "harm_reduction.hr_substance_testing_001"
+      ]
+    },
+    "generalToSubstance": {
+      "description": "How general schema indicates substance applicability",
+      "pattern": "Use 'applicableTo' object with substanceIds array",
+      "structure": {
+        "applicableTo": {
+          "allSubstances": "boolean",
+          "specificSubstances": ["array of substance IDs"],
+          "exceptions": ["array of substance IDs to exclude"]
+        }
+      }
+    },
+    "generalToHarmReduction": {
+      "description": "How general risks reference preventive/mitigation measures",
+      "pattern": "General risks include 'mitigatedBy' arrays pointing to harm reduction IDs",
+      "bidirectional": true,
+      "note": "Harm reduction measures list 'mitigatesRisks' and 'preventsAdverseEvents'"
+    },
+    "harmReductionToGeneral": {
+      "description": "How harm reduction measures reference risks and adverse events they address",
+      "pattern": "harm_reduction measures include 'mitigatesRisks' and 'preventsAdverseEvents' arrays",
+      "examples": [
+        "mitigatesRisks: ['general_risks.rf_high_dose_001']",
+        "preventsAdverseEvents: ['general_risks.ae_acute_anxiety_001']"
+      ]
+    },
+    "harmReductionToSubstance": {
+      "description": "How harm reduction measures indicate substance-specific considerations",
+      "pattern": "Use 'applicableTo' object with substance specifications",
+      "note": "Some measures universal, some substance-specific"
+    },
+    "substanceToSubstance": {
+      "description": "How substances reference each other (e.g., for comparisons)",
+      "pattern": "substance_{name}.{substanceId}",
+      "examples": [
+        "substance_psilocybin.psilocybin_001",
+        "substance_lsd.lsd_001"
+      ]
+    }
+  },
+
+  "entityTypeMapping": {
+    "rf": {
+      "name": "Risk Factor",
+      "location": "general_risks_schema.json",
+      "categories": [
+        "individual",
+        "practitioner_client",
+        "interpersonal",
+        "setting",
+        "preparation_integration",
+        "cultural_spiritual",
+        "legal_socioeconomic",
+        "contamination_quality"
+      ]
+    },
+    "sr": {
+      "name": "Substance-Specific Risk",
+      "location": "substance_*_schema.json",
+      "description": "Risks unique to a particular substance"
+    },
+    "ae": {
+      "name": "Adverse Event (General)",
+      "location": "general_risks_schema.json",
+      "categories": [
+        "psychological",
+        "physiological",
+        "perceptual",
+        "behavioral"
+      ]
+    },
+    "sae": {
+      "name": "Substance-Specific Adverse Event",
+      "location": "substance_*_schema.json",
+      "description": "Adverse events specific to a substance"
+    },
+    "bv": {
+      "name": "Boundary Violation",
+      "location": "general_risks_schema.json"
+    },
+    "erp": {
+      "name": "Emergency Response Protocol",
+      "location": "general_risks_schema.json"
+    },
+    "prep": {
+      "name": "Preparation Practice",
+      "location": "general_risks_schema.json"
+    },
+    "int": {
+      "name": "Integration Practice",
+      "location": "general_risks_schema.json"
+    },
+    "tool": {
+      "name": "Assessment Tool",
+      "location": "general_risks_schema.json"
+    },
+    "hr": {
+      "name": "Harm Reduction Measure",
+      "location": "harm_reduction_schema.json",
+      "categories": [
+        "screening_consent",
+        "setting",
+        "dosing",
+        "supervision",
+        "integration",
+        "crisis",
+        "education",
+        "community",
+        "accessibility"
+      ]
+    }
+  },
+
+  "queryExamples": {
+    "allRisksForSubstance": {
+      "description": "Get all risk factors applicable to a specific substance",
+      "steps": [
+        "1. Load general_risks_schema.json",
+        "2. Filter all risk factors where applicableTo.allSubstances = true OR substanceId in applicableTo.specificSubstances",
+        "3. Load substance_[name]_schema.json",
+        "4. Append substance-specific risks",
+        "5. Merge and return"
+      ]
+    },
+    "harmReductionForRisk": {
+      "description": "Get harm reduction measures that mitigate a specific risk factor",
+      "steps": [
+        "1. Load harm_reduction_schema.json",
+        "2. Search all measures for risk ID in 'mitigatesRisks' arrays",
+        "3. Return matching harm reduction measures",
+        "4. Include measure details: criticality, implementation, evidence"
+      ]
+    },
+    "preventiveMe asuresForAdverseEvent": {
+      "description": "Find harm reduction measures that prevent a specific adverse event",
+      "steps": [
+        "1. Load harm_reduction_schema.json",
+        "2. Search all measures for adverse event ID in 'preventsAdverseEvents' arrays",
+        "3. Return matching measures",
+        "4. Include implementation details and effectiveness data"
+      ]
+    },
+    "comprehensiveRiskMitigation": {
+      "description": "Get complete risk profile with mitigation strategies for a substance",
+      "steps": [
+        "1. Identify all applicable risks (from general + substance schemas)",
+        "2. For each risk, query harm_reduction schema for mitigating measures",
+        "3. Build risk-mitigation pairs",
+        "4. Prioritize by risk severity and measure criticality",
+        "5. Return actionable risk reduction plan"
+      ]
+    },
+    "substancesAffectedByRisk": {
+      "description": "Find which substances are affected by a specific risk factor",
+      "steps": [
+        "1. Load general_risks_schema.json",
+        "2. Find risk factor by ID",
+        "3. Check applicableTo object",
+        "4. If allSubstances = true, return all 9 substances",
+        "5. Otherwise return specificSubstances array"
+      ]
+    },
+    "compareSubstanceRisks": {
+      "description": "Compare risk profiles between two substances",
+      "steps": [
+        "1. Load both substance schemas",
+        "2. For each general risk, check applicability and severity modifiers",
+        "3. Compare substance-specific risks",
+        "4. Generate comparison report"
+      ]
+    },
+    "riskFactorInteractions": {
+      "description": "Identify when multiple risk factors combine",
+      "steps": [
+        "1. Load general_risks_schema.json",
+        "2. Access complexInteractions array",
+        "3. Filter by substance or risk factor IDs",
+        "4. Return interaction descriptions and risk multipliers"
+      ]
+    },
+    "harmReductionImplementationGuide": {
+      "description": "Generate step-by-step harm reduction plan for a specific context",
+      "steps": [
+        "1. Identify context: substance, setting, population",
+        "2. Query harm_reduction schema for applicable measures",
+        "3. Filter by criticality (essential vs important)",
+        "4. Organize by timing (pre_session, during, post_session)",
+        "5. Include implementation details, best practices, citations",
+        "6. Return structured implementation guide"
+      ]
+    }
+  },
+
+  "validationRules": {
+    "uniqueIds": {
+      "rule": "All IDs must be unique within their entity type across all schemas",
+      "example": "rf_cardiovascular_001 can only appear once in general_risks_schema"
+    },
+    "validReferences": {
+      "rule": "All cross-references must point to existing entities",
+      "example": "If substance schema references rf_cardiovascular_001, it must exist in general_risks"
+    },
+    "applicabilityConsistency": {
+      "rule": "If general risk says allSubstances=true, all substance schemas should acknowledge it",
+      "implementation": "Substance schemas should have riskFactorApplicability array"
+    },
+    "severityValues": {
+      "allowedValues": [
+        "minimal",
+        "low",
+        "low_to_moderate",
+        "moderate",
+        "moderate_to_high",
+        "high",
+        "critical"
+      ]
+    },
+    "contraindicationTypes": {
+      "allowedValues": [
+        "absolute",
+        "relative",
+        "absolute_if_active",
+        "relative_if_stable"
+      ]
+    }
+  },
+
+  "usageGuidelines": {
+    "forResearchers": {
+      "description": "How to use these schemas for research",
+      "steps": [
+        "Query risk factors by category and severity",
+        "Filter by evidence quality for robust findings",
+        "Use prevalenceData for statistical analysis",
+        "Cross-reference citations for literature review"
+      ]
+    },
+    "forClinicians": {
+      "description": "How to use for clinical screening and support",
+      "steps": [
+        "Use preparationPractices for session planning",
+        "Reference emergencyResponseProtocols for safety",
+        "Check contraindicationType for screening decisions",
+        "Use integrationPractices for post-session care"
+      ]
+    },
+    "forSoftwareDevelopers": {
+      "description": "How to build applications using these schemas",
+      "steps": [
+        "Parse JSON schemas into database or object models",
+        "Implement cross-reference resolution",
+        "Build query interfaces for risk assessment",
+        "Create visualization tools for risk profiles"
+      ]
+    },
+    "forPolicyMakers": {
+      "description": "How to use for evidence-based policy",
+      "steps": [
+        "Review legalSocioeconomicRiskFactors section",
+        "Analyze prevalenceData for population-level impacts",
+        "Consider equityRelated sections for fair policy",
+        "Use evidence quality ratings for decision-making"
+      ]
+    }
+  },
+
+  "maintenanceProtocol": {
+    "versionControl": {
+      "majorVersionChange": "Breaking changes to schema structure",
+      "minorVersionChange": "Adding new entities or fields",
+      "patchVersionChange": "Correcting data or citations"
+    },
+    "updateFrequency": "Quarterly review of new literature",
+    "citationVerification": "All citations must be verifiable",
+    "peerReview": "Changes reviewed by domain experts before release"
+  },
+
+  "toolingRecommendations": {
+    "validation": [
+      "JSON Schema validator for structural validation",
+      "Custom validator for cross-reference integrity",
+      "Citation checker for bibliography"
+    ],
+    "querying": [
+      "JSONPath for complex queries",
+      "Graph database (e.g., Neo4j) for relationship exploration",
+      "SQL database with foreign keys for traditional queries"
+    ],
+    "visualization": [
+      "Network graphs for risk factor relationships",
+      "Heat maps for substance risk profiles",
+      "Timeline visualizations for temporal patterns"
+    ]
+  }
+}

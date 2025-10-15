@@ -1,0 +1,1964 @@
+{
+  "schemaVersion": "2.0",
+  "lastUpdated": "2025-01-09",
+  
+  "substances": [
+    {
+      "id": "2cb_001",
+      "name": "2C-B",
+      "aliases": ["4-bromo-2,5-dimethoxyphenethylamine", "Nexus", "Venus"],
+      "classification": {
+        "primary": "non-classical_serotonergic_psychedelic",
+        "secondary": ["phenethylamine", "substituted_phenethylamine"],
+        "mechanism": "5-HT2A_partial_agonist",
+        "receptorAffinity": {
+          "5HT2A": "low_to_moderate",
+          "5HT2C": "moderate",
+          "note": "Lower or negligible activity at 5-HT2A compared to classical psychedelics"
+        }
+      },
+      "synthesisHistory": {
+        "creator": "Alexander Shulgin",
+        "year": 1970,
+        "context": "Synthesized as part of systematic exploration of phenethylamine derivatives"
+      },
+      "prevalenceData": {
+        "marketPresence": {
+          "availability": "Illicit drug market",
+          "formulations": ["tablets", "powder", "crystal"],
+          "falsificationRate": "low",
+          "context": "Often found in combination with MDMA",
+          "citations": ["caudevilla_2012", "palamar_2020"]
+        },
+        "coUsePatterns": {
+          "primaryCoSubstance": "MDMA",
+          "coUseRate": "high",
+          "context": "2023 global survey showed high rate of co-use among 11 psychedelic substances",
+          "citations": ["caudevilla_2012"]
+        }
+      },
+      "dosing": {
+        "threshold": {"value": 1, "unit": "mg"},
+        "light": {"min": 1, "max": 5, "unit": "mg", "notes": "Subtle perceptual and emotional effects"},
+        "common": {"min": 10, "max": 25, "unit": "mg", "notes": "Typical recreational range"},
+        "strong": {"min": 20, "max": 30, "unit": "mg", "notes": "Intense psychedelic experiences"},
+        "heavy": {"min": 30, "unit": "mg", "notes": "Very intense, increased risk"},
+        "therapeutic": {
+          "status": "not_established",
+          "notes": "No established therapeutic protocols or dosing guidelines"
+        },
+        "weightDependence": "unknown",
+        "notes": "Difficult to achieve consistent dosing due to illicit market variability"
+      },
+      "pharmacokinetics": {
+        "absorption": {
+          "route": "oral_primary",
+          "alternativeRoutes": ["insufflation", "rectal"],
+          "insufflationRisks": "Severe neurological reactions including central serotonin syndrome, epileptic seizures, cerebral edema, cerebral vasculopathy"
+        },
+        "onset": {"min": 20, "max": 60, "unit": "minutes"},
+        "peak": {"min": 60, "max": 120, "unit": "minutes"},
+        "duration": {"min": 6, "max": 8, "unit": "hours"},
+        "metabolism": "Unknown specific pathways",
+        "elimination": "Unknown"
+      },
+      "subjectiveEffectTimeline": {
+        "acute": {
+          "timeframe": "0-240 minutes",
+          "predominantEffects": [
+            "visual_distortions",
+            "enhanced_sensory_perception",
+            "emotional_shifts",
+            "euphoria",
+            "altered_thought_processes"
+          ],
+          "comparison": "Often described as 'lighter' or more manageable than LSD"
+        },
+        "similarities": {
+          "ayahuasca": "Similar enhanced sensory perception",
+          "salvia": "Similar perceptual quality"
+        }
+      },
+      "toleranceDevelopment": {
+        "rate": "presumed_rapid",
+        "crossTolerance": ["LSD", "mescaline", "other_phenethylamines"],
+        "duration": "unknown",
+        "notes": "Limited research data available"
+      },
+      "addictionPotential": "minimal_to_unknown",
+      "physiologicalDependence": "none reported",
+      "psychologicalDependence": "rare"
+    },
+    {
+      "id": "2ci_001",
+      "name": "2C-I",
+      "aliases": ["4-iodo-2,5-dimethoxyphenethylamine"],
+      "classification": {
+        "primary": "non-classical_serotonergic_psychedelic",
+        "secondary": ["phenethylamine", "substituted_phenethylamine"],
+        "mechanism": "5-HT2A_partial_agonist"
+      },
+      "knownRisks": {
+        "psychological": [
+          "paranoid_ideation",
+          "aggression",
+          "confusion"
+        ],
+        "physiological": [
+          "tachycardia",
+          "hypertension",
+          "renal_failure",
+          "seizures",
+          "cardiac_arrest",
+          "respiratory_arrest"
+        ],
+        "citations": ["baumeister_2015"]
+      },
+      "dosing": {
+        "notes": "Limited reliable dosing information available; high risk compound"
+      }
+    },
+    {
+      "id": "25i_nbome_001",
+      "name": "25I-NBOMe",
+      "aliases": ["2C-I-NBOMe"],
+      "classification": {
+        "primary": "novel_psychedelic_substance",
+        "secondary": ["phenethylamine", "substituted_phenethylamine", "NBOMe_series"],
+        "mechanism": "5-HT2A_full_agonist",
+        "note": "Significantly more potent and dangerous than classical psychedelics"
+      },
+      "prevalenceData": {
+        "adulterationRisk": {
+          "soldAs": ["LSD", "MDMA"],
+          "prevalence": "common",
+          "riskLevel": "high",
+          "citations": ["hirschfeld_2021", "malcolm_2022"]
+        }
+      },
+      "hppdRisk": {
+        "regularUse": {
+          "value": 67,
+          "unit": "percent",
+          "context": "Chronic or prolonged effects with regular use"
+        },
+        "singleUse": {
+          "value": 20,
+          "unit": "percent",
+          "context": "Risk even from single use"
+        },
+        "citations": ["retrospective_analysis_nd"]
+      },
+      "knownRisks": {
+        "toxicity": "higher_than_classical_psychedelics",
+        "unpredictableEffects": true,
+        "prolongedEffects": true,
+        "severeAdverseReactions": "documented",
+        "fatalities": "documented"
+      }
+    }
+  ],
+
+  "setFactors": [
+    {
+      "id": "set_expectations_001",
+      "name": "Expectations and Intentions",
+      "category": "cognitive",
+      "description": "Individual's mindset, goals, and expectations entering experience",
+      "components": [
+        {
+          "name": "Intentions",
+          "importance": "high",
+          "effect": "Clear intentions associated with better outcomes",
+          "riskOfAbsence": "Confusion, disorientation, difficulty integrating",
+          "specificTo2CX": "Limited therapeutic research means fewer established frameworks for intention-setting"
+        },
+        {
+          "name": "Expectations",
+          "importance": "high",
+          "effect": "Unrealistic expectations can lead to disappointment or distress",
+          "specificTo2CX": "Often described as 'lighter' than other psychedelics, which may lead to underestimation of intensity",
+          "mediatingFactors": ["media_portrayal", "peer_reports", "preparation_quality"]
+        }
+      ],
+      "modifiability": "high"
+    },
+    {
+      "id": "set_personality_001",
+      "name": "Personality Traits",
+      "category": "trait",
+      "traits": [
+        {
+          "trait": "Neuroticism",
+          "effect": "negative",
+          "strength": "strong_predictor",
+          "specificRisks": ["anxiety", "panic", "paranoia"]
+        },
+        {
+          "trait": "Openness to Experience",
+          "effect": "positive",
+          "strength": "moderate_predictor",
+          "specificBenefits": ["better_navigation_of_novel_states"]
+        },
+        {
+          "trait": "Suggestibility",
+          "effect": "risk_factor",
+          "specificRisks": ["susceptible_to_influence", "belief_manipulation"]
+        }
+      ],
+      "modifiability": "low"
+    }
+  ],
+
+  "riskFactors": [
+    {
+      "id": "rf_cardiovascular_001",
+      "name": "Pre-existing cardiovascular conditions",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "description": "Heart conditions, hypertension, arrhythmias",
+      "severity": "high",
+      "substanceInteractions": [
+        {
+          "substanceId": "2cb_001",
+          "mechanism": "Increases blood pressure, heart rate, and body temperature",
+          "riskLevel": "moderate_to_high",
+          "specificConditions": [
+            {
+              "condition": "uncontrolled_hypertension",
+              "contraindicationType": "absolute",
+              "severity": "critical"
+            },
+            {
+              "condition": "arrhythmias",
+              "contraindicationType": "absolute",
+              "severity": "critical"
+            },
+            {
+              "condition": "coronary_artery_disease",
+              "contraindicationType": "relative",
+              "requiresMonitoring": true,
+              "severity": "high"
+            }
+          ],
+          "citations": ["aday_2020", "fonzo_2025"],
+          "evidenceQuality": "low_extrapolated_from_other_psychedelics"
+        },
+        {
+          "substanceId": "2ci_001",
+          "mechanism": "Documented tachycardia and hypertension",
+          "riskLevel": "high",
+          "specificRisks": [
+            "tachycardia",
+            "hypertension",
+            "cardiac_arrest"
+          ],
+          "citations": ["baumeister_2015"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "monitoringRecommendations": [
+        "Baseline ECG",
+        "Continuous vital sign monitoring during session",
+        "Medical supervision required"
+      ]
+    },
+    {
+      "id": "rf_serotonergic_medication_001",
+      "name": "Concurrent Serotonergic Medications",
+      "category": "pharmacological",
+      "subcategory": "drug_interactions",
+      "description": "Use of medications affecting serotonin levels",
+      "severity": "critical",
+      "substanceInteractions": [
+        {
+          "substanceId": "2cb_001",
+          "medications": ["SSRIs", "MAOIs", "triptans"],
+          "mechanism": "Increased risk of serotonin toxicity/syndrome",
+          "riskLevel": "high",
+          "contraindicationType": "absolute",
+          "specificRisks": [
+            "serotonin_syndrome",
+            "hyperthermia",
+            "seizures",
+            "death"
+          ],
+          "citations": ["hirschfeld_2021"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "prevention": [
+        "Comprehensive medication review",
+        "Discontinuation of serotonergic medications with appropriate washout period",
+        "Education about dangerous combinations"
+      ]
+    },
+    {
+      "id": "rf_polydrug_use_001",
+      "name": "Concurrent Polydrug Use",
+      "category": "behavioral",
+      "subcategory": "substance_use",
+      "description": "Use of multiple substances simultaneously or in close temporal proximity",
+      "severity": "high",
+      "prevalenceData": {
+        "coUseWithMDMA": {
+          "prevalence": "high",
+          "context": "2C-B frequently combined with MDMA",
+          "citations": ["caudevilla_2012"]
+        }
+      },
+      "substanceInteractions": [
+        {
+          "substanceId": "2cb_001",
+          "commonCombinations": [
+            {
+              "substances": ["2C-B", "MDMA"],
+              "effect": "Unpredictable interactions, increased physiological burden",
+              "prevalence": "very_common"
+            },
+            {
+              "substances": ["2C-B", "alcohol"],
+              "effect": "Increased adverse effects"
+            },
+            {
+              "substances": ["2C-B", "cannabis"],
+              "effect": "Variable - may reduce or exacerbate difficulty"
+            }
+          ],
+          "citations": ["kopra_2025", "breeksema_2022"]
+        }
+      ],
+      "harmReductionStrategies": [
+        "Substance testing",
+        "Avoiding combinations",
+        "Education about dangerous interactions",
+        "Starting with single substances"
+      ]
+    },
+    {
+      "id": "rf_age_youth_001",
+      "name": "Adolescence and Young Adulthood",
+      "category": "demographic",
+      "subcategory": "age",
+      "ageRange": {"min": 13, "max": 25},
+      "description": "Younger age associated with increased vulnerability",
+      "severity": "moderate_to_high",
+      "substanceInteractions": [
+        {
+          "substanceId": "*",
+          "mechanism": "Developing brain more susceptible to disruption",
+          "riskLevel": "elevated",
+          "specificRisks": [
+            "negative_psychological_effects",
+            "higher_emergency_treatment_rates",
+            "potential_developmental_disruption"
+          ],
+          "prevalenceData": {
+            "negativeEffects": {
+              "value": 53,
+              "unit": "percent",
+              "context": "Of those with negative effects were under 25",
+              "citation": "bremler_2023"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "rf_route_insufflation_001",
+      "name": "Insufflation Route of Administration",
+      "category": "behavioral",
+      "subcategory": "administration_route",
+      "description": "Intranasal administration of 2C-B",
+      "severity": "critical",
+      "specificTo2CX": true,
+      "substanceInteractions": [
+        {
+          "substanceId": "2cb_001",
+          "route": "insufflation",
+          "specificRisks": [
+            "severe_neurological_reactions",
+            "central_serotonin_syndrome",
+            "epileptic_seizures",
+            "cerebral_edema",
+            "cerebral_vasculopathy"
+          ],
+          "riskLevel": "critical",
+          "citations": ["hirschfeld_2021"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "prevention": [
+        "Strong warnings against insufflation",
+        "Education about oral administration as safer route",
+        "Clear communication about severe neurological risks"
+      ]
+    },
+    {
+      "id": "rf_lithium_interaction_001",
+      "name": "Lithium Co-Administration",
+      "category": "pharmacological",
+      "subcategory": "drug_interactions",
+      "description": "Concurrent use with lithium medication",
+      "severity": "critical",
+      "substanceInteractions": [
+        {
+          "substanceId": "*",
+          "medication": "lithium",
+          "mechanism": "Significantly increased risk of seizures",
+          "riskLevel": "critical",
+          "contraindicationType": "absolute",
+          "specificRisks": ["seizures"],
+          "citations": ["nayak_2021"],
+          "evidenceQuality": "strong"
+        }
+      ]
+    },
+    {
+      "id": "rf_inadequate_harm_reduction_info_001",
+      "name": "Lack of Harm Reduction Information",
+      "category": "educational",
+      "subcategory": "information_access",
+      "description": "Limited access to accurate, evidence-based information",
+      "severity": "moderate_to_high",
+      "specificTo2CX": "Very limited research means less reliable information available",
+      "consequences": [
+        "Inadequate preparation",
+        "Insufficient knowledge about interactions",
+        "Inability to recognize early warning signs",
+        "Poor dosing decisions",
+        "Increased risk of adverse events"
+      ],
+      "citations": ["breeksema_2022", "kopra_2022", "pleet_2023"],
+      "interventions": [
+        "Comprehensive public education",
+        "Peer support networks",
+        "Online harm reduction resources",
+        "Professional consultation access"
+      ]
+    }
+  ],
+
+  "medicalConditions": [
+    {
+      "id": "cond_psychotic_disorders_001",
+      "name": "Psychotic Disorders",
+      "category": "psychiatric",
+      "icd10": "F20-F29",
+      "description": "Schizophrenia, schizoaffective disorder, schizophreniform disorder",
+      "substanceRisks": [
+        {
+          "substanceId": "*",
+          "contraindicationType": "absolute",
+          "specificRisks": [
+            {
+              "risk": "psychotic_episode_induction",
+              "severity": "high"
+            },
+            {
+              "risk": "exacerbation_of_symptoms",
+              "severity": "high"
+            },
+            {
+              "risk": "prolonged_psychotic_reactions",
+              "severity": "high"
+            }
+          ],
+          "requiredPrecautions": [
+            "Absolute avoidance recommended",
+            "If use occurs, immediate medical attention"
+          ],
+          "citations": ["aday_2021", "ghaznavi_2025", "white_2024", "bremler_2023", "lowe_2022"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "familyHistory": {
+        "relevant": true,
+        "contraindicationType": "absolute",
+        "riskMultiplier": "significantly_elevated"
+      }
+    },
+    {
+      "id": "cond_bipolar_001",
+      "name": "Bipolar Disorder",
+      "category": "psychiatric",
+      "icd10": "F31",
+      "substanceRisks": [
+        {
+          "substanceId": "*",
+          "contraindicationType": "absolute",
+          "specificRisks": [
+            {
+              "risk": "manic_episode_induction",
+              "severity": "high"
+            },
+            {
+              "risk": "mood_destabilization",
+              "severity": "high"
+            }
+          ],
+          "requiredPrecautions": [
+            "Careful screening",
+            "Absolute contraindication for active/unstable bipolar",
+            "Extreme caution even if stable"
+          ],
+          "citations": ["aday_2021", "ghaznavi_2025", "white_2024", "bremler_2023"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "familyHistory": {
+        "relevant": true,
+        "contraindicationType": "relative",
+        "riskMultiplier": "elevated"
+      }
+    },
+    {
+      "id": "cond_anxiety_mood_disorders_001",
+      "name": "Anxiety and Mood Disorders",
+      "category": "psychiatric",
+      "icd10": "F30-F48",
+      "description": "Major depression, generalized anxiety disorder, panic disorder",
+      "substanceRisks": [
+        {
+          "substanceId": "*",
+          "contraindicationType": "relative",
+          "riskLevel": "moderate_to_high",
+          "specificRisks": {
+            "symptomExacerbation": {
+              "anxiety": "Can worsen existing anxiety symptoms",
+              "depression": "May trigger or worsen depressive episodes"
+            }
+          },
+          "requiredPrecautions": [
+            "Thorough assessment",
+            "Symptom stability required",
+            "Enhanced support during experience",
+            "Careful integration planning"
+          ],
+          "citations": ["ona_2018"],
+          "evidenceQuality": "low"
+        }
+      ]
+    },
+    {
+      "id": "cond_cardiovascular_001",
+      "name": "Cardiovascular Conditions",
+      "category": "physiological",
+      "icd10": "I00-I99",
+      "description": "Heart disease, hypertension, arrhythmias",
+      "substanceRisks": [
+        {
+          "substanceId": "2cb_001",
+          "contraindicationType": "absolute_if_uncontrolled",
+          "riskLevel": "high",
+          "mechanism": "Increases heart rate, blood pressure, body temperature",
+          "specificRisks": [
+            "hypertensive_crisis",
+            "arrhythmia",
+            "cardiac_events"
+          ],
+          "citations": ["aday_2020", "fonzo_2025"],
+          "evidenceQuality": "low_extrapolated"
+        },
+        {
+          "substanceId": "2ci_001",
+          "contraindicationType": "absolute",
+          "riskLevel": "critical",
+          "documentedEvents": [
+            "tachycardia",
+            "hypertension",
+            "cardiac_arrest"
+          ],
+          "citations": ["baumeister_2015"],
+          "evidenceQuality": "moderate"
+        }
+      ]
+    },
+    {
+      "id": "cond_trauma_history_001",
+      "name": "Unprocessed Trauma History",
+      "category": "psychiatric",
+      "subcategory": "trauma",
+      "description": "History of traumatic experiences, especially if unresolved",
+      "severity": "moderate_to_high",
+      "substanceRisks": [
+        {
+          "substanceId": "*",
+          "mechanism": "Trauma reactivation during psychedelic state",
+          "riskLevel": "moderate",
+          "specificRisks": [
+            "trauma_reexperiencing",
+            "emotional_distress",
+            "destabilization"
+          ],
+          "requiredPrecautions": [
+            "Trauma-informed preparation",
+            "Specialized integration support",
+            "Safety planning",
+            "Therapeutic support availability"
+          ],
+          "citations": ["ona_2018", "breeksema_2022"],
+          "evidenceQuality": "low_extrapolated"
+        }
+      ],
+      "contraindicationType": "relative",
+      "requiresSpecializedSupport": true
+    }
+  ],
+
+  "adverseEvents": [
+    {
+      "id": "ae_anxiety_acute_001",
+      "name": "Acute Anxiety",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Anxiety experienced during or shortly after administration",
+      "substanceOccurrence": [
+        {
+          "substanceId": "2cb_001",
+          "prevalence": {
+            "note": "Specific prevalence data not available; extrapolated from general psychedelic use",
+            "generalPsychedelicRate": "15-100%",
+            "context": "Wide variation across studies and doses"
+          },
+          "management": {
+            "primary": "reassurance",
+            "effectiveness": "Usually sufficient",
+            "escalation": "Benzodiazepines if reassurance insufficient"
+          },
+          "citations": ["baumeister_2015", "hirschfeld_2021"],
+          "evidenceQuality": "very_low"
+        }
+      ],
+      "riskFactors": [
+        "rf_anxiety_history_001",
+        "rf_unprepared_001",
+        "rf_high_dose_001",
+        "rf_neuroticism_001"
+      ],
+      "interventions": [
+        "verbal_reassurance",
+        "breathing_exercises",
+        "grounding_techniques",
+        "environmental_adjustment",
+        "benzodiazepines_if_severe"
+      ]
+    },
+    {
+      "id": "ae_paranoia_001",
+      "name": "Paranoid Ideation",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "moderate_to_severe",
+      "description": "Paranoid thoughts and suspiciousness during experience",
+      "substanceOccurrence": [
+        {
+          "substanceId": "2ci_001",
+          "prevalence": "documented",
+          "associatedWith": ["aggression", "confusion"],
+          "riskLevel": "moderate_to_high",
+          "citations": ["baumeister_2015"],
+          "evidenceQuality": "low"
+        }
+      ],
+      "management": {
+        "nonPharmacological": [
+          "calm_environment",
+          "reassurance",
+          "avoid_confrontation"
+        ],
+        "pharmacological": [
+          "benzodiazepines_first_line",
+          "antipsychotics_if_severe"
+        ]
+      }
+    },
+    {
+      "id": "ae_cardiovascular_001",
+      "name": "Cardiovascular Effects",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "timeframe": "acute",
+      "severity": "moderate_to_severe",
+      "description": "Increased heart rate, blood pressure, risk of cardiac events",
+      "substanceOccurrence": [
+        {
+          "substanceId": "2ci_001",
+          "symptoms": [
+            "tachycardia",
+            "hypertension",
+            "cardiac_arrest",
+            "respiratory_arrest"
+          ],
+          "severity": "severe_to_critical",
+          "prevalence": "documented in emergency presentations",
+          "citations": ["baumeister_2015"],
+          "evidenceQuality": "moderate"
+        },
+        {
+          "substanceId": "2cb_001",
+          "symptoms": [
+            "increased_heart_rate",
+            "increased_blood_pressure"
+          ],
+          "severity": "mild_to_moderate",
+          "prevalence": "presumed common based on class effects",
+          "citations": ["aday_2020", "fonzo_2025"],
+          "evidenceQuality": "very_low_extrapolated"
+        }
+      ],
+      "monitoring": [
+        "vital_signs_monitoring",
+        "ECG_if_symptoms_present",
+        "emergency_medical_services_if_severe"
+      ],
+      "treatment": [
+        "supportive_care",
+        "beta_blockers_if_indicated",
+        "emergency_intervention_for_cardiac_events"
+      ]
+    },
+    {
+      "id": "ae_renal_failure_001",
+      "name": "Renal Failure",
+      "category": "physiological",
+      "subcategory": "renal",
+      "timeframe": "acute_to_subacute",
+      "severity": "critical",
+      "description": "Acute kidney injury or renal failure",
+      "substanceOccurrence": [
+        {
+          "substanceId": "2ci_001",
+          "prevalence": "rare but documented",
+          "context": "Emergency presentations",
+          "severity": "life_threatening",
+          "citations": ["baumeister_2015"],
+          "evidenceQuality": "low"
+        }
+      ],
+      "treatment": [
+        "immediate_medical_attention",
+        "supportive_care",
+        "dialysis_if_indicated",
+        "hospitalization_required"
+      ]
+    },
+    {
+      "id": "ae_seizures_001",
+      "name": "Seizures",
+      "category": "physiological",
+      "subcategory": "neurological",
+      "timeframe": "acute",
+      "severity": "severe_to_critical",
+      "description": "Seizure activity",
+      "substanceOccurrence": [
+        {
+          "substanceId": "2ci_001",
+          "prevalence": "documented in emergency presentations",
+          "severity": "severe",
+          "citations": ["baumeister_2015"],
+          "evidenceQuality": "low"
+        },
+        {
+          "substanceId": "2cb_001",
+          "route": "insufflation",
+          "prevalence": "documented as risk",
+          "mechanism": "Direct neurological impact",
+          "severity": "severe",
+          "citations": ["hirschfeld_2021"],
+          "evidenceQuality": "moderate"
+        },
+        {
+          "substanceId": "*",
+          "interaction": "lithium",
+          "prevalence": "significantly increased risk",
+          "severity": "critical",
+          "citations": ["nayak_2021"],
+          "evidenceQuality": "strong"
+        }
+      ],
+      "treatment": [
+        "immediate_medical_attention",
+        "benzodiazepines",
+        "airway_protection",
+        "emergency_services"
+      ]
+    },
+    {
+      "id": "ae_cerebral_edema_001",
+      "name": "Cerebral Edema",
+      "category": "physiological",
+      "subcategory": "neurological",
+      "timeframe": "acute",
+      "severity": "critical",
+      "description": "Brain swelling",
+      "substanceOccurrence": [
+        {
+          "substanceId": "2cb_001",
+          "route": "insufflation",
+          "prevalence": "documented risk",
+          "severity": "life_threatening",
+          "citations": ["hirschfeld_2021"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "treatment": [
+        "immediate_emergency_medical_services",
+        "hospital_admission",
+        "intensive_care",
+        "neurosurgical_consultation"
+      ]
+    },
+    {
+      "id": "ae_cerebral_vasculopathy_001",
+      "name": "Cerebral Vasculopathy",
+      "category": "physiological",
+      "subcategory": "neurological",
+      "timeframe": "acute",
+      "severity": "critical",
+      "description": "Blood vessel abnormalities in the brain",
+      "substanceOccurrence": [
+        {
+          "substanceId": "2cb_001",
+          "route": "insufflation",
+          "prevalence": "documented risk",
+          "severity": "severe_to_critical",
+          "citations": ["hirschfeld_2021"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "treatment": [
+        "immediate_medical_attention",
+        "neurological_assessment",
+        "imaging",
+        "specialist_consultation"
+      ]
+    },
+    {
+      "id": "ae_serotonin_syndrome_001",
+      "name": "Serotonin Syndrome",
+      "category": "physiological",
+      "subcategory": "neurotoxicity",
+      "timeframe": "acute",
+      "severity": "severe_to_critical",
+      "description": "Potentially life-threatening condition from excessive serotonin",
+      "symptoms": {
+        "autonomic": [
+          "hyperthermia",
+          "tachycardia",
+          "hypertension",
+          "diaphoresis",
+          "mydriasis"
+        ],
+        "neuromuscular": [
+          "muscle_rigidity",
+          "tremor",
+          "hyperreflexia",
+          "clonus"
+        ],
+        "cognitive": [
+          "agitation",
+          "confusion",
+          "delirium"
+        ],
+        "severe": [
+          "seizures",
+          "rhabdomyolysis",
+          "disseminated_intravascular_coagulation",
+          "death"
+        ]
+      },
+      "substanceOccurrence": [
+        {
+          "substanceId": "2cb_001",
+          "triggeringCombinations": [
+            {
+              "combination": "2C-B + SSRIs",
+              "severity": "high",
+              "mechanism": "Excessive serotonergic activity"
+            },
+            {
+              "combination": "2C-B + MAOIs",
+              "severity": "critical",
+              "mechanism": "Severe serotonin accumulation"
+            },
+            {
+              "combination": "2C-B + triptans",
+              "severity": "high",
+              "mechanism": "Additive serotonergic effects"
+            }
+          ],
+          "route": "any, especially insufflation",
+          "riskLevel": "critical",
+          "citations": ["hirschfeld_2021"],
+          "evidenceQuality": "moderate"
+        }
+      ],
+      "onset": "Rapid (minutes to hours after exposure)",
+      "duration": "Variable; requires medical management",
+      "treatment": {
+        "primary": "Discontinuation of serotonergic agents",
+        "supportive": [
+          "Benzodiazepines",
+          "Cooling measures",
+          "IV fluids",
+          "Vital sign monitoring"
+        ],
+        "severe": [
+          "ICU admission",
+          "Serotonin antagonists (cyproheptadine)",
+          "Intubation if needed"
+        ]
+      },
+      "prevention": {
+        "screening": "Comprehensive medication review essential",
+        "education": "Clear warnings about dangerous combinations",
+        "avoidance": "Absolute contraindication for certain combinations"
+      },
+      "mortality": "Can be fatal without treatment"
+    },
+    {
+      "id": "ae_hppd_001",
+      "name": "Hallucinogen Persisting Perception Disorder (HPPD)",
+      "category": "perceptual",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "description": "Persistent perceptual disturbances long after drug effects have worn off",
+      "substanceOccurrence": [
+        {
+          "substanceId": "25i_nbome_001",
+          "prevalence": {
+            "regularUse": {
+              "value": 67,
+              "unit": "percent",
+              "context": "Chronic or prolonged effects with regular use"
+            },
+            "singleUse": {
+              "value": 20,
+              "unit": "percent",
+              "context": "Risk even from single use"
+            }
+          },
+          "riskPattern": "Higher risk with regular use; elevated risk compared to classical psychedelics",
+          "citations": ["retrospective_analysis_nd"],
+          "evidenceQuality": "moderate"
+        },
+        {
+          "substanceId": "2cb_001",
+          "prevalence": {
+            "note": "Limited specific data; presumed similar to classical psychedelics but possibly lower",
+            "generalEstimate": "Rare in controlled settings"
+          },
+          "evidenceQuality": "very_low"
+        }
+      ],
+      "symptoms": [
+        "visual_snow",
+        "geometric_patterns",
+        "trailing",
+        "intensified_colors",
+        "palinopsia",
+        "afterimages"
+      ],
+      "riskFactors": [
+        {
+          "factor": "rf_frequent_use_001",
+          "evidence": "strong",
+          "specificTo": "25I-NBOMe"
+        },
+        {
+          "factor": "rf_high_dose_001",
+          "evidence": "moderate"
+        },
+        {
+          "factor": "rf_polydrug_use_001",
+          "evidence": "moderate"
+        }
+      ],
+      "treatment": [
+        "reassurance",
+        "benzodiazepines_anecdotal",
+        "lamotrigine_case_reports",
+        "cognitive_behavioral_therapy"
+      ]
+    },
+    {
+      "id": "ae_prolonged_psychosis_001",
+      "name": "Prolonged Psychotic Reactions",
+      "category": "psychological",
+      "timeframe": "extended",
+      "severity": "severe",
+      "description": "Psychotic symptoms persisting beyond acute drug effects",
+      "substanceOccurrence": [
+        {
+          "substanceId": "*",
+          "prevalence": "Rare but documented",
+          "duration": "Days to weeks or longer",
+          "riskFactors": [
+            "personal_history_psychosis",
+            "family_history_psychosis",
+            "high_doses",
+            "unsupported_settings"
+          ],
+          "citations": ["baumeister_2015", "barnett_2021", "sabe_2024"],
+          "evidenceQuality": "low"
+        }
+      ],
+      "treatment": [
+        "psychiatric_evaluation",
+        "antipsychotic_medication",
+        "supportive_therapy",
+        "hospitalization_if_severe"
+      ]
+    },
+    {
+      "id": "ae_confusion_001",
+      "name": "Confusion and Disorientation",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Cognitive impairment, disorientation",
+      "substanceOccurrence": [
+        {
+          "substanceId": "2ci_001",
+          "prevalence": "Common in adverse presentations",
+          "associatedWith": ["paranoia", "aggression"],
+          "citations": ["baumeister_2015"],
+          "evidenceQuality": "low"
+        }
+      ],
+      "management": [
+        "calm_environment",
+        "orientation_cues",
+        "reassurance",
+        "monitoring"
+      ]
+    },
+    {
+      "id": "ae_aggression_001",
+      "name": "Aggression",
+      "category": "behavioral",
+      "timeframe": "acute",
+      "severity": "moderate_to_severe",
+      "description": "Aggressive or violent behavior",
+      "substanceOccurrence": [
+        {
+          "substanceId": "2ci_001",
+          "prevalence": "Documented",
+          "associatedWith": ["paranoia", "confusion"],
+          "safetyImplications": "Risk to self and others",
+          "citations": ["baumeister_2015"],
+          "evidenceQuality": "low"
+        }
+      ],
+      "management": [
+        "maintain_safe_distance",
+        "calm_approach",
+        "de_escalation_techniques",
+        "benzodiazepines",
+        "physical_restraint_if_necessary",
+        "emergency_services_if_severe"
+      ]
+    }
+  ],
+
+  "therapeuticAlliance": [
+    {
+      "id": "alliance_quality_001",
+      "name": "Therapeutic Alliance Quality",
+      "category": "relational",
+      "description": "Quality of relationship between therapist/facilitator and participant",
+      "importance": "critical",
+      "impact": "Strong predictor of outcomes",
+      "applicabilityTo2CX": "Limited therapeutic use means less established protocols",
+      "components": [
+        {
+          "component": "safety",
+          "description": "Participant feels physically and emotionally safe"
+        },
+        {
+          "component": "trust",
+          "description": "Confidence in facilitator's competence and intentions"
+        },
+        {
+          "component": "collaboration",
+          "description": "Shared decision-making and goals"
+        }
+      ],
+      "positiveCharacteristics": [
+        "open",
+        "empathetic",
+        "non-judgmental",
+        "knowledgeable_about_substance"
+      ],
+      "negativeCharacteristics": [
+        "rigid",
+        "critical",
+        "distant",
+        "lacking_substance_knowledge"
+      ],
+      "specificTo2CX": "Given limited research, facilitators must acknowledge uncertainty while maintaining supportive presence"
+    }
+  ],
+
+  "boundaryViolations": [
+    {
+      "id": "boundary_sexual_001",
+      "name": "Sexual Misconduct",
+      "category": "ethical_violation",
+      "severity": "critical",
+      "description": "Sexual touching, contact, or exploitation during psychedelic therapy",
+      "riskFactors": [
+        "Heightened suggestibility during psychedelic state",
+        "Vulnerability and trust",
+        "Power imbalances",
+        "Lack of clear ethical guidelines",
+        "Inadequate practitioner training",
+        "Absence of oversight"
+      ],
+      "prevention": [
+        "Clear ethical boundaries",
+        "Training on power dynamics",
+        "Same-gender facilitator options",
+        "Multiple facilitators present",
+        "Reporting mechanisms"
+      ]
+    },
+    {
+      "id": "boundary_epistemic_001",
+      "name": "Epistemic Harm/Belief Imposition",
+      "category": "ethical_violation",
+      "severity": "moderate_to_high",
+      "description": "Imposing beliefs or interpretations onto participants",
+      "specificTo2CX": "Limited research means facilitators may impose personal theories or experiences inappropriately",
+      "mechanisms": [
+        "Interpreting experiences for client",
+        "Marginalizing client's perspective",
+        "Pressure to adopt facilitator's worldview"
+      ],
+      "consequences": [
+        "False insights becoming solidified beliefs",
+        "Undermined autonomy",
+        "Psychological distress"
+      ],
+      "prevention": [
+        "Non-directive support",
+        "Respecting client's interpretive framework",
+        "Not imposing meaning",
+        "Acknowledging uncertainty about substance"
+      ]
+    }
+  ],
+
+  "preparationPractices": [
+    {
+      "id": "prep_screening_001",
+      "name": "Comprehensive Screening",
+      "category": "assessment",
+      "timing": "pre_session",
+      "specificTo2CX": "Critical given limited safety data and high variability in illicit market",
+      "components": [
+        {
+          "area": "psychiatric_history",
+          "focus": [
+            "Personal history of mental illness",
+            "Family history of psychosis/bipolar",
+            "Current symptoms",
+            "Treatment history"
+          ]
+        },
+        {
+          "area": "medical_history",
+          "focus": [
+            "Cardiovascular conditions",
+            "Seizure history",
+            "Neurological conditions",
+            "Medication review - especially serotonergic drugs"
+          ]
+        },
+        {
+          "area": "substance_use",
+          "focus": [
+            "Current substance use patterns",
+            "History of polydrug use",
+            "Previous experiences with 2C-X or similar substances",
+            "Understanding of substance identity and purity"
+          ]
+        }
+      ],
+      "exclusionCriteria": [
+        "Active psychosis",
+        "Active mania",
+        "Unstable cardiovascular disease",
+        "Current use of SSRIs/MAOIs/triptans",
+        "Lithium use",
+        "Pregnancy",
+        "Severe liver/kidney impairment"
+      ],
+      "relativeContraindications": [
+        "Family history of psychosis",
+        "Anxiety or mood disorders",
+        "Trauma history",
+        "Controlled cardiovascular conditions"
+      ],
+      "effectiveness": "high",
+      "evidenceQuality": "extrapolated_from_other_psychedelics"
+    },
+    {
+      "id": "prep_substance_verification_001",
+      "name": "Substance Testing and Verification",
+      "category": "harm_reduction",
+      "timing": "pre_session",
+      "specificTo2CX": "Critical due to high risk of adulteration and misrepresentation",
+      "importance": "critical",
+      "rationale": "Illicit market 2C substances often misrepresented or adulterated with dangerous compounds like NBOMes",
+      "methods": [
+        {
+          "method": "reagent_testing",
+          "description": "Use of chemical reagents to identify substance class",
+          "limitations": "Cannot determine purity or exact dosage",
+          "recommendation": "Minimum requirement"
+        },
+        {
+          "method": "laboratory_analysis",
+          "description": "Professional testing for exact composition and purity",
+          "advantages": "Most reliable method",
+          "recommendation": "Ideal when available"
+        },
+        {
+          "method": "test_dose",
+          "description": "Taking small amount to assess effects before full dose",
+          "recommendation": "Strongly advised",
+          "citations": ["baxter_2024"]
+        }
+      ],
+      "redFlags": [
+        "Substance sold as something else (e.g., 'LSD' or 'MDMA')",
+        "Unknown source",
+        "Unusual appearance or smell",
+        "Bitter taste (may indicate NBOMe)"
+      ]
+    },
+    {
+      "id": "prep_psychoeducation_001",
+      "name": "Psychoeducation",
+      "category": "education",
+      "timing": "pre_session",
+      "specificTo2CX": "Must acknowledge limited research and elevated uncertainty",
+      "content": [
+        {
+          "topic": "substance_effects",
+          "details": [
+            "Limited research available",
+            "Expected duration (6-8 hours)",
+            "Described as 'lighter' than some psychedelics but still potent",
+            "Individual variation high",
+            "Risk of misidentified substances"
+          ]
+        },
+        {
+          "topic": "risks",
+          "details": [
+            "Cardiovascular effects",
+            "Risk of serotonin syndrome with certain medications",
+            "Severe risks from insufflation",
+            "Risk from polydrug use, especially MDMA",
+            "Psychological risks",
+            "Unknown long-term effects"
+          ]
+        },
+        {
+          "topic": "harm_reduction",
+          "details": [
+            "Importance of substance testing",
+            "Starting with low doses",
+            "Oral administration only",
+            "Avoiding drug combinations",
+            "Importance of set and setting",
+            "Having support person present"
+          ]
+        }
+      ],
+      "format": ["Verbal discussion", "Written materials"],
+      "effectiveness": "moderate_to_high",
+      "evidenceQuality": "extrapolated"
+    },
+    {
+      "id": "prep_route_education_001",
+      "name": "Route of Administration Education",
+      "category": "education",
+      "timing": "pre_session",
+      "specificTo2CX": true,
+      "importance": "critical",
+      "focus": "Strong warnings against insufflation",
+      "content": [
+        "Oral administration is the only relatively safe route",
+        "Insufflation associated with severe neurological complications",
+        "Risk of cerebral edema, seizures, and cerebral vasculopathy from insufflation",
+        "No safe benefit from alternative routes"
+      ],
+      "effectiveness": "high_for_behavior_change",
+      "citations": ["hirschfeld_2021"]
+    }
+  ],
+
+  "integrationPractices": [
+    {
+      "id": "int_therapy_001",
+      "name": "Integration Therapy Sessions",
+      "category": "professional_support",
+      "timing": "post_session",
+      "applicabilityTo2CX": "Important but limited therapist expertise available",
+      "structure": {
+        "initial": {
+          "timing": "1-2 days post-session",
+          "purpose": "Process immediate experience",
+          "duration": "60-90 minutes"
+        },
+        "ongoing": {
+          "frequency": "Weekly to bi-weekly as needed",
+          "duration": "Variable based on individual needs",
+          "purpose": "Translate insights into behavior change, address difficulties"
+        }
+      },
+      "considerations": [
+        "Therapist may have limited familiarity with 2C-X",
+        "Focus on general psychedelic integration principles",
+        "Emphasize processing unusual or unexpected effects"
+      ],
+      "effectiveness": "presumed_high",
+      "evidenceQuality": "extrapolated"
+    },
+    {
+      "id": "int_peer_support_001",
+      "name": "Peer Support and Community",
+      "category": "community",
+      "timing": "post_session_ongoing",
+      "applicabilityTo2CX": "May be primary source of support given limited professional resources",
+      "formats": [
+        {
+          "format": "online_forums",
+          "benefits": ["Accessible", "Anonymous option", "Shared experiences"],
+          "risks": ["Misinformation", "Lack of professional oversight"]
+        },
+        {
+          "format": "integration_circles",
+          "benefits": ["Community support", "Shared learning", "Reduced isolation"],
+          "risks": ["Variable facilitator quality", "Potential for groupthink"]
+        }
+      ],
+      "bestPractices": [
+        "Seek communities with harm reduction focus",
+        "Be cautious of extreme claims",
+        "Supplement with professional support when possible"
+      ],
+      "effectiveness": "moderate",
+      "evidenceQuality": "low"
+    },
+    {
+      "id": "int_creative_001",
+      "name": "Creative Expression",
+      "category": "self_practice",
+      "timing": "post_session_ongoing",
+      "modalities": [
+        {
+          "modality": "journaling",
+          "frequency": "Daily recommended initially",
+          "benefits": ["Process experience", "Track insights", "Identify patterns"]
+        },
+        {
+          "modality": "art",
+          "types": ["Drawing", "Painting"],
+          "benefits": ["Non-verbal processing", "Expression of ineffable experiences"]
+        }
+      ],
+      "effectiveness": "moderate",
+      "evidenceQuality": "extrapolated"
+    }
+  ],
+
+  "groupDynamicsFactors": [
+    {
+      "id": "group_common_couse_001",
+      "name": "Common Co-Use with MDMA",
+      "category": "behavioral",
+      "description": "Frequent combination of 2C-B with MDMA in group settings",
+      "specificTo2CX": true,
+      "prevalence": "Very common",
+      "context": "Often used together at events, parties, or in social settings",
+      "risks": [
+        "Unpredictable interactions",
+        "Increased physiological burden",
+        "Enhanced serotonergic effects",
+        "Difficulty attributing effects to specific substance",
+        "Group pressure to combine substances"
+      ],
+      "citations": ["caudevilla_2012"],
+      "harmReduction": [
+        "Education about interaction risks",
+        "Encouraging single-substance use",
+        "If combining, start with lower doses of both",
+        "Increased monitoring",
+        "Peer education"
+      ]
+    },
+    {
+      "id": "group_suggestibility_001",
+      "name": "Collective Suggestibility",
+      "category": "psychological",
+      "description": "Heightened suggestibility in group settings during psychedelic states",
+      "risks": [
+        "Adoption of harmful beliefs",
+        "Group pressure for risky behavior (e.g., combining drugs, higher doses)",
+        "Loss of individual perspective"
+      ],
+      "prevention": [
+        "Individual preparation and intention-setting",
+        "Clear group agreements beforehand",
+        "Trained facilitators",
+        "Emphasis on individual autonomy"
+      ]
+    }
+  ],
+
+  "culturalSpiritualFactors": [
+    {
+      "id": "cultural_synthetic_origin_001",
+      "name": "Synthetic Origin and Cultural Context",
+      "category": "cultural",
+      "description": "2C-X compounds are synthetic with no traditional cultural use",
+      "specificTo2CX": true,
+      "implications": [
+        "No established cultural frameworks for interpretation",
+        "No traditional protocols or rituals",
+        "Limited collective wisdom about use",
+        "Western recreational/experimental context predominates"
+      ],
+      "considerations": [
+        "Users must construct their own meaning-making frameworks",
+        "Increased importance of individual preparation",
+        "Risk of cultural appropriation if borrowing from other traditions",
+        "Western medical/scientific framing may be most appropriate"
+      ]
+    },
+    {
+      "id": "cultural_rave_festival_context_001",
+      "name": "Rave and Festival Culture Context",
+      "category": "cultural",
+      "description": "Common use in electronic music and festival settings",
+      "specificTo2CX": true,
+      "culturalContext": "Primarily associated with recreational use in party/festival settings",
+      "risks": [
+        "Emphasis on hedonistic use over intentional exploration",
+        "Environmental stressors (heat, noise, crowds)",
+        "Normalization of polydrug use",
+        "Lack of preparation and integration",
+        "Risk-taking behaviors"
+      ],
+      "benefits": [
+        "Community and shared experience",
+        "Peer knowledge sharing",
+        "Some harm reduction infrastructure at events"
+      ],
+      "recommendations": [
+        "Apply intentional use principles even in recreational settings",
+        "Utilize harm reduction services at events",
+        "Plan for safer use strategies",
+        "Consider therapeutic use models even outside clinical settings"
+      ]
+    }
+  ],
+
+  "legalSocioeconomicFactors": [
+    {
+      "id": "legal_prohibition_001",
+      "name": "Prohibition and Illegal Status",
+      "category": "legal",
+      "description": "Harms arising from criminalization of 2C-X compounds",
+      "specificTo2CX": "Scheduled as illegal in most jurisdictions",
+      "impacts": [
+        {
+          "impact": "lack_of_quality_control",
+          "severity": "critical",
+          "description": "No regulation leads to variable purity and dangerous adulterants",
+          "specificTo2CX": "High risk of NBOMe adulteration, inconsistent dosing within batches",
+          "consequences": ["Unpredictable effects", "Toxicity", "Overdose", "Severe adverse reactions"]
+        },
+        {
+          "impact": "unsafe_acquisition",
+          "severity": "moderate_to_high",
+          "description": "Exposure to criminal markets"
+        },
+        {
+          "impact": "reluctance_to_seek_help",
+          "severity": "high",
+          "description": "Fear of legal repercussions prevents help-seeking",
+          "consequences": ["Adverse events not treated", "Poor outcomes"]
+        },
+        {
+          "impact": "research_barriers",
+          "severity": "critical",
+          "description": "Scheduled status severely limits research",
+          "specificTo2CX": "Virtually no clinical research, extremely limited safety data",
+          "consequences": ["Minimal evidence base", "No established protocols", "Users rely on anecdotal information"]
+        }
+      ]
+    },
+    {
+      "id": "socioeconomic_access_001",
+      "name": "Socioeconomic Barriers",
+      "category": "socioeconomic",
+      "description": "Financial and resource barriers",
+      "specificTo2CX": "No legal therapeutic access, only illicit market",
+      "barriers": [
+        {
+          "barrier": "no_therapeutic_access",
+          "description": "No legal therapeutic pathways exist",
+          "impact": "All use is unregulated and unsupported"
+        },
+        {
+          "barrier": "quality_testing_costs",
+          "description": "Professional substance testing may be expensive or unavailable",
+          "impact": "Lower SES individuals less able to verify substance safety"
+        }
+      ]
+    }
+  ],
+
+  "contaminationQualityFactors": [
+    {
+      "id": "contam_nbome_adulteration_001",
+      "name": "NBOMe Adulteration",
+      "category": "contamination",
+      "severity": "critical",
+      "description": "Presence of dangerous NBOMe compounds sold as 2C-X or other substances",
+      "specificTo2CX": true,
+      "prevalence": "Common in illicit market",
+      "commonScenarios": [
+        {
+          "scenario": "Sold as LSD",
+          "prevalence": "Very common",
+          "risks": ["Higher toxicity", "Prolonged effects", "Severe adverse reactions", "Fatalities"]
+        },
+        {
+          "scenario": "Sold as 2C-B or other 2C-X",
+          "prevalence": "Common",
+          "risks": ["Unexpected potency", "Different effect profile", "Higher HPPD risk"]
+        }
+      ],
+      "identification": [
+        "Bitter taste indicates NBOMe (2C-B typically has minimal taste)",
+        "Reagent testing can differentiate",
+        "NBOMes more likely to cause severe vasoconstriction"
+      ],
+      "harmReduction": [
+        "Reagent testing essential",
+        "Test doses",
+        "Avoid if bitter taste",
+        "Be aware of warning signs"
+      ],
+      "citations": ["hirschfeld_2021", "malcolm_2022"],
+      "evidenceQuality": "strong"
+    },
+    {
+      "id": "contam_dosage_variability_001",
+      "name": "Dosage Variability",
+      "category": "quality",
+      "severity": "high",
+      "description": "Inconsistent concentration within same batch",
+      "specificTo2CX": "Documented hot spots and cold spots in 2C-X powder/crystal",
+      "consequences": [
+        "Accidental overdose",
+        "Unexpectedly intense effects",
+        "Difficulty establishing safe dose",
+        "Inconsistent experiences"
+      ],
+      "mechanism": [
+        "Uneven distribution in powder",
+        "Variable tablet pressing",
+        "Inconsistent synthesis"
+      ],
+      "harmReduction": [
+        "Volumetric dosing for powder",
+        "Thorough mixing if dividing doses",
+        "Starting with low doses",
+        "Not assuming consistency across purchases"
+      ],
+      "citations": ["hirschfeld_2021", "bremler_2023"],
+      "evidenceQuality": "moderate"
+    },
+    {
+      "id": "contam_misrepresentation_001",
+      "name": "Substance Misrepresentation",
+      "category": "sourcing",
+      "severity": "high",
+      "description": "2C-X sold as other substances or vice versa",
+      "commonPatterns": [
+        {
+          "soldAs": "LSD",
+          "actualSubstance": "2C-X or NBOMe",
+          "risks": ["Unexpected duration", "Different safety profile", "Wrong dose calculation"]
+        },
+        {
+          "soldAs": "MDMA",
+          "actualSubstance": "2C-X",
+          "risks": ["Different effects", "Wrong expectations", "Inappropriate setting"]
+        }
+      ],
+      "prevention": [
+        "Substance testing before use",
+        "Reliable sources",
+        "Knowledge of substance characteristics",
+        "Test doses"
+      ],
+      "citations": ["petranker_2022", "hirschfeld_2021"],
+      "evidenceQuality": "strong"
+    },
+    {
+      "id": "contam_powder_crystal_risks_001",
+      "name": "Powder/Crystal Form Risks",
+      "category": "quality",
+      "severity": "high",
+      "description": "Risks specific to powder and crystal formulations",
+      "specificTo2CX": "Commonly sold in these forms",
+      "risks": [
+        "Difficult to measure accurate doses",
+        "Easy to overdose without precision scale",
+        "Variation within batch",
+        "Unknown purity",
+        "Temptation to insufflate (dangerous)"
+      ],
+      "harmReduction": [
+        "Use milligram scale (0.001g accuracy)",
+        "Volumetric dosing",
+        "Never eyeball doses",
+        "Oral administration only",
+        "Start very low with unknown batches"
+      ],
+      "citations": ["baumeister_2015", "hirschfeld_2021"],
+      "evidenceQuality": "moderate"
+    }
+  ],
+
+  "emergencyResponseProtocols": [
+    {
+      "id": "emergency_nonpharm_001",
+      "name": "Non-Pharmacological Interventions",
+      "category": "crisis_management",
+      "priority": "first_line",
+      "interventions": [
+        {
+          "intervention": "continuous_monitoring",
+          "description": "Maintain observation and regular verbal contact",
+          "importance": "Critical given unpredictable effects and potential for severe complications"
+        },
+        {
+          "intervention": "vital_signs_monitoring",
+          "description": "Regular monitoring of heart rate, blood pressure, temperature",
+          "specificTo2CX": "Essential given cardiovascular risks",
+          "frequency": "Every 15-30 minutes or more frequently if concerning"
+        },
+        {
+          "intervention": "verbal_reassurance",
+          "description": "Calm, empathetic reassurance",
+          "effectiveness": "Variable - may be insufficient for severe reactions"
+        },
+        {
+          "intervention": "environmental_adjustment",
+          "description": "Modify setting to reduce distress",
+          "actions": ["Move to quiet area", "Dim lights", "Reduce temperature if hyperthermic"]
+        },
+        {
+          "intervention": "physical_cooling",
+          "description": "Active cooling measures if hyperthermia present",
+          "specificTo2CX": "Important given risk of dangerous hyperthermia",
+          "methods": ["Cool room", "Cool cloths", "Fans"]
+        }
+      ],
+      "limitations": "May be insufficient for severe physiological reactions",
+      "escalationCriteria": [
+        "Persistent tachycardia or hypertension",
+        "Hyperthermia",
+        "Seizure activity",
+        "Severe agitation or aggression",
+        "Altered consciousness",
+        "Chest pain"
+      ]
+    },
+    {
+      "id": "emergency_pharm_001",
+      "name": "Pharmacological Interventions",
+      "category": "crisis_management",
+      "priority": "second_line",
+      "specificTo2CX": "More likely to be needed than with classical psychedelics",
+      "medications": [
+        {
+          "medication": "benzodiazepines",
+          "indication": "Anxiety, agitation, seizures",
+          "dosing": {
+            "typical": {"value": 10, "unit": "mg", "route": "oral", "medication": "diazepam"},
+            "severe": {"min": 15, "max": 30, "unit": "mg"}
+          },
+          "effectiveness": "Generally effective for psychological distress",
+          "availability": "Should be immediately available"
+        },
+        {
+          "medication": "antipsychotics",
+          "indication": "Severe psychosis, aggression unresponsive to benzodiazepines",
+          "cautions": [
+            "Use with extreme caution",
+            "May worsen some symptoms",
+            "Should be administered by medical professionals only"
+          ],
+          "preference": "Atypical antipsychotics (olanzapine, risperidone) over haloperidol"
+        }
+      ],
+      "medicalSupervision": "Required for any pharmacological intervention"
+    },
+    {
+      "id": "emergency_medical_001",
+      "name": "Emergency Medical Services",
+      "category": "crisis_management",
+      "priority": "escalation",
+      "specificTo2CX": "Lower threshold for calling EMS given severe complications documented",
+      "whenToCall": [
+        "Cardiovascular symptoms (chest pain, severe tachycardia/hypertension)",
+        "Seizure activity",
+        "Suspected serotonin syndrome",
+        "Severe hyperthermia",
+        "Altered consciousness",
+        "Suspected renal or hepatic complications",
+        "Severe agitation/aggression not responding to benzodiazepines",
+        "Any life-threatening symptoms"
+      ],
+      "preparedness": [
+        "Emergency numbers readily available",
+        "Knowledge of nearest emergency facility",
+        "Basic information about substance taken (if known)",
+        "Vital signs if available"
+      ],
+      "informationForEMS": [
+        "Substance believed taken",
+        "Time of ingestion",
+        "Route of administration",
+        "Dose if known",
+        "Other substances consumed",
+        "Vital signs",
+        "Duration of symptoms",
+        "Medical history including medications"
+      ]
+    },
+    {
+      "id": "emergency_serotonin_syndrome_protocol_001",
+      "name": "Serotonin Syndrome Protocol",
+      "category": "specific_emergency",
+      "specificTo2CX": "High risk given serotonergic activity",
+      "recognition": {
+        "symptoms": [
+          "Hyperthermia",
+          "Agitation/restlessness",
+          "Muscle rigidity/clonus",
+          "Hyperreflexia",
+          "Tachycardia",
+          "Hypertension",
+          "Dilated pupils",
+          "Diaphoresis"
+        ],
+        "severity": "Life-threatening emergency"
+      },
+      "immediateActions": [
+        "Call emergency services immediately",
+        "Discontinue any serotonergic substances",
+        "Cooling measures for hyperthermia",
+        "Benzodiazepines for agitation/seizures",
+        "Monitor vital signs",
+        "Prepare for rapid transport"
+      ],
+      "hospitalTreatment": [
+        "Aggressive cooling",
+        "IV fluids",
+        "Cyproheptadine (serotonin antagonist)",
+        "ICU admission likely",
+        "Management of complications"
+      ]
+    },
+    {
+      "id": "emergency_neurological_complications_001",
+      "name": "Neurological Emergency Protocol",
+      "category": "specific_emergency",
+      "specificTo2CX": "Risk of cerebral edema, vasculopathy, seizures especially with insufflation",
+      "symptoms": [
+        "Severe headache",
+        "Seizures",
+        "Altered consciousness",
+        "Focal neurological signs",
+        "Severe confusion"
+      ],
+      "immediateActions": [
+        "Call emergency services immediately",
+        "Protect airway if consciousness altered",
+        "Position for seizure safety if needed",
+        "Do not give anything by mouth",
+        "Monitor vital signs",
+        "Prepare for rapid transport"
+      ],
+      "hospitalCare": [
+        "Neuroimaging (CT/MRI)",
+        "Neurological consultation",
+        "Management of cerebral edema if present",
+        "ICU admission likely"
+      ]
+    }
+  ],
+
+  "assessmentTools": [
+    {
+      "id": "tool_general_psychedelic_001",
+      "name": "General Psychedelic Assessment Tools",
+      "applicabilityTo2CX": "No specific tools exist; general psychedelic tools may be used with caution",
+      "note": "Lack of 2C-X specific validation",
+      "examples": [
+        {
+          "tool": "Swiss Psychedelic Side Effects Inventory",
+          "limitation": "Not validated for 2C-X specifically"
+        },
+        {
+          "tool": "Challenging Experience Questionnaire",
+          "limitation": "Not validated for 2C-X specifically"
+        }
+      ]
+    }
+  ],
+
+  "doseResponseCurves": [
+    {
+      "note": "No formal dose-response data available for 2C-X family",
+      "generalPrinciple": "Assume dose-dependent increase in both desired effects and adverse events",
+      "specificConsiderations": [
+        "Steep dose-response curve possible",
+        "Individual variability high",
+        "Batch variability significant",
+        "No established therapeutic window"
+      ]
+    }
+  ],
+
+  "complexInteractions": [
+    {
+      "id": "interact_complex_001",
+      "factors": [
+        {"type": "substance", "id": "2cb_001"},
+        {"type": "medication", "class": "SSRI"},
+        {"type": "setting", "description": "hot_environment"}
+      ],
+      "riskMultiplier": "critical",
+      "specificOutcome": "Severe serotonin syndrome with hyperthermia",
+      "mechanism": [
+        "2C-B serotonergic activity",
+        "SSRI inhibits serotonin reuptake",
+        "Environmental heat increases body temperature",
+        "Synergistic serotonergic overload"
+      ],
+      "prevention": [
+        "Absolute avoidance of SSRIs with 2C-X",
+        "Cool environment essential",
+        "Hydration",
+        "Immediate cooling if hyperthermia develops"
+      ],
+      "evidenceQuality": "moderate"
+    },
+    {
+      "id": "interact_complex_002",
+      "factors": [
+        {"type": "substance", "id": "2cb_001"},
+        {"type": "substance", "name": "MDMA"},
+        {"type": "setting", "description": "party/festival"},
+        {"type": "risk_factor", "id": "rf_age_youth_001"}
+      ],
+      "riskMultiplier": "high",
+      "specificOutcome": "Unpredictable combination effects, increased physiological burden",
+      "mechanism": [
+        "Common combination in party settings",
+        "Both affect serotonin",
+        "Additive cardiovascular effects",
+        "Young brain more vulnerable",
+        "Environmental stressors"
+      ],
+      "prevalence": "Very common combination",
+      "prevention": [
+        "Education about combination risks",
+        "Encourage single-substance use",
+        "If combining, use lower doses of both",
+        "Increased monitoring",
+        "Cooler environment"
+      ],
+      "evidenceQuality": "low"
+    },
+    {
+      "id": "interact_complex_003",
+      "factors": [
+        {"type": "substance", "id": "2cb_001"},
+        {"type": "route", "description": "insufflation"},
+        {"type": "risk_factor", "description": "unknown_purity"}
+      ],
+      "riskMultiplier": "critical",
+      "specificOutcome": "Severe neurological complications",
+      "mechanism": [
+        "Insufflation increases risk of severe neurological reactions",
+        "Unknown purity means unknown dose",
+        "Possible NBOMe contamination",
+        "Direct nasal/sinus tissue damage"
+      ],
+      "specificRisks": [
+        "Cerebral edema",
+        "Cerebral vasculopathy",
+        "Seizures",
+        "Central serotonin syndrome"
+      ],
+      "prevention": [
+        "Never insufflate 2C-X compounds",
+        "Oral administration only",
+        "Substance testing",
+        "Start with low oral doses"
+      ],
+      "evidenceQuality": "moderate",
+      "citations": ["hirschfeld_2021"]
+    }
+  ],
+
+  "metadata": {
+    "documentSource": "Psychedelic Safety Literature Review - 2C-X Section",
+    "substanceFamily": "2C-X (phenethylamines)",
+    "primarySubstances": ["2C-B", "2C-I", "25I-NBOMe"],
+    "researchStatus": "Very limited clinical research",
+    "dataQuality": "Low to very low for most parameters",
+    "geographicScope": "Global illicit market data",
+    "lastLiteratureSearch": "2024",
+    "qualityAssessment": "Severely limited by lack of controlled research",
+    "knownLimitations": [
+      "Extremely limited clinical research",
+      "Most data from case reports and user surveys",
+      "High variability in illicit market compounds",
+      "Frequent misrepresentation and adulteration",
+      "No established therapeutic protocols",
+      "Limited long-term outcome data",
+      "Significant underreporting likely",
+      "Much extrapolated from other psychedelics",
+      "No diversity data in limited research",
+      "Synthesis and chemistry highly variable"
+    ],
+    "criticalGaps": [
+      "No clinical trials",
+      "No established safety profiles",
+      "No pharmacokinetic studies",
+      "Limited toxicology data",
+      "No therapeutic dosing guidelines",
+      "Minimal understanding of long-term effects",
+      "No drug interaction studies",
+      "Limited understanding of metabolism"
+    ],
+    "evidenceBase": "Primarily anecdotal, case reports, and illicit market surveillance",
+    "recommendedCaution": "Extreme caution advised due to limited safety data and high market variability"
+  }
+}

@@ -1,0 +1,3018 @@
+{
+  "schemaVersion": "2.0",
+  "schemaType": "general_risks",
+  "lastUpdated": "2025-01-09",
+  
+  "metadata": {
+    "description": "Universal risk factors, adverse events, and protocols applicable across psychedelic substances",
+    "relatedSchemas": [
+      "substance_psilocybin_schema.json",
+      "substance_lsd_schema.json",
+      "substance_mdma_schema.json",
+      "substance_dmt_schema.json",
+      "substance_5meo_dmt_schema.json",
+      "substance_ayahuasca_schema.json",
+      "substance_mescaline_schema.json",
+      "substance_ibogaine_schema.json",
+      "substance_ketamine_schema.json"
+    ],
+    "crossReferenceFormat": {
+      "description": "Use dot notation for cross-schema references",
+      "example": "substance_psilocybin.psilocybin_001"
+    }
+  },
+
+  "riskFactorCategories": [
+    {
+      "id": "cat_individual_001",
+      "name": "Individual Risk Factors",
+      "description": "Personal characteristics and conditions affecting psychedelic response",
+      "subcategories": [
+        "physiological",
+        "psychiatric",
+        "demographic",
+        "personality",
+        "experience"
+      ]
+    },
+    {
+      "id": "cat_practitioner_client_001",
+      "name": "Practitioner-Client Risk Factors",
+      "description": "Relational and therapeutic dynamics",
+      "subcategories": [
+        "therapeutic_alliance",
+        "boundary_violations",
+        "competence"
+      ]
+    },
+    {
+      "id": "cat_interpersonal_001",
+      "name": "Interpersonal Risk Factors",
+      "description": "Group dynamics and social context",
+      "subcategories": [
+        "relationship_tensions",
+        "group_dynamics",
+        "social_support"
+      ]
+    },
+    {
+      "id": "cat_setting_001",
+      "name": "Setting-Specific Risk Factors",
+      "description": "Environmental context and physical setting",
+      "subcategories": [
+        "clinical",
+        "ceremonial",
+        "underground",
+        "recreational"
+      ]
+    },
+    {
+      "id": "cat_preparation_integration_001",
+      "name": "Preparation and Integration Risk Factors",
+      "description": "Pre and post-session support adequacy",
+      "subcategories": [
+        "preparation",
+        "integration"
+      ]
+    },
+    {
+      "id": "cat_cultural_spiritual_001",
+      "name": "Cultural and Spiritual Risk Factors",
+      "description": "Cultural context and spiritual framework",
+      "subcategories": [
+        "cultural",
+        "spiritual"
+      ]
+    },
+    {
+      "id": "cat_legal_001",
+      "name": "Legal Context Risk Factors",
+      "description": "Impact of legal status and regulation",
+      "subcategories": [
+        "prohibition",
+        "regulation",
+        "access"
+      ]
+    },
+    {
+      "id": "cat_socioeconomic_001",
+      "name": "Socioeconomic Risk Factors",
+      "description": "Economic and equity-related vulnerabilities",
+      "subcategories": [
+        "access_disparities",
+        "economic_stress",
+        "systemic_discrimination"
+      ]
+    },
+    {
+      "id": "cat_contamination_001",
+      "name": "Contamination and Quality Risk Factors",
+      "description": "Substance purity and adulteration",
+      "subcategories": [
+        "adulteration",
+        "quality_variability",
+        "misidentification"
+      ]
+    }
+  ],
+
+  "individualRiskFactors": {
+    "physiological": [
+      {
+        "id": "rf_cardiovascular_001",
+        "name": "Pre-existing Cardiovascular Conditions",
+        "category": "individual",
+        "subcategory": "physiological",
+        "description": "Heart conditions, hypertension, arrhythmias",
+        "severity": "high",
+        "applicableTo": {
+          "allSubstances": true,
+          "specificVariations": [
+            {
+              "substanceIds": ["psilocybin_001", "lsd_001", "mdma_001"],
+              "severity": "high",
+              "mechanism": "Sympathomimetic effects increase cardiovascular burden"
+            },
+            {
+              "substanceIds": ["ibogaine_001"],
+              "severity": "critical",
+              "mechanism": "Direct cardiotoxicity and QT prolongation"
+            }
+          ]
+        },
+        "specificConditions": [
+          {
+            "condition": "uncontrolled_hypertension",
+            "contraindicationType": "absolute",
+            "severity": "critical"
+          },
+          {
+            "condition": "arrhythmias",
+            "contraindicationType": "absolute",
+            "severity": "critical"
+          },
+          {
+            "condition": "recent_MI",
+            "contraindicationType": "absolute",
+            "timeframe": "Within 6 months",
+            "severity": "critical"
+          },
+          {
+            "condition": "coronary_artery_disease",
+            "contraindicationType": "relative",
+            "requiresMonitoring": true,
+            "severity": "high"
+          }
+        ],
+        "monitoringRecommendations": [
+          "Baseline ECG",
+          "Continuous vital sign monitoring",
+          "Medical supervision required"
+        ],
+        "citations": ["anderson_2020", "wsol_2023", "marazziti_2024"]
+      },
+      {
+        "id": "rf_respiratory_001",
+        "name": "Obstructive Respiratory Syndromes",
+        "category": "individual",
+        "subcategory": "physiological",
+        "description": "Conditions affecting breathing and oxygen exchange",
+        "severity": "moderate_to_high",
+        "applicableTo": {
+          "allSubstances": true,
+          "specificConcerns": "Increased risk in overdose situations"
+        },
+        "citations": ["marazziti_2024"]
+      },
+      {
+        "id": "rf_epilepsy_001",
+        "name": "Epilepsy or Seizure History",
+        "category": "individual",
+        "subcategory": "physiological",
+        "description": "Personal or family history of seizures",
+        "severity": "high",
+        "applicableTo": {
+          "allSubstances": true,
+          "clinicalTrialExclusion": "common"
+        },
+        "specificRisks": [
+          "Seizure induction",
+          "Interaction with anticonvulsants"
+        ],
+        "citations": ["simonsson_2022"]
+      }
+    ],
+    "psychiatric": [
+      {
+        "id": "rf_psychotic_disorders_001",
+        "name": "Personal or Family History of Psychotic Disorders",
+        "category": "individual",
+        "subcategory": "psychiatric",
+        "description": "Schizophrenia, schizophreniform, schizoaffective disorders",
+        "severity": "critical",
+        "applicableTo": {
+          "allSubstances": true,
+          "severity": "critical"
+        },
+        "specificRisks": [
+          "Prolonged psychotic reactions",
+          "Exacerbation of existing condition",
+          "Psychotic episode induction"
+        ],
+        "prevalence": {
+          "increasedRiskInNaturalistic": true,
+          "lowerRiskWithProperScreening": true
+        },
+        "contraindicationType": "absolute_in_most_contexts",
+        "familyHistoryRelevance": {
+          "relevant": true,
+          "contraindicationType": "relative",
+          "riskMultiplier": "elevated"
+        },
+        "citations": ["honk_2024", "henningfield_2023", "johnson_2008", "breeksema_2022", "carbonaro_2016"]
+      },
+      {
+        "id": "rf_bipolar_001",
+        "name": "Bipolar Disorder",
+        "category": "individual",
+        "subcategory": "psychiatric",
+        "description": "Personal or family history of bipolar disorder",
+        "severity": "high",
+        "applicableTo": {
+          "allSubstances": true,
+          "emergingNuance": "May be safer in controlled settings than previously thought"
+        },
+        "specificRisks": [
+          "Manic episode induction",
+          "Hypomanic episode induction"
+        ],
+        "contraindicationType": "relative",
+        "activeState": "absolute",
+        "stableState": "relative_with_precautions",
+        "familyHistory": {
+          "relevant": true,
+          "contraindicationType": "relative",
+          "riskMultiplier": "elevated"
+        },
+        "requiredPrecautions": [
+          "Careful screening",
+          "Comprehensive preparation",
+          "Close monitoring",
+          "Integration support",
+          "Medication review"
+        ],
+        "citations": ["honk_2024", "marrocu_nd", "sabe_2024"]
+      },
+      {
+        "id": "rf_personality_disorders_001",
+        "name": "Personality Disorders",
+        "category": "individual",
+        "subcategory": "psychiatric",
+        "description": "Cluster A, B, or C personality disorders",
+        "severity": "high",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "specificRisks": {
+          "negativeResponse": {
+            "probability": 31,
+            "unit": "percent",
+            "relativeTo": "general_population"
+          },
+          "adversePsychologicalResponse": {
+            "riskMultiplier": 4,
+            "description": "Greater than four-fold elevated risk"
+          },
+          "longTermNegativeResponse": {
+            "associated": true,
+            "severity": "moderate_to_high"
+          }
+        },
+        "contraindicationType": "relative",
+        "requiredPrecautions": [
+          "Thorough screening",
+          "Enhanced preparation",
+          "Increased therapeutic support",
+          "Careful monitoring",
+          "Extended integration"
+        ],
+        "citations": ["marrocu_nd", "bremler_2023"]
+      },
+      {
+        "id": "rf_anxiety_depression_001",
+        "name": "Pre-existing Anxiety or Depression",
+        "category": "individual",
+        "subcategory": "psychiatric",
+        "description": "Active or history of anxiety or depressive disorders",
+        "severity": "moderate",
+        "applicableTo": {
+          "allSubstances": true,
+          "nuance": "Can be therapeutic target but also risk factor"
+        },
+        "specificRisks": [
+          "Symptom exacerbation",
+          "Challenging experiences",
+          "Prolonged anxiety post-session"
+        ],
+        "prevalenceData": {
+          "anxietyWorsening": {
+            "value": 87,
+            "unit": "percent",
+            "context": "Among those with negative psychological responses"
+          }
+        },
+        "citations": ["bremler_2023"]
+      },
+      {
+        "id": "rf_suicidality_001",
+        "name": "Suicidal Ideation or History",
+        "category": "individual",
+        "subcategory": "psychiatric",
+        "description": "Active suicidal thoughts or past attempts",
+        "severity": "high",
+        "applicableTo": {
+          "allSubstances": true,
+          "complexEvidence": "Population studies show protective effects but individual cases show risks"
+        },
+        "specificRisks": [
+          "Increased suicidal ideation post-session",
+          "Impulsive self-harm during altered state"
+        ],
+        "contraindicationType": "relative",
+        "requiresCloseMonitoring": true,
+        "citations": ["hendricks_2015", "kruger_2024", "romeo_2024"]
+      },
+      {
+        "id": "rf_poor_coping_001",
+        "name": "Poor Coping Skills and Emotional Instability",
+        "category": "individual",
+        "subcategory": "psychiatric",
+        "description": "Difficulty managing emotions, emotional lability",
+        "severity": "moderate",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "specificRisks": [
+          "Overwhelming experiences",
+          "Difficulty navigating challenging moments",
+          "Extended distress"
+        ],
+        "citations": ["studerus_2011"]
+      },
+      {
+        "id": "rf_stressful_life_001",
+        "name": "Acute Stressful Life Circumstances",
+        "category": "individual",
+        "subcategory": "psychiatric",
+        "description": "Ongoing major life stressors or changes",
+        "severity": "moderate",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "specificRisks": [
+          "Increased anxiety during session",
+          "Panic reactions",
+          "Longer-term psychological distress"
+        ],
+        "citations": ["bremler_2023"]
+      },
+      {
+        "id": "rf_trauma_history_001",
+        "name": "Unprocessed Trauma History",
+        "category": "individual",
+        "subcategory": "psychiatric",
+        "description": "History of traumatic experiences, especially if unresolved",
+        "severity": "moderate_to_high",
+        "applicableTo": {
+          "allSubstances": true,
+          "specificHighRisk": ["ayahuasca_001"]
+        },
+        "specificRisks": [
+          "Trauma reactivation",
+          "Emotional distress",
+          "Destabilization",
+          "Reexperiencing"
+        ],
+        "prevalenceData": {
+          "ptsdReexperiencing": {
+            "value": 37.5,
+            "unit": "percent",
+            "context": "In ceremonial ayahuasca with PTSD diagnosis"
+          },
+          "sexualAssaultReexperiencing": {
+            "population": "women",
+            "prevalence": "high",
+            "context": "ayahuasca ceremonies"
+          }
+        },
+        "therapeuticPotential": "May be beneficial with proper support",
+        "requiredSupport": [
+          "Trauma-informed therapy",
+          "Specialized integration support",
+          "Safety planning",
+          "Grounding techniques training"
+        ],
+        "citations": ["bremler_2023", "gorman_2021", "weiss_2023", "scala_2024"]
+      }
+    ],
+    "demographic": [
+      {
+        "id": "rf_age_youth_001",
+        "name": "Adolescence and Young Adulthood",
+        "category": "individual",
+        "subcategory": "demographic",
+        "ageRange": {"min": 13, "max": 25},
+        "description": "Younger age associated with increased vulnerability",
+        "severity": "moderate_to_high",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "specificRisks": [
+          "Negative psychological effects",
+          "Higher emergency treatment rates",
+          "Potential developmental disruption",
+          "Lower risk aversion",
+          "Higher impulsivity"
+        ],
+        "prevalenceData": {
+          "negativeEffectsUnder25": {
+            "value": 53,
+            "unit": "percent",
+            "context": "Of those with negative effects"
+          },
+          "poisonControlCases": {
+            "ageGroup": "13-19",
+            "prevalence": "majority",
+            "substances": ["LSD", "psilocybin"]
+          }
+        },
+        "mechanisticFactors": [
+          "Ongoing brain development",
+          "Neurotransmitter system susceptibility",
+          "Difficulty with emotional regulation"
+        ],
+        "citations": ["marazziti_2024", "breeksema_2022", "bremler_2023", "malcolm_2022"]
+      },
+      {
+        "id": "rf_sex_gender_001",
+        "name": "Sex and Gender Differences",
+        "category": "individual",
+        "subcategory": "demographic",
+        "description": "Biological sex and gender-related vulnerabilities",
+        "severity": "moderate",
+        "applicableTo": {
+          "specificSubstances": true,
+          "variableBySubstance": true
+        },
+        "sexSpecificRisks": {
+          "female": [
+            {
+              "substanceIds": ["mdma_001"],
+              "risks": [
+                "Higher plasma concentrations",
+                "More intense subjective effects",
+                "More perceptual changes",
+                "More anxiety and depression",
+                "Elevated hyponatremia risk",
+                "More adverse comedown effects"
+              ],
+              "citations": ["papaseit_2018", "atila_2024", "parrott_2014"]
+            },
+            {
+              "substanceIds": ["ayahuasca_001"],
+              "risks": [
+                "Sexual assault reexperiencing",
+                "Higher probability of physical adverse effects"
+              ],
+              "citations": ["weiss_2023", "bouso_2022"]
+            }
+          ]
+        },
+        "recommendations": [
+          "Sex-stratified dosing considerations for MDMA",
+          "Additional monitoring for women using MDMA",
+          "Trauma-informed approaches for women with assault history"
+        ]
+      }
+    ],
+    "personality": [
+      {
+        "id": "rf_neuroticism_001",
+        "name": "High Neuroticism",
+        "category": "individual",
+        "subcategory": "personality",
+        "description": "Tendency toward emotional instability, anxiety, worry",
+        "severity": "moderate_to_high",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "specificRisks": [
+          "Anxiety during session",
+          "Panic reactions",
+          "Paranoia",
+          "Challenging experiences"
+        ],
+        "strengthAsPredictor": "strong",
+        "assessmentTools": ["Big Five Inventory", "NEO-PI-R"],
+        "citations": ["barrett_2017", "breeksema_2022", "gorman_2021"]
+      },
+      {
+        "id": "rf_low_openness_001",
+        "name": "Low Openness to Experience",
+        "category": "individual",
+        "subcategory": "personality",
+        "description": "Preference for routine, resistance to new experiences",
+        "severity": "low_to_moderate",
+        "applicableTo": {
+          "allSubstances": true,
+          "effect": "May reduce positive outcomes rather than increase risks"
+        },
+        "impact": "Lower likelihood of mystical experiences and positive outcomes",
+        "assessmentTools": ["Big Five Inventory", "NEO-PI-R"],
+        "citations": ["breeksema_2022", "aday_2021"]
+      },
+      {
+        "id": "rf_suggestibility_001",
+        "name": "High Suggestibility",
+        "category": "individual",
+        "subcategory": "personality",
+        "description": "Susceptibility to external influence and suggestion",
+        "severity": "moderate",
+        "applicableTo": {
+          "allSubstances": true,
+          "amplifiedDuringPsychedelicState": true
+        },
+        "specificRisks": [
+          "Susceptible to practitioner influence",
+          "Belief manipulation",
+          "Adoption of harmful ideas",
+          "Vulnerability to exploitation"
+        ],
+        "citations": ["neitzke-spruill_2024", "halpern_2018"]
+      },
+      {
+        "id": "rf_dysfunctional_attitudes_001",
+        "name": "Dysfunctional Attitudes",
+        "category": "individual",
+        "subcategory": "personality",
+        "description": "Rigid, maladaptive beliefs and thought patterns",
+        "severity": "moderate",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "effect": "More challenging experiences",
+        "assessmentTools": ["Dysfunctional Attitude Scale"],
+        "citations": ["anderson_2019"]
+      },
+      {
+        "id": "rf_lack_surrender_001",
+        "name": "Difficulty with Surrender and Acceptance",
+        "category": "individual",
+        "subcategory": "personality",
+        "description": "Resistance to letting go, need for control",
+        "severity": "moderate",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "oppositeState": "Psychological flexibility and surrender",
+        "effect": "Strong predictor of challenging experiences",
+        "oppositeEffect": "Strong predictor of positive outcomes",
+        "modifiability": "moderate_to_high",
+        "interventions": [
+          "Mindfulness training",
+          "Acceptance and Commitment Therapy concepts",
+          "Surrender exercises"
+        ],
+        "citations": ["fogg_2021"]
+      }
+    ],
+    "experience": [
+      {
+        "id": "rf_lack_experience_001",
+        "name": "Lack of Psychedelic Experience",
+        "category": "individual",
+        "subcategory": "experience",
+        "description": "First-time or limited experience with psychedelics",
+        "severity": "moderate",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "specificRisks": [
+          "Overwhelming experiences",
+          "Poor preparation",
+          "Inability to navigate altered states"
+        ],
+        "citations": ["bodnar_2019", "lancelotta_2020"]
+      },
+      {
+        "id": "rf_lack_preparation_001",
+        "name": "Inadequate Preparation",
+        "category": "individual",
+        "subcategory": "experience",
+        "description": "Insufficient understanding or readiness for the experience",
+        "severity": "moderate_to_high",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "specificRisks": [
+          "Unrealistic expectations",
+          "Poor navigation of challenges",
+          "Increased anxiety",
+          "Worse outcomes"
+        ],
+        "citations": ["aday_2020", "garcia-romeu_2018", "henningfield_2023", "palitsky_nd"]
+      },
+      {
+        "id": "rf_prior_challenging_001",
+        "name": "Prior Challenging Experiences",
+        "category": "individual",
+        "subcategory": "experience",
+        "description": "Previous difficult or traumatic psychedelic experiences",
+        "severity": "moderate",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "effect": "Increased likelihood of similar challenges in future",
+        "recommendation": "Seek professional guidance before further use",
+        "citations": ["aday_2021", "evans_2023", "palmer_2022"]
+      }
+    ],
+    "dosageAndUse": [
+      {
+        "id": "rf_high_dose_001",
+        "name": "High Dosage",
+        "category": "individual",
+        "subcategory": "dosageAndUse",
+        "description": "Doses exceeding recommended or typical ranges",
+        "severity": "high",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "specificRisks": [
+          "Increased adverse events",
+          "Overwhelming experiences",
+          "Physiological complications",
+          "Overdose"
+        ],
+        "doseResponseRelationship": "As dose increases, likelihood of negative effects increases",
+        "citations": ["anderson_2019", "baumeister_2015", "breeksema_2022", "johnson_2008", "bremler_2023"]
+      },
+      {
+        "id": "rf_frequent_use_001",
+        "name": "Frequent or Regular Use",
+        "category": "individual",
+        "subcategory": "dosageAndUse",
+        "description": "Using psychedelics multiple times per month or more",
+        "severity": "moderate_to_high",
+        "applicableTo": {
+          "specificSubstances": true,
+          "higherRisk": ["25i_nbome_001", "lsd_001"]
+        },
+        "specificRisks": [
+          "HPPD development",
+          "Tolerance buildup",
+          "Psychological dependency"
+        ],
+        "prevalenceData": {
+          "hppdWithRegularUse": {
+            "value": 67,
+            "unit": "percent",
+            "context": "25I-NBOMe regular users"
+          },
+          "hppdWithSingleUse": {
+            "value": 20,
+            "unit": "percent",
+            "context": "25I-NBOMe single use"
+          }
+        },
+        "citations": ["retrospective_analysis_nd"]
+      },
+      {
+        "id": "rf_unknown_dose_purity_001",
+        "name": "Unknown Dose or Purity",
+        "category": "individual",
+        "subcategory": "dosageAndUse",
+        "description": "Uncertainty about substance quantity or composition",
+        "severity": "high",
+        "applicableTo": {
+          "allSubstances": true,
+          "particularlyRelevant": "illicit_market_sources"
+        },
+        "specificRisks": [
+          "Accidental overdose",
+          "Unexpected reactions",
+          "Adulteration effects",
+          "Unpredictable intensity"
+        ],
+        "prevalenceInAdverseEvents": {
+          "uncertaintyAboutDose": "high",
+          "context": "Most participants with adverse effects"
+        },
+        "citations": ["baumeister_2015", "hirschfeld_2021", "bremler_2023"]
+      },
+      {
+        "id": "rf_polydrug_use_001",
+        "name": "Concurrent Polydrug Use",
+        "category": "individual",
+        "subcategory": "dosageAndUse",
+        "description": "Use of multiple substances simultaneously or in close temporal proximity",
+        "severity": "high",
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "specificRisks": [
+          "Unpredictable interactions",
+          "Increased physiological burden",
+          "Serotonin syndrome",
+          "Death"
+        ],
+        "prevalenceInDeaths": {
+          "value": 82,
+          "unit": "percent",
+          "context": "Most common theme in psychedelic-related deaths"
+        },
+        "dangerousCombinations": [
+          {
+            "substances": ["any_psychedelic", "SSRIs"],
+            "effect": "Serotonin syndrome risk",
+            "severity": "critical"
+          },
+          {
+            "substances": ["any_psychedelic", "MAOIs"],
+            "effect": "Severe serotonin syndrome, potentially fatal",
+            "severity": "critical",
+            "contraindicationType": "absolute"
+          },
+          {
+            "substances": ["psychedelic", "alcohol"],
+            "effect": "Increased adverse effects"
+          },
+          {
+            "substances": ["psychedelic", "cannabis"],
+            "effect": "Variable - may reduce or exacerbate difficulty",
+            "prevalence": "common combination"
+          }
+        ],
+        "harmReduction": [
+          "Substance testing",
+          "Avoiding combinations",
+          "Education about dangerous interactions",
+          "Medication review before sessions"
+        ],
+        "citations": ["kopra_2025", "breeksema_2022", "malcolm_2022", "carbonaro_2016"]
+      }
+    ]
+  },
+
+  "practitionerClientRiskFactors": [
+    {
+      "id": "rf_impaired_judgment_001",
+      "name": "Client Impaired Judgment and Vulnerability",
+      "category": "practitioner_client",
+      "subcategory": "therapeutic_alliance",
+      "description": "Heightened suggestibility and vulnerability during psychedelic states",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": "therapeutic_contexts"
+      },
+      "specificRisks": [
+        "Increased susceptibility to practitioner influence",
+        "Reduced ability to recognize harmful situations",
+        "Over-reliance on practitioner",
+        "Dependency development"
+      ],
+      "citations": ["dupuis_2021", "johns_2022", "kirlic_2025", "barber_2023"]
+    },
+    {
+      "id": "rf_weak_alliance_001",
+      "name": "Weak Therapeutic Alliance",
+      "category": "practitioner_client",
+      "subcategory": "therapeutic_alliance",
+      "description": "Poor quality relationship between practitioner and client",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true,
+        "contexts": ["clinical", "therapeutic"]
+      },
+      "impact": "Associated with poorer treatment outcomes",
+      "specificRisks": [
+        "Reduced safety perception",
+        "Difficulty navigating challenges",
+        "Poor integration",
+        "Less disclosure of experiences"
+      ],
+      "negativeCharacteristics": [
+        "Rigid therapist",
+        "Critical therapist",
+        "Distant therapist",
+        "Distracted therapist",
+        "Imposing beliefs",
+        "Boundary violations"
+      ],
+      "amplificationDuringPsychedelics": {
+        "description": "Psychedelics amplify transference and countertransference",
+        "specificRisks": [
+          "Idealization of therapist",
+          "Projection onto therapist",
+          "Dependency development",
+          "Power imbalance exploitation"
+        ]
+      },
+      "citations": ["garcia-romeu_2018", "modlin_2023", "evans_holcomb_2025"]
+    },
+    {
+      "id": "rf_inadequate_training_001",
+      "name": "Inadequate Practitioner Training or Experience",
+      "category": "practitioner_client",
+      "subcategory": "competence",
+      "description": "Lack of sufficient training in psychedelic-assisted therapy",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": ["underground", "retreat"]
+      },
+      "specificRisks": [
+        "Inadequate response to challenging experiences",
+        "Inability to navigate complex ethical dilemmas",
+        "Boundary violations",
+        "Mishandling of adverse events"
+      ],
+      "requiredTraining": [
+        "Patient hyper-suggestibility",
+        "Enhanced transference and projection",
+        "Therapist ego-inflation and countertransference",
+        "Risk of undue influence",
+        "Emergency protocols"
+      ],
+      "citations": ["wilson-poe_2024", "calder_2023", "fonzo_2025", "neitzke-spruill_2024", "kruger_2024"]
+    },
+    {
+      "id": "rf_therapist_lack_awareness_001",
+      "name": "Therapist Lack of Self-Awareness",
+      "category": "practitioner_client",
+      "subcategory": "competence",
+      "description": "Insufficient reflection on personal motives and biases",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true,
+        "contexts": ["clinical", "therapeutic", "underground"]
+      },
+      "specificRisks": [
+        "Countertransference issues",
+        "Unintentional harm to clients",
+        "Boundary violations",
+        "Projection of therapist issues"
+      ],
+      "citations": ["evans_holcomb_2025", "gorman_2021"]
+    },
+    {
+      "id": "rf_inappropriate_disclosure_001",
+      "name": "Inappropriate Therapist Self-Disclosure",
+      "category": "practitioner_client",
+      "subcategory": "competence",
+      "description": "Disclosure of personal psychedelic use",
+      "severity": "moderate",
+      "applicableTo": {
+        "allSubstances": true,
+        "contexts": ["clinical", "therapeutic"]
+      },
+      "specificRisks": [
+        "Unhelpful transference",
+        "Unhelpful countertransference",
+        "Undermining therapeutic process"
+      ],
+      "citations": ["wilson-poe_2024"]
+    }
+  ],
+
+  "boundaryViolations": [
+    {
+      "id": "bv_sexual_001",
+      "name": "Sexual Misconduct",
+      "category": "boundary_violation",
+      "severity": "critical",
+      "description": "Sexual touching, contact, or exploitation during psychedelic therapy",
+      "prevalenceData": [
+        {
+          "value": 8,
+          "unit": "percent",
+          "context": "Naturalistic users knowing someone victimized",
+          "perpetrators": "Sitters, guides, or practitioners"
+        },
+        {
+          "value": 46.3,
+          "unit": "percent",
+          "context": "Of sexual misconduct perpetrators were underground sitters/guides"
+        },
+        {
+          "value": 7.9,
+          "unit": "percent",
+          "context": "Participants knowing someone who experienced sexual violations"
+        }
+      ],
+      "riskFactors": [
+        "rf_impaired_judgment_001",
+        "rf_suggestibility_001",
+        "rf_weak_alliance_001",
+        "Lack of clear ethical guidelines",
+        "Inadequate practitioner training",
+        "Absence of oversight"
+      ],
+      "prevention": [
+        "Clear ethical boundaries",
+        "Training on power dynamics",
+        "Same-gender therapist options",
+        "Multiple therapists present",
+        "Video recording with consent",
+        "Reporting mechanisms",
+        "Licensing and oversight"
+      ],
+      "citations": ["kruger_2024", "holoyda_2023", "barber_2023"]
+    },
+    {
+      "id": "bv_financial_001",
+      "name": "Financial Exploitation",
+      "category": "boundary_violation",
+      "severity": "high",
+      "description": "Taking financial advantage of vulnerable clients",
+      "examples": [
+        "Excessive fees",
+        "Unethical business practices",
+        "Pressure to purchase additional services",
+        "Lack of transparency about costs"
+      ],
+      "riskFactors": [
+        "Vulnerable clients seeking healing",
+        "Power imbalances",
+        "Lack of regulation",
+        "Absence of price transparency"
+      ],
+      "prevention": [
+        "Clear fee structures",
+        "Informed financial consent",
+        "Regulatory oversight",
+        "Consumer protection laws"
+      ],
+      "citations": ["evans_holcomb_2025"]
+    },
+    {
+      "id": "bv_emotional_001",
+      "name": "Emotional Manipulation or Abuse",
+      "category": "boundary_violation",
+      "severity": "high",
+      "description": "Using power imbalance to manipulate or emotionally abuse clients",
+      "manifestations": [
+        "Gaslighting",
+        "Shaming",
+        "Invalidation of experience",
+        "Cult-like dynamics",
+        "Isolation from support systems"
+      ],
+      "riskFactors": [
+        "rf_impaired_judgment_001",
+        "rf_suggestibility_001",
+        "Amplified transference",
+        "Heightened emotional state"
+      ],
+      "citations": ["muthukumaraswamy_2022"]
+    },
+    {
+      "id": "bv_epistemic_001",
+      "name": "Epistemic Harm and Belief Imposition",
+      "category": "boundary_violation",
+      "severity": "moderate_to_high",
+      "description": "Imposing beliefs or interpretations onto participants",
+      "mechanisms": [
+        "Interpreting experiences for client",
+        "Marginalizing client's perspective",
+        "Over-emphasizing specific outcomes",
+        "Pressure to adopt facilitator's worldview"
+      ],
+      "consequences": [
+        "False insights becoming solidified beliefs",
+        "Undermined autonomy",
+        "Psychological distress",
+        "Spiritual crisis"
+      ],
+      "prevention": [
+        "Non-directive support",
+        "Respecting client's interpretive framework",
+        "Not imposing meaning",
+        "Cultural humility"
+      ],
+      "citations": ["zeller_nd", "cheung_nd", "palitsky_nd"]
+    }
+  ],
+
+  "interpersonalRiskFactors": [
+    {
+      "id": "rf_preexisting_tensions_001",
+      "name": "Pre-existing Relationship Tensions",
+      "category": "interpersonal",
+      "subcategory": "relationship_tensions",
+      "description": "Using psychedelics with people with whom there are unresolved conflicts",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": ["group_settings", "ceremonial", "retreat"]
+      },
+      "prevalenceData": {
+        "value": 33,
+        "unit": "percent",
+        "context": "Of those with negative experiences took psychedelics with someone they had relationship issues with"
+      },
+      "specificRisks": [
+        "Amplification of conflicts",
+        "Challenging experiences",
+        "Relationship damage"
+      ],
+      "recommendations": [
+        "Avoid using with people you have active conflicts with",
+        "If working on relationships, do so with professional facilitation",
+        "Ensure supportive, not antagonistic, setting"
+      ],
+      "citations": ["bremler_2023"]
+    },
+    {
+      "id": "rf_lack_social_support_001",
+      "name": "Lack of Social Support",
+      "category": "interpersonal",
+      "subcategory": "relationship_tensions",
+      "description": "Absence of supportive relationships or safety measures",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "effect": "Increases risk of challenging experiences and need for medical attention",
+      "citations": ["golden_2022", "marazziti_2024"]
+    },
+    {
+      "id": "rf_group_power_dynamics_001",
+      "name": "Group Power Dynamics and Hierarchies",
+      "category": "interpersonal",
+      "subcategory": "group_dynamics",
+      "description": "Unequal power relationships within groups",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": ["ceremonial", "retreat", "group_therapy"]
+      },
+      "specificRisks": [
+        "Exploitation",
+        "Undue influence",
+        "Boundary violations",
+        "Guru dynamics"
+      ],
+      "citations": ["palitsky_nd", "argyri_2024", "spriggs_2023"]
+    },
+    {
+      "id": "rf_collective_suggestibility_001",
+      "name": "Collective Suggestibility and Belief Shaping",
+      "category": "interpersonal",
+      "subcategory": "group_dynamics",
+      "description": "Heightened suggestibility in group settings",
+      "severity": "moderate",
+      "applicableTo": {
+        "allSubstances": true,
+        "amplifiedInGroups": true
+      },
+      "specificRisks": [
+        "Adoption of harmful beliefs",
+        "Cult-like dynamics",
+        "Loss of individual perspective"
+      ],
+      "bidirectional": "Can lead to healthy or unhealthy outcomes",
+      "citations": ["cheung_nd", "robinson_2024", "kruger_2024"]
+    },
+    {
+      "id": "rf_emotional_contagion_001",
+      "name": "Emotional Contagion",
+      "category": "interpersonal",
+      "subcategory": "group_dynamics",
+      "description": "Spread of emotional states within group",
+      "severity": "moderate",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": "group_settings"
+      },
+      "specificRisks": [
+        "Anxiety spreading",
+        "Panic spreading",
+        "Paranoia spreading",
+        "Cascade of challenging experiences"
+      ],
+      "prevention": [
+        "Adequate facilitator-to-participant ratios",
+        "Individual spaces available",
+        "Trained facilitators",
+        "Pre-session group agreements"
+      ],
+      "citations": ["bremler_2023", "breeksema_2022"]
+    }
+  ],
+
+  "settingRiskFactors": [
+    {
+      "id": "rf_unsafe_uncomfortable_setting_001",
+      "name": "Unsafe, Uncomfortable, or Unsupportive Settings",
+      "category": "setting",
+      "subcategory": "environmental",
+      "description": "Stressful, chaotic, or unsupportive physical/social environments",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Negative outcomes",
+        "Challenging experiences",
+        "Anxiety",
+        "Panic"
+      ],
+      "examples": [
+        "Unfamiliar locations",
+        "Uncomfortable temperature",
+        "Excessive noise",
+        "Lack of privacy",
+        "Chaotic environments",
+        "Lack of medical/psychological support"
+      ],
+      "citations": ["bremler_2023", "kopra_2022", "morton_2023", "davis_nd", "baxter_2024"]
+    },
+    {
+      "id": "rf_unforeseen_interruptions_001",
+      "name": "Unforeseen Interruptions or Intrusions",
+      "category": "setting",
+      "subcategory": "environmental",
+      "description": "Unexpected disturbances during experience",
+      "severity": "moderate",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Highly destabilizing",
+        "Anxiety triggering",
+        "Paranoia",
+        "Challenging emotional responses"
+      ],
+      "examples": [
+        "Unexpected visits",
+        "Loud noises",
+        "Changes in environment",
+        "Emergency situations"
+      ],
+      "citations": ["haden_2016", "pilecki_2021"]
+    },
+    {
+      "id": "rf_clinical_artificiality_001",
+      "name": "Artificiality of Clinical Settings",
+      "category": "setting",
+      "subcategory": "clinical",
+      "description": "Sterile, impersonal nature of clinical environments",
+      "severity": "low_to_moderate",
+      "applicableTo": {
+        "allSubstances": true,
+        "contexts": ["clinical", "research"]
+      },
+      "specificRisks": [
+        "Inability to surrender",
+        "Anxiety from medical equipment",
+        "Feeling restricted",
+        "Reduced spontaneity"
+      ],
+      "citations": ["gashi_2021", "baláet_2022", "bremler_2023", "hartogsohn_2017"]
+    },
+    {
+      "id": "rf_lack_screening_retreat_001",
+      "name": "Lack of Screening in Retreats",
+      "category": "setting",
+      "subcategory": "ceremonial",
+      "description": "Insufficient screening in retreat or religious contexts",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": ["retreat", "ceremonial", "religious"]
+      },
+      "specificRisks": [
+        "Inclusion of vulnerable individuals",
+        "Contraindicated conditions",
+        "Adverse outcomes"
+      ],
+      "citations": ["johnson_2019", "rosenblat_2023", "honk_2024"]
+    },
+    {
+      "id": "rf_cultic_dynamics_001",
+      "name": "Cultic Dynamics in Groups",
+      "category": "setting",
+      "subcategory": "ceremonial",
+      "description": "Cult-like group dynamics and belief systems",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": ["retreat", "ceremonial", "underground"]
+      },
+      "specificRisks": [
+        "Pressure to conform",
+        "Belief manipulation",
+        "Discouragement of critical thinking",
+        "Isolation from support"
+      ],
+      "citations": ["golden_2022", "cheung_nd"]
+    },
+    {
+      "id": "rf_unqualified_facilitators_001",
+      "name": "Unqualified Facilitators",
+      "category": "setting",
+      "subcategory": "underground",
+      "description": "Lack of proper training or oversight",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": ["underground", "retreat", "ceremonial"]
+      },
+      "specificRisks": [
+        "Inadequate support",
+        "Inability to manage emergencies",
+        "Boundary violations",
+        "Variable ethics"
+      ],
+      "citations": ["holoyda_2023", "bender_2022", "baxter_2024", "kopra_2025"]
+    },
+    {
+      "id": "rf_recreational_unpredictable_001",
+      "name": "Unpredictable Recreational Environments",
+      "category": "setting",
+      "subcategory": "recreational",
+      "description": "Parties, festivals, and social settings",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": ["mdma_001", "lsd_001"]
+      },
+      "specificRisks": [
+        "Sensory overload",
+        "Anxiety",
+        "Challenging interpersonal experiences",
+        "Lack of control",
+        "Accidents and injuries",
+        "Higher rates of medical emergencies",
+        "Polydrug use",
+        "Delayed help"
+      ],
+      "citations": ["gashi_2021", "baláet_2022", "bremler_2023", "haden_2016", "johnstad_2021", "canady_2023"]
+    }
+  ],
+
+  "preparationIntegrationRiskFactors": [
+    {
+      "id": "rf_inadequate_screening_001",
+      "name": "Inadequate Screening",
+      "category": "preparation",
+      "subcategory": "screening",
+      "description": "Insufficient assessment of contraindications and vulnerabilities",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Inclusion of high-risk individuals",
+        "Adverse outcomes",
+        "Medical emergencies"
+      ],
+      "shouldScreen": [
+        "Personal history of psychosis, mania, bipolar",
+        "Family history of psychosis, bipolar",
+        "Personality disorders",
+        "Trauma history",
+        "Cardiovascular conditions",
+        "Medications",
+        "Substance use patterns"
+      ],
+      "citations": ["garcia-romeu_2018", "barber_2023", "rosenblat_2023"]
+    },
+    {
+      "id": "rf_inadequate_education_001",
+      "name": "Inadequate Education and Information",
+      "category": "preparation",
+      "subcategory": "education",
+      "description": "Insufficient knowledge about effects and risks",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Unrealistic expectations",
+        "Poor decision-making",
+        "Underestimation of intensity",
+        "Anxiety during session"
+      ],
+      "citations": ["anderson_2019", "hirschfeld_2021"]
+    },
+    {
+      "id": "rf_insufficient_psych_prep_001",
+      "name": "Insufficient Psychological Preparation",
+      "category": "preparation",
+      "subcategory": "psychological",
+      "description": "Lack of preparation to address vulnerabilities",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Challenging experiences",
+        "Trauma reactivation",
+        "Difficulty coping",
+        "Disappointment if not positive"
+      ],
+      "shouldInclude": [
+        "Life review",
+        "Trauma discussion",
+        "Emotional regulation skills",
+        "Discussion of challenging experiences",
+        "Realistic expectations"
+      ],
+      "citations": ["aday_2020", "breeksema_2022", "davis_nd", "garcia-romeu_2018", "evans_2023"]
+    },
+    {
+      "id": "rf_unclear_intentions_001",
+      "name": "Unclear Intentions and Goals",
+      "category": "preparation",
+      "subcategory": "intention",
+      "description": "Lack of clear purpose for the experience",
+      "severity": "moderate",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Confusion",
+        "Disorientation",
+        "Difficulty integrating",
+        "Difficulty making meaning"
+      ],
+      "citations": ["campo_2024", "haijen_2018"]
+    },
+    {
+      "id": "rf_lack_integration_001",
+      "name": "Lack of Integration Practices",
+      "category": "integration",
+      "subcategory": "support",
+      "description": "Absence of post-session processing and meaning-making",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Extended difficulties",
+        "Inability to apply insights",
+        "Poor outcomes",
+        "Confusion"
+      ],
+      "recommendedPractices": [
+        "Therapy sessions",
+        "Journaling",
+        "Meditation",
+        "Art therapy",
+        "Peer support",
+        "Nature connection"
+      ],
+      "citations": ["aday_2020", "forstmann_2021", "zeller_nd", "robinson_2024", "evans_2023", "piercey_2024"]
+    },
+    {
+      "id": "rf_lack_support_guidance_001",
+      "name": "Lack of Support and Guidance",
+      "category": "integration",
+      "subcategory": "support",
+      "description": "Absence of professional or peer support post-session",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Difficulty processing",
+        "Confusion",
+        "Anxiety",
+        "Poor integration"
+      ],
+      "citations": ["bathje_2022", "evans_2023", "robinson_2024", "davis_nd", "cheung_nd"]
+    },
+    {
+      "id": "rf_insufficient_processing_time_001",
+      "name": "Insufficient Time for Processing",
+      "category": "integration",
+      "subcategory": "timing",
+      "description": "Rushing back to routine without reflection time",
+      "severity": "moderate",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Overwhelm",
+        "Difficulty applying lessons",
+        "Re-emergence of challenges"
+      ],
+      "citations": ["bathje_2022", "evans_2023"]
+    },
+    {
+      "id": "rf_dismissing_challenging_001",
+      "name": "Dismissing or Minimizing Challenging Experiences",
+      "category": "integration",
+      "subcategory": "processing",
+      "description": "Attempting to ignore difficult aspects of experience",
+      "severity": "moderate",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Unresolved emotional issues",
+        "Lingering distress",
+        "Perpetuation of unhealthy coping"
+      ],
+      "citations": ["davis_2022", "palitsky_nd"]
+    }
+  ],
+
+  "culturalSpiritualRiskFactors": [
+    {
+      "id": "rf_lack_cultural_context_001",
+      "name": "Lack of Cultural Context and Understanding",
+      "category": "cultural_spiritual",
+      "subcategory": "cultural",
+      "description": "Absence of appropriate cultural framework for experience",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": ["ayahuasca_001", "peyote_001", "ibogaine_001"]
+      },
+      "specificRisks": [
+        "Cultural misinterpretation",
+        "Confusion",
+        "Distress",
+        "Inappropriate integration",
+        "Cultural appropriation"
+      ],
+      "citations": ["argyri_2024", "hartogsohn_2024", "walther_2024", "bathje_2022", "barber_2023"]
+    },
+    {
+      "id": "rf_lack_cultural_competence_001",
+      "name": "Lack of Culturally Competent Care",
+      "category": "cultural_spiritual",
+      "subcategory": "cultural",
+      "description": "Care that doesn't respect or respond to cultural backgrounds",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Poor outcomes",
+        "Marginalization",
+        "Disrespect of beliefs",
+        "Inappropriate interventions"
+      ],
+      "affectedPopulations": ["BIPOC", "Immigrant communities", "Indigenous peoples"],
+      "researchDiversityProblem": {
+        "value": 82.3,
+        "unit": "percent",
+        "context": "Participants 1993-2017 were non-Hispanic White",
+        "consequence": "Limited generalizability"
+      },
+      "citations": ["evans_2023", "haft_2025", "rajwani_2022", "michaels_2018"]
+    },
+    {
+      "id": "rf_spiritual_struggles_001",
+      "name": "Spiritual Struggles and Crises",
+      "category": "cultural_spiritual",
+      "subcategory": "spiritual",
+      "description": "Distressing spiritual or existential experiences",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "manifestations": [
+        "Ontological shock",
+        "Existential crises",
+        "Spiritual emergency",
+        "Loss of meaning",
+        "Conflict with existing beliefs"
+      ],
+      "riskFactors": [
+        "Strong pre-existing religious beliefs",
+        "Rigid belief systems",
+        "Lack of spiritual framework",
+        "Dismissal by facilitators"
+      ],
+      "citations": ["palitsky_2024", "robinson_2024", "breeksema_2022"]
+    },
+    {
+      "id": "rf_clashing_beliefs_001",
+      "name": "Clashing with Pre-existing Beliefs",
+      "category": "cultural_spiritual",
+      "subcategory": "spiritual",
+      "description": "Experiences that conflict with worldview",
+      "severity": "moderate",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Cognitive dissonance",
+        "Existential distress",
+        "Spiritual crisis"
+      ],
+      "citations": ["anderson_2019", "hirschfeld_2021"]
+    },
+    {
+      "id": "rf_spiritual_imposition_001",
+      "name": "Spiritual Imposition",
+      "category": "cultural_spiritual",
+      "subcategory": "spiritual",
+      "description": "Imposing spiritual or religious beliefs on clients",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true,
+        "contexts": ["therapeutic", "ceremonial"]
+      },
+      "specificRisks": [
+        "Undermined autonomy",
+        "Psychological distress",
+        "Spiritual crisis",
+        "Delayed recovery"
+      ],
+      "citations": ["palitsky_nd"]
+    }
+  ],
+
+  "legalSocioeconomicRiskFactors": [
+    {
+      "id": "rf_prohibition_quality_001",
+      "name": "Prohibition-Related Lack of Quality Control",
+      "category": "legal_socioeconomic",
+      "subcategory": "prohibition",
+      "description": "Absence of regulation leading to variable purity and adulterants",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Unpredictable effects",
+        "Toxicity",
+        "Overdose risk",
+        "Unknown adulterants"
+      ],
+      "citations": ["barber_2023", "kopra_2025"]
+    },
+    {
+      "id": "rf_unsafe_acquisition_001",
+      "name": "Unsafe Acquisition",
+      "category": "legal_socioeconomic",
+      "subcategory": "prohibition",
+      "description": "Exposure to criminal markets",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Violence",
+        "Theft",
+        "Intimidation",
+        "Contact with criminal organizations"
+      ],
+      "citations": ["rajwani_2022", "barber_2023"]
+    },
+    {
+      "id": "rf_reluctance_seek_help_001",
+      "name": "Reluctance to Seek Help Due to Legal Fears",
+      "category": "legal_socioeconomic",
+      "subcategory": "prohibition",
+      "description": "Fear of legal repercussions prevents help-seeking",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Adverse events not treated",
+        "Poor outcomes",
+        "Deaths",
+        "Delayed medical intervention"
+      ],
+      "citations": ["freitas_2024", "palitsky_nd", "wells_2024"]
+    },
+    {
+      "id": "rf_research_barriers_001",
+      "name": "Research Barriers from Schedule I Classification",
+      "category": "legal_socioeconomic",
+      "subcategory": "prohibition",
+      "description": "Legal restrictions limit research",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": "Schedule_I_substances"
+      },
+      "consequences": [
+        "Limited safety data",
+        "Slow protocol development",
+        "Insufficient evidence",
+        "High research costs"
+      ],
+      "citations": ["rekatsina_2022", "elsey_2017"]
+    },
+    {
+      "id": "rf_disproportionate_enforcement_001",
+      "name": "Disproportionate Legal Enforcement",
+      "category": "legal_socioeconomic",
+      "subcategory": "prohibition",
+      "description": "Racialized drug policies lead to disproportionate arrests",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "specificRisks": [
+        "Criminalization of minorities",
+        "Police violence risk",
+        "Sense of unsafety",
+        "Reduced protective effects"
+      ],
+      "affectedPopulations": ["Black individuals", "Hispanic individuals", "Indigenous peoples"],
+      "citations": ["rajwani_2022", "jones_2022"]
+    },
+    {
+      "id": "rf_cost_barriers_001",
+      "name": "Cost of Therapy and Socioeconomic Barriers",
+      "category": "legal_socioeconomic",
+      "subcategory": "socioeconomic",
+      "description": "Financial barriers limiting access to safe use",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": "therapeutic_contexts"
+      },
+      "specificBarriers": [
+        {
+          "barrier": "High cost",
+          "description": "$25,000+ per course",
+          "impact": "Only wealthy can access"
+        },
+        {
+          "barrier": "Lack of insurance coverage",
+          "impact": "Out-of-pocket costs prohibitive"
+        },
+        {
+          "barrier": "Geographic disparities",
+          "impact": "Rural and underserved areas lack access"
+        },
+        {
+          "barrier": "Transportation",
+          "impact": "Multiple sessions require reliable transport"
+        },
+        {
+          "barrier": "Time off work",
+          "impact": "Inflexible jobs or hourly wages can't participate"
+        }
+      ],
+      "consequences": [
+        "Wealthy get therapeutic access; poor relegated to unregulated market",
+        "Higher unsafe use in lower SES",
+        "Health disparities amplified"
+      ],
+      "citations": ["barber_2024", "wilson-poe_2024", "rosa_2022"]
+    },
+    {
+      "id": "rf_economic_stress_001",
+      "name": "Economic Stress and Mental Health Burden",
+      "category": "legal_socioeconomic",
+      "subcategory": "socioeconomic",
+      "description": "Poverty and economic stress increase vulnerabilities",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "mechanisms": [
+        "Self-medication due to lack of affordable care",
+        "Use in unsafe contexts",
+        "Higher polydrug use",
+        "Mental health disorders from poverty/inequality"
+      ],
+      "overdoseData": {
+        "finding": "Highest overdose death rates in counties with highest income inequality",
+        "blackPersonRate": "46.5 per 100,000 in high inequality counties"
+      },
+      "citations": ["bremler_2023", "kopra_2025", "jegede_2024"]
+    },
+    {
+      "id": "rf_limited_healthcare_access_001",
+      "name": "Limited Healthcare Access",
+      "category": "legal_socioeconomic",
+      "subcategory": "socioeconomic",
+      "description": "Inability to access medical and mental health services",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "prevalenceNeedingHelp": {
+        "value": 2.6,
+        "unit": "percent",
+        "context": "Non-clinical users requiring professional assistance"
+      },
+      "impacts": [
+        "Adverse events untreated",
+        "Long-term negative effects more likely",
+        "Higher poor outcomes"
+      ],
+      "affectedPopulations": ["Uninsured", "Underinsured", "Rural populations"],
+      "citations": ["palitsky_nd", "hinkle_2024"]
+    },
+    {
+      "id": "rf_racial_moderation_001",
+      "name": "Race and Ethnicity Moderation of Effects",
+      "category": "legal_socioeconomic",
+      "subcategory": "socioeconomic",
+      "description": "Protective effects reduced for racial and ethnic minorities",
+      "severity": "moderate_to_high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "finding": "Protective effects against distress and suicidality significantly lower for minorities than White participants",
+      "mechanismHypothesis": "Discrimination impacts naturalistic use, reducing protective associations",
+      "citations": ["jones_2022"]
+    }
+  ],
+
+  "contaminationQualityRiskFactors": [
+    {
+      "id": "rf_adulteration_nbome_001",
+      "name": "Adulteration with NBOMe Compounds",
+      "category": "contamination_quality",
+      "subcategory": "adulteration",
+      "description": "Presence of NBOMe compounds instead of or in addition to advertised substance",
+      "severity": "high",
+      "applicableTo": {
+        "substances": ["lsd_001", "mdma_001"],
+        "soldAs": ["LSD", "MDMA"]
+      },
+      "specificRisks": [
+        "Higher toxicity",
+        "Unpredictable effects",
+        "Prolonged effects",
+        "Severe adverse reactions",
+        "Fatalities documented"
+      ],
+      "citations": ["hirschfeld_2021", "malcolm_2022"]
+    },
+    {
+      "id": "rf_adulteration_dox_001",
+      "name": "Adulteration with DOx Family",
+      "category": "contamination_quality",
+      "subcategory": "adulteration",
+      "description": "Presence of dimethoxyamphetamines",
+      "severity": "high",
+      "applicableTo": {
+        "substances": ["lsd_001", "mdma_001", "psilocybin_001"],
+        "soldAs": ["LSD", "MDMA", "psilocybin powder"]
+      },
+      "specificRisks": [
+        "Severe side effects",
+        "Prolonged duration",
+        "Hospitalizations"
+      ]
+    },
+    {
+      "id": "rf_adulteration_fentanyl_001",
+      "name": "Adulteration with Fentanyl and Opioids",
+      "category": "contamination_quality",
+      "subcategory": "adulteration",
+      "description": "Presence of fentanyl or other opioids",
+      "severity": "critical",
+      "applicableTo": {
+        "substances": ["mdma_001"],
+        "soldAs": ["MDMA"]
+      },
+      "specificRisks": [
+        "Overdose",
+        "Death"
+      ],
+      "prevalence": "Significant concern",
+      "citations": ["rajwani_2022"]
+    },
+    {
+      "id": "rf_purity_variability_001",
+      "name": "Purity and Potency Variability",
+      "category": "contamination_quality",
+      "subcategory": "quality_variability",
+      "description": "Inconsistent concentration of active substance",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyProblematic": ["psilocybin_mushrooms", "lsd_blotters", "mdma_tablets", "ibogaine_extract"]
+      },
+      "specificExamples": [
+        {
+          "substance": "psilocybin_mushrooms",
+          "variability": "Significant between species, growing conditions, storage",
+          "consequence": "Difficult to achieve consistent dosing"
+        },
+        {
+          "substance": "lsd_blotters",
+          "variability": "Hot spots and cold spots within same batch",
+          "consequence": "Unpredictable dosing"
+        },
+        {
+          "substance": "mdma_tablets",
+          "variability": "Increasing average content (2-3x typical dose common)",
+          "consequence": "Higher risk of toxicity"
+        },
+        {
+          "substance": "ibogaine_extract",
+          "variability": "8.2% to 32.9% purity in extracts",
+          "consequence": "Difficult to determine safe dosing"
+        }
+      ],
+      "harmReduction": [
+        "Use standardized pharmaceutical-grade when possible",
+        "Test substances",
+        "Start with lower doses",
+        "Volumetric dosing"
+      ],
+      "citations": ["johnson_2018", "kopra_2022", "miller_2024", "edwards_2023", "rocha_2023"]
+    },
+    {
+      "id": "rf_storage_degradation_001",
+      "name": "Storage and Degradation",
+      "category": "contamination_quality",
+      "subcategory": "quality_variability",
+      "description": "Loss of potency over time due to improper storage",
+      "severity": "moderate",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyAffected": ["psilocybin_001"]
+      },
+      "example": {
+        "substance": "psilocybin",
+        "degradation": "Up to 50% loss within months",
+        "factors": ["Light", "Heat", "Moisture", "Oxygen"]
+      },
+      "consequences": [
+        "Unpredictable potency",
+        "Weaker than expected effects",
+        "Dosing difficulties"
+      ],
+      "prevention": [
+        "Proper storage (cool, dark, dry, airtight)",
+        "Use within recommended timeframe",
+        "Be aware of age"
+      ],
+      "citations": ["cavanna_2022", "gotvaldova_2020"]
+    },
+    {
+      "id": "rf_misidentification_001",
+      "name": "Botanical Misidentification",
+      "category": "contamination_quality",
+      "subcategory": "misidentification",
+      "description": "Incorrect identification of psychedelic plants/mushrooms",
+      "severity": "critical",
+      "applicableTo": {
+        "substances": ["psilocybin_mushrooms", "ayahuasca_plants", "peyote_001", "mescaline_cacti"]
+      },
+      "specificRisks": [
+        "Consumption of toxic species",
+        "Poisoning",
+        "Death"
+      ],
+      "prevention": [
+        "Expert botanical identification",
+        "Avoid foraging without expertise",
+        "Purchase from reputable sources",
+        "Use standardized preparations"
+      ],
+      "citations": ["kopra_2022", "white_2024"]
+    },
+    {
+      "id": "rf_lack_testing_001",
+      "name": "Lack of Substance Testing",
+      "category": "contamination_quality",
+      "subcategory": "testing",
+      "description": "Absence of reliable testing methods",
+      "severity": "high",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "problems": [
+        "Drug test kits unreliable",
+        "Cannot detect all adulterants",
+        "Cannot accurately measure amount",
+        "Cannot predict individual response"
+      ],
+      "citations": ["ortiz_bernal_2022"]
+    }
+  ],
+
+  "universalAdverseEvents": [
+    {
+      "id": "ae_acute_anxiety_001",
+      "name": "Acute Anxiety",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Anxiety during or shortly after administration",
+      "applicableTo": {
+        "allSubstances": true,
+        "variablePrevalence": true
+      },
+      "prevalenceRange": {
+        "min": 2,
+        "max": 100,
+        "unit": "percent",
+        "context": "Wide variation across studies and substances"
+      },
+      "temporalPattern": {
+        "onset": "During session",
+        "duration": "Usually resolves with session",
+        "canPersist": "May last hours beyond peak in some cases"
+      },
+      "riskFactors": [
+        "rf_neuroticism_001",
+        "rf_lack_preparation_001",
+        "rf_unsafe_uncomfortable_setting_001",
+        "rf_high_dose_001",
+        "rf_anxiety_depression_001"
+      ],
+      "management": {
+        "primary": "reassurance",
+        "effectiveness": "Usually sufficient",
+        "escalation": "Benzodiazepines if insufficient"
+      },
+      "associatedWithWorseLongTerm": {
+        "prevalence": 87,
+        "unit": "percent",
+        "context": "Among those with negative psychological responses"
+      },
+      "citations": ["freitas_2024", "scala_2024", "forstmann_2021", "breeksema_2022", "bremler_2023"]
+    },
+    {
+      "id": "ae_panic_001",
+      "name": "Panic Reactions",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "moderate_to_high",
+      "description": "Intense fear, overwhelming anxiety, sense of losing control",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "riskFactors": [
+        "rf_neuroticism_001",
+        "rf_high_dose_001",
+        "rf_unsafe_uncomfortable_setting_001",
+        "rf_lack_preparation_001"
+      ],
+      "management": [
+        "Verbal reassurance",
+        "Calm presence",
+        "Breathing guidance",
+        "Environmental adjustment",
+        "Benzodiazepines if severe"
+      ],
+      "citations": ["baumeister_2015", "hirschfeld_2021"]
+    },
+    {
+      "id": "ae_dysphoria_001",
+      "name": "Dysphoria and Challenging Experiences",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "moderate_to_high",
+      "description": "Unpleasant emotional states, 'bad trips'",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "characteristics": [
+        "Dysphoria",
+        "Confusion",
+        "Fear",
+        "Sense of doom",
+        "Emotional pain"
+      ],
+      "riskFactors": [
+        "rf_poor_coping_001",
+        "rf_lack_surrender_001",
+        "rf_trauma_history_001",
+        "rf_unsafe_uncomfortable_setting_001",
+        "rf_high_dose_001"
+      ],
+      "therapeuticPotential": "May be part of therapeutic process if properly supported",
+      "citations": ["johnson_2019", "barrett_2016", "baumeister_2015"]
+    },
+    {
+      "id": "ae_paranoia_001",
+      "name": "Paranoia",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "moderate_to_high",
+      "description": "Suspicious, persecutory thoughts",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "riskFactors": [
+        "rf_neuroticism_001",
+        "rf_psychotic_disorders_001",
+        "rf_unsafe_uncomfortable_setting_001",
+        "rf_cannabis_combination"
+      ],
+      "citations": ["baumeister_2015", "hirschfeld_2021"]
+    },
+    {
+      "id": "ae_confusion_001",
+      "name": "Confusion and Disorientation",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Difficulty with cognitive processing, disorientation",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "citations": ["baumeister_2015", "kopra_2022"]
+    },
+    {
+      "id": "ae_hppd_001",
+      "name": "Hallucinogen Persisting Perception Disorder (HPPD)",
+      "category": "perceptual",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "description": "Persistent perceptual disturbances long after drug effects worn off",
+      "applicableTo": {
+        "allSubstances": true,
+        "variableRisk": true,
+        "higherRisk": ["lsd_001", "25i_nbome_001"]
+      },
+      "types": [
+        {
+          "type": "type_1",
+          "description": "Transient, benign flashback",
+          "duration": "short_term",
+          "distress": "minimal"
+        },
+        {
+          "type": "type_2",
+          "description": "Chronic, potentially distressing",
+          "duration": "long_term",
+          "distress": "moderate_to_severe"
+        }
+      ],
+      "symptoms": [
+        "Visual distortions",
+        "Visual snow",
+        "Trailing",
+        "Afterimages",
+        "Geometric patterns",
+        "Intensified colors",
+        "Palinopsia"
+      ],
+      "prevalenceEstimates": {
+        "wideRange": "15-77% report some perceptual changes",
+        "clinicallySignificant": "Small minority experience distress/impairment",
+        "methodologicalConcerns": "Rates may be inflated"
+      },
+      "riskFactors": [
+        "rf_frequent_use_001",
+        "rf_high_dose_001",
+        "rf_polydrug_use_001",
+        "rf_age_youth_001",
+        "rf_substance_misuse_history"
+      ],
+      "clinicalTrialsData": "No cases reported in contemporary controlled trials",
+      "treatment": [
+        "Benzodiazepines (anecdotal)",
+        "Lamotrigine (case reports)",
+        "Reassurance",
+        "CBT (limited)"
+      ],
+      "citations": ["halpern_2003", "carhart-harris_2010", "ortiz_bernal_2022", "bremler_2023", "lacroix_2024"]
+    },
+    {
+      "id": "ae_prolonged_psychosis_001",
+      "name": "Prolonged Psychotic Reactions",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "high_to_critical",
+      "description": "Psychotic symptoms lasting days, weeks, or longer",
+      "applicableTo": {
+        "allSubstances": true,
+        "rare": true
+      },
+      "duration": "Days to weeks or longer",
+      "riskFactors": [
+        "rf_psychotic_disorders_001",
+        "rf_bipolar_001",
+        "rf_family_psychosis_history",
+        "rf_high_dose_001",
+        "rf_lack_screening_001"
+      ],
+      "mechanismHypothesis": "Likely pre-existing vulnerability",
+      "citations": ["baumeister_2015", "barnett_2021", "sabe_2024", "breeksema_2022", "johnson_2019"]
+    },
+    {
+      "id": "ae_worsening_mental_health_001",
+      "name": "Worsening of Pre-existing Mental Health Conditions",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "moderate_to_high",
+      "description": "Exacerbation of existing conditions",
+      "applicableTo": {
+        "allSubstances": true,
+        "particularlyRelevant": ["personality_disorders", "anxiety", "depression"]
+      },
+      "prevalenceData": {
+        "personalityDisorders": {
+          "value": 31,
+          "unit": "percent",
+          "context": "Negative responses with pre-existing PD"
+        }
+      },
+      "citations": ["bremler_2023", "marrocu_nd"]
+    },
+    {
+      "id": "ae_negative_psychological_persisting_001",
+      "name": "Persisting Negative Psychological Effects",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "moderate_to_high",
+      "description": "Anxiety, depression, paranoia, emotional instability persisting post-experience",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "mostPrevalentSymptom": "Anxiety (81-93% in negative experience study)",
+      "prevalenceData": {
+        "over12months": {
+          "value": 10,
+          "unit": "percent",
+          "context": "Close to 10% with challenging experiences",
+          "approximation": true
+        }
+      },
+      "citations": ["bremler_2023", "evans_2023", "robinson_2024", "orlowski_2022"]
+    },
+    {
+      "id": "ae_functional_impairment_001",
+      "name": "Functional Impairment",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "moderate_to_high",
+      "description": "Impairment in daily functioning",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "prevalenceData": {
+        "value": {"min": 9, "max": 13},
+        "unit": "percent",
+        "context": "Non-clinical users experienced negative outcomes with functional impairment"
+      },
+      "needForProfessionalHelp": {
+        "value": 2.6,
+        "unit": "percent",
+        "context": "Required medical/psychiatric/psychological assistance"
+      },
+      "citations": ["palitsky_nd", "robinson_2024"]
+    },
+    {
+      "id": "ae_suicidal_ideation_001",
+      "name": "Suicidal Ideation",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "critical",
+      "description": "Thoughts of suicide following psychedelic experience",
+      "applicableTo": {
+        "allSubstances": true,
+        "rare": true,
+        "complexEvidence": "Population studies protective, but individual cases reported"
+      },
+      "contextualFactors": [
+        "Typically not seen in controlled settings",
+        "May be due to underlying issues rather than direct effect",
+        "Occurred in weeks following treatment in trials"
+      ],
+      "citations": ["kruger_2024", "hinkle_2024", "johnson_2019", "rosenblat_2023", "romeo_2024"]
+    },
+    {
+      "id": "ae_physical_harm_risk_001",
+      "name": "Risk of Physical Harm",
+      "category": "behavioral",
+      "timeframe": "acute",
+      "severity": "moderate_to_high",
+      "description": "Behavior during experience putting self at physical risk",
+      "applicableTo": {
+        "allSubstances": true,
+        "higherRisk": ["recreational_settings", "unsupervised_use"]
+      },
+      "prevalenceData": {
+        "value": 4.67,
+        "unit": "percent",
+        "context": "Reported behavior putting self at risk"
+      },
+      "specificRisks": [
+        "Accidents",
+        "Injuries",
+        "Falls",
+        "Traffic accidents",
+        "Dangerous behaviors"
+      ],
+      "citations": ["kruger_2024", "johnson_2019"]
+    },
+    {
+      "id": "ae_problematic_relationship_001",
+      "name": "Problematic Relationships with Psychedelics",
+      "category": "behavioral",
+      "timeframe": "long_term",
+      "severity": "moderate",
+      "description": "Cravings, difficulty reducing use, dependence",
+      "applicableTo": {
+        "allSubstances": true,
+        "rareButPossible": true
+      },
+      "prevalenceData": {
+        "cravings": {
+          "value": 26,
+          "unit": "percent",
+          "population": "Veterans"
+        },
+        "attemptsToReduce": {
+          "value": 25,
+          "unit": "percent",
+          "population": "Veterans"
+        },
+        "physicalDependence": {
+          "value": 20,
+          "unit": "percent",
+          "population": "Veterans"
+        },
+        "psychologicalDependence": {
+          "value": 16,
+          "unit": "percent",
+          "population": "Veterans"
+        }
+      },
+      "citations": ["davis_nd"]
+    },
+    {
+      "id": "ae_nausea_001",
+      "name": "Nausea and Vomiting",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Gastrointestinal distress",
+      "applicableTo": {
+        "allSubstances": true,
+        "variablePrevalence": true,
+        "higherWith": ["psilocybin_001", "ayahuasca_001"]
+      },
+      "citations": ["baumeister_2015"]
+    },
+    {
+      "id": "ae_headache_001",
+      "name": "Headache",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild",
+      "description": "Head pain during or after experience",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "citations": ["baumeister_2015"]
+    },
+    {
+      "id": "ae_dizziness_001",
+      "name": "Dizziness",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild",
+      "description": "Feeling unsteady or lightheaded",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "citations": ["baumeister_2015"]
+    },
+    {
+      "id": "ae_increased_hr_bp_001",
+      "name": "Increased Heart Rate and Blood Pressure",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "description": "Sympathomimetic cardiovascular effects",
+      "applicableTo": {
+        "allSubstances": true,
+        "variableIntensity": true
+      },
+      "riskFactors": [
+        "rf_cardiovascular_001",
+        "rf_high_dose_001"
+      ],
+      "monitoring": "Important in those with cardiovascular conditions",
+      "citations": ["baumeister_2015", "wsol_2023"]
+    },
+    {
+      "id": "ae_mydriasis_001",
+      "name": "Pupil Dilation (Mydriasis)",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "minimal",
+      "description": "Dilated pupils",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "clinicalSignificance": "Minimal, but observable sign",
+      "citations": ["baumeister_2015"]
+    },
+    {
+      "id": "ae_sweating_001",
+      "name": "Sweating",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild",
+      "description": "Increased perspiration",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "citations": ["baumeister_2015"]
+    },
+    {
+      "id": "ae_tremors_001",
+      "name": "Tremors",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild",
+      "description": "Shaking or trembling",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "citations": ["baumeister_2015"]
+    }
+  ],
+
+  "emergencyResponseProtocols": [
+    {
+      "id": "erp_nonpharm_001",
+      "name": "Non-Pharmacological Interventions",
+      "category": "crisis_management",
+      "priority": "first_line",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "interventions": [
+        {
+          "intervention": "continuous_monitoring",
+          "description": "Maintain observation and regular verbal contact",
+          "frequency": "Continuous throughout session"
+        },
+        {
+          "intervention": "verbal_reassurance",
+          "description": "Remind that experience is temporary, drug-related, and they are safe",
+          "effectiveness": "Sufficient for most distress",
+          "technique": "Calm, empathetic, non-judgmental"
+        },
+        {
+          "intervention": "calm_presence",
+          "description": "Facilitator maintains calm demeanor",
+          "rationale": "Reduces anxiety through modeling"
+        },
+        {
+          "intervention": "breathing_guidance",
+          "description": "Guide slow, deep breathing",
+          "technique": "Simple, clear instructions"
+        },
+        {
+          "intervention": "grounding_techniques",
+          "description": "Help participant focus on present moment",
+          "examples": ["Focus on breath", "Feel feet on ground", "Notice sounds"]
+        },
+        {
+          "intervention": "environmental_adjustment",
+          "description": "Modify setting to reduce distress",
+          "actions": [
+            "Move to quiet area",
+            "Dim lights",
+            "Reduce noise",
+            "Adjust temperature",
+            "Remove overstimulating elements"
+          ]
+        },
+        {
+          "intervention": "physical_contact",
+          "description": "Gentle, reassuring touch if appropriate",
+          "requirements": ["Participant consent", "Cultural appropriateness"],
+          "examples": ["Hand on shoulder", "Hand holding if welcomed"]
+        },
+        {
+          "intervention": "avoid_arguing",
+          "description": "Do not challenge altered perceptions",
+          "rationale": "Can escalate distress"
+        }
+      ],
+      "effectiveness": "High - manages most cases of distress",
+      "citations": ["johnson_2008", "garcia-romeu_2018", "davis_2022", "barnett_2021", "psychedelic_drug_crises_2024", "ching_2024", "mcalpine_2024"]
+    },
+    {
+      "id": "erp_pharm_001",
+      "name": "Pharmacological Interventions",
+      "category": "crisis_management",
+      "priority": "second_line",
+      "whenToUse": "If non-pharmacological approaches insufficient",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "medications": [
+        {
+          "medication": "benzodiazepines",
+          "specific": "diazepam",
+          "status": "preferred_first_line_pharmacological",
+          "dosing": {
+            "typical": {"value": 10, "unit": "mg", "route": "oral"},
+            "emergency": {"min": 15, "max": 30, "unit": "mg"}
+          },
+          "mechanism": "Anxiolytic, reduces agitation",
+          "availability": "Should be readily available"
+        },
+        {
+          "medication": "antipsychotics",
+          "examples": ["risperidone", "olanzapine"],
+          "status": "last_resort",
+          "whenToUse": "Severe psychosis unresponsive to benzodiazepines",
+          "cautions": [
+            "Use with caution",
+            "May cause unpleasant/intense effects",
+            "Haloperidol may exacerbate - avoid"
+          ]
+        }
+      ],
+      "administration": "By trained medical personnel only",
+      "documentation": "All interventions must be documented",
+      "citations": ["johnson_2008", "barnett_2021", "hughes_2016"]
+    },
+    {
+      "id": "erp_ems_001",
+      "name": "Emergency Medical Services",
+      "category": "crisis_management",
+      "priority": "escalation",
+      "whenToCall": [
+        "Condition does not improve with interventions",
+        "Severe physiological symptoms",
+        "Suspected overdose",
+        "Suicidal ideation or behavior",
+        "Violent or dangerous behavior",
+        "Medical emergency"
+      ],
+      "preparedness": [
+        "Clear protocol for contacting EMS",
+        "Emergency numbers readily available",
+        "Address and location information prepared",
+        "Medical history available if possible"
+      ],
+      "prevalenceData": {
+        "lsd": {"value": 1, "unit": "percent", "year": 2020},
+        "mdma": {"value": 1, "unit": "percent", "year": 2020},
+        "ketamine": {"value": 0.6, "unit": "percent", "year": 2020},
+        "psilocybin": {"value": 0.6, "unit": "percent", "year": 2020}
+      },
+      "citations": ["baxter_2024", "canady_2023"]
+    },
+    {
+      "id": "erp_helpline_001",
+      "name": "Psychedelic Crisis Helplines",
+      "category": "peer_support",
+      "description": "Professional peer support via telephone",
+      "examples": [
+        {
+          "organization": "Fireside Project",
+          "availability": "Telephone helpline",
+          "effectiveness": {
+            "deescalation": {
+              "value": 65.9,
+              "unit": "percent"
+            },
+            "preventedPossibleHarm": {
+              "value": 29.3,
+              "unit": "percent"
+            },
+            "prevented911": {
+              "value": 12.5,
+              "unit": "percent"
+            },
+            "preventedER": {
+              "value": 10.8,
+              "unit": "percent"
+            }
+          }
+        },
+        {
+          "organization": "Zendo Project",
+          "setting": "On-site at festivals/events",
+          "model": "Peer support in safe space"
+        }
+      ],
+      "impact": "Can prevent escalation and reduce emergency services burden",
+      "citations": ["pleet_2023", "canady_2023", "ruane_2015", "cheung_nd"]
+    },
+    {
+      "id": "erp_serotonin_syndrome_001",
+      "name": "Serotonin Syndrome Protocol",
+      "category": "medical_emergency",
+      "priority": "critical",
+      "applicableTo": {
+        "substances": "Particularly with MAOIs, SSRIs, MDMA, 5-MeO-DMT",
+        "severity": "Life-threatening"
+      },
+      "symptoms": {
+        "autonomic": ["Hyperthermia", "Tachycardia", "Hypertension", "Diaphoresis", "Mydriasis"],
+        "neuromuscular": ["Muscle rigidity", "Tremor", "Hyperreflexia", "Clonus", "Myoclonus"],
+        "cognitive": ["Agitation", "Confusion", "Delirium"],
+        "severe": ["Seizures", "Rhabdomyolysis", "DIC", "Death"]
+      },
+      "onset": "Rapid (minutes to hours)",
+      "treatment": {
+        "primary": "Discontinuation of serotonergic agents",
+        "supportive": [
+          "Benzodiazepines",
+          "Cooling measures",
+          "IV fluids",
+          "Vital sign monitoring"
+        ],
+        "severe": [
+          "ICU admission",
+          "Serotonin antagonists (cyproheptadine)",
+          "Intubation if needed"
+        ]
+      },
+      "prevention": {
+        "screening": "Medication review essential",
+        "education": "Clear warnings about dangerous combinations",
+        "avoidance": "Absolute contraindication for certain combinations"
+      },
+      "citations": ["malcolm_2022", "gomez-escolar_2024"]
+    }
+  ],
+
+  "preparationPractices": [
+    {
+      "id": "prep_comprehensive_screening_001",
+      "name": "Comprehensive Screening",
+      "category": "assessment",
+      "timing": "pre_session",
+      "applicableTo": {
+        "allSubstances": true,
+        "essential": true
+      },
+      "components": [
+        {
+          "area": "psychiatric_history",
+          "tools": ["Clinical interview", "Structured diagnostic interviews"],
+          "focus": [
+            "Personal history of mental illness",
+            "Family history of psychosis/bipolar",
+            "Current symptoms",
+            "Treatment history"
+          ]
+        },
+        {
+          "area": "medical_history",
+          "tools": ["Medical history questionnaire", "Physical exam", "ECG if indicated"],
+          "focus": [
+            "Cardiovascular conditions",
+            "Seizure history",
+            "Liver/kidney function",
+            "Medication review"
+          ]
+        },
+        {
+          "area": "substance_use",
+          "tools": ["Substance use history", "Toxicology screening"],
+          "focus": [
+            "Current substance use",
+            "History of substance use disorder",
+            "Polydrug patterns"
+          ]
+        },
+        {
+          "area": "trauma_history",
+          "tools": ["Trauma-focused interview", "Validated trauma scales"],
+          "focus": [
+            "Types of trauma",
+            "PTSD symptoms",
+            "Current triggers",
+            "Coping strategies"
+          ]
+        }
+      ],
+      "exclusionCriteria": [
+        "Active psychosis",
+        "Active mania",
+        "Unstable cardiovascular disease",
+        "Severe liver/kidney impairment",
+        "Pregnancy",
+        "High-risk medications"
+      ],
+      "relativeContraindications": [
+        "Family history of psychosis",
+        "Personality disorders",
+        "Trauma history (requires specialized support)",
+        "Controlled cardiovascular conditions"
+      ],
+      "effectiveness": "high",
+      "evidenceQuality": "strong",
+      "citations": ["garcia-romeu_2018", "palitsky_nd", "rosa_2022"]
+    },
+    {
+      "id": "prep_psychoeducation_001",
+      "name": "Psychoeducation",
+      "category": "education",
+      "timing": "pre_session",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "content": [
+        {
+          "topic": "substance_effects",
+          "details": [
+            "Mechanism of action",
+            "Typical subjective effects",
+            "Timeline",
+            "Dose-response"
+          ]
+        },
+        {
+          "topic": "potential_experiences",
+          "details": [
+            "Range of possible experiences",
+            "Mystical experiences",
+            "Challenging experiences",
+            "Somatic effects"
+          ]
+        },
+        {
+          "topic": "risks",
+          "details": [
+            "Psychological risks",
+            "Physical risks",
+            "What to expect if difficult",
+            "When to seek help"
+          ]
+        },
+        {
+          "topic": "harm_reduction",
+          "details": [
+            "Set and setting importance",
+            "Coping strategies",
+            "Integration importance",
+            "Dangerous combinations"
+          ]
+        }
+      ],
+      "format": ["Verbal discussion", "Written materials", "Videos"],
+      "effectiveness": "moderate_to_high",
+      "citations": ["garcia-romeu_2018", "rossi_2022"]
+    },
+    {
+      "id": "prep_intention_setting_001",
+      "name": "Intention Setting",
+      "category": "psychological",
+      "timing": "pre_session",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "description": "Process of defining clear intentions and goals",
+      "benefits": [
+        "Provides structure and direction",
+        "Enhances meaning-making",
+        "Improves outcomes",
+        "Facilitates integration"
+      ],
+      "process": [
+        "Reflection on motivations",
+        "Identifying personal goals",
+        "Articulating intentions clearly",
+        "Discussing with facilitator",
+        "Refining intentions"
+      ],
+      "effectiveness": "moderate_to_high",
+      "citations": ["campo_2024", "haijen_2018", "garel_2023"]
+    },
+    {
+      "id": "prep_life_review_001",
+      "name": "Life Review",
+      "category": "therapeutic",
+      "timing": "pre_session",
+      "applicableTo": {
+        "allSubstances": true,
+        "contexts": ["clinical", "therapeutic"]
+      },
+      "description": "Comprehensive review of participant's life history",
+      "components": [
+        "Major life events",
+        "Significant relationships",
+        "Traumas and challenges",
+        "Achievements and strengths",
+        "Current life situation",
+        "Worldview and beliefs"
+      ],
+      "purposes": [
+        "Build rapport",
+        "Identify potential triggers",
+        "Understand context",
+        "Inform integration",
+        "Assess readiness"
+      ],
+      "duration": "Typically 1-3 sessions",
+      "citations": ["garcia-romeu_2018"]
+    },
+    {
+      "id": "prep_coping_skills_001",
+      "name": "Coping Skills Training",
+      "category": "skills",
+      "timing": "pre_session",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "skills": [
+        {
+          "skill": "breathing_techniques",
+          "description": "Deep breathing for anxiety management",
+          "practice": "Taught and practiced in preparation"
+        },
+        {
+          "skill": "grounding_techniques",
+          "description": "Methods to stay in present moment",
+          "examples": ["5-4-3-2-1 sensory exercise", "Body scanning"]
+        },
+        {
+          "skill": "surrender_acceptance",
+          "description": "Letting go and accepting experience",
+          "importance": "Strong predictor of positive outcomes"
+        },
+        {
+          "skill": "mindfulness",
+          "description": "Non-judgmental awareness",
+          "benefit": "Helps navigate difficult moments"
+        }
+      ],
+      "effectiveness": "moderate_to_high",
+      "citations": ["robinson_2024", "kirlic_2025"]
+    }
+  ],
+
+  "integrationPractices": [
+    {
+      "id": "int_therapy_001",
+      "name": "Integration Therapy Sessions",
+      "category": "professional_support",
+      "timing": "post_session",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "structure": {
+        "initial": {
+          "timing": "1-2 days post-session",
+          "purpose": "Process immediate experience",
+          "duration": "60-90 minutes"
+        },
+        "ongoing": {
+          "frequency": "Weekly to bi-weekly",
+          "duration": "1-3 months",
+          "purpose": "Translate insights into behavior change"
+        }
+      },
+      "modalities": [
+        "Individual therapy",
+        "Group therapy",
+        "Couples therapy",
+        "Family therapy"
+      ],
+      "effectiveness": "high",
+      "evidenceQuality": "strong",
+      "citations": ["garcia-romeu_2018", "bathje_2022"]
+    },
+    {
+      "id": "int_contemplative_001",
+      "name": "Contemplative Practices",
+      "category": "self_practice",
+      "timing": "post_session_ongoing",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "practices": [
+        {
+          "practice": "meditation",
+          "frequency": "Daily recommended",
+          "benefits": ["Sustained awareness", "Emotional regulation", "Integration of insights"]
+        },
+        {
+          "practice": "mindfulness",
+          "frequency": "Daily informal practice",
+          "benefits": ["Present-moment awareness", "Reduced reactivity"]
+        }
+      ],
+      "effectiveness": "moderate_to_high",
+      "citations": ["bathje_2022", "piercey_2024"]
+    },
+    {
+      "id": "int_creative_001",
+      "name": "Creative Expression",
+      "category": "self_practice",
+      "timing": "post_session_ongoing",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "modalities": [
+        {
+          "modality": "journaling",
+          "frequency": "Daily recommended initially",
+          "benefits": ["Process experience", "Track insights", "Narrative creation"],
+          "commonality": "Very common practice"
+        },
+        {
+          "modality": "art",
+          "types": ["Drawing", "Painting", "Sculpture"],
+          "benefits": ["Non-verbal processing", "Accessing unconscious material"]
+        },
+        {
+          "modality": "music",
+          "benefits": ["Emotional processing", "Accessing experience"]
+        },
+        {
+          "modality": "writing",
+          "types": ["Poetry", "Prose"],
+          "benefits": ["Meaning-making", "Articulation of ineffable experiences"]
+        }
+      ],
+      "effectiveness": "moderate",
+      "citations": ["bathje_2022", "cavarra_2022", "gezon_2024"]
+    },
+    {
+      "id": "int_somatic_001",
+      "name": "Somatic Practices",
+      "category": "mind_body",
+      "timing": "post_session_ongoing",
+      "applicableTo": {
+        "allSubstances": true,
+        "especiallyImportant": ["ayahuasca_001"]
+      },
+      "practices": [
+        {
+          "practice": "yoga",
+          "benefits": ["Embodiment", "Trauma processing", "Grounding"]
+        },
+        {
+          "practice": "breathwork",
+          "benefits": ["Continued access to non-ordinary states", "Emotional release"]
+        }
+      ],
+      "effectiveness": "moderate_to_high",
+      "citations": ["bathje_2022", "cowley-court_2023"]
+    },
+    {
+      "id": "int_nature_001",
+      "name": "Nature Connection",
+      "category": "environmental",
+      "timing": "post_session_ongoing",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "activities": [
+        "Forest bathing",
+        "Hiking",
+        "Gardening",
+        "Simply spending time outdoors"
+      ],
+      "benefits": [
+        "Grounding",
+        "Perspective",
+        "Connection to larger whole",
+        "Stress reduction"
+      ],
+      "commonality": "Widely reported as beneficial",
+      "citations": ["piercey_2024", "robinson_2024"]
+    },
+    {
+      "id": "int_peer_support_001",
+      "name": "Peer Support and Integration Circles",
+      "category": "community",
+      "timing": "post_session_ongoing",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "formats": [
+        {
+          "format": "integration_circles",
+          "benefits": [
+            "Shared experience",
+            "Reduced isolation",
+            "Community support",
+            "Normalize challenges"
+          ]
+        },
+        {
+          "format": "online_forums",
+          "benefits": ["Accessible", "Anonymous option", "Ongoing support"]
+        }
+      ],
+      "risks": [
+        "Exposure to misinformation",
+        "Cultic dynamics",
+        "Lack of clinical oversight"
+      ],
+      "bestPractices": [
+        "Trained facilitators",
+        "Clear guidelines",
+        "Professional consultation available"
+      ],
+      "effectiveness": "moderate_to_high",
+      "citations": ["cheung_nd", "robinson_2024", "gezon_2024"]
+    }
+  ],
+
+  "assessmentTools": [
+    {
+      "id": "tool_spsi_001",
+      "name": "Swiss Psychedelic Side Effects Inventory (SPSI)",
+      "purpose": "Systematic assessment of adverse effects",
+      "type": "psychedelic_specific",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "domains": [
+        "Psychological symptoms",
+        "Physical symptoms",
+        "Perceptual disturbances",
+        "Social/interpersonal effects"
+      ],
+      "advantages": [
+        "Standardized",
+        "Comprehensive",
+        "Improves data quality"
+      ],
+      "citation": "calder_2024"
+    },
+    {
+      "id": "tool_big_five_001",
+      "name": "Big Five Inventory / NEO-PI-R",
+      "purpose": "Assess personality traits",
+      "type": "personality",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "relevantTraits": [
+        "Neuroticism",
+        "Openness to experience",
+        "Extraversion",
+        "Agreeableness",
+        "Conscientiousness"
+      ],
+      "predictiveValue": "High for neuroticism and openness",
+      "citations": ["barrett_2017", "breeksema_2022"]
+    },
+    {
+      "id": "tool_dysfunctional_attitude_001",
+      "name": "Dysfunctional Attitude Scale",
+      "purpose": "Measure dysfunctional beliefs and attitudes",
+      "type": "cognitive",
+      "applicableTo": {
+        "allSubstances": true
+      },
+      "relevance": "Predicts challenging experiences",
+      "citation": "anderson_2019"
+    }
+  ],
+
+  "crossReferencingGuidelines": {
+    "substanceToGeneralRisk": {
+      "description": "Substance-specific schemas reference general risk factors by ID",
+      "format": "general_risks.rf_[category]_[number]",
+      "example": "general_risks.rf_cardiovascular_001",
+      "implementation": {
+        "substanceSchema": {
+          "riskFactors": [
+            {
+              "generalRiskId": "rf_cardiovascular_001",
+              "applicability": "high",
+              "substanceSpecificModifiers": {
+                "mechanism": "Increases BP and HR",
+                "severity": "moderate_to_high"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "generalToSubstance": {
+      "description": "General risk factors indicate which substances they apply to",
+      "format": "Use applicableTo object with substanceIds array",
+      "example": {
+        "applicableTo": {
+          "allSubstances": true,
+          "specificVariations": [
+            {
+              "substanceIds": ["psilocybin_001", "lsd_001"],
+              "severity": "moderate"
+            }
+          ]
+        }
+      }
+    },
+    "complexInteractions": {
+      "description": "Document interactions between multiple risk factors and substances",
+      "location": "complexInteractions array in general schema or substance schema",
+      "format": "List of factor objects with combined effect description"
+    }
+  }
+}

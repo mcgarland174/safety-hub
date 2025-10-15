@@ -1,0 +1,2110 @@
+{
+  "schemaVersion": "2.0",
+  "schemaType": "harm_reduction",
+  "lastUpdated": "2025-01-09",
+  
+  "metadata": {
+    "description": "Evidence-based harm reduction strategies, safety measures, and intervention protocols for psychedelic use",
+    "referencesSchemas": [
+      "general_risks_schema.json",
+      "substance_psilocybin_schema.json",
+      "substance_lsd_schema.json",
+      "substance_mdma_schema.json",
+      "substance_dmt_schema.json",
+      "substance_5meo_dmt_schema.json",
+      "substance_ayahuasca_schema.json",
+      "substance_mescaline_schema.json",
+      "substance_ibogaine_schema.json",
+      "substance_ketamine_schema.json"
+    ],
+    "categories": [
+      "screening_consent",
+      "setting_optimization",
+      "dose_preparation",
+      "supervision_facilitation",
+      "preparation",
+      "integration",
+      "crisis_intervention",
+      "education",
+      "community_support",
+      "accessibility_equity"
+    ]
+  },
+
+  "screeningAndConsent": {
+    "categoryId": "hr_screening_consent",
+    "description": "Practices for identifying contraindications and ensuring informed decision-making",
+    "mitigatesRisks": [
+      "general_risks.rf_psychotic_disorders_001",
+      "general_risks.rf_bipolar_001",
+      "general_risks.rf_cardiovascular_001",
+      "general_risks.rf_trauma_history_001",
+      "general_risks.rf_polydrug_use_001",
+      "general_risks.rf_inadequate_screening_001"
+    ],
+    "practices": [
+      {
+        "id": "hrp_screening_comprehensive_001",
+        "name": "Comprehensive Medical and Psychiatric Screening",
+        "category": "screening_consent",
+        "subcategory": "screening",
+        "description": "Systematic assessment of medical and psychiatric history to identify contraindications",
+        "objectives": [
+          "Identify absolute and relative contraindications",
+          "Assess psychological vulnerabilities",
+          "Evaluate risk factors",
+          "Minimize adverse events",
+          "Ensure participant safety",
+          "Determine eligibility"
+        ],
+        "components": [
+          {
+            "component": "standardized_questionnaires",
+            "tools": ["Swiss Psychedelic Side Effects Inventory (SPSI)"],
+            "purpose": "Systematic data collection on risk factors",
+            "relatedTool": "general_risks.tool_spsi_001"
+          },
+          {
+            "component": "clinical_interviews",
+            "conductedBy": "Trained professionals",
+            "focus": [
+              "Medical history",
+              "Psychiatric history",
+              "Current mental state",
+              "Substance use patterns"
+            ]
+          },
+          {
+            "component": "medical_evaluations",
+            "includes": [
+              "Physical examination",
+              "ECG if cardiovascular risk",
+              "Blood pressure monitoring",
+              "Medication review"
+            ]
+          },
+          {
+            "component": "contraindication_assessment",
+            "absolute": [
+              "Active psychosis",
+              "Active mania",
+              "Unstable cardiovascular disease",
+              "Severe liver/kidney impairment",
+              "Pregnancy",
+              "High-risk medication combinations"
+            ],
+            "relative": [
+              "Family history of psychosis/bipolar",
+              "Personality disorders",
+              "Trauma history (requires specialized support)",
+              "Controlled cardiovascular conditions"
+            ]
+          }
+        ],
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "research", "retreat"],
+        "resourceRequirements": {
+          "personnel": "Trained medical/psychiatric professionals",
+          "time": "2-4 hours initial screening",
+          "materials": "Standardized assessment tools"
+        },
+        "outcomes": {
+          "adverseEventReduction": {
+            "description": "Screening significantly reduces severe adverse events",
+            "prevalenceInScreenedPopulations": {
+              "seriousAEs_priorDisorders": {
+                "value": 4,
+                "unit": "percent"
+              },
+              "seriousAEs_healthyParticipants": {
+                "value": 0,
+                "unit": "percent"
+              }
+            }
+          },
+          "polydrug_deathPrevention": {
+            "value": 82,
+            "unit": "percent",
+            "context": "Deaths involved polysubstance use - screening could prevent"
+          }
+        },
+        "citations": [
+          "bremler_2023",
+          "garcia-romeu_2018",
+          "palitsky_nd",
+          "rosa_2022",
+          "marazziti_2024",
+          "honk_2024",
+          "henningfield_2023",
+          "aday_2020",
+          "kopra_2025"
+        ]
+      },
+      {
+        "id": "hrp_informed_consent_enhanced_001",
+        "name": "Enhanced Informed Consent",
+        "category": "screening_consent",
+        "subcategory": "consent",
+        "description": "Comprehensive consent process addressing unique aspects of psychedelic experiences",
+        "objectives": [
+          "Provide comprehensive information",
+          "Explain therapeutic process",
+          "Discuss set and setting",
+          "Address unique effects",
+          "Ensure voluntariness",
+          "Respect autonomy",
+          "Enable ongoing consent"
+        ],
+        "components": [
+          {
+            "component": "comprehensive_disclosure",
+            "includes": [
+              "Potential psychological effects",
+              "Potential physical effects",
+              "Potential spiritual effects",
+              "Alternative treatment options",
+              "Challenging experience possibility",
+              "Trauma reexperiencing risk",
+              "Time course of effects",
+              "Management strategies"
+            ]
+          },
+          {
+            "component": "therapeutic_process_explanation",
+            "topics": [
+              "Therapeutic model",
+              "Role of therapists/guides",
+              "Importance of integration",
+              "Post-session support",
+              "Making sense of experience"
+            ]
+          },
+          {
+            "component": "set_setting_discussion",
+            "focus": "Strategies for creating safe, supportive environment"
+          },
+          {
+            "component": "unique_effects_disclosure",
+            "includes": [
+              "Significant shifts in values possible",
+              "Personality changes possible",
+              "Changes in judgment and beliefs",
+              "Suggestibility enhancement",
+              "Power dynamics awareness"
+            ]
+          },
+          {
+            "component": "voluntariness_assurance",
+            "measures": [
+              "Ample opportunity for questions",
+              "Express concerns freely",
+              "No pressure from clinicians",
+              "Right to withdraw anytime"
+            ]
+          },
+          {
+            "component": "documentation",
+            "requirements": [
+              "Written informed consent",
+              "Understanding verification",
+              "Voluntary agreement documentation"
+            ]
+          }
+        ],
+        "enhancedConsentFeatures": {
+          "description": "Goes beyond typical psychiatric intervention consent",
+          "additionalElements": [
+            "In-depth discussion of unique psychedelic effects",
+            "Exploration of value/personality shift possibilities",
+            "Detailed mental health risk discussion",
+            "Family history consideration",
+            "Multiple preparation sessions"
+          ]
+        },
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "research", "retreat", "therapeutic"],
+        "outcomes": {
+          "trustBuilding": "Transparent consent builds practitioner-patient trust",
+          "ethicalCompliance": "Adheres to medical ethics standards",
+          "improvedOutcomes": "Contributes to better therapeutic outcomes"
+        },
+        "citations": [
+          "palitsky_nd",
+          "rajwani_2022",
+          "davis_2022",
+          "kocarova_2021",
+          "devenot_2022",
+          "dupuis_2021",
+          "garcia-romeu_2018",
+          "rossi_2022",
+          "henningfield_2023",
+          "lacroix_2024",
+          "o'donnell_2025"
+        ]
+      },
+      {
+        "id": "hrp_preparation_meetings_001",
+        "name": "Multiple Preparation Meetings",
+        "category": "screening_consent",
+        "subcategory": "preparation",
+        "description": "Series of sessions before substance administration to build rapport and prepare participant",
+        "objectives": [
+          "Build rapport",
+          "Review life history",
+          "Discuss potential effects",
+          "Address concerns",
+          "Set intentions",
+          "Practice coping strategies"
+        ],
+        "structure": {
+          "typical_number": "2-4 sessions",
+          "duration_per_session": "60-90 minutes",
+          "timing": "Over 2-4 weeks before session"
+        },
+        "content": [
+          "Life review",
+          "Relationship review",
+          "Trauma assessment",
+          "World view exploration",
+          "Fear addressing",
+          "Intention setting",
+          "Coping strategy practice"
+        ],
+        "mitigatesRisks": [
+          "general_risks.rf_lack_preparation_001",
+          "general_risks.rf_unclear_intentions_001",
+          "general_risks.rf_weak_alliance_001",
+          "general_risks.ae_acute_anxiety_001"
+        ],
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "research", "therapeutic"],
+        "citations": ["garcia-romeu_2018", "palitsky_nd"]
+      }
+    ]
+  },
+
+  "settingOptimization": {
+    "categoryId": "hr_setting",
+    "description": "Environmental factors that minimize risks and promote positive outcomes",
+    "mitigatesRisks": [
+      "general_risks.rf_unsafe_uncomfortable_setting_001",
+      "general_risks.rf_unforeseen_interruptions_001",
+      "general_risks.rf_clinical_artificiality_001"
+    ],
+    "practices": [
+      {
+        "id": "hrp_physical_environment_001",
+        "name": "Optimized Physical Environment",
+        "category": "setting",
+        "subcategory": "physical",
+        "description": "Creating comfortable, safe, aesthetically pleasing spaces for psychedelic experiences",
+        "components": [
+          {
+            "component": "comfortable_space",
+            "features": [
+              "Warm, dedicated room",
+              "Pleasing artwork",
+              "Comfortable place to recline (sofa/bed)",
+              "Appropriate temperature control",
+              "Privacy assurance"
+            ]
+          },
+          {
+            "component": "safety_measures",
+            "features": [
+              "Free from hazards",
+              "No access to vehicles/machinery",
+              "Secure environment",
+              "Emergency equipment accessible"
+            ]
+          },
+          {
+            "component": "clinical_atmosphere_minimization",
+            "rationale": "Clinical environments can increase anxiety",
+            "approach": "Aesthetically pleasing, non-clinical design",
+            "balance": "Safety equipment available but not prominently displayed"
+          },
+          {
+            "component": "sensory_optimization",
+            "includes": [
+              "Curated music playlists",
+              "Eyeshades available",
+              "Appropriate lighting (dimmable)",
+              "Minimal external noise",
+              "Pleasant ambient conditions"
+            ],
+            "purpose": "Guide experience and minimize distractions"
+          },
+          {
+            "component": "natural_settings",
+            "note": "Natural environments also beneficial when safe and controlled",
+            "considerations": [
+              "Weather conditions",
+              "Supervision availability",
+              "Privacy assurance"
+            ]
+          }
+        ],
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["clinical", "research", "retreat", "therapeutic"],
+        "applicableTo": {
+          "allSubstances": true
+        },
+        "citations": [
+          "golden_2022",
+          "garcia-romeu_2018",
+          "holze_2022",
+          "walther_2024",
+          "haden_2016"
+        ]
+      },
+      {
+        "id": "hrp_social_environment_001",
+        "name": "Supportive Social Environment",
+        "category": "setting",
+        "subcategory": "social",
+        "description": "Establishing clear guidelines, experienced support, and therapeutic alliance",
+        "components": [
+          {
+            "component": "clear_guidelines",
+            "includes": [
+              "Expectations for behavior",
+              "Communication protocols",
+              "Interaction boundaries",
+              "Emergency procedures"
+            ],
+            "purpose": "Create structure and predictability"
+          },
+          {
+            "component": "experienced_facilitators",
+            "roles": [
+              "Trained therapists",
+              "Guides",
+              "Trip sitters"
+            ],
+            "qualifications": [
+              "Knowledge of medical/psychological markers",
+              "Experience with psychedelic states",
+              "Crisis management training",
+              "Empathetic presence"
+            ],
+            "prevalence": {
+              "value": 79.6,
+              "unit": "percent",
+              "context": "LSD users took substance with close friend, group, partner"
+            }
+          },
+          {
+            "component": "therapeutic_alliance",
+            "buildingProcess": [
+              "Rapport establishment in preparation",
+              "Trust development",
+              "Shared understanding of goals"
+            ],
+            "benefits": [
+              "Mediates positive acute experiences",
+              "Improves long-term outcomes",
+              "Greater emotional breakthrough",
+              "Enhanced mystical-type experiences"
+            ],
+            "optimalConfiguration": "Two therapists/guides with pre-existing rapport"
+          }
+        ],
+        "mitigatesRisks": [
+          "general_risks.rf_lack_social_support_001",
+          "general_risks.rf_weak_alliance_001",
+          "general_risks.ae_acute_anxiety_001"
+        ],
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "research", "retreat", "therapeutic"],
+        "citations": [
+          "haden_2016",
+          "golden_2022",
+          "gashi_2021",
+          "kopra_2022",
+          "pilecki_2021",
+          "davis_nd",
+          "baxter_2024",
+          "garcia-romeu_2018"
+        ]
+      },
+      {
+        "id": "hrp_cultural_sensitivity_001",
+        "name": "Culturally Sensitive Setting",
+        "category": "setting",
+        "subcategory": "cultural",
+        "description": "Tailoring environment to participant's cultural background",
+        "components": [
+          {
+            "component": "cultural_practices_incorporation",
+            "examples": [
+              "Cultural symbols",
+              "Culturally resonant music",
+              "Traditional ritual elements",
+              "Language accommodation"
+            ]
+          },
+          {
+            "component": "rituals_ceremonies",
+            "contexts": [
+              "Indigenous ceremonies",
+              "Religious contexts",
+              "Therapeutic adaptations"
+            ],
+            "elements": [
+              "Ritual songs",
+              "Traditional implements",
+              "Ceremonial structure",
+              "Community practices"
+            ]
+          },
+          {
+            "component": "individualized_approach",
+            "recognition": "Individual preferences shape music and environment effects",
+            "customization": "Methods to customize settings yield optimal results"
+          },
+          {
+            "component": "group_vs_individual",
+            "considerations": [
+              "Cultural norms around group activities",
+              "Individual vs collective orientation",
+              "Privacy preferences",
+              "Therapeutic goals"
+            ]
+          }
+        ],
+        "mitigatesRisks": [
+          "general_risks.rf_lack_cultural_context_001",
+          "general_risks.rf_lack_cultural_competence_001",
+          "general_risks.rf_clashing_beliefs_001"
+        ],
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["clinical", "ceremonial", "retreat", "therapeutic"],
+        "citations": [
+          "jones_2022",
+          "gezon_2024",
+          "golden_2022",
+          "carhart-harris_2018",
+          "aday_2021",
+          "dupuis_2022",
+          "hartogsohn_2021"
+        ]
+      }
+    ]
+  },
+
+  "doseAndPreparation": {
+    "categoryId": "hr_dose_prep",
+    "description": "Strategies for safe dosing and substance preparation",
+    "mitigatesRisks": [
+      "general_risks.rf_high_dose_001",
+      "general_risks.rf_unknown_dose_purity_001",
+      "general_risks.rf_adulteration_nbome_001",
+      "general_risks.rf_purity_variability_001"
+    ],
+    "practices": [
+      {
+        "id": "hrp_start_low_go_slow_001",
+        "name": "Start Low, Go Slow Dosing",
+        "category": "dose_preparation",
+        "subcategory": "dosing",
+        "description": "Beginning with low doses especially for first-time users or new substances",
+        "rationale": "Allows assessment of sensitivity and tolerance before increasing",
+        "approach": {
+          "initial_dose": "Lower end of therapeutic range",
+          "assessment_period": "Complete experience before considering increase",
+          "subsequent_doses": "Gradual increases based on response"
+        },
+        "evidenceExample": {
+          "substance": "psilocybin",
+          "findings": [
+            {
+              "dose": 10,
+              "unit": "mg",
+              "result": "Similar adverse events as 25mg",
+              "implication": "Lower initial dose feasible"
+            },
+            {
+              "dose": 1,
+              "unit": "mg",
+              "result": "No serious adverse events",
+              "implication": "Very low dose safe for assessment"
+            }
+          ]
+        },
+        "applicability": {
+          "populations": [
+            "First-time users",
+            "New substance exposure",
+            "Unknown individual sensitivity",
+            "History of adverse reactions"
+          ]
+        },
+        "effectiveness": "high",
+        "evidenceQuality": "moderate_to_strong",
+        "implementationSettings": ["clinical", "therapeutic", "personal"],
+        "citations": [
+          "bornemann_2020",
+          "baxter_2024",
+          "basedow_2024",
+          "izmi_2024",
+          "palmer_2022",
+          "villiger_2024",
+          "scala_2024"
+        ]
+      },
+      {
+        "id": "hrp_weight_based_dosing_001",
+        "name": "Weight-Based Dosing",
+        "category": "dose_preparation",
+        "subcategory": "dosing",
+        "description": "Calculating doses based on body weight for precision",
+        "rationale": "Accounts for pharmacokinetic variations with body mass",
+        "application": {
+          "primary_use": "Clinical trials",
+          "calculation": "mg/kg body weight",
+          "substances_where_relevant": [
+            "substance_psilocybin.psilocybin_001"
+          ]
+        },
+        "doseResponseExample": {
+          "substance": "psilocybin",
+          "outcome": "complete mystical-type experience",
+          "data": [
+            {"dose": 0, "unit": "mg/kg", "probability": 0, "unit_prob": "percent"},
+            {"dose": 0.07, "unit": "mg/kg", "probability": 5.6, "unit_prob": "percent"},
+            {"dose": 0.14, "unit": "mg/kg", "probability": 11.1, "unit_prob": "percent"},
+            {"dose": 0.29, "unit": "mg/kg", "probability": 44.4, "unit_prob": "percent"},
+            {"dose": 0.43, "unit": "mg/kg", "probability": 55.6, "unit_prob": "percent"}
+          ]
+        },
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "research"],
+        "citations": ["bender_2022"]
+      },
+      {
+        "id": "hrp_microdosing_001",
+        "name": "Microdosing Protocol",
+        "category": "dose_preparation",
+        "subcategory": "dosing",
+        "description": "Sub-perceptual dosing to minimize risks while exploring potential benefits",
+        "definition": "One-tenth to one-twentieth of normal dose",
+        "goals": [
+          "Enhance well-being",
+          "Improve cognitive function",
+          "Minimize full-dose risks",
+          "Explore personal response"
+        ],
+        "commonSubstances": [
+          {
+            "substance": "substance_lsd.lsd_001",
+            "prevalence": 65,
+            "unit": "percent",
+            "context": "Of microdosers"
+          },
+          {
+            "substance": "substance_psilocybin.psilocybin_001",
+            "prevalence": 28,
+            "unit": "percent",
+            "context": "Of microdosers"
+          }
+        ],
+        "typicalSchedule": "1 day on, 2 days off",
+        "harmReductionPractices": [
+          "Avoiding alcohol on dosing days",
+          "Avoiding caffeine on dosing days",
+          "Dose adjustment based on response",
+          "Setting predetermined dose limits"
+        ],
+        "effectiveness": "moderate",
+        "evidenceQuality": "limited",
+        "implementationSettings": ["personal", "therapeutic"],
+        "citations": [
+          "bornemann_2020",
+          "lea_2020",
+          "anderson_2019",
+          "rosenbaum_2020",
+          "piercey_2024"
+        ]
+      },
+      {
+        "id": "hrp_substance_testing_001",
+        "name": "Substance Testing and Verification",
+        "category": "dose_preparation",
+        "subcategory": "substance_prep",
+        "description": "Testing substances to verify composition and identify adulterants",
+        "rationale": "Prevent accidental ingestion of dangerous substances",
+        "methods": [
+          {
+            "method": "reagent_test_kits",
+            "specific": "Ehrlich's reagent",
+            "affordability": "affordable",
+            "capabilities": [
+              "Confirm presence of intended drug",
+              "Rule out harmful adulterants"
+            ],
+            "limitations": [
+              "Cannot determine exact quantity",
+              "Cannot predict individual response"
+            ]
+          },
+          {
+            "method": "test_dose",
+            "description": "Small test dose to assess purity and potency",
+            "prevalence": {
+              "firstTimeLSD": {
+                "value": 31.3,
+                "unit": "percent",
+                "context": "Reported taking test dose",
+                "gap": "68.7% did not - improvement opportunity"
+              }
+            }
+          },
+          {
+            "method": "drug_checking_services",
+            "description": "Professional laboratory testing",
+            "availability": "Limited but expanding",
+            "capabilities": [
+              "Identify specific compounds",
+              "Quantify concentrations",
+              "Detect adulterants"
+            ]
+          }
+        ],
+        "trustedSources": {
+          "importance": "Reduces adulteration risk",
+          "considerations": [
+            "Source reputation",
+            "Consistency of supply",
+            "Community feedback"
+          ]
+        },
+        "mitigatesRisks": [
+          "general_risks.rf_adulteration_nbome_001",
+          "general_risks.rf_adulteration_dox_001",
+          "general_risks.rf_adulteration_fentanyl_001",
+          "general_risks.rf_purity_variability_001",
+          "general_risks.rf_lack_testing_001"
+        ],
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["personal", "harm_reduction_services", "events"],
+        "citations": [
+          "palmer_2022",
+          "miller_2024",
+          "baxter_2024",
+          "lea_2020",
+          "lancelotta_2020"
+        ]
+      },
+      {
+        "id": "hrp_volumetric_dosing_001",
+        "name": "Volumetric Dosing for Precision",
+        "category": "dose_preparation",
+        "subcategory": "substance_prep",
+        "description": "Dissolving known quantity in specific volume of liquid for consistent doses",
+        "applicability": {
+          "substances": [
+            "substance_lsd.lsd_001",
+            "Powdered substances"
+          ]
+        },
+        "method": {
+          "process": [
+            "Dissolve known quantity in measured liquid",
+            "Calculate concentration",
+            "Measure precise volumes for doses",
+            "Store properly"
+          ],
+          "advantages": [
+            "Consistent dosing",
+            "Avoids cutting blotters (inconsistent)",
+            "Allows microdosing precision",
+            "Reduces waste"
+          ]
+        },
+        "contraindication": "Do not cut LSD blotters - uneven distribution",
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["personal", "therapeutic"],
+        "citations": ["miller_2024"]
+      }
+    ]
+  },
+
+  "supervisionAndFacilitation": {
+    "categoryId": "hr_supervision",
+    "description": "Professional support before, during, and after psychedelic experiences",
+    "mitigatesRisks": [
+      "general_risks.rf_inadequate_training_001",
+      "general_risks.rf_weak_alliance_001",
+      "general_risks.rf_unqualified_facilitators_001",
+      "general_risks.ae_acute_anxiety_001",
+      "general_risks.ae_panic_001"
+    ],
+    "practices": [
+      {
+        "id": "hrp_continuous_monitoring_001",
+        "name": "Continuous Session Monitoring",
+        "category": "supervision",
+        "subcategory": "during_session",
+        "description": "Ongoing observation and support throughout psychedelic experience",
+        "components": [
+          {
+            "component": "physical_safety",
+            "measures": [
+              "Regular visual checks",
+              "Proximity to participant",
+              "Physical space safety",
+              "Vital signs monitoring if indicated"
+            ]
+          },
+          {
+            "component": "psychological_support",
+            "measures": [
+              "Regular verbal contact",
+              "Emotional availability",
+              "Non-intrusive presence",
+              "Readiness to intervene"
+            ]
+          },
+          {
+            "component": "continuous_presence",
+            "requirements": [
+              "Facilitator always accessible",
+              "No extended absences",
+              "Clear communication protocols",
+              "Emergency response readiness"
+            ]
+          }
+        ],
+        "adverseEventReduction": {
+          "finding": "Proper supervision reduces adverse outcomes",
+          "historicalData": {
+            "prolongedReactions": {
+              "rate": 1.8,
+              "per": 1000,
+              "unit": "patients"
+            },
+            "suicideAttempts": {
+              "rate": 1.2,
+              "per": 1000,
+              "unit": "patients"
+            },
+            "completedSuicides": {
+              "rate": 0.4,
+              "per": 1000,
+              "unit": "patients"
+            },
+            "note": "Causal link unclear for portion - proper support could reduce further"
+          }
+        },
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "research", "therapeutic", "retreat"],
+        "citations": [
+          "husain_2022",
+          "garcia-romeu_2018",
+          "wilson-poe_2024",
+          "henningfield_2023",
+          "johnson_2008",
+          "carbonaro_2016"
+        ]
+      },
+      {
+        "id": "hrp_facilitator_training_001",
+        "name": "Standardized Facilitator Training",
+        "category": "supervision",
+        "subcategory": "competence",
+        "description": "Comprehensive training for all facilitators in ethical practices and support techniques",
+        "trainingComponents": [
+          {
+            "component": "ethical_practices",
+            "topics": [
+              "Power dynamics awareness",
+              "Boundary maintenance",
+              "Consent processes",
+              "Cultural sensitivity",
+              "Conflicts of interest"
+            ]
+          },
+          {
+            "component": "risk_management",
+            "topics": [
+              "Screening procedures",
+              "Contraindication recognition",
+              "Adverse event identification",
+              "Crisis intervention",
+              "Emergency protocols"
+            ]
+          },
+          {
+            "component": "support_techniques",
+            "topics": [
+              "Non-directive support",
+              "Reassurance methods",
+              "Grounding techniques",
+              "Breathing guidance",
+              "Environmental adjustment"
+            ]
+          },
+          {
+            "component": "psychedelic_knowledge",
+            "topics": [
+              "Pharmacology basics",
+              "Subjective effects",
+              "Dose-response relationships",
+              "Drug interactions",
+              "Medical/psychological markers"
+            ]
+          }
+        ],
+        "ongoingSupervision": {
+          "requirement": "Essential for all facilitators",
+          "frequency": "Regular (monthly minimum recommended)",
+          "provided_by": "Experienced mental health professionals",
+          "benefits": [
+            "Prevent ethical lapses",
+            "Improve practice quality",
+            "Address countertransference",
+            "Peer review"
+          ]
+        },
+        "facilitatorQualities": [
+          {
+            "quality": "empathy_rapport",
+            "importance": "critical",
+            "outcome": "Creates trust and enhances alliance"
+          },
+          {
+            "quality": "experiential_knowledge",
+            "note": "Personal psychedelic experience may enhance connection",
+            "caveat": "Not required but potentially beneficial"
+          },
+          {
+            "quality": "self_care",
+            "benefits": ["Improved reliability", "Enhanced empathy"],
+            "methods": ["Personal therapy", "Supervision", "Peer support"]
+          }
+        ],
+        "mitigatesRisks": [
+          "general_risks.rf_inadequate_training_001",
+          "general_risks.rf_therapist_lack_awareness_001",
+          "general_risks.bv_sexual_001",
+          "general_risks.bv_emotional_001",
+          "general_risks.bv_epistemic_001"
+        ],
+        "effectiveness": "high",
+        "evidenceQuality": "moderate_to_strong",
+        "implementationSettings": ["clinical", "research", "therapeutic", "retreat"],
+        "citations": [
+          "cheung_nd",
+          "aday_2024",
+          "developing_guidelines_nd",
+          "rosa_2022",
+          "wilson-poe_2024",
+          "zeller_nd"
+        ]
+      },
+      {
+        "id": "hrp_nondirective_support_001",
+        "name": "Non-Directive Support Approach",
+        "category": "supervision",
+        "subcategory": "technique",
+        "description": "Allowing participants to explore experiences without interference or interpretation",
+        "principles": [
+          "Trust the process",
+          "Avoid imposing meaning",
+          "Support without directing",
+          "Respect individual interpretation",
+          "Non-hierarchical relationship"
+        ],
+        "techniques": [
+          {
+            "technique": "active_listening",
+            "description": "Attentive, empathetic listening without judgment"
+          },
+          {
+            "technique": "minimal_verbal_intervention",
+            "description": "Speak only when necessary to provide reassurance or safety"
+          },
+          {
+            "technique": "mirroring",
+            "description": "Reflect participant's statements without interpretation"
+          },
+          {
+            "technique": "open_ended_questions",
+            "description": "When questions needed, keep them open and exploratory"
+          }
+        ],
+        "whatToAvoid": [
+          "Interpreting experiences for participant",
+          "Imposing facilitator's belief system",
+          "Over-emphasizing specific outcomes",
+          "Leading questions",
+          "Excessive talking"
+        ],
+        "mitigatesRisks": [
+          "general_risks.bv_epistemic_001",
+          "general_risks.rf_spiritual_imposition_001"
+        ],
+        "effectiveness": "high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["clinical", "therapeutic", "retreat"],
+        "citations": ["henningfield_2023", "zeller_nd"]
+      },
+      {
+        "id": "hrp_integration_support_001",
+        "name": "Post-Session Integration Support",
+        "category": "supervision",
+        "subcategory": "integration",
+        "description": "Structured follow-up to process experience and translate insights into behavior change",
+        "structure": {
+          "initial_session": {
+            "timing": "1-2 days post-session",
+            "duration": "60-90 minutes",
+            "purpose": "Process immediate experience and ensure safety"
+          },
+          "ongoing_sessions": {
+            "frequency": "Weekly to bi-weekly",
+            "duration": "1-3 months",
+            "purpose": "Translate insights into sustainable behavior change"
+          }
+        },
+        "activities": [
+          "Experience processing",
+          "Meaning-making",
+          "Behavioral goal setting",
+          "Challenge addressing",
+          "Progress monitoring"
+        ],
+        "relatedPractices": [
+          "hrp_integration_therapy_001",
+          "hrp_integration_contemplative_001",
+          "hrp_integration_creative_001"
+        ],
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "therapeutic"],
+        "citations": ["garcia-romeu_2018", "aday_2024", "pilecki_2021"]
+      }
+    ]
+  },
+
+  "preparation": {
+    "categoryId": "hr_preparation",
+    "description": "Psychological and practical preparation before psychedelic experiences",
+    "mitigatesRisks": [
+      "general_risks.rf_lack_preparation_001",
+      "general_risks.rf_unclear_intentions_001",
+      "general_risks.rf_inadequate_education_001",
+      "general_risks.rf_insufficient_psych_prep_001",
+      "general_risks.ae_acute_anxiety_001"
+    ],
+    "relatedTo": "general_risks.preparationPractices",
+    "practices": [
+      {
+        "id": "hrp_psychoeducation_comprehensive_001",
+        "name": "Comprehensive Psychoeducation",
+        "category": "preparation",
+        "subcategory": "education",
+        "description": "Providing detailed information about substance effects, risks, and benefits",
+        "objectives": [
+          "Manage expectations",
+          "Reduce anxiety and fear",
+          "Enhance safety awareness",
+          "Prepare for challenges",
+          "Optimize mindset"
+        ],
+        "content": [
+          {
+            "topic": "substance_effects",
+            "subtopics": [
+              "Pharmacology basics",
+              "Typical subjective effects",
+              "Timeline (onset, peak, duration)",
+              "Dose-response relationship",
+              "Individual variability"
+            ]
+          },
+          {
+            "topic": "potential_experiences",
+            "subtopics": [
+              "Range of possible experiences",
+              "Mystical experiences",
+              "Challenging experiences",
+              "Emotional intensity",
+              "Perceptual changes",
+              "Somatic sensations"
+            ]
+          },
+          {
+            "topic": "risks_benefits",
+            "subtopics": [
+              "Psychological risks",
+              "Physical risks",
+              "Potential therapeutic benefits",
+              "Short-term vs long-term effects",
+              "Contraindications"
+            ]
+          },
+          {
+            "topic": "harm_reduction",
+            "subtopics": [
+              "Set and setting importance",
+              "Coping strategies",
+              "When to seek help",
+              "Dangerous combinations",
+              "Integration importance"
+            ]
+          },
+          {
+            "topic": "realistic_expectations",
+            "emphasis": "Not all experiences are immediately therapeutic",
+            "challenges_normalization": "Difficult experiences can occur"
+          }
+        ],
+        "deliveryFormats": [
+          "Verbal discussion in preparation sessions",
+          "Written materials to review",
+          "Videos or multimedia",
+          "Q&A sessions"
+        ],
+        "outcomes": {
+          "expectation_management": "Reduces disappointment and distress",
+          "anxiety_reduction": "Lower baseline anxiety before session",
+          "better_preparation": "Participants feel more ready",
+          "improved_outcomes": "Associated with fewer adverse events"
+        },
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "research", "therapeutic", "retreat"],
+        "citations": [
+          "garcia-romeu_2018",
+          "rossi_2022",
+          "carhart-harris_2018",
+          "mcalpine_2024",
+          "pilecki_2021",
+          "white_2024",
+          "gorman_2021",
+          "neitzke-spruill_2024",
+          "zeller_nd",
+          "baxter_2024"
+        ]
+      },
+      {
+        "id": "hrp_intention_setting_structured_001",
+        "name": "Structured Intention Setting",
+        "category": "preparation",
+        "subcategory": "psychological",
+        "description": "Process of defining clear, meaningful intentions for the experience",
+        "objectives": [
+          "Provide direction and focus",
+          "Enhance meaning-making",
+          "Improve outcomes",
+          "Facilitate integration",
+          "Reduce disorientation"
+        ],
+        "process": [
+          {
+            "step": "reflection",
+            "description": "Reflect on personal motivations for using psychedelic"
+          },
+          {
+            "step": "exploration",
+            "description": "Explore what participant hopes to gain or understand"
+          },
+          {
+            "step": "articulation",
+            "description": "Clearly articulate specific intentions"
+          },
+          {
+            "step": "discussion",
+            "description": "Discuss intentions with facilitator"
+          },
+          {
+            "step": "refinement",
+            "description": "Refine and clarify intentions"
+          },
+          {
+            "step": "documentation",
+            "description": "Write down intentions to revisit later"
+          }
+        ],
+        "exampleIntentions": [
+          "Healing from specific trauma",
+          "Understanding life purpose",
+          "Connecting with spirituality",
+          "Addressing depression symptoms",
+          "Personal growth and insight",
+          "Relationship healing"
+        ],
+        "benefits": [
+          "Provides structure for session",
+          "Helps navigate challenging moments",
+          "Facilitates post-session integration",
+          "Associated with better outcomes"
+        ],
+        "mitigatesRisks": [
+          "general_risks.rf_unclear_intentions_001",
+          "general_risks.ae_confusion_001"
+        ],
+        "relatedTo": "general_risks.prep_intention_setting_001",
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["clinical", "therapeutic", "retreat", "personal"],
+        "citations": [
+          "campo_2024",
+          "haijen_2018",
+          "garel_2023",
+          "carhart-harris_2018",
+          "gorman_2021",
+          "palmer_2022",
+          "davis_nd",
+          "pilecki_2021"
+        ]
+      },
+      {
+        "id": "hrp_coping_skills_training_001",
+        "name": "Coping Skills Training",
+        "category": "preparation",
+        "subcategory": "skills",
+        "description": "Teaching specific techniques to navigate difficult moments during experience",
+        "skills": [
+          {
+            "skill": "breathing_techniques",
+            "description": "Deep breathing exercises for anxiety management",
+            "methods": [
+              "Box breathing (4-4-4-4)",
+              "Deep belly breathing",
+              "4-7-8 breathing"
+            ],
+            "practice": "Must be practiced before session"
+          },
+          {
+            "skill": "grounding_techniques",
+            "description": "Methods to stay connected to present moment",
+            "methods": [
+              "5-4-3-2-1 sensory exercise",
+              "Body scanning",
+              "Focusing on physical sensations",
+              "Noticing sounds"
+            ]
+          },
+          {
+            "skill": "surrender_acceptance",
+            "description": "Letting go and accepting the experience",
+            "importance": "Strong predictor of positive outcomes",
+            "practice": "Cultivating acceptance mindset before session"
+          },
+          {
+            "skill": "mindfulness",
+            "description": "Non-judgmental awareness of present moment",
+            "benefit": "Helps navigate difficult emotions without resistance"
+          },
+          {
+            "skill": "self_talk",
+            "description": "Positive self-statements for reassurance",
+            "examples": [
+              "This is temporary",
+              "I am safe",
+              "This is the drug, not reality",
+              "I can handle this"
+            ]
+          }
+        ],
+        "trainingApproach": {
+          "method": "Teach and practice in preparation sessions",
+          "repetition": "Multiple practice sessions",
+          "reinforcement": "Review immediately before dosing session",
+          "availability": "Skills reviewed during session if needed"
+        },
+        "outcomes": {
+          "reduced_panic": "Lower rates of panic reactions",
+          "better_navigation": "Participants better handle challenges",
+          "less_intervention": "Reduced need for pharmacological intervention"
+        },
+        "relatedTo": "general_risks.prep_coping_skills_001",
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["clinical", "therapeutic", "retreat"],
+        "citations": [
+          "robinson_2024",
+          "kirlic_2025",
+          "davis_nd",
+          "gorman_2021",
+          "mcalpine_2024"
+        ]
+      },
+      {
+        "id": "hrp_mood_optimization_001",
+        "name": "Pre-Session Mood Optimization",
+        "category": "preparation",
+        "subcategory": "psychological",
+        "description": "Ensuring positive psychological state before session",
+        "rationale": "Lower average mood prior to session associated with negative experiences",
+        "components": [
+          {
+            "component": "mood_assessment",
+            "description": "Evaluate current emotional state before proceeding",
+            "tools": ["Mood questionnaires", "Clinical interview"]
+          },
+          {
+            "component": "stress_management",
+            "activities": [
+              "Address major stressors before session",
+              "Relaxation practices",
+              "Adequate sleep",
+              "Physical exercise"
+            ]
+          },
+          {
+            "component": "timing_optimization",
+            "consideration": "Schedule session when participant is in relatively positive state",
+            "flexibility": "Postpone if mood is significantly low or stressful period"
+          },
+          {
+            "component": "support_systems",
+            "ensure": "Social support is available and stable"
+          }
+        ],
+        "contraindications": [
+          "Acute crisis or major life stress",
+          "Severe depression or suicidality",
+          "Acute grief",
+          "Major relationship conflict"
+        ],
+        "effectiveness": "moderate",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["clinical", "therapeutic", "retreat"],
+        "citations": ["baxter_2024", "davis_nd", "russ_2019"]
+      }
+    ]
+  },
+
+  "integration": {
+    "categoryId": "hr_integration",
+    "description": "Post-session practices to process, make meaning, and apply insights",
+    "mitigatesRisks": [
+      "general_risks.rf_lack_integration_001",
+      "general_risks.rf_lack_support_guidance_001",
+      "general_risks.rf_dismissing_challenging_001",
+      "general_risks.ae_negative_psychological_persisting_001",
+      "general_risks.ae_functional_impairment_001"
+    ],
+    "relatedTo": "general_risks.integrationPractices",
+    "practices": [
+      {
+        "id": "hrp_integration_therapy_001",
+        "name": "Professional Integration Therapy",
+        "category": "integration",
+        "subcategory": "professional_support",
+        "description": "Structured therapy sessions to process experience and translate insights",
+        "structure": {
+          "initial": {
+            "timing": "1-2 days post-session",
+            "purpose": "Process immediate experience",
+            "duration": "60-90 minutes",
+            "focus": [
+              "Overall experience review",
+              "Emotional state assessment",
+              "Significant moments discussion",
+              "Safety check"
+            ]
+          },
+          "ongoing": {
+            "frequency": "Weekly to bi-weekly",
+            "duration": "1-3 months",
+            "purpose": "Translate insights into behavior change",
+            "focus": [
+              "Meaning-making",
+              "Goal setting",
+              "Behavioral implementation",
+              "Challenge addressing",
+              "Progress monitoring"
+            ]
+          }
+        },
+        "modalities": [
+          "Individual therapy",
+          "Group therapy",
+          "Couples therapy (if relevant)",
+          "Family therapy (if relevant)"
+        ],
+        "therapeuticApproaches": [
+          "Psychodynamic",
+          "Cognitive-behavioral",
+          "Acceptance and Commitment Therapy",
+          "Mindfulness-based",
+          "Somatic",
+          "Transpersonal"
+        ],
+        "outcomes": {
+          "improved_integration": "Better incorporation of insights",
+          "behavioral_change": "Sustained positive changes",
+          "reduced_distress": "Lower rates of extended difficulties",
+          "enhanced_benefits": "Amplified therapeutic effects"
+        },
+        "relatedTo": "general_risks.int_therapy_001",
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "therapeutic"],
+        "citations": [
+          "garcia-romeu_2018",
+          "bathje_2022",
+          "evans_2023",
+          "walther_2024",
+          "gorman_2021",
+          "robinson_2024"
+        ]
+      },
+      {
+        "id": "hrp_integration_contemplative_001",
+        "name": "Contemplative Integration Practices",
+        "category": "integration",
+        "subcategory": "self_practice",
+        "description": "Meditation, mindfulness, and contemplative practices for ongoing integration",
+        "practices": [
+          {
+            "practice": "meditation",
+            "frequency": "Daily recommended",
+            "duration": "10-30 minutes",
+            "benefits": [
+              "Sustained awareness of insights",
+              "Emotional regulation",
+              "Integration of realizations",
+              "Continued connection to experience"
+            ]
+          },
+          {
+            "practice": "mindfulness",
+            "frequency": "Daily informal practice",
+            "application": "Throughout daily activities",
+            "benefits": [
+              "Present-moment awareness",
+              "Reduced reactivity",
+              "Application of insights"
+            ]
+          },
+          {
+            "practice": "prayer",
+            "context": "For spiritually-oriented individuals",
+            "benefits": [
+              "Spiritual connection",
+              "Meaning-making",
+              "Community connection"
+            ]
+          }
+        ],
+        "relatedTo": "general_risks.int_contemplative_001",
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["personal", "therapeutic", "community"],
+        "citations": ["bathje_2022", "piercey_2024"]
+      },
+      {
+        "id": "hrp_integration_creative_001",
+        "name": "Creative Expression for Integration",
+        "category": "integration",
+        "subcategory": "self_practice",
+        "description": "Using creative outlets to process and express psychedelic experiences",
+        "modalities": [
+          {
+            "modality": "journaling",
+            "frequency": "Daily recommended initially",
+            "benefits": [
+              "Process experience",
+              "Track insights over time",
+              "Narrative creation",
+              "Pattern recognition"
+            ],
+            "commonality": "Very common practice"
+          },
+          {
+            "modality": "art",
+            "types": ["Drawing", "Painting", "Sculpture", "Collage"],
+            "benefits": [
+              "Non-verbal processing",
+              "Accessing unconscious material",
+              "Visual representation of ineffable experiences"
+            ]
+          },
+          {
+            "modality": "music",
+            "types": ["Playing", "Composing", "Intentional listening"],
+            "benefits": [
+              "Emotional processing",
+              "Accessing experience",
+              "Expression of feelings"
+            ]
+          },
+          {
+            "modality": "writing",
+            "types": ["Poetry", "Prose", "Letters to self"],
+            "benefits": [
+              "Meaning-making",
+              "Articulation of ineffable experiences",
+              "Narrative construction"
+            ]
+          }
+        ],
+        "relatedTo": "general_risks.int_creative_001",
+        "effectiveness": "moderate",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["personal", "therapeutic", "community"],
+        "citations": [
+          "bathje_2022",
+          "cavarra_2022",
+          "gezon_2024",
+          "robinson_2024",
+          "piercey_2024"
+        ]
+      },
+      {
+        "id": "hrp_integration_somatic_001",
+        "name": "Somatic Integration Practices",
+        "category": "integration",
+        "subcategory": "mind_body",
+        "description": "Body-based practices for processing and integrating experiences",
+        "practices": [
+          {
+            "practice": "yoga",
+            "frequency": "Regular practice (2-7x per week)",
+            "benefits": [
+              "Embodiment",
+              "Trauma processing",
+              "Grounding",
+              "Mind-body integration"
+            ],
+            "specialRelevance": "Particularly important for ayahuasca integration"
+          },
+          {
+            "practice": "breathwork",
+            "types": ["Holotropic", "Pranayama", "Box breathing"],
+            "benefits": [
+              "Continued access to non-ordinary states",
+              "Emotional release",
+              "Self-regulation"
+            ]
+          },
+          {
+            "practice": "qi_gong",
+            "benefits": [
+              "Energy cultivation",
+              "Mind-body integration",
+              "Grounding"
+            ]
+          },
+          {
+            "practice": "somatic_psychotherapy",
+            "benefits": [
+              "Trauma processing",
+              "Body-based integration",
+              "Release of stored emotions"
+            ]
+          }
+        ],
+        "relatedTo": "general_risks.int_somatic_001",
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["personal", "therapeutic"],
+        "specialConsiderations": {
+          "ayahuasca": "Particularly important for ayahuasca integration"
+        },
+        "citations": ["bathje_2022", "cowley-court_2023"]
+      },
+      {
+        "id": "hrp_integration_peer_support_001",
+        "name": "Peer Support and Integration Circles",
+        "category": "integration",
+        "subcategory": "community",
+        "description": "Group-based peer support for integration",
+        "formats": [
+          {
+            "format": "integration_circles",
+            "structure": "Regular meetings with facilitation",
+            "frequency": "Weekly to monthly",
+            "benefits": [
+              "Shared experience",
+              "Reduced isolation",
+              "Community support",
+              "Normalize challenges",
+              "Learn from others"
+            ]
+          },
+          {
+            "format": "online_forums",
+            "benefits": [
+              "Accessible",
+              "Anonymous option",
+              "Ongoing support",
+              "24/7 availability"
+            ]
+          },
+          {
+            "format": "peer_mentoring",
+            "structure": "One-on-one with experienced integrator",
+            "benefits": [
+              "Personalized support",
+              "Practical guidance",
+              "Role modeling"
+            ]
+          }
+        ],
+        "risks": [
+          "Exposure to misinformation",
+          "Cultic dynamics",
+          "Lack of clinical oversight"
+        ],
+        "bestPractices": [
+          "Trained facilitators",
+          "Clear community guidelines",
+          "Professional consultation available",
+          "Moderation of content",
+          "Referral pathways to professionals"
+        ],
+        "relatedTo": "general_risks.int_peer_support_001",
+        "relatedPractice": "hrp_peer_support_networks_001",
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["community", "online"],
+        "citations": [
+          "cheung_nd",
+          "robinson_2024",
+          "gezon_2024",
+          "evans_2023"
+        ]
+      },
+      {
+        "id": "hrp_integration_nature_001",
+        "name": "Nature Connection for Integration",
+        "category": "integration",
+        "subcategory": "environmental",
+        "description": "Using time in nature to process and integrate experiences",
+        "activities": [
+          "Forest bathing (shinrin-yoku)",
+          "Hiking and walking",
+          "Gardening",
+          "Simply spending time outdoors",
+          "Nature meditation"
+        ],
+        "benefits": [
+          "Grounding",
+          "Perspective",
+          "Connection to larger whole",
+          "Stress reduction",
+          "Sense of awe and wonder"
+        ],
+        "commonality": "Widely reported as beneficial",
+        "relatedTo": "general_risks.int_nature_001",
+        "effectiveness": "moderate",
+        "evidenceQuality": "limited",
+        "implementationSettings": ["personal"],
+        "citations": ["piercey_2024", "robinson_2024"]
+      }
+    ]
+  },
+
+  "crisisIntervention": {
+    "categoryId": "hr_crisis",
+    "description": "Protocols for managing acute adverse events during sessions",
+    "mitigatesAdverseEvents": [
+      "general_risks.ae_acute_anxiety_001",
+      "general_risks.ae_panic_001",
+      "general_risks.ae_dysphoria_001",
+      "general_risks.ae_paranoia_001",
+      "general_risks.ae_confusion_001"
+    ],
+    "relatedTo": "general_risks.emergencyResponseProtocols",
+    "tieredApproach": {
+      "tier1": "Non-pharmacological interventions (first line)",
+      "tier2": "Pharmacological interventions (if tier 1 insufficient)",
+      "tier3": "Emergency medical services (if tier 2 insufficient or medical emergency)"
+    },
+    "practices": [
+      {
+        "id": "hrp_crisis_nonpharm_001",
+        "name": "Non-Pharmacological Crisis Management",
+        "category": "crisis_intervention",
+        "subcategory": "first_line",
+        "description": "Psychological and environmental interventions for managing distress",
+        "priority": "first_line",
+        "successRate": "Manages most cases of acute distress",
+        "interventions": [
+          {
+            "intervention": "continuous_monitoring_reassurance",
+            "components": [
+              "Maintain continuous observation",
+              "Regular verbal contact",
+              "Remind experience is temporary",
+              "Remind effects are drug-related",
+              "Remind they are safe",
+              "Empathetic listening"
+            ],
+            "effectiveness": "Often sufficient alone"
+          },
+          {
+            "intervention": "calm_presence",
+            "description": "Facilitator maintains calm demeanor",
+            "rationale": "Reduces anxiety through modeling",
+            "approach": "Non-judgemental, accepting, patient"
+          },
+          {
+            "intervention": "breathing_guidance",
+            "technique": "Guide slow, deep breathing",
+            "instructions": "Simple, clear directions",
+            "examples": [
+              "Breathe in for 4, hold for 4, out for 4",
+              "Deep belly breathing",
+              "Focus on breath"
+            ]
+          },
+          {
+            "intervention": "grounding_techniques",
+            "purpose": "Help focus on present moment",
+            "methods": [
+              "Focus on physical sensations",
+              "Feel feet on ground",
+              "Notice sounds in environment",
+              "5-4-3-2-1 sensory exercise"
+            ]
+          },
+          {
+            "intervention": "environmental_adjustment",
+            "actions": [
+              "Move to quiet area",
+              "Dim lights",
+              "Reduce noise",
+              "Adjust temperature",
+              "Remove overstimulating elements",
+              "Ensure comfortable position"
+            ]
+          },
+          {
+            "intervention": "gentle_physical_contact",
+            "requirements": ["Participant consent", "Cultural appropriateness"],
+            "examples": ["Hand on shoulder", "Hand holding if welcomed"],
+            "caveat": "Only if appropriate and welcomed"
+          },
+          {
+            "intervention": "avoid_arguing",
+            "principle": "Do not challenge altered perceptions",
+            "rationale": "Can escalate distress",
+            "approach": "Accept their experience as valid for them"
+          }
+        ],
+        "relatedTo": "general_risks.erp_nonpharm_001",
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "research", "therapeutic", "retreat", "peer_support"],
+        "johnHopkinsExample": {
+          "sessions": "380+",
+          "volunteers": "250",
+          "outcome": "Managed all acute distress with reassurance alone",
+          "seriousAERate": "Very low rate of enduring symptoms"
+        },
+        "citations": [
+          "johnson_2008",
+          "garcia-romeu_2018",
+          "davis_2022",
+          "barnett_2021",
+          "psychedelic_drug_crises_2024",
+          "ching_2024",
+          "mcalpine_2024",
+          "carbonaro_2016"
+        ]
+      },
+      {
+        "id": "hrp_crisis_pharm_001",
+        "name": "Pharmacological Crisis Management",
+        "category": "crisis_intervention",
+        "subcategory": "second_line",
+        "description": "Medication interventions when non-pharmacological insufficient",
+        "priority": "second_line",
+        "whenToUse": "If non-pharmacological approaches insufficient",
+        "administrationRequirement": "By trained medical personnel only",
+        "medications": [
+          {
+            "medication": "benzodiazepines",
+            "specific": "diazepam (preferred)",
+            "status": "First-line pharmacological",
+            "dosing": {
+              "typical": {"value": 10, "unit": "mg", "route": "oral"},
+              "emergency": {"range": "15-30", "unit": "mg", "context": "May be necessary"}
+            },
+            "mechanism": "Anxiolytic, reduces agitation",
+            "advantages": [
+              "Rapid onset",
+              "Shorter duration than alternatives",
+              "Effective for anxiety and panic",
+              "Well-tolerated"
+            ],
+            "availability": "Should be readily available"
+          },
+          {
+            "medication": "antipsychotics",
+            "examples": ["risperidone", "olanzapine"],
+            "avoid": ["haloperidol"],
+            "status": "Last resort",
+            "whenToUse": "Severe psychosis unresponsive to benzodiazepines",
+            "cautions": [
+              "Use with extreme caution",
+              "May cause unpleasant/intense effects",
+              "Haloperidol may exacerbate psychosis-like symptoms"
+            ]
+          },
+          {
+            "medication": "5-HT2A_antagonists",
+            "example": "ketanserin",
+            "status": "Experimental",
+            "evidence": "Shows promise in attenuating psilocybin effects",
+            "availability": "Not approved in USA",
+            "note": "Research use only currently"
+          }
+        ],
+        "documentation": "All interventions must be documented",
+        "relatedTo": "general_risks.erp_pharm_001",
+        "effectiveness": "high",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["clinical", "research"],
+        "citations": [
+          "johnson_2008",
+          "barnett_2021",
+          "hughes_2016"
+        ]
+      },
+      {
+        "id": "hrp_crisis_ems_001",
+        "name": "Emergency Medical Services Protocols",
+        "category": "crisis_intervention",
+        "subcategory": "escalation",
+        "description": "Criteria and procedures for contacting emergency medical services",
+        "priority": "escalation",
+        "whenToCall": [
+          "Condition does not improve with interventions",
+          "Severe physiological symptoms (chest pain, seizure, hyperthermia)",
+          "Suspected overdose or toxic reaction",
+          "Suicidal ideation or behavior",
+          "Violent or dangerous behavior toward self/others",
+          "Medical emergency (cardiovascular, respiratory)",
+          "Suspected serotonin syndrome"
+        ],
+        "preparedness": [
+          "Clear protocol for contacting EMS",
+          "Emergency numbers readily available (911 in US)",
+          "Address and location information prepared",
+          "Medical history available if possible",
+          "Substance information ready to provide"
+        ],
+        "emsPrevalenceData": {
+          "lsd": {"value": 1, "unit": "percent", "year": 2020},
+          "mdma": {"value": 1, "unit": "percent", "year": 2020},
+          "ketamine": {"value": 0.6, "unit": "percent", "year": 2020},
+          "psilocybin": {"value": 0.6, "unit": "percent", "year": 2020}
+        },
+        "relatedTo": "general_risks.erp_ems_001",
+        "effectiveness": "critical_when_needed",
+        "evidenceQuality": "strong",
+        "implementationSettings": ["all"],
+        "citations": ["johnson_2008", "baxter_2024", "canady_2023"]
+      },
+      {
+        "id": "hrp_crisis_helpline_001",
+        "name": "Psychedelic Crisis Helplines",
+        "category": "crisis_intervention",
+        "subcategory": "peer_support",
+        "description": "Professional peer support via telephone for acute crises",
+        "examples": [
+          {
+            "organization": "Fireside Project",
+            "service": "Telephone helpline",
+            "availability": "Text and call support",
+            "staffing": "Trained peer supporters",
+            "effectiveness": {
+              "deescalation": {
+                "value": 65.9,
+                "unit": "percent",
+                "description": "Successfully de-escalated from psychological distress"
+              },
+              "preventedHarm": {
+                "possibleHarm": {"value": 29.3, "unit": "percent"},
+                "might911": {"value": 12.5, "unit": "percent"},
+                "mightER": {"value": 10.8, "unit": "percent"}
+              }
+            }
+          },
+          {
+            "organization": "Zendo Project",
+            "service": "On-site at festivals/events",
+            "model": "Peer support in safe space",
+            "effectiveness": "Reduces need for medical/emergency support"
+          }
+        ],
+        "impact": "Can prevent escalation and reduce emergency services burden",
+        "relatedTo": "general_risks.erp_helpline_001",
+        "relatedPractice": "hrp_peer_support_networks_001",
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["remote", "events"],
+        "citations": [
+          "pleet_2023",
+          "canady_2023",
+          "ruane_2015",
+          "cheung_nd",
+          "golden_2022",
+          "kopra_2025"
+        ]
+      }
+    ]
+  },
+
+  "publicEducation": {
+    "categoryId": "hr_education",
+    "description": "Community-level education to reduce risks and promote informed decision-making",
+    "mitigatesRisks": [
+      "general_risks.rf_lack_experience_001",
+      "general_risks.rf_lack_preparation_001",
+      "general_risks.rf_inadequate_education_001",
+      "general_risks.rf_unknown_dose_purity_001",
+      "general_risks.rf_polydrug_use_001"
+    ],
+    "practices": [
+      {
+        "id": "hrp_public_harm_reduction_001",
+        "name": "Public Harm Reduction Education",
+        "category": "public_education",
+        "subcategory": "community",
+        "description": "Community-level education on harm reduction practices",
+        "objectives": [
+          "Empower informed decisions",
+          "Encourage responsible use",
+          "Dispel myths and misinformation",
+          "Reduce population-level harms"
+        ],
+        "content": [
+          {
+            "topic": "harm_reduction_practices",
+            "strategies": [
+              "Starting with low doses",
+              "Avoiding substance mixing",
+              "Having trusted trip sitter",
+              "Testing substances for purity",
+              "Understanding drug interactions",
+              "Set and setting importance",
+              "When to seek help"
+            ]
+          },
+          {
+            "topic": "risks_and_benefits",
+            "emphasis": "Honest, balanced information",
+            "includes": [
+              "Psychological risks",
+              "Physical risks",
+              "Potential therapeutic benefits",
+              "Adverse effects",
+              "Individual variability"
+            ],
+            "approach": "Evidence-based, not fear-mongering"
+          },
+          {
+            "topic": "addressing_misconceptions",
+            "myths": [
+              "All psychedelics are equally safe",
+              "Natural means safe",
+              "Psychedelics have no risks",
+              "Bad trips only happen to weak people"
+            ],
+            "facts": [
+              "Classic psychedelics (psilocybin, LSD) have lower overdose risk than MDMA, ketamine",
+              "Natural substances still have risks",
+              "All psychedelics carry some risks",
+              "Challenging experiences can happen to anyone"
+            ]
+          },
+          {
+            "topic": "set_and_setting",
+            "emphasis": "Critical importance for outcomes",
+            "education": [
+              "Mindset preparation",
+              "Environmental factors",
+              "Social context",
+              "Safety considerations"
+            ]
+          },
+          {
+            "topic": "polydrug_dangers",
+            "emphasis": "Most psychedelic-related deaths involve multiple drugs",
+            "dangerous_combinations": [
+              "Psychedelics + MAOIs",
+              "Psychedelics + SSRIs",
+              "MDMA + alcohol",
+              "Multiple stimulants"
+            ]
+          },
+          {
+            "topic": "responsible_use_guidelines",
+            "guidelines": [
+              "Avoid use during pregnancy/breastfeeding",
+              "Don't drive under influence",
+              "Understand legal ramifications",
+              "Screen for contraindications",
+              "Plan for integration"
+            ]
+          }
+        ],
+        "targetedEducation": {
+          "vulnerable_populations": [
+            "Young people",
+            "Those with mental health conditions",
+            "People exploring self-treatment"
+          ],
+          "tailoredApproaches": "Distinct approaches for each group"
+        },
+        "deliveryMethods": [
+          "Online resources",
+          "Brochures and pamphlets",
+          "Community events",
+          "Educational programs",
+          "Social media campaigns",
+          "Peer networks"
+        ],
+        "accessibilityInclusion": {
+          "principles": [
+            "Easily accessible",
+            "Multiple formats",
+            "Multiple languages",
+            "Culturally sensitive",
+            "Varying literacy levels"
+          ]
+        },
+        "prevalenceData": {
+          "pastYearUse": {
+            "value": 8.5,
+            "unit": "million",
+            "population": "Americans over age 12",
+            "year": 2022
+          },
+          "newInitiates": {
+            "value": 1.4,
+            "unit": "million",
+            "year": 2022
+          },
+          "lifetimeUse": {
+            "value": 22,
+            "unit": "percent",
+            "population": "US adults"
+          },
+          "negativeOutcomes": {
+            "value": "9-13",
+            "unit": "percent",
+            "context": "Non-clinical users with functional impairment"
+          },
+          "requiredAssistance": {
+            "value": 2.6,
+            "unit": "percent",
+            "context": "Required medical/psychiatric/psychological help"
+          }
+        },
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["community", "online", "events"],
+        "citations": [
+          "edwards_2023",
+          "haden_2016",
+          "hartogsohn_2017",
+          "kopra_2022",
+          "palamar_2020",
+          "bremler_2023",
+          "henriquez-hernandez_2023",
+          "carhart-harris_2018",
+          "garel_2023",
+          "palmer_2022",
+          "baxter_2024",
+          "engel_2024",
+          "lea_2020",
+          "rajwani_2022",
+          "izmi_2024",
+          "kopra_2025",
+          "palitsky_nd",
+          "piercey_2024"
+        ]
+      },
+      {
+        "id": "hrp_first_responder_training_001",
+        "name": "First Responder Training Programs",
+        "category": "public_education",
+        "subcategory": "professional",
+        "description": "Training for emergency personnel on psychedelic crisis assessment",
+        "targetAudience": [
+          "Emergency medical technicians",
+          "Police officers",
+          "Emergency room staff",
+          "Crisis counselors"
+        ],
+        "trainingContent": [
+          "Psychedelic pharmacology basics",
+          "Crisis assessment",
+          "Intervention techniques",
+          "When to escalate care",
+          "De-escalation strategies",
+          "Avoiding iatrogenic harm"
+        ],
+        "example": {
+          "location": "Denver, Colorado",
+          "partnership": "MAPS (Multidisciplinary Association for Psychedelic Studies)",
+          "program": "Psychedelic crisis assessment and intervention training"
+        },
+        "effectiveness": "high",
+        "evidenceQuality": "limited",
+        "implementationSettings": ["municipal", "healthcare_systems"],
+        "citations": ["kopra_2025"]
+      },
+      {
+        "id": "hrp_drug_testing_services_001",
+        "name": "Community Drug Testing Services",
+        "category": "public_education",
+        "subcategory": "harm_reduction",
+        "description": "Accessible services for substance purity testing",
+        "services": [
+          "On-site testing at events",
+          "Mail-in testing services",
+          "Reagent kit distribution",
+          "Test result interpretation"
+        ],
+        "benefits": [
+          "Prevent adverse effects from adulterants",
+          "Identify dangerous substances",
+          "Educate about purity issues",
+          "Collect surveillance data on drug supply"
+        ],
+        "examples": [
+          "DanceSafe mobile testing",
+          "Energy Control mail-in testing",
+          "Festival testing stations"
+        ],
+        "effectiveness": "moderate_to_high",
+        "evidenceQuality": "moderate",
+        "implementationSettings": ["events", "community_centers", "online"],
+        "citations": ["kopra_2025"]
+      }
+    ]
+  },
+
+  "onlineCommunities": {
+    "categoryId": "hr_online",
+    "description": "Digital peer support and information sharing platforms",
+    "mitigatesRisks": [
+      "general_risks.rf_lack_experience_001",
+      "general_risks.rf_lack_preparation_001",
+      "general_risks.rf_lack_support_guidance_001"
+    ],
+    "practices": []
+  }
+}

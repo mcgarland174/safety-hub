@@ -1,0 +1,1594 @@
+{
+  "schemaVersion": "2.0",
+  "lastUpdated": "2025-01-09",
+  
+  "substances": [
+    {
+      "id": "ketamine_001",
+      "name": "Ketamine",
+      "aliases": ["Special K", "Vitamin K", "K", "kit-kat", "keets", "super acid", "super k", "jet"],
+      "classification": {
+        "primary": "dissociative_anesthetic",
+        "secondary": ["NMDA_receptor_antagonist", "non_classical_psychedelic"],
+        "mechanism": "noncompetitive_NMDA_receptor_antagonist",
+        "receptorAffinity": {
+          "NMDA": "high_antagonist",
+          "opioid": "moderate",
+          "monoamine_transporters": "moderate"
+        }
+      },
+      "developmentHistory": {
+        "era": "1960s",
+        "purpose": "Alternative to phencyclidine (PCP)",
+        "initialUse": "anesthetic"
+      },
+      "prevalenceData": {
+        "lifetimeUse": [
+          {
+            "value": 2.3,
+            "unit": "million",
+            "population": "US teens and adults",
+            "year": 2006,
+            "context": "lifetime use",
+            "citations": ["liu_2016"]
+          },
+          {
+            "value": 5.93,
+            "unit": "percent",
+            "population": "Global Drug Survey respondents",
+            "year": 2018,
+            "context": "lifetime use",
+            "citations": ["barrios_2024"]
+          }
+        ],
+        "emergencyRoomVisits": {
+          "rate": 0.6,
+          "unit": "percent",
+          "year": 2020,
+          "context": "Of all users seeking emergency care",
+          "citations": ["canady_2023"]
+        },
+        "adverseEvents": {
+          "rate": 0.1,
+          "unit": "percent",
+          "context": "Past-year users requiring EMT",
+          "total_events": 120,
+          "total_users": 4477,
+          "year": 2024,
+          "citations": ["barrios_2024"]
+        },
+        "dependence": {
+          "rate": 8.55,
+          "unit": "percent",
+          "context": "Past-year users meeting dependence criteria",
+          "year": 2024,
+          "citations": ["barrios_2024"]
+        }
+      },
+      "dosing": {
+        "anesthetic": {
+          "min": 2,
+          "max": 10,
+          "unit": "mg/kg",
+          "route": "IV or IM",
+          "purpose": "surgical anesthesia"
+        },
+        "subanesthetic_therapeutic": {
+          "typical": 0.5,
+          "unit": "mg/kg",
+          "route": "IV",
+          "duration": "40 minutes infusion",
+          "purpose": "depression treatment",
+          "citations": ["riva_posse_2018", "raja_2024"]
+        },
+        "recreational_low": {
+          "min": 0.1,
+          "max": 0.6,
+          "unit": "mg/kg",
+          "effects": ["mild relaxation", "dissociation", "euphoria", "time/space/body distortions"],
+          "state": "K-land"
+        },
+        "recreational_high": {
+          "description": "Higher doses leading to K-hole",
+          "effects": ["profound dissociation", "out-of-body experiences"],
+          "experience": "can be pleasurable or terrifying"
+        },
+        "clinical_range": {
+          "min": 0.5,
+          "max": 1.5,
+          "unit": "mg/kg",
+          "route": "IV or IM",
+          "citations": ["kelly_2023"]
+        },
+        "weightDependence": true,
+        "notes": "Effects highly dose-dependent; no standardized dosing protocols exist"
+      },
+      "pharmacokinetics": {
+        "absorption": {
+          "routes": ["oral", "intranasal", "sublingual", "intramuscular", "intravenous"],
+          "bioavailability": {
+            "oral": "moderate",
+            "intranasal": "moderate_to_high",
+            "IV": "100%"
+          }
+        },
+        "onset": {
+          "IV": "1-5 minutes",
+          "IM": "5-15 minutes",
+          "intranasal": "5-10 minutes",
+          "oral": "15-30 minutes"
+        },
+        "peak": {
+          "IV": "5-10 minutes",
+          "other_routes": "variable"
+        },
+        "duration": {
+          "short_acting": "1-2 hours primary effects",
+          "aftereffects": "several hours"
+        },
+        "metabolism": "primarily hepatic",
+        "elimination": "renal",
+        "formulation": "hydrochloride salt, often racemic mixture"
+      },
+      "subjectiveEffects": {
+        "dissociative": [
+          "bodily transcendence",
+          "detachment from self or world",
+          "altered proprioception",
+          "feelings of unity",
+          "consciousness expansion"
+        ],
+        "perceptual": [
+          "visual distortions",
+          "auditory changes",
+          "time distortion",
+          "space distortion",
+          "body perception changes"
+        ],
+        "emotional": [
+          "euphoria",
+          "empathy",
+          "transcendence",
+          "anxiety (in some)"
+        ],
+        "dose_dependent_states": {
+          "low_dose": "mild relaxation and dissociation",
+          "k_land": "moderate dissociative state",
+          "k_hole": "profound dissociation, potentially distressing or transcendent"
+        }
+      },
+      "toleranceDevelopment": {
+        "rate": "moderate_to_rapid",
+        "mechanism": "regular use leads to tolerance",
+        "consequence": "higher doses needed for effects",
+        "risk": "increased adverse effects and dependence potential",
+        "citations": ["ingrosso_2024", "bonnet_2015"]
+      },
+      "addictionPotential": "moderate_to_high",
+      "physiologicalDependence": {
+        "prevalence": "associated with prolonged and heavy use",
+        "symptoms": ["cravings", "psychological distress"],
+        "citations": ["barrios_2024", "baumeister_2015", "lacroix_2024"]
+      },
+      "psychologicalDependence": {
+        "prevalence": "moderate",
+        "reinforcingProperties": "present due to euphoric and dissociative effects",
+        "citations": ["liu_2016"]
+      }
+    }
+  ],
+
+  "riskFactors": [
+    {
+      "id": "rf_ketamine_dosage_001",
+      "name": "Lack of Standardized Dosing",
+      "category": "dosing",
+      "severity": "high",
+      "description": "Absence of standardized dosing protocols leads to inconsistencies",
+      "specificRisks": [
+        {
+          "risk": "unintentional_adverse_effects",
+          "severity": "moderate_to_high",
+          "mechanism": "difficulty defining low/medium/high doses"
+        },
+        {
+          "risk": "psychotic_symptoms",
+          "severity": "high",
+          "trigger": "doses exceeding therapeutic range",
+          "populations": "individuals with psychosis vulnerability"
+        },
+        {
+          "risk": "k_hole_distress",
+          "severity": "moderate_to_high",
+          "description": "profound dissociation intensely disturbing for some"
+        }
+      ],
+      "citations": ["cornfield_2024", "baumeister_2015"]
+    },
+    {
+      "id": "rf_ketamine_cognitive_001",
+      "name": "Cognitive Impairment Risk",
+      "category": "psychological",
+      "subcategory": "cognitive",
+      "severity": "moderate_to_high",
+      "timeframe": "chronic use",
+      "description": "Long-term cognitive deficits particularly in memory",
+      "evidence": {
+        "ketamine_dependent": "worse performance and slower task completion",
+        "domains_affected": ["memory", "verbal learning", "spatial memory"],
+        "preservation": ["attentional processes may be spared", "spatial memory may be spared"]
+      },
+      "functionalImpairment": true,
+      "citations": ["baumeister_2015", "gomez_escolar_2024", "liu_2016", "maxwell_2005"]
+    },
+    {
+      "id": "rf_ketamine_personality_001",
+      "name": "Pre-existing Personality Disorders",
+      "category": "psychiatric",
+      "severity": "high",
+      "description": "Individuals with personality disorders at elevated risk",
+      "specificRisks": {
+        "negativeResponse": {
+          "probability": 31,
+          "unit": "percent"
+        },
+        "adversePsychologicalResponse": {
+          "riskMultiplier": 4,
+          "description": "Greater than four-fold elevated risk"
+        }
+      },
+      "citations": ["collins_2024", "marrocu_nd"]
+    },
+    {
+      "id": "rf_ketamine_gi_001",
+      "name": "Gastrointestinal Complications",
+      "category": "physiological",
+      "subcategory": "gastrointestinal",
+      "severity": "moderate",
+      "description": "K-cramps and abdominal pain",
+      "prevalence": {
+        "emergency_admission": 21,
+        "unit": "percent",
+        "context": "patients admitted to ER for ketamine use"
+      },
+      "riskFactors": ["frequent use", "high doses"],
+      "citations": ["baumeister_2015"]
+    },
+    {
+      "id": "rf_ketamine_urinary_001",
+      "name": "Urinary Tract Damage",
+      "category": "physiological",
+      "subcategory": "urological",
+      "severity": "high",
+      "description": "Chronic use linked to ulcerative cystitis and bladder dysfunction",
+      "specificConditions": [
+        {
+          "condition": "ulcerative_cystitis",
+          "commonName": "ketamine bladder",
+          "symptoms": ["painful urination", "frequent urination", "hematuria"],
+          "longTermEffect": "bladder dysfunction"
+        },
+        {
+          "condition": "ketamine_associated_uropathy",
+          "effects": ["renal function decline"]
+        },
+        {
+          "condition": "other_urological",
+          "manifestations": ["haemorrhagic cystitis", "hydronephrosis", "contracted bladder", "ureteral stenosis"]
+        }
+      ],
+      "prevalence": {
+        "value": 25,
+        "operator": ">",
+        "unit": "percent",
+        "context": "regular users experiencing urinary symptoms"
+      },
+      "doseResponse": "severity linked to frequency and dosage",
+      "citations": ["baumeister_2015", "lacroix_2024", "ou_2020"]
+    },
+    {
+      "id": "rf_ketamine_polydrug_001",
+      "name": "Polysubstance Use with Ketamine",
+      "category": "behavioral",
+      "subcategory": "substance_use",
+      "severity": "high",
+      "description": "Ketamine frequently combined with other substances",
+      "commonCombinations": [
+        {
+          "substances": ["ketamine", "MDMA"],
+          "prevalence": "common"
+        },
+        {
+          "substances": ["ketamine", "cannabis"],
+          "prevalence": "common"
+        },
+        {
+          "substances": ["ketamine", "cocaine"],
+          "prevalence": "common",
+          "risk": "lethal effects increased"
+        },
+        {
+          "substances": ["ketamine", "methamphetamine"],
+          "risk": "lethal effects increased"
+        },
+        {
+          "substances": ["ketamine", "alcohol"],
+          "risk": "increased sedation and respiratory depression"
+        },
+        {
+          "substances": ["ketamine", "benzodiazepines"],
+          "risk": "increased sedation and respiratory depression"
+        },
+        {
+          "substances": ["ketamine", "CNS_depressants"],
+          "risk": "potentially fatal respiratory depression"
+        }
+      ],
+      "citations": ["barrios_2024", "guo_2022"]
+    },
+    {
+      "id": "rf_ketamine_roa_intranasal_001",
+      "name": "Intranasal Route Risks",
+      "category": "administration",
+      "route": "intranasal",
+      "specificRisks": [
+        {
+          "risk": "misuse_and_abuse",
+          "severity": "moderate_to_high",
+          "context": "heightened in unsupervised settings"
+        },
+        {
+          "risk": "traffic_accidents",
+          "mechanism": "dissociation and impaired coordination"
+        },
+        {
+          "risk": "elevated_blood_pressure",
+          "consequences": ["heart failure risk", "myocardial infarction risk"]
+        }
+      ],
+      "citations": ["sapkota_2021"]
+    },
+    {
+      "id": "rf_ketamine_roa_sublingual_001",
+      "name": "Sublingual Route Risks",
+      "category": "administration",
+      "route": "sublingual",
+      "specificRisks": [
+        {
+          "risk": "difficulty_staying_present",
+          "mechanism": "high doses shift toward mystical experiences",
+          "therapeuticImplication": "may interfere with therapy engagement"
+        }
+      ],
+      "citations": ["cornfield_2024"]
+    },
+    {
+      "id": "rf_ketamine_contamination_001",
+      "name": "Contamination and Purity Issues",
+      "category": "quality",
+      "severity": "high",
+      "description": "Illicit ketamine purity cannot be guaranteed",
+      "risks": [
+        "unknown substances present",
+        "variable potency",
+        "dangerous adulterants"
+      ],
+      "longTermRisks": {
+        "cognitiveImpairment": "may be linked to contaminated supplies",
+        "urinaryTractDamage": "may be linked to contaminated supplies"
+      },
+      "harmReduction": ["drug testing kits", "trusted sources"],
+      "limitations": "testing kits cannot provide comprehensive analysis",
+      "citations": ["lacroix_2024", "glynos_2023"]
+    }
+  ],
+
+  "medicalConditions": [
+    {
+      "id": "cond_ketamine_hypertension_001",
+      "name": "Untreated Hypertension",
+      "category": "cardiovascular",
+      "icd10": "I10",
+      "contraindicationType": "absolute",
+      "severity": "critical",
+      "substanceRisks": [
+        {
+          "substanceId": "ketamine_001",
+          "mechanism": "Ketamine elevates blood pressure and heart rate",
+          "specificRisks": [
+            {
+              "risk": "hypertensive_crisis",
+              "severity": "critical"
+            },
+            {
+              "risk": "cardiovascular_event",
+              "severity": "critical"
+            }
+          ],
+          "contraindicationType": "absolute",
+          "citations": ["gomez_escolar_2024", "bennett_2023"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ketamine_cvd_001",
+      "name": "Cardiovascular Disease",
+      "category": "cardiovascular",
+      "icd10": "I00-I99",
+      "contraindicationType": "absolute",
+      "severity": "critical",
+      "description": "Active or poorly managed cardiovascular conditions",
+      "substanceRisks": [
+        {
+          "substanceId": "ketamine_001",
+          "mechanism": "Increased blood pressure and heart rate",
+          "physiologicalEffects": {
+            "bloodPressure": {
+              "effect": "elevation",
+              "severity": "moderate",
+              "note": "small changes generally well-tolerated",
+              "exception": "higher peaks in hypertensive patients"
+            },
+            "heartRate": {
+              "effect": "elevation",
+              "severity": "moderate"
+            },
+            "catecholamines": {
+              "mechanism": "decreased reuptake"
+            }
+          },
+          "contraindicationType": "absolute",
+          "citations": ["gomez_escolar_2024", "bennett_2023", "riva_posse_2018"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ketamine_psychosis_001",
+      "name": "Active Psychotic Disorder",
+      "category": "psychiatric",
+      "icd10": "F20-F29",
+      "contraindicationType": "absolute",
+      "severity": "critical",
+      "description": "Current psychotic symptoms including schizophrenia",
+      "substanceRisks": [
+        {
+          "substanceId": "ketamine_001",
+          "mechanism": "Psychotomimetic properties can exacerbate symptoms",
+          "specificRisks": [
+            "worsening_hallucinations",
+            "increased_delusions",
+            "thought_disorganization"
+          ],
+          "contraindicationType": "absolute",
+          "citations": ["baumeister_2015", "collins_2024"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ketamine_pregnancy_001",
+      "name": "Pregnancy and Breastfeeding",
+      "category": "reproductive",
+      "icd10": "Z33",
+      "contraindicationType": "relative",
+      "severity": "high",
+      "description": "Limited safety data for fetal/infant exposure",
+      "substanceRisks": [
+        {
+          "substanceId": "ketamine_001",
+          "evidenceLevel": "limited",
+          "recommendation": "avoid use due to unknown risks",
+          "citations": ["pacilio_2024", "wolfson_2022"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ketamine_substance_abuse_001",
+      "name": "History of Substance Abuse",
+      "category": "psychiatric",
+      "subcategory": "addiction",
+      "icd10": "F10-F19",
+      "contraindicationType": "relative",
+      "severity": "moderate_to_high",
+      "description": "Previous substance use disorder",
+      "substanceRisks": [
+        {
+          "substanceId": "ketamine_001",
+          "specificRisks": [
+            {
+              "risk": "dependence_development",
+              "vulnerability": "increased"
+            },
+            {
+              "risk": "cravings",
+              "vulnerability": "increased"
+            }
+          ],
+          "requiredPrecautions": [
+            "thorough screening",
+            "close monitoring",
+            "enhanced support"
+          ],
+          "citations": ["baumeister_2015"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ketamine_liver_001",
+      "name": "Liver Disease",
+      "category": "hepatic",
+      "icd10": "K70-K77",
+      "contraindicationType": "relative",
+      "severity": "high",
+      "description": "Severe liver impairment",
+      "substanceRisks": [
+        {
+          "substanceId": "ketamine_001",
+          "mechanism": "Ketamine primarily metabolized by liver",
+          "consequence": "drug accumulation and increased adverse event risk",
+          "requiredPrecautions": [
+            "dose adjustment",
+            "monitoring liver function",
+            "careful risk-benefit assessment"
+          ],
+          "citations": ["wong_2014"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ketamine_kidney_001",
+      "name": "Kidney Disease",
+      "category": "renal",
+      "icd10": "N00-N29",
+      "contraindicationType": "relative",
+      "severity": "high",
+      "description": "Pre-existing renal impairment",
+      "substanceRisks": [
+        {
+          "substanceId": "ketamine_001",
+          "bidirectionalRisk": true,
+          "mechanisms": [
+            "Ketamine can cause urinary tract complications",
+            "Pre-existing kidney disease may be exacerbated",
+            "Risk of further renal damage"
+          ],
+          "specificCondition": "ketamine_associated_uropathy",
+          "citations": ["ou_2020"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ketamine_glaucoma_001",
+      "name": "Glaucoma",
+      "category": "ophthalmologic",
+      "icd10": "H40",
+      "contraindicationType": "relative",
+      "severity": "moderate",
+      "substanceRisks": [
+        {
+          "substanceId": "ketamine_001",
+          "mechanism": "Increases intraocular pressure",
+          "consequence": "worsening of glaucoma symptoms",
+          "citations": ["joaquin_2019"]
+        }
+      ]
+    },
+    {
+      "id": "cond_ketamine_anxiety_001",
+      "name": "Anxiety Disorders",
+      "category": "psychiatric",
+      "icd10": "F40-F48",
+      "contraindicationType": "relative",
+      "severity": "moderate",
+      "nuance": "complex - may help some forms but worsen others",
+      "substanceRisks": [
+        {
+          "substanceId": "ketamine_001",
+          "paradoxicalEffect": true,
+          "positiveEvidence": "shown promise treating some anxiety forms",
+          "negativeRisk": "may trigger heightened anxiety or panic in some individuals",
+          "recommendation": "careful screening and monitoring required",
+          "citations": ["niesters_2013"]
+        }
+      ]
+    }
+  ],
+
+  "adverseEvents": [
+    {
+      "id": "ae_ketamine_dissociation_001",
+      "name": "Dissociative Symptoms",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_severe",
+      "description": "Defining effects - detachment from body and surroundings",
+      "manifestations": [
+        {
+          "symptom": "depersonalization",
+          "intensity": "mild_to_profound"
+        },
+        {
+          "symptom": "derealization",
+          "intensity": "mild_to_profound"
+        },
+        {
+          "symptom": "perceptual_distortions",
+          "intensity": "mild"
+        },
+        {
+          "symptom": "k_hole",
+          "intensity": "profound",
+          "description": "complete sensory detachment",
+          "variability": "disturbing for some, transcendent for others"
+        }
+      ],
+      "prevalence": "most common acute effect",
+      "clinicalSignificance": "expected effect but can be disturbing",
+      "citations": ["baumeister_2015", "cornfield_2024"]
+    },
+    {
+      "id": "ae_ketamine_neuropsych_001",
+      "name": "Acute Neuropsychiatric Effects",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "moderate_to_high",
+      "symptoms": [
+        "anxiety",
+        "agitation",
+        "confusion",
+        "psychotic_like_symptoms"
+      ],
+      "riskFactors": [
+        "higher doses",
+        "pre-existing psychosis vulnerability"
+      ],
+      "citations": ["breeksema_2022", "kelly_2023", "collins_2024"]
+    },
+    {
+      "id": "ae_ketamine_cardiovascular_001",
+      "name": "Acute Cardiovascular Effects",
+      "category": "physiological",
+      "subcategory": "cardiovascular",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "effects": {
+        "bloodPressure": {
+          "change": "increase",
+          "typical": "transient and well-tolerated",
+          "higherRisk": "hypertensive patients",
+          "mechanism": "decreased catecholamine reuptake"
+        },
+        "heartRate": {
+          "change": "increase",
+          "typical": "transient"
+        }
+      },
+      "resolution": "resolves with drug metabolism",
+      "riskPopulations": ["pre-existing cardiovascular conditions"],
+      "citations": ["breeksema_2022", "gomez_escolar_2024", "riva_posse_2018"]
+    },
+    {
+      "id": "ae_ketamine_gi_acute_001",
+      "name": "Acute Gastrointestinal Distress",
+      "category": "physiological",
+      "subcategory": "gastrointestinal",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "symptoms": [
+        "nausea",
+        "vomiting"
+      ],
+      "prevalence": "relatively common",
+      "doseResponse": "especially at higher doses",
+      "mechanism": "effects on GI tract",
+      "citations": ["baumeister_2015", "kelly_2023"]
+    },
+    {
+      "id": "ae_ketamine_respiratory_001",
+      "name": "Respiratory Depression",
+      "category": "physiological",
+      "subcategory": "respiratory",
+      "timeframe": "acute",
+      "severity": "moderate_to_severe",
+      "triggers": [
+        "high doses",
+        "rapid IV administration"
+      ],
+      "requirement": "careful monitoring",
+      "intervention": "supportive measures may be needed",
+      "setting": "clinical settings with monitoring capacity",
+      "citations": ["kelly_2023"]
+    },
+    {
+      "id": "ae_ketamine_emt_001",
+      "name": "Emergency Medical Treatment Events",
+      "category": "acute_care",
+      "timeframe": "acute",
+      "prevalence": {
+        "rate": 0.1,
+        "unit": "percent",
+        "denominator": "past-year users",
+        "adverseEventsReported": 120,
+        "totalUsers": 4477,
+        "proportionSeekingEMT": 28.89,
+        "unit_proportion": "percent"
+      },
+      "note": "relatively rare despite common use",
+      "citations": ["barrios_2024"]
+    },
+    {
+      "id": "ae_ketamine_cognitive_long_001",
+      "name": "Long-term Cognitive Impairment",
+      "category": "psychological",
+      "subcategory": "cognitive",
+      "timeframe": "long_term",
+      "severity": "moderate_to_high",
+      "description": "Persistent cognitive decline with chronic use",
+      "affectedDomains": [
+        {
+          "domain": "memory",
+          "severity": "significant",
+          "specifics": ["verbal learning", "spatial memory"]
+        },
+        {
+          "domain": "executive_function",
+          "severity": "moderate"
+        },
+        {
+          "domain": "processing_speed",
+          "severity": "moderate",
+          "manifestation": "require more time for cognitive tasks"
+        }
+      ],
+      "sparedDomains": [
+        "attentional processes (may be spared)",
+        "spatial memory (may be spared)"
+      ],
+      "correlates": "correlated with estimated lifetime ketamine use",
+      "functionalImpairment": true,
+      "citations": ["lacroix_2024", "baumeister_2015", "hase_2022", "liu_2016", "maxwell_2005"]
+    },
+    {
+      "id": "ae_ketamine_mental_health_001",
+      "name": "Mental Health Deterioration",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "moderate_to_high",
+      "manifestations": [
+        {
+          "symptom": "depressive_symptoms",
+          "note": "can increase despite antidepressant effects"
+        },
+        {
+          "symptom": "schizophrenia_like_positive_symptoms",
+          "examples": ["hallucinations", "delusions"]
+        },
+        {
+          "symptom": "schizophrenia_like_negative_symptoms",
+          "examples": ["detachment", "flat affect"]
+        },
+        {
+          "symptom": "increased_anxiety",
+          "context": "particularly when hungover"
+        },
+        {
+          "symptom": "mania",
+          "context": "associated with intoxication"
+        },
+        {
+          "symptom": "paranoia",
+          "context": "associated with intoxication"
+        }
+      ],
+      "psychopathologicalSequelae": "prolonged use may contribute to or worsen mental health problems",
+      "vulnerablePopulations": "those with pre-existing vulnerabilities",
+      "citations": ["lie_2016", "carhart_harris_2010", "baumeister_2015", "bremler_2023"]
+    },
+    {
+      "id": "ae_ketamine_dependence_001",
+      "name": "Ketamine Dependence",
+      "category": "addiction",
+      "timeframe": "long_term",
+      "severity": "high",
+      "description": "Cravings and tolerance with prolonged heavy use",
+      "prevalence": {
+        "dependenceCriteria": {
+          "value": 8.55,
+          "unit": "percent",
+          "population": "past-year users",
+          "year": 2024
+        },
+        "alternateEstimate": {
+          "value": 17,
+          "unit": "percent",
+          "population": "ketamine users"
+        }
+      },
+      "characteristics": [
+        "cravings",
+        "tolerance development",
+        "withdrawal symptoms",
+        "psychological distress on cessation"
+      ],
+      "concerningContext": "especially with oral/intranasal formulations for depression",
+      "linkedRisk": "association with other drug dependence",
+      "helpSeeking": {
+        "note": "majority meeting criteria did not want help to use less",
+        "implication": "complex relationship with perceived problem"
+      },
+      "citations": ["barrios_2024", "baumeister_2015", "lacroix_2024", "ingrosso_2024"]
+    },
+    {
+      "id": "ae_ketamine_tolerance_001",
+      "name": "Tolerance Development",
+      "category": "pharmacological",
+      "timeframe": "develops_with_regular_use",
+      "severity": "moderate",
+      "description": "Higher doses required for desired effects",
+      "consequence": [
+        "increased risk of adverse effects",
+        "potential contribution to dependence"
+      ],
+      "citations": ["ingrosso_2024", "bonnet_2015"]
+    },
+    {
+      "id": "ae_ketamine_urinary_chronic_001",
+      "name": "Chronic Urinary Tract Damage",
+      "category": "physiological",
+      "subcategory": "urological",
+      "timeframe": "long_term",
+      "severity": "high",
+      "description": "Ketamine bladder and related urological complications",
+      "conditions": [
+        {
+          "condition": "ulcerative_cystitis",
+          "commonName": "ketamine bladder",
+          "symptoms": [
+            "painful urination",
+            "frequent urination",
+            "hematuria (blood in urine)"
+          ],
+          "longTermConsequence": "bladder dysfunction"
+        },
+        {
+          "condition": "haemorrhagic_cystitis"
+        },
+        {
+          "condition": "hydronephrosis"
+        },
+        {
+          "condition": "contracted_bladder"
+        },
+        {
+          "condition": "ureteral_stenosis"
+        }
+      ],
+      "prevalence": {
+        "value": 25,
+        "operator": ">",
+        "unit": "percent",
+        "population": "regular ketamine users",
+        "symptomType": "urinary symptoms"
+      },
+      "severityFactors": [
+        "frequency of use",
+        "dosage"
+      ],
+      "functionalImpairment": "can cause debilitating symptoms",
+      "citations": ["baumeister_2015", "lacroix_2024"]
+    },
+    {
+      "id": "ae_ketamine_neurotoxicity_001",
+      "name": "Neurotoxicity",
+      "category": "physiological",
+      "subcategory": "neurological",
+      "timeframe": "long_term",
+      "severity": "high",
+      "evidence": {
+        "animal_studies": {
+          "findings": "kidney and bladder damage at human-equivalent dosing",
+          "subjects": "rodents"
+        },
+        "human_studies": {
+          "findings": "grey matter depletion in certain brain regions",
+          "implication": "potential structural brain changes"
+        }
+      },
+      "citations": ["baumeister_2015", "gomez_escolar_2024"]
+    },
+    {
+      "id": "ae_ketamine_gi_chronic_001",
+      "name": "Chronic Gastrointestinal Toxicity",
+      "category": "physiological",
+      "subcategory": "gastrointestinal",
+      "timeframe": "long_term",
+      "severity": "moderate",
+      "symptoms": [
+        "K-cramps",
+        "vomiting",
+        "dysphagia (difficulty swallowing)"
+      ],
+      "association": "chronic ketamine use"
+    }
+  ],
+
+  "therapeuticAlliance": [
+    {
+      "id": "alliance_ketamine_quality_001",
+      "name": "Therapeutic Alliance in Ketamine Treatment",
+      "category": "relational",
+      "description": "Quality of relationship between therapist and patient in ketamine-assisted therapy",
+      "importance": "critical",
+      "impact": "Influences treatment outcomes and safety",
+      "ketamineSpecificConsiderations": [
+        {
+          "consideration": "dissociative_state_navigation",
+          "description": "Therapist must support patient through dissociative experiences",
+          "challenge": "maintaining connection during profound dissociation"
+        },
+        {
+          "consideration": "dose_related_challenges",
+          "description": "Higher doses shift toward mystical experiences",
+          "therapeuticTension": "balance between therapeutic engagement and transcendent experience"
+        }
+      ],
+      "components": [
+        {
+          "component": "safety",
+          "description": "Physical and emotional safety during dissociative states"
+        },
+        {
+          "component": "trust",
+          "description": "Essential given vulnerability during dissociation"
+        },
+        {
+          "component": "presence",
+          "description": "Grounding presence despite patient's altered state"
+        }
+      ],
+      "citations": ["cornfield_2024"]
+    }
+  ],
+
+  "preparationPractices": [
+    {
+      "id": "prep_ketamine_screening_001",
+      "name": "Ketamine-Specific Screening",
+      "category": "assessment",
+      "timing": "pre_session",
+      "components": [
+        {
+          "area": "cardiovascular_assessment",
+          "tools": ["blood pressure monitoring", "ECG if indicated", "cardiovascular history"],
+          "focus": [
+            "hypertension status",
+            "cardiac arrhythmias",
+            "history of heart disease"
+          ],
+          "rationale": "ketamine elevates BP and HR"
+        },
+        {
+          "area": "urological_history",
+          "tools": ["medical history", "symptom review"],
+          "focus": [
+            "pre-existing urinary conditions",
+            "kidney function",
+            "bladder issues"
+          ],
+          "rationale": "risk of urinary tract damage"
+        },
+        {
+          "area": "hepatic_function",
+          "tools": ["liver function tests", "medical history"],
+          "focus": [
+            "liver disease",
+            "metabolic capacity"
+          ],
+          "rationale": "ketamine primarily metabolized by liver"
+        },
+        {
+          "area": "substance_use_history",
+          "tools": ["detailed substance use interview"],
+          "focus": [
+            "history of dependence",
+            "current substance use",
+            "risk of ketamine dependence"
+          ],
+          "rationale": "dependence potential concerns"
+        }
+      ],
+      "exclusionCriteria": [
+        "untreated hypertension",
+        "active cardiovascular disease",
+        "active psychotic disorder",
+        "severe liver impairment",
+        "severe kidney disease",
+        "pregnancy",
+        "glaucoma"
+      ],
+      "relativeContraindications": [
+        "history of substance abuse",
+        "controlled cardiovascular conditions",
+        "anxiety disorders",
+        "liver disease (mild-moderate)",
+        "kidney disease (mild-moderate)"
+      ]
+    },
+    {
+      "id": "prep_ketamine_education_001",
+      "name": "Ketamine-Specific Education",
+      "category": "education",
+      "timing": "pre_session",
+      "content": [
+        {
+          "topic": "dissociative_effects",
+          "details": [
+            "nature of dissociation",
+            "K-land vs K-hole states",
+            "variability of experience",
+            "both distressing and transcendent possibilities"
+          ]
+        },
+        {
+          "topic": "dose_response",
+          "details": [
+            "highly dose-dependent effects",
+            "importance of accurate dosing",
+            "lack of standardized protocols"
+          ]
+        },
+        {
+          "topic": "physical_effects",
+          "details": [
+            "cardiovascular changes",
+            "possible nausea",
+            "urinary considerations",
+            "GI effects"
+          ]
+        },
+        {
+          "topic": "dependence_risk",
+          "details": [
+            "potential for tolerance",
+            "cravings development",
+            "importance of adherence to protocol"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "integrationPractices": [
+    {
+      "id": "int_ketamine_dissociation_001",
+      "name": "Dissociative Experience Integration",
+      "category": "psychological",
+      "timing": "post_session",
+      "ketamineSpecific": true,
+      "description": "Processing profound dissociative and out-of-body experiences",
+      "challenges": [
+        "ineffability of dissociative states",
+        "integration of ego dissolution",
+        "making sense of K-hole experiences"
+      ],
+      "approaches": [
+        {
+          "approach": "narrative_construction",
+          "description": "helping patient create coherent narrative of dissociative experience"
+        },
+        {
+          "approach": "meaning_making",
+          "description": "exploring personal significance of ego transcendence"
+        },
+        {
+          "approach": "grounding_practices",
+          "description": "re-establishing connection to body and identity"
+        }
+      ]
+    },
+    {
+      "id": "int_ketamine_frequency_001",
+      "name": "Treatment Frequency Monitoring",
+      "category": "safety",
+      "timing": "ongoing",
+      "ketamineSpecific": true,
+      "description": "Monitoring for signs of tolerance and dependence",
+      "components": [
+        "regular assessment of dose effectiveness",
+        "screening for cravings",
+        "monitoring urinary symptoms",
+        "cognitive function checks"
+      ],
+      "interventions": [
+        "dose adjustment",
+        "treatment interval modification",
+        "dependence risk management"
+      ]
+    }
+  ],
+
+  "emergencyResponseProtocols": [
+    {
+      "id": "emergency_ketamine_cardiovascular_001",
+      "name": "Cardiovascular Event Management",
+      "category": "medical_emergency",
+      "priority": "high",
+      "ketamineSpecific": true,
+      "triggers": [
+        "severe hypertension",
+        "chest pain",
+        "arrhythmia",
+        "signs of cardiac distress"
+      ],
+      "interventions": [
+        {
+          "intervention": "vital_sign_monitoring",
+          "frequency": "continuous",
+          "parameters": ["blood pressure", "heart rate", "ECG if available"]
+        },
+        {
+          "intervention": "medical_consultation",
+          "urgency": "immediate",
+          "indication": "any significant cardiovascular symptoms"
+        },
+        {
+          "intervention": "antihypertensive_consideration",
+          "condition": "severe hypertension",
+          "note": "consult medical professional"
+        },
+        {
+          "intervention": "emergency_services",
+          "indication": "chest pain, severe symptoms, or suspected MI"
+        }
+      ]
+    },
+    {
+      "id": "emergency_ketamine_dissociation_001",
+      "name": "Severe Dissociation Management",
+      "category": "psychological",
+      "priority": "high",
+      "ketamineSpecific": true,
+      "description": "Managing distressing K-hole or profound dissociative states",
+      "interventions": [
+        {
+          "intervention": "environmental_management",
+          "actions": [
+            "ensure physical safety",
+            "remove hazards",
+            "prevent wandering or injury"
+          ]
+        },
+        {
+          "intervention": "verbal_reassurance",
+          "technique": "calm, steady voice reminding of safety and temporary nature"
+        },
+        {
+          "intervention": "grounding_techniques",
+          "examples": ["gentle touch (with consent)", "auditory anchors"],
+          "limitation": "may be less effective during profound dissociation"
+        },
+        {
+          "intervention": "time_and_presence",
+          "description": "allowing experience to resolve naturally with supportive presence"
+        },
+        {
+          "intervention": "benzodiazepines",
+          "indication": "if reassurance insufficient and severe distress persists",
+          "status": "second-line"
+        }
+      ]
+    },
+    {
+      "id": "emergency_ketamine_respiratory_001",
+      "name": "Respiratory Depression Protocol",
+      "category": "medical_emergency",
+      "priority": "critical",
+      "ketamineSpecific": true,
+      "triggers": [
+        "decreased respiratory rate",
+        "shallow breathing",
+        "cyanosis",
+        "oxygen desaturation"
+      ],
+      "interventions": [
+        {
+          "intervention": "airway_management",
+          "priority": "immediate",
+          "actions": ["ensure patent airway", "positioning"]
+        },
+        {
+          "intervention": "oxygen_administration",
+          "indication": "any respiratory compromise"
+        },
+        {
+          "intervention": "assisted_ventilation",
+          "indication": "severe respiratory depression",
+          "requirement": "trained personnel and equipment"
+        },
+        {
+          "intervention": "emergency_medical_services",
+          "urgency": "immediate",
+          "indication": "any significant respiratory depression"
+        }
+      ],
+      "prevention": [
+        "avoid high doses",
+        "avoid rapid IV administration",
+        "screening for respiratory conditions",
+        "avoiding CNS depressant combinations"
+      ]
+    }
+  ],
+
+  "assessmentTools": [
+    {
+      "id": "tool_ketamine_urinary_001",
+      "name": "Urinary Symptom Assessment",
+      "purpose": "Monitor for ketamine-associated uropathy",
+      "type": "ketamine_specific",
+      "domains": [
+        "urinary frequency",
+        "urgency",
+        "pain on urination",
+        "hematuria",
+        "bladder capacity"
+      ],
+      "frequency": "regular monitoring for chronic users",
+      "importance": "early detection of urinary tract damage"
+    },
+    {
+      "id": "tool_ketamine_cognitive_001",
+      "name": "Cognitive Function Battery",
+      "purpose": "Monitor for cognitive decline with chronic use",
+      "type": "neuropsychological",
+      "domains": [
+        "verbal learning",
+        "spatial memory",
+        "processing speed",
+        "executive function",
+        "attention"
+      ],
+      "frequency": "baseline and periodic reassessment",
+      "importance": "detect early cognitive impairment"
+    },
+    {
+      "id": "tool_ketamine_dependence_001",
+      "name": "Dependence Risk Screening",
+      "purpose": "Assess for signs of ketamine dependence",
+      "type": "behavioral",
+      "domains": [
+        "cravings",
+        "tolerance",
+        "difficulty controlling use",
+        "withdrawal symptoms",
+        "continued use despite problems"
+      ],
+      "frequency": "ongoing monitoring",
+      "importance": "early intervention for dependence"
+    }
+  ],
+
+  "complexInteractions": [
+    {
+      "id": "interact_ketamine_cns_001",
+      "factors": [
+        {"type": "substance", "id": "ketamine_001"},
+        {"type": "substance_class", "id": "cns_depressants"},
+        {"type": "setting", "id": "unsupervised"}
+      ],
+      "riskMultiplier": "very_high",
+      "specificOutcome": "Severe sedation and potentially fatal respiratory depression",
+      "mechanism": [
+        "Additive CNS depression",
+        "Respiratory depression potentiation",
+        "Reduced protective reflexes"
+      ],
+      "specificCombinations": [
+        {"with": "alcohol", "risk": "very_high"},
+        {"with": "benzodiazepines", "risk": "very_high"},
+        {"with": "opioids", "risk": "critical"}
+      ],
+      "prevention": [
+        "Screen for concurrent substance use",
+        "Education about dangerous combinations",
+        "Supervised administration only"
+      ],
+      "evidenceQuality": "strong",
+      "citations": ["guo_2022"]
+    },
+    {
+      "id": "interact_ketamine_stimulant_001",
+      "factors": [
+        {"type": "substance", "id": "ketamine_001"},
+        {"type": "substance_class", "id": "psychostimulants"}
+      ],
+      "riskMultiplier": "high",
+      "specificOutcome": "Increased lethal effects of stimulants",
+      "mechanism": "Ketamine increases lethal effects of cocaine and methamphetamine",
+      "specificCombinations": [
+        {"with": "cocaine", "risk": "high", "prevalence": "common"},
+        {"with": "methamphetamine", "risk": "high"}
+      ],
+      "evidenceQuality": "moderate",
+      "citations": ["barrios_2024"]
+    },
+    {
+      "id": "interact_ketamine_cardiovascular_001",
+      "factors": [
+        {"type": "substance", "id": "ketamine_001"},
+        {"type": "medical_condition", "id": "cond_ketamine_hypertension_001"},
+        {"type": "dose", "level": "any"}
+      ],
+      "riskMultiplier": "critical",
+      "specificOutcome": "Hypertensive crisis or cardiovascular event",
+      "mechanism": "Ketamine's BP elevation superimposed on existing hypertension",
+      "contraindicationType": "absolute",
+      "evidenceQuality": "strong",
+      "citations": ["gomez_escolar_2024", "bennett_2023"]
+    },
+    {
+      "id": "interact_ketamine_chronic_high_dose_001",
+      "factors": [
+        {"type": "substance", "id": "ketamine_001"},
+        {"type": "pattern", "id": "chronic_high_dose_use"},
+        {"type": "duration", "timeframe": "prolonged"}
+      ],
+      "riskMultiplier": "very_high",
+      "specificOutcomes": [
+        "Ketamine bladder syndrome",
+        "Cognitive impairment",
+        "Dependence"
+      ],
+      "doseResponseRelationship": "severity increases with frequency and dosage",
+      "reversibility": {
+        "cognitive": "partially reversible with cessation",
+        "urological": "may have lasting damage",
+        "dependence": "requires treatment"
+      },
+      "evidenceQuality": "strong",
+      "citations": ["baumeister_2015", "lacroix_2024"]
+    }
+  ],
+
+  "contaminationQualityFactors": [
+    {
+      "id": "contam_ketamine_purity_001",
+      "name": "Ketamine Purity Variability",
+      "category": "quality",
+      "severity": "high",
+      "description": "Illicit ketamine has unverifiable purity and potency",
+      "risks": [
+        "unknown substance presence",
+        "variable potency",
+        "accidental overdose",
+        "underdosing",
+        "unexpected effects"
+      ],
+      "concerningEvidence": {
+        "longTermEffects": "chronic effects may be linked to contaminated supplies rather than pure drug",
+        "affectedOutcomes": ["cognitive impairment", "urinary tract damage"]
+      },
+      "harmReduction": [
+        "drug testing kits (limited effectiveness)",
+        "trusted sources",
+        "test dosing",
+        "pharmaceutical-grade when possible"
+      ],
+      "citations": ["lacroix_2024", "glynos_2023"]
+    },
+    {
+      "id": "contam_ketamine_source_001",
+      "name": "Unregulated Source Risks",
+      "category": "sourcing",
+      "severity": "high",
+      "description": "Obtaining ketamine from illicit markets",
+      "risks": [
+        "no quality control",
+        "unknown composition",
+        "dangerous adulterants",
+        "exposure to criminal activity",
+        "violence risk",
+        "legal consequences"
+      ],
+      "prevention": [
+        "use only in regulated clinical settings when possible",
+        "harm reduction services",
+        "drug checking programs"
+      ],
+      "citations": ["glynos_2023"]
+    }
+  ],
+
+  "legalSocioeconomicFactors": [
+    {
+      "id": "legal_ketamine_status_001",
+      "name": "Controlled Substance Status",
+      "category": "legal",
+      "description": "Ketamine scheduling varies by jurisdiction",
+      "impacts": [
+        {
+          "impact": "limited_recreational_access",
+          "severity": "high",
+          "consequence": "drives use to unregulated markets"
+        },
+        {
+          "impact": "medical_availability",
+          "severity": "moderate",
+          "note": "available for medical use but restricted"
+        },
+        {
+          "impact": "research_barriers",
+          "severity": "moderate",
+          "consequence": "limits safety and efficacy research"
+        }
+      ]
+    },
+    {
+      "id": "socioeconomic_ketamine_therapy_cost_001",
+      "name": "High Cost of Ketamine Therapy",
+      "category": "socioeconomic",
+      "description": "Ketamine-assisted therapy expensive and often not covered",
+      "barriers": [
+        {
+          "barrier": "treatment_cost",
+          "impact": "only wealthy can access safe therapeutic use"
+        },
+        {
+          "barrier": "insurance_coverage",
+          "status": "limited",
+          "impact": "out-of-pocket costs prohibitive"
+        }
+      ],
+      "consequence": "wealth-based treatment divide, poor relegated to unsafe recreational use",
+      "citations": ["barber_2024"]
+    },
+    {
+      "id": "socioeconomic_ketamine_rave_culture_001",
+      "name": "Association with Rave Culture",
+      "category": "cultural",
+      "description": "Recreational ketamine use linked to party settings",
+      "risks": [
+        "polydrug use in party settings",
+        "lack of medical supervision",
+        "unsafe environments",
+        "hot environments (cardiovascular stress)",
+        "dehydration risks"
+      ],
+      "prevalenceNote": "increasing globally, evidenced by wastewater analysis",
+      "citations": ["barrios_2024"]
+    }
+  ],
+
+  "groupDynamicsFactors": [
+    {
+      "id": "group_ketamine_party_001",
+      "name": "Party and Festival Settings",
+      "category": "recreational_setting",
+      "description": "Ketamine use in uncontrolled party environments",
+      "risks": [
+        "lack of medical supervision",
+        "polydrug use encouragement",
+        "unsafe physical environments",
+        "peer pressure for higher doses",
+        "inability to seek help due to stigma or legal concerns"
+      ],
+      "prevalenceContext": "common in rave and electronic music culture"
+    }
+  ],
+
+  "culturalSpiritualFactors": [
+    {
+      "id": "cultural_ketamine_western_001",
+      "name": "Western Medicalization Context",
+      "category": "cultural",
+      "description": "Ketamine used primarily in medical/therapeutic context in West",
+      "considerations": [
+        "pharmaceutical framing",
+        "clinical setting emphasis",
+        "depression treatment focus",
+        "less spiritual/ceremonial context than classical psychedelics"
+      ],
+      "contrast": "differs from classical psychedelics with indigenous histories"
+    },
+    {
+      "id": "spiritual_ketamine_experiences_001",
+      "name": "Mystical and Transcendent Experiences",
+      "category": "spiritual",
+      "description": "Ketamine can produce profound spiritual experiences",
+      "manifestations": [
+        "ego dissolution",
+        "unity consciousness",
+        "out-of-body experiences",
+        "transcendent states",
+        "near-death-like experiences"
+      ],
+      "therapeuticImplications": {
+        "positive": "may contribute to therapeutic benefit",
+        "negative": "can interfere with staying present in therapy",
+        "doseRelated": "higher doses more likely to produce mystical experiences"
+      },
+      "citations": ["cornfield_2024"]
+    }
+  ],
+
+  "doseResponseCurves": [
+    {
+      "substanceId": "ketamine_001",
+      "outcome": "dissociative_state",
+      "relationship": "positive_correlation",
+      "dataPoints": [
+        {
+          "dose": "0.1-0.6",
+          "unit": "mg/kg",
+          "state": "K-land",
+          "effects": ["mild relaxation", "dissociation", "euphoria"]
+        },
+        {
+          "dose": ">0.6",
+          "unit": "mg/kg",
+          "state": "K-hole",
+          "effects": ["profound dissociation", "complete sensory detachment"]
+        }
+      ],
+      "interpretation": "Clear dose-dependent progression of dissociative states",
+      "evidenceQuality": "strong",
+      "citations": ["liu_2016", "petersen_2020"]
+    },
+    {
+      "substanceId": "ketamine_001",
+      "outcome": "mystical_experience",
+      "relationship": "positive_correlation",
+      "note": "Higher sublingual doses shift toward mystical/transcendent experiences",
+      "therapeuticTension": "balance between engagement and transcendence",
+      "citations": ["cornfield_2024"]
+    },
+    {
+      "substanceId": "ketamine_001",
+      "outcome": "adverse_effects",
+      "relationship": "positive_correlation",
+      "effects": [
+        "psychotic symptoms increase at high doses",
+        "cardiovascular effects more pronounced at higher doses",
+        "nausea more common at higher doses"
+      ],
+      "evidenceQuality": "strong"
+    }
+  ],
+
+  "metadata": {
+    "documentSource": "Ketamine Literature Review Extract",
+    "extractDate": "2025-01-09",
+    "primaryResearchTypes": [
+      "clinical_trials",
+      "observational_studies",
+      "case_reports",
+      "epidemiological_surveys",
+      "animal_studies"
+    ],
+    "geographicScope": "Global with emphasis on North America and Europe",
+    "lastLiteratureSearch": "2024",
+    "qualityAssessment": "Comprehensive but with specific limitations",
+    "knownLimitations": [
+      "Limited long-term follow-up studies",
+      "Contamination may confound chronic effect studies",
+      "Lack of standardized dosing protocols",
+      "Variable quality of recreational use data",
+      "Underrepresentation of therapeutic versus recreational contexts",
+      "Limited diversity in clinical research populations",
+      "Difficulty separating ketamine effects from polydrug effects in recreational contexts"
+    ],
+    "ketamineSpecificNotes": [
+      "Classification as psychedelic is debated in literature",
+      "Unique dissociative mechanism distinct from classical psychedelics",
+      "Well-established medical use creates different risk profile than purely recreational substances",
+      "Dependence and chronic effects more prominent concern than with classical psychedelics",
+      "Urological complications are unique and concerning long-term risk"
+    ],
+    "citationCount": "approximately 100+ unique sources in extract",
+    "crossReferencesWithPsilocybinSchema": [
+      "General psychedelic risk factors apply",
+      "Set and setting principles similar",
+      "Integration practices overlap",
+      "Therapeutic alliance considerations similar but with dissociation-specific adaptations"
+    ]
+  }
+}

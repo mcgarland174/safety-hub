@@ -1,0 +1,2385 @@
+{
+  "schemaVersion": "2.0",
+  "lastUpdated": "2025-01-09",
+  
+  "substance": {
+    "id": "lsd_001",
+    "name": "Lysergic Acid Diethylamide (LSD)",
+    "aliases": ["Acid", "Blotter", "Tabs", "Doses"],
+    "synthesisHistory": {
+      "year": 1938,
+      "chemist": "Albert Hofmann",
+      "location": "Switzerland",
+      "origin": "Entirely synthetic, man-made"
+    },
+    "classification": {
+      "primary": "classical_serotonergic_psychedelic",
+      "secondary": ["ergoline", "phenethylamine", "tryptamine"],
+      "mechanism": "5-HT2A_agonist",
+      "receptorAffinity": {
+        "5HT2A": "high",
+        "5HT1A": "moderate",
+        "5HT2C": "moderate"
+      },
+      "chemicalStructure": "Contains both phenethylamine and tryptamine groups",
+      "derivedFrom": "Lysergic acid"
+    },
+    "legalStatus": {
+      "US": "Schedule I",
+      "international": "Controlled in most jurisdictions",
+      "consequences": "Criminalization creates barriers to research and safe use"
+    },
+    "prevalenceData": {
+      "recreationalUseIncrease": {
+        "period": "early 2000s to late 2010s",
+        "increase": "200%",
+        "citation": "baxter_2024"
+      },
+      "firstTimeUserDemographics": {
+        "averageAge": 21,
+        "genderDistribution": "predominantly male",
+        "priorKnowledge": "most well-informed before use",
+        "harmReductionPractices": "commonly use familiar settings with close friends",
+        "citation": "baxter_2024"
+      },
+      "emergencyRoomVisits": {
+        "rate": 1,
+        "unit": "percent",
+        "year": 2020,
+        "context": "Of all LSD users seeking emergency care",
+        "citation": "canady_2023"
+      },
+      "poisonControlCases": {
+        "ageGroup": "13-19",
+        "prevalence": "majority of cases",
+        "context": "Combined LSD and psilocybin data",
+        "citation": "malcolm_2022"
+      }
+    },
+    "dosing": {
+      "microdose": {
+        "range": {"min": 5, "max": 20, "unit": "mcg"},
+        "description": "Sub-perceptual doses",
+        "ratio": "1/10th to 1/20th of normal dose",
+        "commonSchedule": "1 day on, 2 days off",
+        "citations": ["hutten_2019", "family_2020"]
+      },
+      "minidose": {
+        "range": {"min": 21, "max": 30, "unit": "mcg"},
+        "description": "Between micro and threshold, some perceptual effects",
+        "citation": "holze_2021"
+      },
+      "threshold": {"value": 25, "unit": "mcg"},
+      "light": {"min": 25, "max": 75, "unit": "mcg"},
+      "common": {"min": 75, "max": 150, "unit": "mcg"},
+      "strong": {"min": 150, "max": 300, "unit": "mcg"},
+      "heavy": {"min": 300, "unit": "mcg"},
+      "therapeutic": {
+        "typical": {"min": 75, "max": 150, "unit": "mcg"},
+        "range": {"min": 50, "max": 200, "unit": "mcg"},
+        "perKg": {"min": 0.5, "max": 2, "unit": "mcg/kg"},
+        "clinicalStudyDoses": [25, 50, 100, 200],
+        "citation": "fuentes_2020"
+      },
+      "recreational": {
+        "typical": {"min": 50, "max": 150, "unit": "mcg"},
+        "range": {"min": 10, "max": 400, "unit": "mcg"},
+        "citation": "leonard_2018"
+      },
+      "egoDissolution": {
+        "threshold": 200,
+        "unit": "mcg",
+        "description": "Doses at or above this considered high/capable of inducing ego-dissolution",
+        "citation": "engel_2024a"
+      },
+      "overwhelmingDoses": {
+        "threshold": 500,
+        "unit": "mcg",
+        "description": "Extremely high doses producing overwhelming effects",
+        "risks": "dangerous psychological outcomes",
+        "citation": "bremler_2023"
+      },
+      "weightDependence": true,
+      "toleranceFactor": true,
+      "individualVariability": ["tolerance", "weight", "age"],
+      "doseResponseRelationship": {
+        "description": "Effects increase with dose; positive effects plateau around 100 mcg while anxiety risk increases at higher doses",
+        "positiveEffectsPlateau": 100,
+        "anxietyIncrease": "Higher doses",
+        "citation": "holze_2021"
+      }
+    },
+    "pharmacokinetics": {
+      "absorption": {
+        "route": "oral_primary",
+        "alternativeRoutes": ["intravenous", "ocular"],
+        "bioavailability": "high_oral"
+      },
+      "onset": {
+        "phase": "onset",
+        "duration": {"min": 30, "max": 60, "unit": "minutes"},
+        "citation": "petersen_2020"
+      },
+      "peak": {
+        "phase": "peak",
+        "duration": {"min": 120, "max": 180, "unit": "minutes"},
+        "citation": "petersen_2020"
+      },
+      "totalDuration": {
+        "typical": {"min": 8, "max": 12, "unit": "hours"},
+        "phases": [
+          {
+            "phase": "onset",
+            "duration": {"min": 30, "max": 60, "unit": "minutes"}
+          },
+          {
+            "phase": "peak",
+            "duration": {"min": 120, "max": 180, "unit": "minutes"}
+          },
+          {
+            "phase": "subsiding",
+            "duration": {"min": 120, "max": 180, "unit": "minutes"}
+          },
+          {
+            "phase": "return_to_baseline",
+            "duration": "variable"
+          }
+        ],
+        "citation": "petersen_2020"
+      },
+      "metabolism": "hepatic",
+      "elimination": "renal"
+    },
+    "subjectiveEffects": {
+      "perceptual": [
+        "visual_hallucinations",
+        "altered_time_perception",
+        "distorted_sensory_experiences",
+        "enhanced_colors",
+        "geometric_patterns",
+        "trails",
+        "visual_snow"
+      ],
+      "cognitive": [
+        "altered_identity_perception",
+        "depersonalization",
+        "derealization",
+        "enhanced_introspection",
+        "novel_thought_patterns"
+      ],
+      "emotional": [
+        "euphoria",
+        "heightened_emotions",
+        "emotional_lability",
+        "anxiety_possible",
+        "fear_possible"
+      ],
+      "somatic": [
+        "increased_body_temperature",
+        "increased_heart_rate",
+        "increased_blood_pressure",
+        "pupil_dilation",
+        "nausea_possible"
+      ],
+      "intensity": "Can be more intense than other illicit substances",
+      "overwhelming": "May overwhelm unprepared users",
+      "variability": "Highly individualized, influenced by set and setting",
+      "citations": ["baxter_2024", "fuentes_2020", "johnson_2019"]
+    },
+    "toleranceDevelopment": {
+      "rate": "rapid",
+      "mechanism": "Receptor downregulation",
+      "crossTolerance": ["psilocybin", "mescaline", "other_5HT2A_agonists"],
+      "duration": "Repeated use necessitates higher doses",
+      "resetTime": "3-7 days typically required",
+      "citation": "fuentes_2020"
+    },
+    "addictionPotential": {
+      "physical": "none",
+      "psychological": "minimal",
+      "dependence": "Does not typically cause physical dependence",
+      "withdrawal": "No withdrawal symptoms",
+      "compulsiveUse": "rare",
+      "citations": ["martins_2023", "fuentes_2020"]
+    },
+    "toxicityProfile": {
+      "physiological": "low",
+      "overdoseRisk": "low_compared_to_other_drugs",
+      "lethalDose": "very_high",
+      "safetyRatio": "high_therapeutic_index",
+      "rarityCases": {
+        "description": "Rare case reports of overdose",
+        "effects": ["coma", "hyperthermia", "bleeding"],
+        "deaths": "Accidental deaths documented but rare",
+        "citations": ["leonard_2018", "martins_2023"]
+      },
+      "citation": "baxter_2024"
+    },
+    "therapeuticPotential": {
+      "underInvestigation": true,
+      "targetConditions": [
+        "depression",
+        "anxiety",
+        "PTSD",
+        "addiction",
+        "end_of_life_distress"
+      ],
+      "citations": ["baxter_2024", "fuentes_2020", "anderson_2019"]
+    }
+  },
+
+  "routesOfAdministration": [
+    {
+      "id": "roa_oral_lsd_001",
+      "route": "oral",
+      "substanceId": "lsd_001",
+      "commonality": "most_common",
+      "preparations": [
+        {
+          "type": "blotter_paper",
+          "description": "Small squares of paper impregnated with LSD",
+          "commonality": "most_common",
+          "risks": [
+            "Dosage uncertainty due to uneven distribution",
+            "Hot spots with higher concentrations",
+            "Cold spots with little to no LSD",
+            "Difficult to achieve consistent microdosing"
+          ],
+          "citations": ["abraham_1993", "miller_2024"]
+        },
+        {
+          "type": "liquid",
+          "description": "LSD dissolved in water or alcohol",
+          "advantages": ["More consistent dosing possible", "Volumetric measurement"],
+          "citation": "abraham_1993"
+        },
+        {
+          "type": "sugar_cubes",
+          "description": "Sugar cubes with LSD applied",
+          "citation": "abraham_1993"
+        },
+        {
+          "type": "gelatin",
+          "description": "Gelatin squares or 'window panes'",
+          "advantages": ["More stable than paper"]
+        }
+      ],
+      "onset": {"min": 30, "max": 60, "unit": "minutes"},
+      "advantages": [
+        "Relatively safe in controlled settings",
+        "Familiar route",
+        "Slower onset allows adjustment"
+      ],
+      "risks": [
+        "Dosage uncertainty with illicit sources",
+        "Users may redose before first dose takes effect",
+        "Unpredictable effects if dose unknown"
+      ],
+      "safetyConsiderations": [
+        "Test substances",
+        "Start with known low dose",
+        "Wait adequate time before considering redosing",
+        "Use volumetric dosing for consistency"
+      ]
+    },
+    {
+      "id": "roa_iv_lsd_001",
+      "route": "intravenous",
+      "substanceId": "lsd_001",
+      "commonality": "rare",
+      "context": "Clinical research primarily",
+      "onset": "very_rapid",
+      "risks": [
+        "Faster onset leads to more intense experience",
+        "More difficult to control dose",
+        "Overwhelming effects possible",
+        "Increased risk of adverse reactions",
+        "Overdose risk higher"
+      ],
+      "requirements": [
+        "Medical supervision essential",
+        "Clinical or research setting only",
+        "Not recommended outside controlled environments"
+      ],
+      "citation": "garcia-romeu_2018"
+    },
+    {
+      "id": "roa_ocular_lsd_001",
+      "route": "ocular",
+      "substanceId": "lsd_001",
+      "commonality": "very_rare",
+      "evidenceBase": "limited",
+      "risks": [
+        "Unpredictable dosage",
+        "Faster onset than oral",
+        "Lack of safety data"
+      ],
+      "recommendation": "Not recommended outside controlled research",
+      "citation": "Literature mentions but limited data"
+    }
+  ],
+
+  "lsdSpecificRiskFactors": [
+    {
+      "id": "rf_lsd_dosage_001",
+      "name": "High Dose Effects",
+      "category": "dosage",
+      "severity": "high",
+      "doseThresholds": [
+        {
+          "dose": 50,
+          "unit": "mcg",
+          "badDrugEffects": 9,
+          "percentUnit": "percent",
+          "citation": "holze_2022"
+        },
+        {
+          "dose": 100,
+          "unit": "mcg",
+          "badDrugEffects": 27,
+          "percentUnit": "percent",
+          "citation": "holze_2022"
+        },
+        {
+          "dose": 200,
+          "unit": "mcg",
+          "badDrugEffects": 31,
+          "percentUnit": "percent",
+          "egoDissolution": "capable",
+          "citations": ["holze_2022", "engel_2024a"]
+        },
+        {
+          "dose": 500,
+          "unit": "mcg",
+          "description": "Extremely high, overwhelming effects",
+          "risks": "dangerous psychological outcomes",
+          "citation": "bremler_2023"
+        }
+      ],
+      "physiologicalEffects": {
+        "heartRate": {
+          "finding": "Peak heart rate >100 bpm in 25% at 200 mcg",
+          "citation": "holze_2022"
+        },
+        "bodyTemperature": {
+          "finding": "Peak temperature >38°C in 34% at 200 mcg",
+          "citation": "holze_2022"
+        }
+      },
+      "specificRisks": [
+        "psychological_distress",
+        "physiological_discomfort",
+        "anxiety",
+        "panic",
+        "ego_dissolution",
+        "confusion"
+      ],
+      "doseResponseRelationship": "Clear increase in adverse effects with dose"
+    },
+    {
+      "id": "rf_lsd_psychiatric_history_001",
+      "name": "Prior Mental Health Conditions",
+      "category": "psychiatric",
+      "severity": "high",
+      "specificConditions": [
+        {
+          "condition": "psychosis_history",
+          "personalHistory": "high_risk",
+          "familyHistory": "elevated_risk",
+          "risks": [
+            "Trigger psychotic episodes",
+            "Exacerbate symptoms",
+            "Prolonged psychotic reactions"
+          ],
+          "citations": ["kopra_2022", "white_2024"]
+        },
+        {
+          "condition": "bipolar_disorder",
+          "personalHistory": "high_risk",
+          "familyHistory": "elevated_risk",
+          "risks": [
+            "Manic episode induction",
+            "Mood destabilization"
+          ],
+          "citations": ["honk_2024", "marrocu_nd"]
+        },
+        {
+          "condition": "personality_disorders",
+          "negativeResponseRate": 31,
+          "unit": "percent",
+          "relativeTo": "general_population",
+          "adverseResponseRisk": "4-fold elevation",
+          "longTermNegativeResponse": "associated",
+          "citations": ["marrocu_nd", "bremler_2023"]
+        },
+        {
+          "condition": "anxiety_disorders",
+          "risk": "worsening_symptoms",
+          "prevalence": "87% worsening in those with negative responses",
+          "citation": "bremler_2023"
+        },
+        {
+          "condition": "depression",
+          "risk": "potential_worsening",
+          "context": "Especially with history",
+          "citation": "bremler_2023"
+        }
+      ],
+      "postExperiencePsychiatricDiagnosis": {
+        "rate": 37.5,
+        "unit": "percent",
+        "context": "Developed psychiatric diagnosis after negative psychedelic experience",
+        "citation": "bremler_2023"
+      },
+      "screening": "Essential - careful screening required"
+    },
+    {
+      "id": "rf_lsd_inexperience_001",
+      "name": "Lack of Experience with Psychedelics",
+      "category": "experiential",
+      "severity": "moderate_to_high",
+      "description": "First-time users particularly vulnerable",
+      "specificRisks": [
+        "Unfamiliarity with dosing",
+        "Unpredictability of effects",
+        "Overwhelming experiences",
+        "Inability to manage intense states"
+      ],
+      "firstTimeUserData": {
+        "fearExperience": {
+          "rate": 64.1,
+          "unit": "percent",
+          "severity": "generally mild",
+          "impact": "Did not discourage further use",
+          "citation": "baxter_2024"
+        },
+        "seriousAdverseEvents": {
+          "rate": 0.5,
+          "unit": "percent",
+          "context": "Seeking emergency medical treatment",
+          "citation": "baxter_2024"
+        }
+      },
+      "harmReduction": [
+        "Comprehensive education",
+        "Start with low doses",
+        "Experienced trip sitter present",
+        "Safe, familiar setting",
+        "Adequate preparation"
+      ],
+      "citation": "baxter_2024"
+    },
+    {
+      "id": "rf_lsd_age_youth_001",
+      "name": "Young Age (<25 years)",
+      "category": "demographic",
+      "severity": "moderate_to_high",
+      "ageRange": {"min": 13, "max": 25},
+      "specificRisks": [
+        "Developing brain vulnerability",
+        "Higher emergency treatment rates",
+        "Lower risk awareness",
+        "Impulsivity",
+        "Emotional regulation difficulties"
+      ],
+      "prevalenceData": {
+        "negativeEffectsUnder25": {
+          "rate": 53,
+          "unit": "percent",
+          "context": "Of those with negative effects",
+          "citation": "bremler_2023"
+        },
+        "poisonControlCases": {
+          "ageRange": "13-19",
+          "prevalence": "majority",
+          "substances": "LSD and psilocybin combined",
+          "citation": "malcolm_2022"
+        },
+        "emergencyTreatment": {
+          "trend": "Higher rates in younger users",
+          "citation": "marazziti_2024"
+        }
+      },
+      "mechanisms": [
+        "Neurotransmitter system susceptibility",
+        "Ongoing brain development",
+        "Psychological impact of intense experiences in developing brain"
+      ],
+      "citations": ["bremler_2023", "malcolm_2022", "marazziti_2024", "breeksema_2022"]
+    },
+    {
+      "id": "rf_lsd_prior_negative_001",
+      "name": "Prior Negative Psychedelic Experiences",
+      "category": "experiential",
+      "severity": "moderate",
+      "description": "History of challenging experiences increases future risk",
+      "mechanism": "Psychological vulnerability or sensitization",
+      "specificRisks": [
+        "Increased likelihood of similar challenges",
+        "Anticipatory anxiety",
+        "Potential for re-traumatization"
+      ],
+      "recommendations": [
+        "Exercise caution",
+        "Seek professional guidance",
+        "Consider whether further use appropriate",
+        "Enhanced preparation if continuing"
+      ],
+      "citations": ["aday_2021", "evans_2023", "palmer_2022"]
+    },
+    {
+      "id": "rf_lsd_stressful_life_001",
+      "name": "Stressful Life Events or Circumstances",
+      "category": "situational",
+      "severity": "moderate",
+      "description": "Major life changes or ongoing stress increase risk",
+      "specificRisks": [
+        "Anxiety during trip",
+        "Panic reactions",
+        "Longer-term psychological distress",
+        "Difficulty managing intense emotions"
+      ],
+      "examples": [
+        "Recent bereavement",
+        "Relationship breakdown",
+        "Job loss",
+        "Financial stress",
+        "Major life transitions"
+      ],
+      "recommendation": "Consider postponing use until life circumstances stabilize",
+      "citation": "bremler_2023"
+    },
+    {
+      "id": "rf_lsd_cardiovascular_001",
+      "name": "Cardiovascular Conditions",
+      "category": "physiological",
+      "severity": "moderate_to_high",
+      "description": "Pre-existing heart conditions pose elevated risk",
+      "mechanism": [
+        "LSD increases blood pressure",
+        "Increases heart rate",
+        "Increases body temperature"
+      ],
+      "specificConditions": [
+        "Hypertension",
+        "Arrhythmias",
+        "Coronary artery disease",
+        "Heart failure",
+        "Recent myocardial infarction"
+      ],
+      "contraindicationType": "relative_to_absolute",
+      "exclusionFromTrials": "common",
+      "monitoring": [
+        "Vital signs monitoring",
+        "Medical supervision",
+        "ECG if indicated"
+      ],
+      "citations": ["fuentes_2020", "holze_2021", "ghaznavi_2025", "bender_2022"]
+    }
+  ],
+
+  "lsdDrugInteractions": [
+    {
+      "id": "interact_lsd_lithium_001",
+      "substanceId": "lsd_001",
+      "interactingDrug": "lithium",
+      "severity": "critical",
+      "contraindicationType": "absolute",
+      "specificRisks": [
+        "Higher risk of harm",
+        "Severe adverse reactions",
+        "Seizures possible",
+        "Confusion",
+        "Delirium"
+      ],
+      "mechanism": "Unknown but well-documented dangerous interaction",
+      "recommendation": "Absolute avoidance",
+      "citation": "ghaznavi_2025"
+    },
+    {
+      "id": "interact_lsd_ssri_001",
+      "substanceId": "lsd_001",
+      "interactingDrug": "SSRIs",
+      "severity": "high",
+      "specificRisks": [
+        "Serotonin syndrome risk",
+        "Unpredictable effects",
+        "May blunt psychedelic effects",
+        "Potential for dangerous serotonin accumulation"
+      ],
+      "symptoms": [
+        "Tachycardia",
+        "Hypertension",
+        "Hyperthermia",
+        "Seizures",
+        "Potentially fatal in severe cases"
+      ],
+      "recommendation": "Avoid combination; taper SSRIs under medical supervision if psychedelic use planned",
+      "citations": ["sakai_2024", "gomez-escolar_2024", "malcolm_2022"]
+    },
+    {
+      "id": "interact_lsd_maoi_001",
+      "substanceId": "lsd_001",
+      "interactingDrug": "MAOIs",
+      "severity": "critical",
+      "contraindicationType": "absolute",
+      "specificRisks": [
+        "Severe serotonin syndrome",
+        "Potentially fatal interaction",
+        "Unpredictable potentiation of effects"
+      ],
+      "recommendation": "Absolute contraindication",
+      "citations": ["breeksema_2022", "ghaznavi_2025"]
+    },
+    {
+      "id": "interact_lsd_alcohol_001",
+      "substanceId": "lsd_001",
+      "interactingDrug": "alcohol",
+      "severity": "moderate",
+      "polydrug": true,
+      "specificRisks": [
+        "Increased adverse effects",
+        "Impaired judgment",
+        "Unpredictable interactions",
+        "Increased nausea"
+      ],
+      "recommendation": "Avoid combination",
+      "citation": "kopra_2025"
+    },
+    {
+      "id": "interact_lsd_cannabis_001",
+      "substanceId": "lsd_001",
+      "interactingDrug": "cannabis",
+      "severity": "moderate",
+      "polydrug": true,
+      "commonality": "Common combination",
+      "effects": "Variable - may reduce or exacerbate difficulty",
+      "specificRisks": [
+        "Increased anxiety in some",
+        "Intensification of effects",
+        "Unpredictable interactions"
+      ],
+      "recommendation": "Exercise caution; effects vary individually",
+      "citation": "carbonaro_2016"
+    }
+  ],
+
+  "lsdContraindications": [
+    {
+      "id": "contra_lsd_absolute_001",
+      "type": "absolute",
+      "conditions": [
+        {
+          "condition": "active_psychosis",
+          "rationale": "LSD can worsen symptoms, trigger hallucinations/delusions",
+          "severity": "critical",
+          "citation": "fuentes_2020"
+        },
+        {
+          "condition": "severe_organic_disease",
+          "subtypes": [
+            "organic_toxic_cerebral_disorder",
+            "severe_neurological_disease"
+          ],
+          "rationale": "Physiological effects pose significant risk",
+          "citations": ["bodnar_2019", "fuentes_2020"]
+        },
+        {
+          "condition": "severe_cardiovascular_disease",
+          "subtypes": [
+            "uncontrolled_hypertension",
+            "severe_arrhythmias",
+            "recent_MI",
+            "severe_heart_failure"
+          ],
+          "rationale": "LSD increases BP and HR; may trigger cardiovascular events",
+          "citations": ["fuentes_2020", "holze_2021"]
+        },
+        {
+          "condition": "pregnancy",
+          "rationale": "Lack of safety research; potential fetal effects unknown",
+          "severity": "critical",
+          "citation": "fuentes_2020"
+        },
+        {
+          "condition": "epilepsy",
+          "rationale": "May increase seizure risk due to stimulating effects",
+          "note": "Often excluded from clinical trials",
+          "citations": ["fuentes_2020", "simonsson_2022"]
+        },
+        {
+          "condition": "current_suicidality",
+          "rationale": "Intense psychological effects may exacerbate feelings of hopelessness or despair",
+          "severity": "critical",
+          "citation": "holze_2022"
+        }
+      ]
+    },
+    {
+      "id": "contra_lsd_relative_001",
+      "type": "relative",
+      "conditions": [
+        {
+          "condition": "mental_health_history",
+          "subtypes": [
+            "personality_disorders",
+            "depression",
+            "anxiety_disorders",
+            "PTSD"
+          ],
+          "rationale": "Heightened risk of negative experience; requires careful screening and support",
+          "requiredPrecautions": [
+            "Thorough screening",
+            "Comprehensive preparation",
+            "Enhanced therapeutic support",
+            "Close monitoring",
+            "Extended integration"
+          ],
+          "citations": ["marrocu_nd", "sabe_2024", "bremler_2023"]
+        },
+        {
+          "condition": "family_history_psychosis",
+          "rationale": "Increased vulnerability to psychotic reactions",
+          "requiredPrecautions": [
+            "Extra caution",
+            "Detailed family history",
+            "Lower doses",
+            "Enhanced monitoring"
+          ],
+          "citations": ["honk_2024", "henningfield_2023"]
+        },
+        {
+          "condition": "family_history_bipolar",
+          "rationale": "May trigger manic episodes in vulnerable individuals",
+          "note": "Some evidence suggests safety in controlled settings for Bipolar II",
+          "citations": ["honk_2024"]
+        },
+        {
+          "condition": "trauma_history",
+          "rationale": "Risk of trauma reactivation; may be therapeutic with proper support",
+          "requiredPrecautions": [
+            "Trauma-informed approach",
+            "Specialized therapeutic support",
+            "Preparation work",
+            "Safety planning",
+            "Grounding techniques training"
+          ],
+          "citations": ["bremler_2023", "gorman_2021", "weiss_2023"]
+        },
+        {
+          "condition": "paranoid_personality_traits",
+          "rationale": "LSD may amplify suspicion, distrust, anxiety, leading to paranoia",
+          "citation": "fuentes_2000"
+        },
+        {
+          "condition": "controlled_cardiovascular_conditions",
+          "rationale": "Moderate BP/HR increases may be problematic; requires monitoring",
+          "requiredPrecautions": [
+            "Medical clearance",
+            "Vital signs monitoring",
+            "Medical supervision available"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "lsdAdverseEvents": [
+    {
+      "id": "ae_lsd_anxiety_001",
+      "name": "Acute Anxiety and Panic",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_severe",
+      "prevalence": [
+        {
+          "context": "First-time users experiencing fear",
+          "rate": 64.1,
+          "unit": "percent",
+          "severity": "Generally mild",
+          "impact": "Did not discourage further use",
+          "citation": "baxter_2024"
+        },
+        {
+          "context": "Emergency medical treatment seekers - anxiety/panic",
+          "rate": 69.6,
+          "unit": "percent",
+          "coOccurrence": "64.1% also had confusion",
+          "citation": "kopra_2022"
+        },
+        {
+          "context": "Most frequently reported adverse effect",
+          "citations": ["andersen_2021", "family_2022", "rossi_2022"]
+        }
+      ],
+      "description": "Anxiety and panic reactions during LSD experience",
+      "manifestations": [
+        "Intense fear",
+        "Racing heart",
+        "Sense of impending doom",
+        "Inability to calm down",
+        "Overwhelming worry",
+        "Panic attacks"
+      ],
+      "riskFactors": [
+        "Unprepared for intensity",
+        "High doses",
+        "Unfamiliar setting",
+        "Pre-existing anxiety",
+        "Stressful life circumstances",
+        "Lack of support"
+      ],
+      "management": [
+        "Reassurance",
+        "Breathing exercises",
+        "Grounding techniques",
+        "Environmental adjustment",
+        "Benzodiazepines if severe"
+      ],
+      "prognosis": "Usually resolves with session; can escalate without proper support",
+      "citations": ["baxter_2024", "kopra_2022", "rossi_2022"]
+    },
+    {
+      "id": "ae_lsd_psychotic_symptoms_001",
+      "name": "Acute Psychotic Symptoms",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "moderate_to_severe",
+      "prevalence": {
+        "persistent": 1.3,
+        "unit": "percent",
+        "context": "Persistent psychotic symptoms",
+        "citation": "carhart-harris_2010"
+      },
+      "symptoms": [
+        "Paranoia",
+        "Hallucinations beyond typical psychedelic effects",
+        "Delusions",
+        "Derealization",
+        "Disorganized thinking",
+        "Loss of reality testing"
+      ],
+      "overlap": "May overlap with 'bad trip'",
+      "riskFactors": [
+        "Personal history of psychosis",
+        "Family history of psychosis",
+        "High doses",
+        "Vulnerable individuals",
+        "Poor set and setting"
+      ],
+      "duration": "Usually acute but can become prolonged",
+      "management": [
+        "Supportive care",
+        "Benzodiazepines",
+        "Antipsychotics if severe and unresponsive",
+        "Medical evaluation"
+      ],
+      "citation": "carhart-harris_2010"
+    },
+    {
+      "id": "ae_lsd_cognitive_impairment_001",
+      "name": "Acute Cognitive Impairment",
+      "category": "cognitive",
+      "timeframe": "acute",
+      "severity": "moderate",
+      "affectedDomains": [
+        "Attention",
+        "Memory",
+        "Executive function",
+        "Concentration",
+        "Problem-solving"
+      ],
+      "description": "Impaired cognitive functioning during experience",
+      "manifestations": [
+        "Difficulty focusing",
+        "Short-term memory problems",
+        "Inability to complete tasks",
+        "Confusion",
+        "Disorientation"
+      ],
+      "functionalImpact": "Makes experience disorienting and potentially overwhelming",
+      "duration": "Resolves as drug effects subside",
+      "citation": "barber_2023"
+    },
+    {
+      "id": "ae_lsd_ego_dissolution_001",
+      "name": "Ego Dissolution",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "variable",
+      "doseRelationship": "More common at higher doses (200+ mcg)",
+      "description": "Loss of sense of self or identity",
+      "valence": "Can be positive or distressing",
+      "positiveExperience": [
+        "Mystical experience",
+        "Unity consciousness",
+        "Transcendent insights",
+        "Transformative"
+      ],
+      "negativeExperience": [
+        "Terror",
+        "Confusion",
+        "Panic",
+        "Fear of death or insanity",
+        "Loss of control"
+      ],
+      "individualVariability": "Highly dependent on preparation, set, setting, and support",
+      "citation": "holze_2021"
+    },
+    {
+      "id": "ae_lsd_trauma_reactivation_001",
+      "name": "Trauma Reactivation",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "moderate_to_severe",
+      "description": "Triggering recall of past traumatic experiences",
+      "manifestations": [
+        "Flashbacks to traumatic events",
+        "Re-experiencing trauma",
+        "Intense emotional distress",
+        "Dissociation",
+        "Panic"
+      ],
+      "examples": [
+        "Sexual assault memories",
+        "Combat experiences",
+        "Childhood abuse",
+        "Accidents",
+        "Loss"
+      ],
+      "riskFactors": [
+        "History of trauma",
+        "Unprocessed trauma",
+        "PTSD",
+        "Lack of trauma-informed support"
+      ],
+      "dualNature": "Can be destabilizing or therapeutically valuable with proper support",
+      "management": [
+        "Trauma-informed facilitators",
+        "Grounding techniques",
+        "Safety planning",
+        "Integration support"
+      ],
+      "citation": "scala_2024"
+    },
+    {
+      "id": "ae_lsd_suicidality_acute_001",
+      "name": "Suicidal Ideation and Self-Harm",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "critical",
+      "prevalence": {
+        "thoughtsOrActs": 20.6,
+        "unit": "percent",
+        "context": "Emergency medical treatment seekers",
+        "citation": "kopra_2022"
+      },
+      "description": "Thoughts or acts of self-harm during experience",
+      "riskFactors": [
+        "Pre-existing mental health issues",
+        "History of suicidal ideation",
+        "Depression",
+        "Challenging experience",
+        "Overwhelming negative emotions",
+        "Loss of hope"
+      ],
+      "causality": "Direct link unclear; may reflect underlying issues",
+      "management": [
+        "Immediate support",
+        "Continuous monitoring",
+        "Safety measures",
+        "Emergency services if needed",
+        "Psychiatric evaluation"
+      ],
+      "prevention": [
+        "Thorough screening",
+        "Exclude active suicidality",
+        "Close monitoring during session"
+      ],
+      "citation": "kopra_2022"
+    },
+    {
+      "id": "ae_lsd_cardiovascular_001",
+      "name": "Cardiovascular Effects",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "normallyBenign": true,
+      "riskInVulnerable": "moderate_to_high",
+      "effects": [
+        {
+          "effect": "increased_heart_rate",
+          "prevalence": {
+            "over100bpm": 25,
+            "unit": "percent",
+            "dose": 200,
+            "doseUnit": "mcg",
+            "citation": "holze_2022"
+          },
+          "severity": "Usually benign"
+        },
+        {
+          "effect": "increased_blood_pressure",
+          "severity": "Moderate increases typical",
+          "risk": "Problematic in pre-existing cardiovascular disease"
+        },
+        {
+          "effect": "increased_body_temperature",
+          "prevalence": {
+            "over38C": 34,
+            "unit": "percent",
+            "dose": 200,
+            "doseUnit": "mcg",
+            "citation": "holze_2022"
+          },
+          "risk": "Hyperthermia possible with exertion/hot environment"
+        }
+      ],
+      "vulnerablePopulations": [
+        "Pre-existing heart conditions",
+        "Hypertension",
+        "Arrhythmias"
+      ],
+      "lifeThreateningRisk": "Low in healthy individuals; elevated in cardiovascular disease",
+      "citations": ["holze_2022", "romeo_2024"]
+    },
+    {
+      "id": "ae_lsd_somatic_001",
+      "name": "Other Physical Symptoms",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "symptoms": [
+        {
+          "symptom": "sweating",
+          "prevalence": 26.5,
+          "unit": "percent",
+          "context": "EMT seekers",
+          "citation": "kopra_2022"
+        },
+        {
+          "symptom": "palpitations",
+          "prevalence": 25.5,
+          "unit": "percent",
+          "context": "EMT seekers",
+          "citation": "kopra_2022"
+        },
+        {
+          "symptom": "difficulty_breathing",
+          "prevalence": 20.6,
+          "unit": "percent",
+          "context": "EMT seekers",
+          "citation": "kopra_2022"
+        },
+        {
+          "symptom": "nausea_vomiting",
+          "prevalence": 17.6,
+          "unit": "percent",
+          "context": "EMT seekers",
+          "citation": "kopra_2022"
+        },
+        {
+          "symptom": "headache",
+          "commonality": "reported",
+          "citations": ["holze_2022", "kopra_2022"]
+        },
+        {
+          "symptom": "mydriasis",
+          "description": "Pupil dilation",
+          "commonality": "very common"
+        }
+      ],
+      "duration": "Typically subside after effects wear off",
+      "management": "Supportive care; usually self-limiting"
+    },
+    {
+      "id": "ae_lsd_overdose_001",
+      "name": "Overdose",
+      "category": "toxicological",
+      "timeframe": "acute",
+      "severity": "critical",
+      "rarity": "rare",
+      "caseReports": true,
+      "effects": [
+        "Coma",
+        "Severe hyperthermia",
+        "Bleeding complications",
+        "Respiratory depression",
+        "Cardiovascular collapse"
+      ],
+      "mortality": "Accidental deaths documented but very rare",
+      "prevention": [
+        "Accurate dosing",
+        "Start low",
+        "Avoid unknown sources",
+        "Test substances"
+      ],
+      "citations": ["leonard_2018", "martins_2023"]
+    },
+    {
+      "id": "ae_lsd_hppd_001",
+      "name": "Hallucinogen Persisting Perception Disorder (HPPD)",
+      "category": "perceptual",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "types": [
+        {
+          "type": "Type I",
+          "description": "Transient, benign flashbacks",
+          "distress": "minimal",
+          "impairment": "none_to_minimal"
+        },
+        {
+          "type": "Type II",
+          "description": "Chronic, potentially distressing",
+          "distress": "moderate_to_severe",
+          "impairment": "variable"
+        }
+      ],
+      "prevalence": [
+        {
+          "finding": "15% reported visual disturbances without further drug use",
+          "citation": "halpern_2003"
+        },
+        {
+          "finding": "10% reported long-term perceptual changes when asked directly",
+          "significance": "73% did not consider changes significant",
+          "citation": "carhart-harris_2010"
+        },
+        {
+          "finding": "69% of former LSD users reported flashbacks",
+          "coOccurrence": "66-79% also had long-term anxiety",
+          "citation": "larsen_2016"
+        },
+        {
+          "finding": "Range 15-77% across studies",
+          "note": "Rates may be inflated due to methodological concerns",
+          "citation": "ortiz_bernal_2022"
+        }
+      ],
+      "visualSymptoms": [
+        "Visual snow",
+        "Flashes",
+        "Floaters",
+        "Afterimages",
+        "Palinopsia",
+        "Intensified colors",
+        "Trailing",
+        "Geometric patterns",
+        "Halos"
+      ],
+      "dissociativeSymptoms": [
+        "Depersonalization",
+        "Derealization"
+      ],
+      "riskFactors": [
+        "Frequent use",
+        "High doses",
+        "Long-term use",
+        "Polydrug use (especially alcohol, cannabis)",
+        "Young age",
+        "History of substance misuse"
+      ],
+      "onsetPattern": "Can occur after single use but more common with chronic use",
+      "clinicalTrials": {
+        "contemporary": "No cases reported in contemporary clinical trials",
+        "context": "Thought to be less common in controlled settings"
+      },
+      "subjectiveExperience": "Some experience as non-harmful or meaningful; others find distressing",
+      "citations": ["halpern_2003", "carhart-harris_2010", "larsen_2016", "ortiz_bernal_2022", "lacroix_2024"]
+    },
+    {
+      "id": "ae_lsd_flashbacks_001",
+      "name": "Flashbacks",
+      "category": "perceptual",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "description": "Spontaneous recurrence of aspects of LSD experience",
+      "relationship": "Sometimes linked to HPPD but can occur independently",
+      "prevalence": [
+        {
+          "range": {"min": 10, "max": 35},
+          "unit": "percent",
+          "note": "Not all distressing or harmful",
+          "citation": "kopra_2022"
+        },
+        {
+          "value": 69,
+          "unit": "percent",
+          "context": "Former LSD users",
+          "citation": "larsen_2016"
+        },
+        {
+          "value": 15,
+          "unit": "percent",
+          "context": "Uncontrolled LSD-like experiences without further drug use",
+          "citation": "halpern_2003"
+        }
+      ],
+      "triggers": [
+        "Stress",
+        "Fatigue",
+        "Cannabis use",
+        "Dark environments",
+        "Sensory deprivation",
+        "Exercise"
+      ],
+      "valence": "Range from benign to distressing",
+      "duration": "Typically brief (seconds to minutes)",
+      "citations": ["kopra_2022", "larsen_2016", "halpern_2003"]
+    },
+    {
+      "id": "ae_lsd_prolonged_psychosis_001",
+      "name": "Prolonged Psychotic Reactions",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "severe",
+      "rarity": "rare",
+      "duration": "Days, weeks, or longer",
+      "prevalence": [
+        {
+          "value": 1.3,
+          "unit": "percent",
+          "context": "Persistent psychotic symptoms",
+          "citation": "carhart-harris_2010"
+        },
+        {
+          "value": 57,
+          "unit": "percent",
+          "context": "Of those with bad experiences developed extended psychosis",
+          "citation": "rosenblat_nd"
+        },
+        {
+          "historicalRate": {"min": 0.08, "max": 4.6},
+          "unit": "percent",
+          "context": "Range in studies; higher in psychiatric patients",
+          "citation": "johnson_2008"
+        }
+      ],
+      "symptoms": [
+        "Paranoia",
+        "Hallucinosis",
+        "Derealization",
+        "Disorganized thinking",
+        "Delusions",
+        "Loss of reality testing"
+      ],
+      "riskFactors": [
+        "Personal history of psychosis",
+        "Family history of psychosis",
+        "Pre-existing psychiatric vulnerability",
+        "Uncontrolled settings",
+        "High doses"
+      ],
+      "context": "More common in uncontrolled settings and vulnerable individuals",
+      "treatment": [
+        "Psychiatric evaluation",
+        "Antipsychotic medication",
+        "Supportive therapy",
+        "Hospitalization if severe"
+      ],
+      "citations": ["carhart-harris_2010", "rosenblat_nd", "johnson_2008"]
+    },
+    {
+      "id": "ae_lsd_anxiety_depression_longterm_001",
+      "name": "Persistent Anxiety and Depression",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "moderate",
+      "prevalence": [
+        {
+          "anxiety": 1.9,
+          "depression": 1.1,
+          "unit": "percent",
+          "citation": "carhart-harris_2010"
+        },
+        {
+          "value": 87,
+          "unit": "percent",
+          "context": "Anxiety symptoms arose or worsened in those with negative psychological responses",
+          "citation": "bremler_2023"
+        }
+      ],
+      "description": "Worsening or new onset of anxiety or depression after LSD use",
+      "riskFactors": [
+        "Pre-existing anxiety or depression",
+        "Bad trip experience",
+        "Challenging experience",
+        "Lack of integration support"
+      ],
+      "duration": "Variable; can persist for weeks to months",
+      "treatment": [
+        "Psychotherapy",
+        "Integration support",
+        "Medication if needed",
+        "Support groups"
+      ],
+      "citations": ["carhart-harris_2010", "bremler_2023"]
+    },
+    {
+      "id": "ae_lsd_personality_changes_001",
+      "name": "Personality Changes",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "evidenceQuality": "weak",
+      "historicalClaims": "Chronic LSD use associated with personality changes in older literature",
+      "modernEvidence": "Not confirmed in recent studies",
+      "temporaryShifts": "Some individuals may experience temporary shifts in sense of self or behavior",
+      "permanentChanges": "No solid evidence for permanent alterations",
+      "citations": ["halpern_1999", "barnett_2024"]
+    },
+    {
+      "id": "ae_lsd_suicidality_longterm_001",
+      "name": "Long-Term Suicidality",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "critical",
+      "rarity": "rare",
+      "prevalence": {
+        "attempts": 1.2,
+        "completed": 0.4,
+        "unit": "per_1000_patients",
+        "citation": "johnson_2008"
+      },
+      "causality": "Unclear; may relate to pre-existing issues",
+      "context": "More common with underlying mental health conditions",
+      "riskFactors": [
+        "Pre-existing depression",
+        "History of suicidal ideation",
+        "Significant distress after experience",
+        "Lack of support"
+      ],
+      "prevention": [
+        "Thorough screening",
+        "Integration support",
+        "Mental health follow-up",
+        "Crisis resources"
+      ],
+      "citation": "johnson_2008"
+    },
+    {
+      "id": "ae_lsd_psychiatric_diagnosis_001",
+      "name": "New Psychiatric Diagnoses Post-Use",
+      "category": "psychological",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "prevalence": [
+        {
+          "value": 37.5,
+          "unit": "percent",
+          "context": "Diagnosed with psychiatric condition after psychedelic experience",
+          "citation": "bremler_2023"
+        },
+        {
+          "value": 14,
+          "unit": "percent",
+          "context": "Developed schizophrenia or delusional disorder 25 years after LSD treatment",
+          "citation": "larsen_2016"
+        },
+        {
+          "value": 25,
+          "unit": "percent",
+          "context": "Developed bipolar or depressive disorder 25 years after LSD treatment",
+          "citation": "larsen_2016"
+        }
+      ],
+      "note": "More common in individuals with pre-existing vulnerabilities",
+      "causality": "Complex; may unmask latent conditions or exacerbate vulnerabilities",
+      "conditions": [
+        "Schizophrenia",
+        "Delusional disorder",
+        "Bipolar disorder",
+        "Major depression",
+        "Anxiety disorders"
+      ],
+      "citations": ["bremler_2023", "larsen_2016"]
+    },
+    {
+      "id": "ae_lsd_cardiovascular_longterm_001",
+      "name": "Long-Term Cardiovascular Effects",
+      "category": "physiological",
+      "timeframe": "long_term",
+      "severity": "unclear",
+      "evidenceQuality": "weak",
+      "description": "Potential long-term cardiovascular effects not well understood",
+      "concerns": [
+        {
+          "concern": "valvular_heart_disease",
+          "mechanism": "LSD as 5-HT2B agonist",
+          "context": "Particularly with long-term microdosing",
+          "evidenceQuality": "theoretical_concern",
+          "citation": "bornemann_2020"
+        }
+      ],
+      "recommendation": "More research needed; caution with long-term regular use",
+      "citation": "bornemann_2020"
+    },
+    {
+      "id": "ae_lsd_neurotoxicity_001",
+      "name": "Neurotoxicity",
+      "category": "physiological",
+      "timeframe": "long_term",
+      "severity": "unclear",
+      "evidenceQuality": "conflicting",
+      "description": "Long-term effects on brain not well understood",
+      "findings": [
+        "Some studies suggest potential neurotoxic effects",
+        "Others find no evidence of neurotoxicity",
+        "Generally considered to have low neurotoxicity"
+      ],
+      "recommendation": "More research needed",
+      "citation": "larsen_2016"
+    }
+  ],
+
+  "lsdMicrodosingAdverseEvents": [
+    {
+      "id": "ae_micro_psychological_001",
+      "name": "Microdosing Psychological Effects",
+      "category": "psychological",
+      "timeframe": "acute",
+      "severity": "mild_to_moderate",
+      "prevalence": {
+        "adverseEffects": 20,
+        "noSideEffects": 30,
+        "unit": "percent",
+        "sampleSize": 1116,
+        "citation": "wells_2024"
+      },
+      "symptoms": [
+        {
+          "symptom": "increased_anxiety",
+          "prevalence": {"min": 81, "max": 93},
+          "unit": "percent",
+          "citation": "bremler_2023"
+        },
+        {
+          "symptom": "emotional_discomfort",
+          "citations": ["wells_2024", "hutten_2019"]
+        },
+        {
+          "symptom": "racing_thoughts",
+          "prevalence": 9.69,
+          "unit": "percent",
+          "citation": "petranker_2022"
+        },
+        {
+          "symptom": "confusion",
+          "prevalence": 9.69,
+          "unit": "percent",
+          "citation": "petranker_2022"
+        },
+        {
+          "symptom": "memory_problems",
+          "prevalence": 9.69,
+          "unit": "percent",
+          "citation": "petranker_2022"
+        },
+        {
+          "symptom": "overstimulation",
+          "citation": "lea_2020"
+        },
+        {
+          "symptom": "difficulty_concentrating",
+          "citation": "lea_2020"
+        },
+        {
+          "symptom": "dissociation_rumination",
+          "prevalence": 5.51,
+          "unit": "percent",
+          "citation": "petranker_2022"
+        }
+      ],
+      "duration": "Usually transient; 1-3% report effects lasting days",
+      "doseDependence": "More common at higher microdoses (15-20 mcg)"
+    },
+    {
+      "id": "ae_micro_physiological_001",
+      "name": "Microdosing Physiological Effects",
+      "category": "physiological",
+      "timeframe": "acute",
+      "severity": "mild",
+      "symptoms": [
+        {
+          "symptom": "headaches",
+          "prevalence": 7.67,
+          "unit": "percent",
+          "citations": ["murphy_2024", "andersen_2021", "straumann_2024", "petranker_2022"]
+        },
+        {
+          "symptom": "cold_sensations",
+          "citation": "murphy_2024"
+        },
+        {
+          "symptom": "feelings_of_abnormality",
+          "citation": "murphy_2024"
+        },
+        {
+          "symptom": "general_physiological_discomfort",
+          "prevalence": 12,
+          "unit": "percent",
+          "dose": "low-dose conditions",
+          "citation": "bornemann_2020"
+        },
+        {
+          "symptom": "restlessness_fatigue",
+          "prevalence": 10.59,
+          "unit": "percent",
+          "citation": "petranker_2022"
+        },
+        {
+          "symptom": "stomach_pain",
+          "prevalence": 7.67,
+          "unit": "percent",
+          "citation": "petranker_2022"
+        },
+        {
+          "symptom": "sleep_problems",
+          "prevalence": 7.67,
+          "unit": "percent",
+          "note": "Sleep quality generally not affected",
+          "citations": ["petranker_2022", "polito_2024"]
+        },
+        {
+          "symptom": "loss_of_appetite",
+          "citation": "observed"
+        }
+      ],
+      "cardiovascular": {
+        "heartRate": "Mixed findings; some studies show no change, others note increases",
+        "bloodPressure": "Variable effects",
+        "citation": "polito_2024"
+      },
+      "balance": "No effects on balance reported"
+    },
+    {
+      "id": "ae_micro_perceptual_001",
+      "name": "Perceptual Effects at Microdose",
+      "category": "perceptual",
+      "timeframe": "acute",
+      "severity": "mild",
+      "description": "Some users report noticeable psychoactive effects even at microdoses",
+      "prevalence": {
+        "at10_20mcg": "Some users report effects",
+        "at25mcg": "Clearer effects; sometimes called 'minidose'",
+        "citations": ["murphy_2024", "holze_2021"]
+      },
+      "note": "Challenges definition of 'sub-perceptual'"
+    },
+    {
+      "id": "ae_micro_longterm_001",
+      "name": "Long-Term Microdosing Effects",
+      "category": "mixed",
+      "timeframe": "long_term",
+      "severity": "variable",
+      "rarity": "1-3% report negative effects beyond typical duration",
+      "concernsUnstudied": true,
+      "cardiovascular": {
+        "concern": "5-HT2B receptor effects",
+        "potentialRisk": "Valvular heart disease",
+        "evidenceQuality": "theoretical",
+        "recommendation": "More research needed",
+        "citations": ["bornemann_2020", "savides_2024"]
+      },
+      "hppd": {
+        "risk": "Possible but rare",
+        "note": "More commonly associated with full doses"
+      },
+      "flashbacks": {
+        "prevalence": "Rare (2% noted with mescaline; similar likely for LSD)",
+        "citation": "aday_2020"
+      }
+    },
+    {
+      "id": "ae_micro_discontinuation_001",
+      "name": "Reasons for Microdosing Discontinuation",
+      "category": "behavioral",
+      "mostCommon": "Perceived lack of efficacy",
+      "negativeEffects": "Less common reason but occurs",
+      "pattern": "Especially when psychological and physical effects occur together",
+      "citation": "hutten_2019"
+    },
+    {
+      "id": "ae_micro_dosing_challenges_001",
+      "name": "Dosing Accuracy Challenges",
+      "category": "practical",
+      "severity": "moderate",
+      "issues": [
+        {
+          "issue": "inconsistent_purity",
+          "description": "Variable LSD content in illicit supplies",
+          "risk": "Unpredictable dosing"
+        },
+        {
+          "issue": "cutting_blotters",
+          "description": "Uneven distribution when cutting tabs",
+          "risk": "Hot spots or weak areas",
+          "citation": "miller_2024"
+        },
+        {
+          "issue": "contamination",
+          "description": "Adulterants may be present",
+          "risk": "Unexpected effects or toxicity"
+        },
+        {
+          "issue": "finding_sweet_spot",
+          "description": "Multiple attempts needed to find optimal dose",
+          "citation": "lea_2020"
+        }
+      ],
+      "solution": "Volumetric dosing recommended for consistency",
+      "citation": "miller_2024"
+    },
+    {
+      "id": "ae_micro_polydrug_001",
+      "name": "Microdosing with Other Substances",
+      "category": "interaction",
+      "severity": "moderate",
+      "concern": "Concurrent use alters effects",
+      "substances": ["alcohol", "caffeine"],
+      "impact": "Difficult to isolate LSD effects",
+      "userBehavior": "Some avoid microdosing when physically unwell or using other substances",
+      "citations": ["baxter_2024", "miller_2024"]
+    },
+    {
+      "id": "ae_micro_expectation_001",
+      "name": "Expectation Effects",
+      "category": "methodological",
+      "concern": "Expectation of effects can confound results",
+      "context": "Particularly in studies using microdose as placebo",
+      "implication": "Difficult to separate true drug effects from expectancy",
+      "citation": "bornemann_2020"
+    }
+  ],
+
+  "contaminationQualityIssues": [
+    {
+      "id": "contam_lsd_potency_001",
+      "name": "Variable Potency in Blotter Paper",
+      "category": "quality",
+      "severity": "high",
+      "description": "Uneven distribution of LSD across blotter paper",
+      "mechanism": "LSD may not be evenly applied to paper",
+      "consequences": [
+        "Hot spots with higher concentrations",
+        "Cold spots with little or no LSD",
+        "Unpredictable dosing",
+        "Accidental overdose",
+        "Weak or no effects from some portions"
+      ],
+      "microdosing": "Particularly problematic for microdosing where precision needed",
+      "prevention": [
+        "Volumetric dosing",
+        "Test doses",
+        "Trusted sources"
+      ],
+      "citation": "miller_2024"
+    },
+    {
+      "id": "contam_lsd_adulterants_001",
+      "name": "Adulteration with NBOMes",
+      "category": "contamination",
+      "severity": "critical",
+      "description": "NBOMe compounds sold as LSD",
+      "commonAdulterants": [
+        "25I-NBOMe",
+        "25C-NBOMe",
+        "25B-NBOMe"
+      ],
+      "risks": [
+        "Higher toxicity than LSD",
+        "Seizures",
+        "Severe hallucinations",
+        "Vasoconstriction",
+        "Hyperthermia",
+        "Deaths documented"
+      ],
+      "differentialDiagnosis": "NBOMes have bitter taste; LSD is tasteless",
+      "prevention": [
+        "Reagent testing with Ehrlich's reagent",
+        "If tastes bitter, spit out",
+        "Trusted sources"
+      ],
+      "citations": ["hirschfeld_2021", "malcolm_2022"]
+    },
+    {
+      "id": "contam_lsd_dox_001",
+      "name": "Adulteration with DOx Compounds",
+      "category": "contamination",
+      "severity": "high",
+      "description": "Dimethoxyamphetamines (DOx family) sold as LSD",
+      "examples": [
+        "DOM",
+        "DOI",
+        "DOB"
+      ],
+      "risks": [
+        "Severe side effects",
+        "Much longer duration (24-36 hours)",
+        "Higher toxicity",
+        "Vasoconstriction",
+        "Hospitalizations"
+      ],
+      "prevention": [
+        "Substance testing",
+        "Start with low dose",
+        "Trusted sources"
+      ]
+    },
+    {
+      "id": "contam_lsd_atropine_001",
+      "name": "Atropine-like Contamination",
+      "category": "contamination",
+      "severity": "high",
+      "description": "Illicitly manufactured LSD contaminated with atropine-like substances",
+      "risks": [
+        "Anticholinergic toxicity",
+        "Psychotic symptoms",
+        "Hyperthermia",
+        "Tachycardia",
+        "Mydriasis",
+        "Urinary retention",
+        "Confusion"
+      ],
+      "citation": "sabe_2024"
+    },
+    {
+      "id": "contam_lsd_misidentification_001",
+      "name": "Misidentification in Drug Supply",
+      "category": "sourcing",
+      "severity": "high",
+      "description": "LSD found in samples sold as other drugs",
+      "example": "LSD found in cocaine samples",
+      "risk": "Unexpected psychedelic effects",
+      "implication": "Highlights unreliability of illicit drug market",
+      "citations": ["hirschfeld_2021"]
+    },
+    {
+      "id": "contam_lsd_serotonin_syndrome_risk_001",
+      "name": "Contamination Increasing Serotonin Syndrome Risk",
+      "category": "interaction",
+      "severity": "critical",
+      "description": "Contaminated LSD combined with serotonergic drugs",
+      "mechanism": "Unknown adulterants may potentiate serotonin effects",
+      "risk": "Serotonin toxicity when combined with SSRIs, MAOIs",
+      "prevention": [
+        "Test substances",
+        "Know all medications being taken",
+        "Avoid combinations"
+      ],
+      "citations": ["hirschfeld_2021", "malcolm_2022"]
+    },
+    {
+      "id": "contam_lsd_unregulated_market_001",
+      "name": "Lack of Quality Control in Illicit Market",
+      "category": "regulatory",
+      "severity": "high",
+      "description": "No regulatory oversight of illicit LSD",
+      "consequences": [
+        "Cannot verify purity",
+        "Cannot verify potency",
+        "Cannot verify identity",
+        "Exposure to unknown adulterants",
+        "Unpredictable effects"
+      ],
+      "compoundingFactors": [
+        "Unregulated synthesis",
+        "Unknown intermediates",
+        "Storage degradation",
+        "Intentional adulteration"
+      ],
+      "citations": ["bremler_2023", "glynos_2023"]
+    }
+  ],
+
+  "harmReductionStrategies": [
+    {
+      "id": "hr_lsd_substance_testing_001",
+      "name": "Substance Testing",
+      "category": "pre_use",
+      "importance": "critical",
+      "methods": [
+        {
+          "method": "reagent_testing",
+          "reagent": "Ehrlich's reagent",
+          "detects": "Presence of indoles (LSD, psilocybin)",
+          "limitations": [
+            "Cannot detect all adulterants",
+            "Cannot measure quantity",
+            "Cannot predict individual response"
+          ],
+          "availability": "Affordable, accessible",
+          "citations": ["miller_2024", "lea_2020"]
+        },
+        {
+          "method": "drug_checking_services",
+          "description": "Professional laboratory analysis",
+          "availability": "Variable by location",
+          "advantage": "More comprehensive analysis"
+        },
+        {
+          "method": "test_dose",
+          "description": "Taking small amount to assess purity/potency",
+          "prevalence": "31.3% of first-time users took test dose",
+          "recommendation": "Strongly recommended",
+          "citation": "baxter_2024"
+        }
+      ],
+      "bitterTaste": "If blotter tastes bitter, it's likely not LSD - spit it out"
+    },
+    {
+      "id": "hr_lsd_start_low_001",
+      "name": "Start Low, Go Slow",
+      "category": "dosing",
+      "importance": "high",
+      "description": "Begin with low doses, especially for first-time users",
+      "rationale": [
+        "Gauge individual sensitivity",
+        "Minimize risk of overwhelming experience",
+        "Reduce likelihood of adverse effects"
+      ],
+      "recommendations": [
+        "First-time: 50-75 mcg",
+        "Wait for full effects before considering more",
+        "Gradual dose increase if continuing use"
+      ],
+      "citations": ["bornemann_2020", "baxter_2024", "basedow_2024"]
+    },
+    {
+      "id": "hr_lsd_set_setting_001",
+      "name": "Optimize Set and Setting",
+      "category": "environmental",
+      "importance": "critical",
+      "set_components": [
+        "Positive mindset",
+        "Clear intentions",
+        "Emotional stability",
+        "Adequate preparation",
+        "Realistic expectations"
+      ],
+      "setting_components": [
+        "Safe, comfortable environment",
+        "Familiar location preferred",
+        "Minimize distractions",
+        "Temperature control",
+        "Access to bathroom",
+        "Comfortable seating/lying area",
+        "Supportive people present"
+      ],
+      "firstTimeUsers": "79.6% took LSD with close friend, group of friends, or partner",
+      "citations": ["baxter_2024", "bremler_2023", "kopra_2022"]
+    },
+    {
+      "id": "hr_lsd_trip_sitter_001",
+      "name": "Trip Sitter/Trusted Support Person",
+      "category": "social",
+      "importance": "high",
+      "description": "Experienced, sober person present during experience",
+      "roles": [
+        "Provide reassurance",
+        "Ensure physical safety",
+        "Help with basic needs",
+        "Assist with challenging moments",
+        "Be calm presence"
+      ],
+      "characteristics": [
+        "Trustworthy",
+        "Calm demeanor",
+        "Knowledge of psychedelics",
+        "Non-judgmental",
+        "Available throughout experience"
+      ],
+      "prevalence": "Common practice among experienced users",
+      "citations": ["baxter_2024", "edwards_2023", "palmer_2022"]
+    },
+    {
+      "id": "hr_lsd_avoid_mixing_001",
+      "name": "Avoid Polydrug Use",
+      "category": "safety",
+      "importance": "critical",
+      "description": "Do not combine LSD with other substances",
+      "specificWarnings": [
+        {
+          "substance": "alcohol",
+          "risk": "Increased adverse effects, impaired judgment"
+        },
+        {
+          "substance": "SSRIs",
+          "risk": "Serotonin syndrome"
+        },
+        {
+          "substance": "MAOIs",
+          "risk": "Severe serotonin syndrome, potentially fatal"
+        },
+        {
+          "substance": "lithium",
+          "risk": "Dangerous interaction, seizures"
+        },
+        {
+          "substance": "cannabis",
+          "risk": "Unpredictable intensification, increased anxiety"
+        }
+      ],
+      "generalRule": "Use LSD alone, not in combination",
+      "deathData": "82% of psychedelic-related deaths involved polydrug use",
+      "citation": "kopra_2025"
+    },
+    {
+      "id": "hr_lsd_medication_review_001",
+      "name": "Medication Review",
+      "category": "medical",
+      "importance": "critical",
+      "description": "Review all medications before LSD use",
+      "procedure": [
+        "List all prescription medications",
+        "Include over-the-counter drugs",
+        "Note supplements and herbs",
+        "Consult with knowledgeable professional",
+        "Stop contraindicated medications under supervision"
+      ],
+      "absoluteContraindications": [
+        "MAOIs",
+        "Lithium"
+      ],
+      "relativeContraindications": [
+        "SSRIs",
+        "Antipsychotics",
+        "Benzodiazepines (may reduce effects)"
+      ],
+      "citation": "davis_nd"
+    },
+    {
+      "id": "hr_lsd_preparation_001",
+      "name": "Comprehensive Preparation",
+      "category": "pre_use",
+      "importance": "high",
+      "components": [
+        "Psychoeducation about effects",
+        "Setting clear intentions",
+        "Life review with facilitator",
+        "Addressing fears and concerns",
+        "Learning coping strategies",
+        "Understanding set and setting",
+        "Informed consent process"
+      ],
+      "duration": "Multiple sessions recommended",
+      "effectiveness": "Associated with better outcomes",
+      "citation": "garcia-romeu_2018"
+    },
+    {
+      "id": "hr_lsd_integration_001",
+      "name": "Integration Support",
+      "category": "post_use",
+      "importance": "high",
+      "description": "Processing and making meaning of experience",
+      "timing": "Begin 1-2 days post-session, continue for weeks to months",
+      "modalities": [
+        "Individual therapy",
+        "Group integration circles",
+        "Journaling",
+        "Creative expression",
+        "Contemplative practices",
+        "Peer support"
+      ],
+      "benefits": [
+        "Make sense of experience",
+        "Translate insights to behavior change",
+        "Process challenging material",
+        "Prevent maladaptive beliefs",
+        "Reduce extended difficulties"
+      ],
+      "citations": ["garcia-romeu_2018", "robinson_2024", "evans_2023"]
+    },
+    {
+      "id": "hr_lsd_volumetric_dosing_001",
+      "name": "Volumetric Dosing for Microdosing",
+      "category": "dosing",
+      "importance": "high",
+      "context": "Especially important for microdosing",
+      "method": "Dissolve known quantity of LSD in measured volume of liquid",
+      "advantages": [
+        "Consistent dosing",
+        "Avoid hot spots in blotters",
+        "Precise measurement",
+        "Easy dose adjustment"
+      ],
+      "procedure": [
+        "Use distilled water or alcohol",
+        "Calculate concentration",
+        "Store in dark, cool place",
+        "Measure doses volumetrically"
+      ],
+      "citation": "miller_2024"
+    },
+    {
+      "id": "hr_lsd_trusted_sources_001",
+      "name": "Trusted Sources",
+      "category": "sourcing",
+      "importance": "high",
+      "description": "Obtain substances from reliable sources",
+      "considerations": [
+        "Reputation",
+        "Consistency",
+        "Willingness to have substances tested",
+        "Transparency about sourcing"
+      ],
+      "limitation": "Still no guarantee in unregulated market",
+      "citations": ["lancelotta_2020", "palmer_2022", "miller_2024"]
+    },
+    {
+      "id": "hr_lsd_helplines_001",
+      "name": "Access to Crisis Support",
+      "category": "emergency",
+      "importance": "high",
+      "services": [
+        {
+          "service": "Fireside Project",
+          "type": "Telephone helpline",
+          "availability": "24/7",
+          "effectiveness": "65.9% de-escalation rate"
+        },
+        {
+          "service": "Zendo Project",
+          "type": "On-site support at events",
+          "model": "Peer support"
+        }
+      ],
+      "prevention": "Can prevent need for emergency services",
+      "citations": ["pleet_2023", "canady_2023", "ruane_2015"]
+    },
+    {
+      "id": "hr_lsd_education_001",
+      "name": "Evidence-Based Education",
+      "category": "prevention",
+      "importance": "high",
+      "content": [
+        "Accurate risk information",
+        "Benefits and limitations",
+        "Harm reduction practices",
+        "How to recognize adverse reactions",
+        "When to seek help"
+      ],
+      "delivery": [
+        "Peer networks",
+        "Online resources",
+        "Educational workshops",
+        "Healthcare provider education"
+      ],
+      "targetPopulations": [
+        "Potential users",
+        "Current users",
+        "Healthcare providers",
+        "First responders"
+      ],
+      "citations": ["kopra_2025", "edwards_2023"]
+    }
+  ],
+
+  "clinicalConsiderations": [
+    {
+      "id": "clinical_screening_001",
+      "name": "Comprehensive Screening Protocol",
+      "importance": "critical",
+      "components": [
+        {
+          "area": "psychiatric_history",
+          "assess": [
+            "Personal history of psychosis, bipolar, severe depression",
+            "Family history of psychotic disorders, bipolar",
+            "Current symptoms",
+            "Previous adverse reactions to drugs",
+            "Personality disorders",
+            "PTSD and trauma history"
+          ]
+        },
+        {
+          "area": "medical_history",
+          "assess": [
+            "Cardiovascular conditions",
+            "Neurological conditions",
+            "Seizure history",
+            "Liver and kidney function",
+            "Pregnancy status"
+          ]
+        },
+        {
+          "area": "medication_review",
+          "assess": [
+            "All prescription medications",
+            "Over-the-counter drugs",
+            "Supplements",
+            "Dangerous interactions"
+          ]
+        },
+        {
+          "area": "substance_use",
+          "assess": [
+            "Current use of alcohol, cannabis, other drugs",
+            "History of substance use disorder",
+            "Polydrug patterns"
+          ]
+        }
+      ],
+      "tools": [
+        "Structured clinical interviews",
+        "Validated questionnaires",
+        "Medical examination",
+        "ECG if cardiovascular concerns"
+      ],
+      "citations": ["garcia-romeu_2018", "rosenblat_2023", "aday_2020"]
+    },
+    {
+      "id": "clinical_monitoring_001",
+      "name": "Session Monitoring",
+      "importance": "critical",
+      "vitals": [
+        {
+          "parameter": "heart_rate",
+          "frequency": "Regular intervals",
+          "concern": ">100 bpm in 25% at 200 mcg"
+        },
+        {
+          "parameter": "blood_pressure",
+          "frequency": "Regular intervals",
+          "concern": "Moderate increases expected"
+        },
+        {
+          "parameter": "body_temperature",
+          "frequency": "Regular intervals",
+          "concern": ">38°C in 34% at 200 mcg"
+        }
+      ],
+      "psychological": [
+        "Continuous observation",
+        "Regular verbal contact",
+        "Assessment of anxiety/distress",
+        "Suicidal ideation monitoring"
+      ],
+      "documentation": "All observations and interventions",
+      "citations": ["holze_2022", "carbonaro_2016"]
+    },
+    {
+      "id": "clinical_informed_consent_001",
+      "name": "Enhanced Informed Consent",
+      "importance": "critical",
+      "description": "Comprehensive consent process specific to psychedelics",
+      "components": [
+        "Detailed description of effects",
+        "Psychological risks",
+        "Physical risks",
+        "Possibility of challenging experiences",
+        "Trauma reactivation risk",
+        "Long-term effect uncertainties",
+        "Alternatives to treatment",
+        "Right to withdraw"
+      ],
+      "enhanced": "Goes beyond typical psychiatric consent",
+      "discussion": [
+        "Potential for shifts in values/personality",
+        "Changes in judgment and beliefs",
+        "Increased suggestibility during experience",
+        "Power dynamics in therapeutic relationship"
+      ],
+      "citation": "rajwani_2022"
+    },
+    {
+      "id": "clinical_therapist_training_001",
+      "name": "Therapist Training and Competencies",
+      "importance": "critical",
+      "coreCompetencies": [
+        "Understanding psychedelic pharmacology",
+        "Crisis management skills",
+        "Trauma-informed care",
+        "Cultural competence",
+        "Ethical boundaries",
+        "Integration techniques",
+        "Managing transference/countertransference"
+      ],
+      "training": [
+        "Hyper-suggestibility awareness",
+        "Enhanced transference and projection",
+        "Ego-inflation risks",
+        "Undue influence prevention",
+        "Power dynamics"
+      ],
+      "supervision": "Ongoing supervision essential",
+      "citations": ["wilson-poe_2024", "kruger_2024"]
+    },
+    {
+      "id": "clinical_adverse_event_reporting_001",
+      "name": "Systematic Adverse Event Assessment",
+      "importance": "high",
+      "challenge": "Underreporting in psychedelic research",
+      "recommendations": [
+        "Standardized assessment tools (e.g., SPSI)",
+        "Specific targeted questions",
+        "Open-ended questions",
+        "Clinician-reported outcomes",
+        "Patient-reported outcomes",
+        "Reports from close others",
+        "Multiple time points"
+      ],
+      "timing": [
+        "During session",
+        "Immediately post-session",
+        "Days to weeks follow-up",
+        "Long-term follow-up"
+      ],
+      "citations": ["palitsky_nd", "cheung_2024", "freitas_2024"]
+    }
+  ],
+
+  "emergencyProtocols": [
+    {
+      "id": "emergency_lsd_nonpharm_001",
+      "name": "Non-Pharmacological Crisis Management",
+      "priority": "first_line",
+      "interventions": [
+        {
+          "intervention": "reassurance",
+          "description": "Remind experience is temporary, drug-related, safe",
+          "tone": "Calm, empathetic",
+          "effectiveness": "Sufficient for most cases"
+        },
+        {
+          "intervention": "environmental_modification",
+          "actions": [
+            "Move to quiet area",
+            "Reduce stimulation",
+            "Dim lights",
+            "Comfortable temperature"
+          ]
+        },
+        {
+          "intervention": "breathing_guidance",
+          "technique": "Slow, deep breathing instructions"
+        },
+        {
+          "intervention": "grounding",
+          "techniques": [
+            "Focus on physical sensations",
+            "Present moment awareness",
+            "Sensory focus"
+          ]
+        },
+        {
+          "intervention": "supportive_presence",
+          "description": "Calm, non-judgmental presence",
+          "avoid": "Arguing with altered perceptions"
+        }
+      ],
+      "effectiveness": "High - manages most distress",
+      "citations": ["garcia-romeu_2018", "johnson_2008"]
+    },
+    {
+      "id": "emergency_lsd_pharm_001",
+      "name": "Pharmacological Interventions",
+      "priority": "second_line",
+      "indication": "Non-pharmacological approaches insufficient",
+      "medications": [
+        {
+          "drug": "diazepam",
+          "status": "First-line pharmacological",
+          "typical_dose": 10,
+          "unit": "mg",
+          "route": "oral",
+          "emergency_dose": {"min": 15, "max": 30, "unit": "mg"},
+          "mechanism": "Anxiolytic",
+          "advantages": ["Rapid onset", "Shorter duration"],
+          "availability": "Should be readily available"
+        },
+        {
+          "drug": "antipsychotics",
+          "examples": ["risperidone", "olanzapine"],
+          "status": "Last resort",
+          "indication": "Severe psychosis unresponsive to benzodiazepines",
+          "avoid": "haloperidol (may worsen psychosis-like symptoms)",
+          "cautions": "May cause unpleasant effects"
+        }
+      ],
+      "citations": ["johnson_2008", "barnett_2021"]
+    },
+    {
+      "id": "emergency_lsd_ems_001",
+      "name": "Emergency Medical Services",
+      "indication": [
+        "Condition not improving",
+        "Severe physiological symptoms",
+        "Suicidal ideation/behavior",
+        "Violent behavior",
+        "Suspected overdose",
+        "Medical emergency"
+      ],
+      "preparation": [
+        "Emergency contact protocol",
+        "Medical history available",
+        "List of consumed substances"
+      ],
+      "prevalence": {
+        "firstTimeUsers": 0.5,
+        "generalUsers2020": 1,
+        "unit": "percent"
+      }
+    }
+  ],
+
+  "researchGaps": [
+    {
+      "gap": "Long-term safety data",
+      "description": "Limited long-term follow-up studies",
+      "priority": "high"
+    },
+    {
+      "gap": "Diversity in research",
+      "description": "82.3% of participants 1993-2017 were non-Hispanic White",
+      "impact": "Limited generalizability",
+      "priority": "critical"
+    },
+    {
+      "gap": "Cardiovascular effects of microdosing",
+      "description": "5-HT2B agonism concerns understudied",
+      "priority": "high"
+    },
+    {
+      "gap": "Optimal dosing strategies",
+      "description": "Individual dose optimization not well understood",
+      "priority": "moderate"
+    },
+    {
+      "gap": "Integration best practices",
+      "description": "Limited evidence on optimal integration approaches",
+      "priority": "moderate"
+    },
+    {
+      "gap": "Neurotoxicity",
+      "description": "Conflicting evidence on long-term brain effects",
+      "priority": "high"
+    },
+    {
+      "gap": "Mechanisms of therapeutic effects",
+      "description": "How LSD produces therapeutic benefits unclear",
+      "priority": "moderate"
+    }
+  ],
+
+  "metadata": {
+    "substanceId": "lsd_001",
+    "documentSource": "LSD - Literature Review",
+    "extractionDate": "2025-01-09",
+    "totalCitations": "400+",
+    "dateRange": "1960s-2024",
+    "geographicScope": "Global, emphasis on North America and Europe",
+    "evidenceQuality": "Variable by topic; strongest for acute effects, weaker for long-term outcomes",
+    "knownLimitations": [
+      "Underreporting of adverse events likely",
+      "Limited diversity in research populations",
+      "Few long-term follow-up studies",
+      "Historical data quality variable",
+      "Illicit use data less reliable than clinical",
+      "Publication bias toward positive findings"
+    ],
+    "clinicalTrialsData": "Multiple clinical trials but smaller scale than other psychedelics",
+    "naturalisticData": "Substantial observational and survey data"
+  }
+}
