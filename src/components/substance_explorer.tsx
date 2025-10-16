@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
-import { AlertCircle, Info, Shield, ChevronRight, AlertTriangle, CheckCircle } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AlertCircle, Info, Shield, ChevronRight, AlertTriangle, CheckCircle, FileText } from 'lucide-react';
+import caseStudiesData from '../data/case_studies_schema.json';
 
 const SubstanceExplorer = () => {
+  const navigate = useNavigate();
   const [selectedSubstance, setSelectedSubstance] = useState('psilocybin');
   const [expandedSection, setExpandedSection] = useState(null);
   const [hoveredLegendItem, setHoveredLegendItem] = useState(null);
   const [clinicalContextExpanded, setClinicalContextExpanded] = useState(true);
   const [activeSection, setActiveSection] = useState('pharmacology');
   const [expandedSubstance, setExpandedSubstance] = useState('psilocybin');
+
+  // Get related case studies for the selected substance
+  const relatedCases = useMemo(() => {
+    return caseStudiesData.caseStudies.filter(caseStudy =>
+      caseStudy.substances.includes(selectedSubstance)
+    );
+  }, [selectedSubstance]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -4640,6 +4650,48 @@ const SubstanceExplorer = () => {
                     </li>
                   </ul>
                 </div>
+
+                {/* Related Case Studies Section */}
+                {relatedCases.length > 0 && (
+                  <div className="bg-[#A33D2C] bg-opacity-10 border-2 border-[#A33D2C] p-6 rounded-[24px]">
+                    <h3 className="font-semibold text-lg mb-3 flex items-center" style={{fontFamily: 'Satoshi, sans-serif'}}>
+                      <FileText className="w-5 h-5 text-[#A33D2C] mr-2" />
+                      Related Case Studies ({relatedCases.length})
+                    </h3>
+                    <p className="text-sm text-[#4E4E4E] mb-4" style={{fontFamily: 'Inter, sans-serif'}}>
+                      Real-world cases involving {substanceColors[selectedSubstance] ? substance.name : selectedSubstance} from the Psychedelic Safety Institute Case Book
+                    </p>
+                    <div className="space-y-3">
+                      {relatedCases.slice(0, 5).map((caseStudy) => (
+                        <div
+                          key={caseStudy.id}
+                          className="bg-white p-4 rounded-[12px] border-2 border-[#E8D9C8] hover:border-[#A33D2C] transition-all cursor-pointer"
+                          onClick={() => navigate('/case-studies')}
+                        >
+                          <h4 className="font-semibold text-[#2C1B11] mb-1" style={{fontFamily: 'Satoshi, sans-serif'}}>
+                            {caseStudy.title}
+                          </h4>
+                          <p className="text-xs text-[#6C3000] mb-2" style={{fontFamily: 'Inter, sans-serif'}}>
+                            {caseStudy.year} • {caseStudy.setting}
+                          </p>
+                          <p className="text-sm text-[#4E4E4E] line-clamp-2" style={{fontFamily: 'Inter, sans-serif'}}>
+                            {caseStudy.summary}
+                          </p>
+                        </div>
+                      ))}
+                      {relatedCases.length > 5 && (
+                        <button
+                          onClick={() => navigate('/case-studies')}
+                          className="w-full px-4 py-3 bg-[#A33D2C] text-white rounded-[12px] font-semibold hover:opacity-90 transition-all flex items-center justify-center space-x-2"
+                          style={{fontFamily: 'Inter, sans-serif'}}
+                        >
+                          <span>View All {relatedCases.length} Related Cases</span>
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                )}
               </>
             )}
           </div>

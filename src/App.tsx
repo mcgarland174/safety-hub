@@ -5,6 +5,7 @@ import SubstanceExplorer from './components/substance_explorer'
 import ConditionExplorer from './components/condition_explorer'
 import SubstanceComparison from './components/substance-comparison'
 import HarmReductionExplorer from './components/harm-reduction-explorer'
+import CaseStudiesExplorer from './components/case-studies-explorer'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/conditions" element={<ConditionExplorer />} />
         <Route path="/comparison" element={<SubstanceComparison />} />
         <Route path="/practices" element={<HarmReductionExplorer />} />
+        <Route path="/case-studies" element={<CaseStudiesExplorer />} />
       </Routes>
     </>
   )

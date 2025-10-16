@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Home, Pill, AlertCircle, BarChart3, Shield, Menu, X, Check } from 'lucide-react';
+import { Home, Pill, AlertCircle, BarChart3, Shield, Menu, X, Check, FileText } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showEmergency, setShowEmergency] = useState(false);
+  const [showSubstancesDropdown, setShowSubstancesDropdown] = useState(false);
 
   const navItems = [
     {
@@ -21,7 +22,15 @@ const Navigation: React.FC = () => {
       path: '/substances',
       label: 'Substances',
       icon: Pill,
-      color: '#E6543E'
+      color: '#E6543E',
+      dropdown: [
+        {
+          id: 'comparison',
+          path: '/comparison',
+          label: 'Compare Substances',
+          icon: BarChart3
+        }
+      ]
     },
     {
       id: 'conditions',
@@ -31,18 +40,18 @@ const Navigation: React.FC = () => {
       color: '#F4B63A'
     },
     {
-      id: 'comparison',
-      path: '/comparison',
-      label: 'Compare',
-      icon: BarChart3,
-      color: '#007F6E'
-    },
-    {
       id: 'practices',
       path: '/practices',
       label: 'Harm Reduction',
       icon: Shield,
       color: '#47A8E0'
+    },
+    {
+      id: 'case-studies',
+      path: '/case-studies',
+      label: 'Case Studies',
+      icon: FileText,
+      color: '#A33D2C'
     }
   ];
 
@@ -50,9 +59,18 @@ const Navigation: React.FC = () => {
     return location.pathname === path;
   };
 
+  const isActiveGroup = (item: any) => {
+    if (isActive(item.path)) return true;
+    if (item.dropdown) {
+      return item.dropdown.some((sub: any) => isActive(sub.path));
+    }
+    return false;
+  };
+
   const handleNavigation = (path: string) => {
     navigate(path);
     setIsMobileMenuOpen(false);
+    setShowSubstancesDropdown(false);
   };
 
   return (
@@ -82,28 +100,65 @@ const Navigation: React.FC = () => {
             <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item) => {
                 const Icon = item.icon;
-                const active = isActive(item.path);
+                const active = isActiveGroup(item);
+                const hasDropdown = item.dropdown && item.dropdown.length > 0;
 
                 return (
-                  <button
+                  <div
                     key={item.id}
-                    onClick={() => handleNavigation(item.path)}
-                    className={`
-                      flex items-center space-x-2 px-6 py-2.5 rounded-[12px]
-                      transition-all duration-200 font-semibold
-                      ${active
-                        ? 'text-white shadow-[0_6px_18px_rgba(0,0,0,0.1)]'
-                        : 'text-[#4E4E4E] hover:bg-[#FEEAD8]'
-                      }
-                    `}
-                    style={{
-                      fontFamily: 'Inter, sans-serif',
-                      ...(active ? { backgroundColor: item.color } : {})
-                    }}
+                    className="relative"
+                    onMouseEnter={() => hasDropdown && item.id === 'substances' && setShowSubstancesDropdown(true)}
+                    onMouseLeave={() => hasDropdown && item.id === 'substances' && setShowSubstancesDropdown(false)}
                   >
-                    <Icon className={`w-4 h-4 ${active ? 'text-white' : ''}`} style={!active ? {color: item.color} : {}} />
-                    <span className="text-sm">{item.label}</span>
-                  </button>
+                    <button
+                      onClick={() => handleNavigation(item.path)}
+                      className={`
+                        flex items-center space-x-2 px-6 py-2.5 rounded-[12px]
+                        transition-all duration-200 font-semibold
+                        ${active
+                          ? 'text-white shadow-[0_6px_18px_rgba(0,0,0,0.1)]'
+                          : 'text-[#4E4E4E] hover:bg-[#FEEAD8]'
+                        }
+                      `}
+                      style={{
+                        fontFamily: 'Inter, sans-serif',
+                        ...(active ? { backgroundColor: item.color } : {})
+                      }}
+                    >
+                      <Icon className={`w-4 h-4 ${active ? 'text-white' : ''}`} style={!active ? {color: item.color} : {}} />
+                      <span className="text-sm">{item.label}</span>
+                    </button>
+
+                    {/* Dropdown Menu */}
+                    {hasDropdown && showSubstancesDropdown && item.id === 'substances' && (
+                      <div
+                        className="absolute top-full mt-1 left-0 bg-white rounded-[12px] shadow-lg border-2 border-[#E8D9C8] py-2 min-w-[200px] z-50"
+                      >
+                        {item.dropdown.map((subItem: any) => {
+                          const SubIcon = subItem.icon;
+                          const subActive = isActive(subItem.path);
+                          return (
+                            <button
+                              key={subItem.id}
+                              onClick={() => handleNavigation(subItem.path)}
+                              className={`
+                                w-full flex items-center space-x-2 px-4 py-2.5
+                                transition-all duration-200 font-semibold text-left
+                                ${subActive
+                                  ? 'bg-[#E6543E] text-white'
+                                  : 'text-[#4E4E4E] hover:bg-[#FEEAD8]'
+                                }
+                              `}
+                              style={{fontFamily: 'Inter, sans-serif'}}
+                            >
+                              <SubIcon className={`w-4 h-4 ${subActive ? 'text-white' : ''}`} style={!subActive ? {color: '#007F6E'} : {}} />
+                              <span className="text-sm">{subItem.label}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
                 );
               })}
 
@@ -137,28 +192,54 @@ const Navigation: React.FC = () => {
             <div className="px-4 py-2 space-y-1">
               {navItems.map((item) => {
                 const Icon = item.icon;
-                const active = isActive(item.path);
+                const active = isActiveGroup(item);
+                const hasDropdown = item.dropdown && item.dropdown.length > 0;
 
                 return (
-                  <button
-                    key={item.id}
-                    onClick={() => handleNavigation(item.path)}
-                    className={`
-                      w-full flex items-center space-x-3 px-4 py-3 rounded-[12px]
-                      transition-all duration-200 font-semibold
-                      ${active
-                        ? 'text-white shadow-[0_6px_18px_rgba(0,0,0,0.1)]'
-                        : 'text-[#4E4E4E] hover:bg-[#FEEAD8]'
-                      }
-                    `}
-                    style={{
-                      fontFamily: 'Inter, sans-serif',
-                      ...(active ? { backgroundColor: item.color } : {})
-                    }}
-                  >
-                    <Icon className={`w-5 h-5 ${active ? 'text-white' : ''}`} style={!active ? {color: item.color} : {}} />
-                    <span>{item.label}</span>
-                  </button>
+                  <div key={item.id}>
+                    <button
+                      onClick={() => handleNavigation(item.path)}
+                      className={`
+                        w-full flex items-center space-x-3 px-4 py-3 rounded-[12px]
+                        transition-all duration-200 font-semibold
+                        ${active
+                          ? 'text-white shadow-[0_6px_18px_rgba(0,0,0,0.1)]'
+                          : 'text-[#4E4E4E] hover:bg-[#FEEAD8]'
+                        }
+                      `}
+                      style={{
+                        fontFamily: 'Inter, sans-serif',
+                        ...(active ? { backgroundColor: item.color } : {})
+                      }}
+                    >
+                      <Icon className={`w-5 h-5 ${active ? 'text-white' : ''}`} style={!active ? {color: item.color} : {}} />
+                      <span>{item.label}</span>
+                    </button>
+
+                    {/* Mobile Dropdown Items */}
+                    {hasDropdown && item.dropdown.map((subItem: any) => {
+                      const SubIcon = subItem.icon;
+                      const subActive = isActive(subItem.path);
+                      return (
+                        <button
+                          key={subItem.id}
+                          onClick={() => handleNavigation(subItem.path)}
+                          className={`
+                            w-full flex items-center space-x-3 px-8 py-2.5 rounded-[12px]
+                            transition-all duration-200 font-medium
+                            ${subActive
+                              ? 'text-white bg-[#007F6E]'
+                              : 'text-[#4E4E4E] hover:bg-[#FEEAD8]'
+                            }
+                          `}
+                          style={{fontFamily: 'Inter, sans-serif'}}
+                        >
+                          <SubIcon className={`w-4 h-4 ${subActive ? 'text-white' : ''}`} style={!subActive ? {color: '#007F6E'} : {}} />
+                          <span className="text-sm">{subItem.label}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
                 );
               })}
 
