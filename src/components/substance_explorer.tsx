@@ -1,10 +1,14 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AlertCircle, Info, Shield, ChevronRight, AlertTriangle, CheckCircle, FileText } from 'lucide-react';
+import { AlertCircle, Info, Shield, ChevronRight, AlertTriangle, CheckCircle, FileText, Edit3 } from 'lucide-react';
 import caseStudiesData from '../data/case_studies_schema.json';
+import { EvidenceDisplay } from './CitationText';
+import { CitationLink } from './CitationLink';
+import { useFeedback } from '../contexts/FeedbackContext';
 
 const SubstanceExplorer = () => {
   const navigate = useNavigate();
+  const { setPageContext, openFeedbackModal } = useFeedback();
   const [selectedSubstance, setSelectedSubstance] = useState('psilocybin');
   const [expandedSection, setExpandedSection] = useState(null);
   const [hoveredLegendItem, setHoveredLegendItem] = useState(null);
@@ -18,6 +22,12 @@ const SubstanceExplorer = () => {
       caseStudy.substances.includes(selectedSubstance)
     );
   }, [selectedSubstance]);
+
+  // Update feedback context when substance changes
+  useEffect(() => {
+    const substanceName = selectedSubstance.charAt(0).toUpperCase() + selectedSubstance.slice(1);
+    setPageContext(`Substances > ${substanceName}`);
+  }, [selectedSubstance, setPageContext]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -4132,6 +4142,16 @@ const SubstanceExplorer = () => {
                 <p className="text-sm text-[#4E4E4E] mt-1" style={{fontFamily: 'Inter, sans-serif'}}>{condition.notes}</p>
               )}
             </div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                openFeedbackModal(`${condition.category} > ${condition.name}`);
+              }}
+              className="p-1.5 hover:bg-[#E6F7F4] rounded-[8px] transition-colors text-[#007F6E] flex-shrink-0"
+              title="Suggest edit for this condition"
+            >
+              <Edit3 className="w-3.5 h-3.5" />
+            </button>
             <ChevronRight className={`w-4 h-4 text-[#4E4E4E] flex-shrink-0 ml-2 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
           </div>
         </button>
@@ -4178,7 +4198,7 @@ const SubstanceExplorer = () => {
 
             {condition.details.citations && (
               <div className="pt-2 border-t border-[#E8D9C8]">
-                <p className="text-xs text-[#4E4E4E]" style={{fontFamily: 'Inter, sans-serif'}}>📚 Evidence: {condition.details.citations}</p>
+                <EvidenceDisplay citations={condition.details.citations} className="text-xs" />
               </div>
             )}
           </div>
@@ -4272,8 +4292,16 @@ const SubstanceExplorer = () => {
           <div className="w-64 flex-shrink-0">
             <div className="sticky top-4 space-y-4">
               <div className="bg-white rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-6 border border-[#E8D9C8]">
-                <div className="flex items-center space-x-2 mb-4 pb-3 border-b-2 border-[#E8D9C8]">
-                  <h3 className="text-sm font-bold text-[#2C1B11] uppercase tracking-wide" style={{fontFamily: 'Satoshi, sans-serif'}}>Substances</h3>
+                <div className="mb-4 pb-3 border-b-2 border-[#E8D9C8]">
+                  <h3 className="text-sm font-bold text-[#2C1B11] uppercase tracking-wide mb-3" style={{fontFamily: 'Satoshi, sans-serif'}}>Substances</h3>
+                  <button
+                    onClick={() => openFeedbackModal('Substance Information - Propose Addition or Edit')}
+                    className="w-full px-4 py-3 bg-[#E6543E] hover:bg-[#D24E38] text-white rounded-[12px] font-semibold transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 text-sm"
+                    style={{fontFamily: 'Inter, sans-serif'}}
+                  >
+                    <Edit3 className="w-4 h-4" />
+                    Suggest Edit
+                  </button>
                 </div>
                 
                 <nav className="space-y-1">
@@ -4591,20 +4619,27 @@ const SubstanceExplorer = () => {
                             <div className="flex items-start space-x-3">
                               <div className="text-3xl flex-shrink-0">{context.icon}</div>
                               <div className="flex-1 space-y-3">
-                                <h4 className="font-bold text-[#6C3000] text-base" style={{fontFamily: 'Satoshi, sans-serif'}}>{context.title}</h4>
+                                <div className="flex items-start justify-between gap-2">
+                                  <h4 className="font-bold text-[#6C3000] text-base flex-1" style={{fontFamily: 'Satoshi, sans-serif'}}>{context.title}</h4>
+                                  <button
+                                    onClick={() => openFeedbackModal(`Clinical Insight: ${context.title}`)}
+                                    className="p-1.5 hover:bg-[#FCA300] hover:bg-opacity-30 rounded-[8px] transition-colors text-[#6C3000] flex-shrink-0"
+                                    title="Suggest edit for this insight"
+                                  >
+                                    <Edit3 className="w-3.5 h-3.5" />
+                                  </button>
+                                </div>
                                 <p className="text-sm text-[#2C1B11] leading-relaxed" style={{fontFamily: 'Inter, sans-serif'}}>{context.content}</p>
 
-                                <div className="pt-2 border-t border-[#E8D9C8] flex flex-wrap gap-2">
+                                <div className="pt-2 border-t border-[#E8D9C8] flex flex-wrap items-center gap-2">
                                   <span className="text-xs text-[#D26600] font-semibold" style={{fontFamily: 'Inter, sans-serif'}}>Sources:</span>
                                   {context.citations.map((citation, cidx) => (
-                                    <button
+                                    <CitationLink
                                       key={cidx}
+                                      citationKey={citation}
+                                      showIcon={true}
                                       className="text-xs bg-[#FFD480] hover:bg-[#FCA300] text-[#6C3000] px-2.5 py-1 rounded-[12px] transition-colors font-medium"
-                                      title="Click to view full reference"
-                                      style={{fontFamily: 'Inter, sans-serif'}}
-                                    >
-                                      📚 {citation}
-                                    </button>
+                                    />
                                   ))}
                                 </div>
                               </div>

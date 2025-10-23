@@ -1,13 +1,20 @@
-import React, { useState, useMemo } from 'react';
-import { FileText, Search, Filter, X, AlertCircle, Calendar, Beaker, MapPin } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { FileText, Search, Filter, X, AlertCircle, Calendar, Beaker, MapPin, Edit3 } from 'lucide-react';
 import caseStudiesData from '../data/case_studies_schema.json';
+import { useFeedback } from '../contexts/FeedbackContext';
 
 const CaseStudiesExplorer = () => {
+  const { setPageContext, openFeedbackModal } = useFeedback();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubstance, setSelectedSubstance] = useState('all');
   const [selectedSeverity, setSelectedSeverity] = useState('all');
   const [selectedYear, setSelectedYear] = useState('all');
   const [selectedCase, setSelectedCase] = useState(null);
+
+  // Set page context
+  useEffect(() => {
+    setPageContext('Case Studies');
+  }, [setPageContext]);
 
   const caseStudies = caseStudiesData.caseStudies;
 
@@ -371,9 +378,21 @@ const CaseStudiesExplorer = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-[#2C1B11] mb-2" style={{fontFamily: 'Satoshi, sans-serif'}}>
-                  {cs.title}
-                </h3>
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <h3 className="text-xl font-bold text-[#2C1B11] flex-1" style={{fontFamily: 'Satoshi, sans-serif'}}>
+                    {cs.title}
+                  </h3>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openFeedbackModal(`Case Study: ${cs.title}`);
+                    }}
+                    className="p-1.5 hover:bg-[#E6F7F4] rounded-[8px] transition-colors text-[#007F6E] flex-shrink-0"
+                    title="Suggest edit for this case study"
+                  >
+                    <Edit3 className="w-3.5 h-3.5" />
+                  </button>
+                </div>
 
                 {/* Metadata */}
                 <div className="flex flex-wrap gap-3 mb-3 text-sm text-[#4E4E4E]" style={{fontFamily: 'Inter, sans-serif'}}>

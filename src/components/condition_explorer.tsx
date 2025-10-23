@@ -1,10 +1,17 @@
-import React, { useState, useMemo } from 'react';
-import { Info, AlertTriangle, Shield, ChevronRight, ChevronDown, Search, X, AlertCircle, Zap, Settings } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Info, AlertTriangle, Shield, ChevronRight, ChevronDown, Search, X, AlertCircle, Zap, Settings, Edit3 } from 'lucide-react';
+import { useFeedback } from '../contexts/FeedbackContext';
 
 const ConditionExplorer = () => {
+  const { setPageContext, openFeedbackModal } = useFeedback();
   const [selectedCondition, setSelectedCondition] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+
+  // Set page context
+  useEffect(() => {
+    setPageContext('Conditions Explorer');
+  }, [setPageContext]);
 
   const conditionCategories = [
     {
@@ -3541,12 +3548,25 @@ const ConditionExplorer = () => {
       <div className="space-y-6">
         {/* Hero Section */}
         <div className="bg-[#F4B63A] text-white rounded-[24px] shadow-[0_6px_18px_rgba(0,0,0,0.1)] p-8 md:p-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{fontFamily: 'Satoshi, sans-serif'}}>
-            Medical Condition Explorer
-          </h1>
-          <p className="text-xl md:text-2xl mb-6 text-[#8B6914]" style={{fontFamily: 'Inter, sans-serif'}}>
-            Find drug interactions and contraindications for psychedelic substances
-          </p>
+          <div className="flex items-start justify-between gap-6 mb-6">
+            <div className="flex-1">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{fontFamily: 'Satoshi, sans-serif'}}>
+                Medical Condition Explorer
+              </h1>
+              <p className="text-xl md:text-2xl text-[#8B6914]" style={{fontFamily: 'Inter, sans-serif'}}>
+                Find drug interactions and contraindications for psychedelic substances
+              </p>
+            </div>
+            <button
+              onClick={() => openFeedbackModal('Medical Conditions - Propose Addition or Edit')}
+              className="px-6 py-4 bg-white hover:bg-[#FFF9F5] text-[#F4B63A] rounded-[12px] font-bold transition-all shadow-lg hover:shadow-xl flex items-center gap-2 whitespace-nowrap"
+              style={{fontFamily: 'Inter, sans-serif'}}
+            >
+              <Edit3 className="w-5 h-5" />
+              <span className="hidden sm:inline">Propose Addition or Edit</span>
+              <span className="sm:hidden">Suggest Edit</span>
+            </button>
+          </div>
           
           {/* Search Bar */}
           <div className="relative">
@@ -3647,9 +3667,19 @@ const ConditionExplorer = () => {
 
                 <div className="flex items-start mb-3 pl-2">
                   <span className="text-3xl mr-3 flex-shrink-0">{cat.icon}</span>
-                  <h4 className="font-bold text-xl text-[#2C1B11] group-hover:text-[#D26600] leading-tight transition-colors" style={{fontFamily: 'Satoshi, sans-serif'}}>
+                  <h4 className="font-bold text-xl text-[#2C1B11] group-hover:text-[#D26600] leading-tight transition-colors flex-1" style={{fontFamily: 'Satoshi, sans-serif'}}>
                     {condition.name}
                   </h4>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openFeedbackModal(`Condition: ${condition.name}`);
+                    }}
+                    className="p-1.5 hover:bg-[#E6F7F4] rounded-[8px] transition-colors text-[#007F6E] flex-shrink-0"
+                    title="Suggest edit for this condition"
+                  >
+                    <Edit3 className="w-3.5 h-3.5" />
+                  </button>
                 </div>
 
                 <p className="text-sm text-[#4E4E4E] leading-relaxed mb-4 pl-2" style={{fontFamily: 'Inter, sans-serif'}}>{condition.shortDesc}</p>

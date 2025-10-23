@@ -1,6 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import { Search, AlertCircle, Users, Heart, Brain, Filter, ChevronDown, ChevronRight, X, Check, Star, ExternalLink, FileText, Video, Globe, BookOpen } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Search, AlertCircle, Users, Heart, Brain, Filter, ChevronDown, ChevronRight, X, Check, Star, ExternalLink, FileText, Video, Globe, BookOpen, Edit3 } from 'lucide-react';
 import { harmReductionResources } from '../data/harm-reduction-resources';
+import { useFeedback } from '../contexts/FeedbackContext';
 
 // Sample data structure based on the schemas
 const harmReductionPractices = [
@@ -565,6 +566,7 @@ const categories = {
 };
 
 const HarmReductionExplorer = () => {
+  const { setPageContext, openFeedbackModal } = useFeedback();
   const [selectedTiming, setSelectedTiming] = useState('essential');
   const [selectedPractice, setSelectedPractice] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
@@ -575,6 +577,11 @@ const HarmReductionExplorer = () => {
     setting: []
   });
   const [showEmergency, setShowEmergency] = useState(false);
+
+  // Set page context
+  useEffect(() => {
+    setPageContext('Harm Reduction Practices');
+  }, [setPageContext]);
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredPractices = useMemo(() => {
@@ -700,8 +707,21 @@ const HarmReductionExplorer = () => {
 
       <div className="max-w-[1280px] mx-auto px-6 pt-8">
         <div className="bg-[#47A8E0] text-white p-8 rounded-[24px] shadow-[0_6px_18px_rgba(0,0,0,0.1)]">
-          <h1 className="text-4xl font-bold mb-2" style={{fontFamily: 'Satoshi, sans-serif'}}>Harm Reduction Practice Database</h1>
-          <p className="text-white text-lg" style={{fontFamily: 'Inter, sans-serif'}}>Evidence-based practices for minimizing risks and promoting safety</p>
+          <div className="flex items-start justify-between gap-6">
+            <div className="flex-1">
+              <h1 className="text-4xl font-bold mb-2" style={{fontFamily: 'Satoshi, sans-serif'}}>Harm Reduction Practice Database</h1>
+              <p className="text-white text-lg" style={{fontFamily: 'Inter, sans-serif'}}>Evidence-based practices for minimizing risks and promoting safety</p>
+            </div>
+            <button
+              onClick={() => openFeedbackModal('Harm Reduction Practices - Propose Addition or Edit')}
+              className="px-6 py-4 bg-white hover:bg-[#F0F9FF] text-[#47A8E0] rounded-[12px] font-bold transition-all shadow-lg hover:shadow-xl flex items-center gap-2 whitespace-nowrap"
+              style={{fontFamily: 'Inter, sans-serif'}}
+            >
+              <Edit3 className="w-5 h-5" />
+              <span className="hidden sm:inline">Propose Addition or Edit</span>
+              <span className="sm:hidden">Suggest Edit</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -883,6 +903,16 @@ const HarmReductionExplorer = () => {
                       </div>
                       <h3 className="font-bold text-[#2C1B11]" style={{fontFamily: 'Satoshi, sans-serif'}}>{practice.name}</h3>
                     </div>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openFeedbackModal(`Harm Reduction Practice: ${practice.name}`);
+                      }}
+                      className="p-1.5 hover:bg-[#E6F7F4] rounded-[8px] transition-colors text-[#007F6E] flex-shrink-0 ml-2"
+                      title="Suggest edit for this practice"
+                    >
+                      <Edit3 className="w-3.5 h-3.5" />
+                    </button>
                   </div>
 
                   <p className="text-sm text-[#4E4E4E] mb-3 line-clamp-2">{practice.description}</p>
