@@ -22,15 +22,7 @@ const Navigation: React.FC = () => {
       path: '/substances',
       label: 'Substances',
       icon: Pill,
-      color: '#E6543E',
-      dropdown: [
-        {
-          id: 'comparison',
-          path: '/comparison',
-          label: 'Compare Substances',
-          icon: BarChart3
-        }
-      ]
+      color: '#E6543E'
     },
     {
       id: 'conditions',
