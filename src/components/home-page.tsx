@@ -83,7 +83,7 @@ const HomePage = () => {
                 className="px-8 py-4 bg-[#007F6E] backdrop-blur-sm text-white rounded-[12px] font-semibold text-lg border-2 border-white/30 hover:opacity-90 transition-all"
                 style={{fontFamily: 'Inter, sans-serif'}}
               >
-                Check Your Condition
+                Check a Condition
               </button>
             </div>
           </div>
