@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AlertCircle, Info, Shield, ChevronRight, AlertTriangle, CheckCircle, FileText, Edit3 } from 'lucide-react';
+import { AlertCircle, Info, Shield, ChevronRight, ChevronDown, AlertTriangle, CheckCircle, FileText, Edit3 } from 'lucide-react';
 import caseStudiesData from '../data/case_studies_schema.json';
 import { EvidenceDisplay } from './CitationText';
 import { CitationLink } from './CitationLink';
@@ -15,6 +15,7 @@ const SubstanceExplorer = () => {
   const [clinicalContextExpanded, setClinicalContextExpanded] = useState(true);
   const [activeSection, setActiveSection] = useState('pharmacology');
   const [expandedSubstance, setExpandedSubstance] = useState('psilocybin');
+  const [safetySummaryExpanded, setSafetySummaryExpanded] = useState(false);
 
   // Get related case studies for the selected substance
   const relatedCases = useMemo(() => {
@@ -4579,25 +4580,45 @@ const SubstanceExplorer = () => {
                 </div>
 
                 {data.safetySummary && (
-                  <div id="safety-summary" className="bg-gradient-to-br from-blue-50 to-green-50 rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-6 scroll-mt-24 border-2 border-blue-200">
-                    <div className="flex items-center space-x-3 mb-4 pb-3 border-b-2 border-blue-200">
-                      <div className="w-1 h-8 bg-blue-600 rounded"></div>
-                      <Shield className="w-6 h-6 text-blue-600" />
-                      <h3 className="font-bold text-2xl text-[#2C1B11]" style={{fontFamily: 'Satoshi, sans-serif'}}>{data.safetySummary.title}</h3>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {data.safetySummary.keyPoints.map((point, idx) => (
-                        <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-[12px] p-4 border border-blue-200">
-                          <div className="flex items-start space-x-3">
-                            <span className="text-2xl flex-shrink-0">{point.icon}</span>
-                            <div>
-                              <h4 className="font-semibold text-[#2C1B11] mb-2" style={{fontFamily: 'Satoshi, sans-serif'}}>{point.label}</h4>
-                              <p className="text-sm text-[#4E4E4E] leading-relaxed" style={{fontFamily: 'Inter, sans-serif'}}>{point.content}</p>
+                  <div id="safety-summary" className="bg-gradient-to-br from-blue-50 to-green-50 rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] scroll-mt-24 border-2 border-blue-200 overflow-hidden">
+                    <button
+                      onClick={() => setSafetySummaryExpanded(!safetySummaryExpanded)}
+                      className="w-full p-6 flex items-center justify-between hover:bg-blue-100/30 transition-colors"
+                    >
+                      <div className="flex items-center space-x-3">
+                        <div className="w-1 h-8 bg-blue-600 rounded"></div>
+                        <Shield className="w-6 h-6 text-blue-600" />
+                        <h3 className="font-bold text-2xl text-[#2C1B11]" style={{fontFamily: 'Satoshi, sans-serif'}}>{data.safetySummary.title}</h3>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-sm text-blue-600 font-medium" style={{fontFamily: 'Inter, sans-serif'}}>
+                          {safetySummaryExpanded ? 'Collapse' : 'Expand'}
+                        </span>
+                        {safetySummaryExpanded ? (
+                          <ChevronDown className="w-5 h-5 text-blue-600" />
+                        ) : (
+                          <ChevronRight className="w-5 h-5 text-blue-600" />
+                        )}
+                      </div>
+                    </button>
+
+                    {safetySummaryExpanded && (
+                      <div className="px-6 pb-6 border-t-2 border-blue-200 pt-4">
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {data.safetySummary.keyPoints.map((point, idx) => (
+                            <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-[12px] p-4 border border-blue-200">
+                              <div className="flex items-start space-x-3">
+                                <span className="text-2xl flex-shrink-0">{point.icon}</span>
+                                <div>
+                                  <h4 className="font-semibold text-[#2C1B11] mb-2" style={{fontFamily: 'Satoshi, sans-serif'}}>{point.label}</h4>
+                                  <p className="text-sm text-[#4E4E4E] leading-relaxed" style={{fontFamily: 'Inter, sans-serif'}}>{point.content}</p>
+                                </div>
+                              </div>
                             </div>
-                          </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
