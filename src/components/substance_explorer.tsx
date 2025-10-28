@@ -3843,9 +3843,9 @@ const SubstanceExplorer = () => {
                 citations: 'Honk et al. 2024; Marrocu et al., 2024; Sabe et al. 2024'
               }
             },
-            { 
-              name: 'Personality disorders', 
-              level: 'Relative', 
+            {
+              name: 'Personality disorders',
+              level: 'Relative',
               notes: '31% negative response rate; 4x higher adverse risk',
               details: {
                 description: 'Personality disorders significantly increase risk of negative outcomes. Not absolute contraindication but requires enhanced support.',
@@ -3859,16 +3859,10 @@ const SubstanceExplorer = () => {
                 ],
                 citations: 'Marrocu et al., 2024; Bremler et al. 2023'
               }
-            }
-          ]
-        },
-        {
-          category: 'Trauma & Anxiety',
-          severity: 'moderate',
-          conditions: [
-            { 
-              name: 'Unprocessed trauma/PTSD', 
-              level: 'Relative', 
+            },
+            {
+              name: 'Unprocessed trauma/PTSD',
+              level: 'Relative',
               notes: 'Can reactivate trauma; needs specialized support',
               details: {
                 description: 'A history of trauma is not a contraindication for psychedelic use but requires specialized, trauma-informed support. With appropriate preparation and integration, psychedelic experiences can be therapeutically valuable for individuals who have experienced trauma. ',
@@ -3884,9 +3878,9 @@ const SubstanceExplorer = () => {
                 citations: 'Bremler et al. 2023; Gorman et al. 2021; Weiss et al. 2023; Scala et al. 2024'
               }
             },
-            { 
-              name: 'Active anxiety/depression', 
-              level: 'Moderate', 
+            {
+              name: 'Active anxiety/depression',
+              level: 'Moderate',
               notes: '87% with negative responses report worsening anxiety',
               details: {
                 description: 'Pre-existing anxiety or depression can be both a therapeutic target and risk factor. Paradoxically, it can worsen or improve symptoms.',
