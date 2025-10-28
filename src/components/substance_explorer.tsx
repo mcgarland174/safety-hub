@@ -4721,6 +4721,16 @@ const SubstanceExplorer = () => {
                   
                   {clinicalContextExpanded && (
                     <div className="p-6 pt-4">
+                      <div className="mb-6 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-[12px]">
+                        <div className="flex items-start space-x-2">
+                          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="text-sm font-semibold text-amber-900 mb-1" style={{fontFamily: 'Satoshi, sans-serif'}}>Context Matters</p>
+                            <p className="text-sm text-amber-800" style={{fontFamily: 'Inter, sans-serif'}}>These insights demonstrate that risk is not inherent to the substance alone, but heavily influenced by screening, preparation, setting, and support systems. The same substance can have dramatically different safety profiles depending on context.</p>
+                          </div>
+                        </div>
+                      </div>
+
                       <div className="space-y-4">
                         {data.clinicalContext.map((context, idx) => (
                           <div key={idx} className="bg-[#FDE9D6] border-l-4 border-[#FCA300] p-5 rounded-r-[12px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.1)] transition-shadow">
@@ -4754,16 +4764,6 @@ const SubstanceExplorer = () => {
                             </div>
                           </div>
                         ))}
-                      </div>
-                      
-                      <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-[12px]">
-                        <div className="flex items-start space-x-2">
-                          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                          <div>
-                            <p className="text-sm font-semibold text-amber-900 mb-1" style={{fontFamily: 'Satoshi, sans-serif'}}>Context Matters</p>
-                            <p className="text-sm text-amber-800" style={{fontFamily: 'Inter, sans-serif'}}>These insights demonstrate that risk is not inherent to the substance alone, but heavily influenced by screening, preparation, setting, and support systems. The same substance can have dramatically different safety profiles depending on context.</p>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   )}
