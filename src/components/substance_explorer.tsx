@@ -3782,6 +3782,23 @@ const SubstanceExplorer = () => {
                 ],
                 citations: 'Petranker et al., 2020'
               }
+            },
+            {
+              name: 'QTc prolongation or medications affecting QTc',
+              level: 'Relative',
+              notes: 'ECG and electrolyte screening recommended',
+              details: {
+                description: 'Individuals with known QTc prolongation or taking medications that affect QTc interval require careful evaluation before psilocybin use.',
+                mechanism: 'Psilocybin at 25mg doses can cause slight QTc prolongation. While this poses low risk per FDA guidelines for non-cardiac medications, individuals with pre-existing QTc concerns or taking QTc-affecting medications (antibiotics, antidepressants) may be at increased risk.',
+                prevalence: 'QTc prolongation from psilocybin deemed low risk by FDA standards, but requires screening in vulnerable populations.',
+                harmReduction: [
+                  { name: 'ECG screening before use', link: null },
+                  { name: 'Electrolyte panel assessment', link: null },
+                  { name: 'Medical supervision during session', link: null },
+                  { name: 'Review all medications for QTc interactions', link: null }
+                ],
+                citations: 'Bennett et al., 2023; Ghaznavi et al., 2025; Dahmane et al., 2021'
+              }
             }
           ]
         },
@@ -3995,6 +4012,74 @@ const SubstanceExplorer = () => {
                   { name: 'Consider delaying use until brain fully developed (age 25+)', link: null }
                 ],
                 citations: 'Marazziti et al. 2024; Iseger et al., 2024; Breeksema et al. 2022; Bremler et al. 2023'
+              }
+            }
+          ]
+        },
+        {
+          category: 'Substance Use & Addiction',
+          severity: 'moderate',
+          conditions: [
+            {
+              name: 'History of substance use disorders',
+              level: 'Caution',
+              notes: 'Increased vulnerability to adverse reactions',
+              details: {
+                description: 'Individuals with a history of substance use disorders may be more vulnerable to adverse reactions during psilocybin experiences.',
+                mechanism: 'Past substance use patterns and underlying vulnerabilities that contributed to addiction may interact with psilocybin effects, potentially leading to challenging psychological experiences or relapse triggers.',
+                prevalence: 'Substance use disorder history is associated with increased risk of adverse physical and psychological effects.',
+                harmReduction: [
+                  { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+                  { name: 'Enhanced therapeutic support', link: null },
+                  { name: 'Integration therapy to process experiences', link: 'hrp_integration_therapy_001' },
+                  { name: 'Careful assessment of readiness and stability', link: null }
+                ],
+                citations: 'Studerus et al., 2011; Roberts et al., 2020; Bennett et al., 2023'
+              }
+            }
+          ]
+        },
+        {
+          category: 'Cognitive & Neurological',
+          severity: 'high',
+          conditions: [
+            {
+              name: 'Dementia or delirium',
+              level: 'Absolute',
+              notes: 'Could exacerbate cognitive impairments',
+              details: {
+                description: 'Psilocybin use in individuals with dementia or delirium is contraindicated due to risk of exacerbating cognitive impairments and creating unmanageable confusion.',
+                mechanism: 'Psilocybin induces profound alterations in perception, cognition, and reality testing. In individuals with already compromised cognitive function, these effects can cause severe disorientation, agitation, and potentially dangerous behavior.',
+                prevalence: 'No safety data exists for psilocybin use in dementia or delirium populations. Clinical trials exclude these individuals.',
+                harmReduction: [
+                  { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+                  { name: 'Cognitive assessment before any psychedelic use', link: null },
+                  { name: 'Avoid use entirely in dementia/delirium', link: null }
+                ],
+                citations: 'Bennett et al., 2023'
+              }
+            }
+          ]
+        },
+        {
+          category: 'Metabolic & Nutritional',
+          severity: 'moderate',
+          conditions: [
+            {
+              name: 'Malnourishment or electrolyte imbalances',
+              level: 'Relative',
+              notes: 'Bloodwork and medical evaluation required',
+              details: {
+                description: 'Individuals who are malnourished or have electrolyte imbalances require proper medical evaluation before psilocybin use.',
+                mechanism: 'Electrolyte imbalances (particularly potassium and magnesium) can affect cardiac function and increase vulnerability to cardiovascular complications. Malnourishment compromises overall physiological resilience to handle the physical stress of a psychedelic experience.',
+                prevalence: 'Electrolyte imbalances and malnutrition increase risk of adverse physical effects during intense psychedelic experiences.',
+                harmReduction: [
+                  { name: 'Comprehensive Medical Screening', link: 'hrp_screening_comprehensive_001' },
+                  { name: 'Complete metabolic panel and electrolyte assessment', link: null },
+                  { name: 'Address nutritional deficiencies before use', link: null },
+                  { name: 'Medical supervision during session', link: null }
+                ],
+                citations: 'Bennett et al., 2023'
               }
             }
           ]
