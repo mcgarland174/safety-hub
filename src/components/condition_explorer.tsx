@@ -735,7 +735,7 @@ const ConditionExplorer = () => {
       ],
       description: 'Post-traumatic stress disorder or significant unprocessed trauma from past experiences including abuse, assault, violence, accidents, or other traumatic events.',
       whyItMatters: 'Psychedelics can bring traumatic memories and emotions to consciousness, leading to reexperiencing. This can be therapeutically valuable with proper support or retraumatizing without it. The line between healing and harm depends entirely on the quality of support.',
-      prevalenceData: '37.5% of PTSD participants in ayahuasca ceremonies experienced trauma reexperiencing. Women with sexual assault history show notably high reactivation rates.',
+      prevalenceData: 'In a 2023 Scientific Reports study of ayahuasca retreat participants, people with a self-reported lifetime PTSD diagnosis had "more than 60%" prevalence of re-experiencing adverse life events during ceremony (vs. lower rates in those without PTSD)',
       substanceInteractions: [
         {
           substance: 'Psilocybin',
@@ -775,7 +775,7 @@ const ConditionExplorer = () => {
         { name: 'Grounding techniques training', link: 'hrp_coping_skills_training_001' },
         { name: 'Trauma-focused integration therapy', link: 'hrp_integration_therapy_001' }
       ],
-      clinicalGuidance: 'Trauma history is NOT a contraindication but requires specialized support. MDMA-assisted therapy has the strongest evidence for PTSD. Without proper trauma-informed care, reactivation can be harmful. With it, psychedelics can facilitate profound healing.',
+      clinicalGuidance: 'A history of trauma is not a contraindication for psychedelic use but requires specialized, trauma-informed support. MDMA-assisted therapy has the strongest evidence for PTSD. Without proper trauma-informed care, reactivation can be harmful. With appropriate preparation and integration, psychedelic experiences can be therapeutically valuable for individuals who have experienced trauma.',
       citations: ['weiss_2023', 'mitchell_2021', 'gorman_2021']
     },
     psychosis: {
@@ -790,7 +790,7 @@ const ConditionExplorer = () => {
         'Consider alternative treatments'
       ],
       description: 'Personal history of schizophrenia, schizoaffective disorder, or other psychotic disorders characterized by hallucinations, delusions, and disorganized thinking.',
-      whyItMatters: 'Psychedelics can intensify psychotic symptoms and trigger prolonged psychotic episodes. Even when stable on medication, individuals with psychotic disorder history have vulnerable neurotransmitter systems that psychedelics can destabilize.',
+      whyItMatters: 'Psychedelics can intensify psychotic symptoms and trigger prolonged psychotic episodes. Individuals with a history of psychotic disorders, even when stable, possess vulnerable neurotransmitter systems that psychedelics may destabilize',
       prevalenceData: 'Prolonged psychotic reactions documented in literature. Virtually absent in properly screened clinical trials. Historical rate: 1.8 per 1,000 patients.',
       substanceInteractions: [
         {

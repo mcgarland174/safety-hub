@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clean Google Form Test</title>
+</head>
+<body>
+    <h1>Clean Test - Fill Out Manually</h1>
+
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeeqURw9iwha6kahrw6pnstvuqcB80bQFGe4hJ-XhSr8fWG-w/formResponse"
+          method="POST"
+          target="response_iframe">
+
+        <p><strong>Fill this out and click Submit:</strong></p>
+
+        <!-- Name (NOT required) -->
+        <label>Name:</label><br>
+        <input type="text" name="entry.805635838"><br><br>
+
+        <!-- Email (REQUIRED) -->
+        <label>Email (Required)*:</label><br>
+        <input type="email" name="entry.1654020937" required><br><br>
+
+        <!-- Page/Section (REQUIRED) -->
+        <label>Page/Section (Required)*:</label><br>
+        <input type="text" name="entry.2057117607" required><br><br>
+
+        <!-- URL (NOT required) -->
+        <label>URL:</label><br>
+        <input type="text" name="entry.1529780435"><br><br>
+
+        <!-- Content Reference (REQUIRED) -->
+        <label>Content Reference (Required)*:</label><br>
+        <input type="text" name="entry.835227252" required><br><br>
+
+        <!-- Feedback Type (REQUIRED - Radio) -->
+        <label>Feedback Type (Required)*:</label><br>
+        <input type="hidden" name="entry.1199030960_sentinel" value="">
+        <input type="radio" name="entry.1887341015" value="Correction (something is wrong/inaccurate)" required checked> Correction<br>
+        <input type="radio" name="entry.1887341015" value="Addition (missing information)"> Addition<br>
+        <input type="radio" name="entry.1887341015" value="Question (need clarification)"> Question<br>
+        <input type="radio" name="entry.1887341015" value="General Feedback"> General Feedback<br><br>
+
+        <!-- Detailed Feedback (NOT required) -->
+        <label>Detailed Feedback:</label><br>
+        <textarea name="entry.611710434" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit" style="padding: 10px 20px; font-size: 16px;">Submit to Google Form</button>
+    </form>
+
+    <hr>
+    <h3>Response from Google:</h3>
+    <iframe name="response_iframe" width="100%" height="400" style="border: 1px solid #ccc;"></iframe>
+
+</body>
+</html>

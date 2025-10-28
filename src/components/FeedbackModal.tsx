@@ -14,15 +14,15 @@ const FeedbackModal: React.FC = () => {
   // Google Form configuration
   const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSeeqURw9iwha6kahrw6pnstvuqcB80bQFGe4hJ-XhSr8fWG-w/formResponse';
 
-  // Field IDs from your Google Form
+  // Field IDs from your Google Form (verified via prefill URL)
   const FIELD_IDS = {
-    pageSection: 'entry.245620168',
-    contentReference: 'entry.681488840',
-    feedbackType: 'entry.1857981835',  // This is actually "name" field in your form
-    subject: 'entry.1857981835',        // Using name field for subject
-    detailedFeedback: 'entry.286641150',
-    email: 'entry.1522983172',
-    url: 'entry.794285773'
+    name: 'entry.1857981835',          // Name field
+    email: 'entry.1522983172',         // Email (REQUIRED)
+    pageSection: 'entry.245620168',    // Page/Section (REQUIRED)
+    url: 'entry.794285773',            // URL
+    contentReference: 'entry.681488840', // Content Reference (REQUIRED)
+    feedbackType: 'entry.1199030960',  // Feedback Type (REQUIRED - Radio)
+    detailedFeedback: 'entry.286641150' // Detailed Feedback
   };
 
   useEffect(() => {
@@ -31,50 +31,53 @@ const FeedbackModal: React.FC = () => {
     }
   }, [isFeedbackModalOpen]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      // Prepare form data
-      const formData = new FormData();
-      formData.append(FIELD_IDS.pageSection, pageContext);
-      formData.append(FIELD_IDS.contentReference, contentContext);
-      // Combine feedback type and subject into the name field
-      const nameField = `[${getFeedbackTypeLabel(feedbackType)}] ${subject}`;
-      formData.append(FIELD_IDS.feedbackType, nameField);
-      formData.append(FIELD_IDS.detailedFeedback, detailedFeedback);
-      formData.append(FIELD_IDS.email, email);
-      formData.append(FIELD_IDS.url, window.location.href);
+    // Create a hidden form and submit it to a hidden iframe
+    const form = document.createElement('form');
+    form.action = GOOGLE_FORM_ACTION;
+    form.method = 'POST';
+    form.target = 'hidden_iframe';
+    form.style.display = 'none';
 
-      // Submit to Google Forms
-      // Note: This will fail due to CORS, but the submission still goes through
-      await fetch(GOOGLE_FORM_ACTION, {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-      });
+    // Add all form fields
+    const nameField = `[${getFeedbackTypeLabel(feedbackType)}] ${subject}`;
+    const fields = {
+      [FIELD_IDS.name]: nameField,
+      [FIELD_IDS.email]: email,
+      [FIELD_IDS.pageSection]: pageContext || 'General',  // Ensure not empty
+      [FIELD_IDS.url]: window.location.href,
+      [FIELD_IDS.contentReference]: contentContext || subject,  // Use subject if contentContext is empty
+      [FIELD_IDS.feedbackType]: getFeedbackTypeLabel(feedbackType),
+      [FIELD_IDS.detailedFeedback]: detailedFeedback
+    };
 
-      // Show success state
-      setIsSubmitted(true);
+    // Debug: log the fields being submitted
+    console.log('Submitting feedback with fields:', fields);
 
-      // Reset form after delay
-      setTimeout(() => {
-        resetForm();
-        closeFeedbackModal();
-      }, 2000);
+    Object.entries(fields).forEach(([name, value]) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = name;
+      input.value = value || '';
+      form.appendChild(input);
+    });
 
-    } catch (error) {
-      console.error('Error submitting feedback:', error);
-      // Even if there's an error, the form likely submitted due to no-cors
-      setIsSubmitted(true);
-      setTimeout(() => {
-        resetForm();
-        closeFeedbackModal();
-      }, 2000);
-    } finally {
-      setIsSubmitting(false);
-    }
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+
+    // Show success state immediately
+    setIsSubmitted(true);
+    setIsSubmitting(false);
+
+    // Reset form after delay
+    setTimeout(() => {
+      resetForm();
+      closeFeedbackModal();
+    }, 2000);
   };
 
   const getFeedbackTypeLabel = (type: string) => {
@@ -98,7 +101,9 @@ const FeedbackModal: React.FC = () => {
   if (!isFeedbackModalOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+    <>
+      <iframe name="hidden_iframe" style={{ display: 'none' }}></iframe>
+      <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-[24px] max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
         {/* Header */}
         <div className="bg-gradient-to-r from-[#007F6E] to-[#005F52] text-white p-6 rounded-t-[24px] sticky top-0 z-10">
@@ -248,6 +253,7 @@ const FeedbackModal: React.FC = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

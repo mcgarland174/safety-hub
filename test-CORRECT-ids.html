@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CORRECT Entry IDs Test</title>
+</head>
+<body>
+    <h1>Test with CORRECT Entry IDs from Prefill URL</h1>
+
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeeqURw9iwha6kahrw6pnstvuqcB80bQFGe4hJ-XhSr8fWG-w/formResponse"
+          method="POST"
+          target="response_iframe">
+
+        <p><strong>Using the CORRECT entry IDs:</strong></p>
+
+        <label>Name (entry.1857981835):</label><br>
+        <input type="text" name="entry.1857981835" value="Test Name"><br><br>
+
+        <label>Email (entry.1522983172) - REQUIRED*:</label><br>
+        <input type="email" name="entry.1522983172" value="test@example.com" required><br><br>
+
+        <label>Page/Section (entry.245620168) - REQUIRED*:</label><br>
+        <input type="text" name="entry.245620168" value="Test Page Section" required><br><br>
+
+        <label>URL (entry.794285773):</label><br>
+        <input type="text" name="entry.794285773" value="https://test.com"><br><br>
+
+        <label>Content Reference (entry.681488840) - REQUIRED*:</label><br>
+        <input type="text" name="entry.681488840" value="Test Content Reference" required><br><br>
+
+        <label>Feedback Type (entry.1199030960) - REQUIRED*:</label><br>
+        <input type="radio" name="entry.1199030960" value="Correction (something is wrong/inaccurate)" checked required> Correction<br>
+        <input type="radio" name="entry.1199030960" value="Addition (missing information)"> Addition<br>
+        <input type="radio" name="entry.1199030960" value="Question (need clarification)"> Question<br>
+        <input type="radio" name="entry.1199030960" value="General Feedback"> General Feedback<br><br>
+
+        <label>Detailed Feedback (entry.286641150):</label><br>
+        <textarea name="entry.286641150">This is test detailed feedback</textarea><br><br>
+
+        <button type="submit" style="padding: 15px 30px; font-size: 18px; background: #007F6E; color: white; border: none; border-radius: 8px; cursor: pointer;">
+            ✅ Submit with CORRECT IDs
+        </button>
+    </form>
+
+    <hr>
+    <h3>Response from Google Forms:</h3>
+    <iframe name="response_iframe" width="100%" height="500" style="border: 2px solid #007F6E;"></iframe>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function() {
+            setTimeout(() => {
+                alert('✅ Form submitted with CORRECT entry IDs! Check the iframe and your Google Form responses.');
+            }, 500);
+        });
+    </script>
+</body>
+</html>

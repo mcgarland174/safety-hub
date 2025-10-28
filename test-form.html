@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Google Form Submission</title>
+</head>
+<body>
+    <h1>Test Form Submission</h1>
+    <form id="testForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeeqURw9iwha6kahrw6pnstvuqcB80bQFGe4hJ-XhSr8fWG-w/formResponse" method="POST" target="hidden_iframe">
+
+        <h3>Testing different field IDs:</h3>
+
+        <label>Name (805635838):</label><br>
+        <input type="text" name="entry.805635838" value="Test Name"><br><br>
+
+        <label>Email (1654020937):</label><br>
+        <input type="text" name="entry.1654020937" value="test@example.com"><br><br>
+
+        <label>Page/Section (2057117607):</label><br>
+        <input type="text" name="entry.2057117607" value="Test Page"><br><br>
+
+        <label>URL (1529780435):</label><br>
+        <input type="text" name="entry.1529780435" value="http://test.com"><br><br>
+
+        <label>Content Reference (835227252):</label><br>
+        <input type="text" name="entry.835227252" value="Test Content"><br><br>
+
+        <label>Feedback Type (1199030960 - multiple choice):</label><br>
+        <input type="text" name="entry.1199030960" value="Correction (something is wrong/inaccurate)"><br><br>
+
+        <label>Detailed Feedback (611710434):</label><br>
+        <textarea name="entry.611710434">Test detailed feedback message</textarea><br><br>
+
+        <button type="submit">Submit Test</button>
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function() {
+            alert('Form submitted! Check your Google Form responses.');
+        });
+    </script>
+</body>
+</html>

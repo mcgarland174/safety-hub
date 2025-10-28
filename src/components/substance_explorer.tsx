@@ -4064,7 +4064,7 @@ const SubstanceExplorer = () => {
             name: 'Acute Anxiety',
             timeframe: 'During session',
             prevalence: '15-31% in clinical trials',
-            description: 'Most common psychological adverse event. Anxiety during or shortly after administration. Usually resolves during or shortly after session, though may last hours beyond peak in some cases.',
+            description: 'Most common psychological adverse event. Anxiety during or shortly after administration. Usually resolves during or shortly after session, though may last hours beyond peak in some cases. There is evidence of anxiety as an enduring or "extended difficulty" in some cases (Simonsson et al., 2023; Evans et al., 2023).',
             management: 'Reassurance typically sufficient; benzodiazepines if severe',
             notes: '87% of those with negative psychological responses experienced anxiety worsening. Often manageable with calm presence and breathing guidance.',
             harmReduction: [

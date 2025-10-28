@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Direct Google Form Test</title>
+</head>
+<body>
+    <h1>Test Direct Submission to Google Form</h1>
+
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeeqURw9iwha6kahrw6pnstvuqcB80bQFGe4hJ-XhSr8fWG-w/formResponse"
+          method="POST"
+          target="response_iframe">
+
+        <p><strong>Test all fields with simple values:</strong></p>
+
+        <label>Name (entry.805635838):</label><br>
+        <input type="text" name="entry.805635838" value="Test Name"><br><br>
+
+        <label>Email (entry.1654020937):</label><br>
+        <input type="email" name="entry.1654020937" value="test@example.com"><br><br>
+
+        <label>Page/Section (entry.2057117607):</label><br>
+        <input type="text" name="entry.2057117607" value="Test Page Section"><br><br>
+
+        <label>URL (entry.1529780435):</label><br>
+        <input type="text" name="entry.1529780435" value="https://test.com"><br><br>
+
+        <label>Content Reference (entry.835227252):</label><br>
+        <input type="text" name="entry.835227252" value="Test Content Reference"><br><br>
+
+        <label>Feedback Type (entry.1887341015 - Radio):</label><br>
+        <input type="hidden" name="entry.1199030960_sentinel" value="">
+        <input type="radio" name="entry.1887341015" value="Correction (something is wrong/inaccurate)" checked> Correction<br>
+        <input type="radio" name="entry.1887341015" value="Addition (missing information)"> Addition<br>
+        <input type="radio" name="entry.1887341015" value="Question (need clarification)"> Question<br>
+        <input type="radio" name="entry.1887341015" value="General Feedback"> General Feedback<br><br>
+
+        <label>Detailed Feedback (entry.611710434):</label><br>
+        <textarea name="entry.611710434">This is test detailed feedback</textarea><br><br>
+
+        <button type="submit">Submit Test</button>
+    </form>
+
+    <iframe name="response_iframe" width="100%" height="400" style="border: 1px solid #ccc; margin-top: 20px;"></iframe>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function() {
+            setTimeout(() => {
+                alert('Form submitted! Check your Google Form responses AND the iframe below for any errors.');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
