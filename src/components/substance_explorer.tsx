@@ -4080,6 +4080,7 @@ const SubstanceExplorer = () => {
             prevalence: 'Variable, dose-dependent',
             description: 'Intense fear, overwhelming anxiety, sense of losing control or dying. More severe than general anxiety.',
             management: 'Calm presence, verbal reassurance, breathing guidance, grounding techniques. Benzodiazepines if non-pharmacological insufficient.',
+            notes: 'Recent case reports and case series note that severe reactions (e.g., psychosis with intense anxiety/panic) tend to occur primarily in people with predisposing factors (prior diagnoses, family history, heavy/repeated dosing, or polysubstance use) (Morris et al., 2024).',
             harmReduction: [
               { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
               { name: 'Coping Skills Training', link: 'hrp_coping_skills_training_001' },
