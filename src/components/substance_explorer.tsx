@@ -4297,13 +4297,15 @@ const SubstanceExplorer = () => {
               <h4 className="font-semibold text-base mb-1 text-[#2C1B11]" style={{fontFamily: 'Satoshi, sans-serif'}}>{event.name}</h4>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs bg-[#FFF9F5] px-2 py-1 rounded-[12px] text-[#4E4E4E]" style={{fontFamily: 'Inter, sans-serif'}}>{event.timeframe}</span>
-                <span className={`text-xs px-2 py-1 rounded-[12px] ${
-                  event.severity.includes('High') ? 'bg-red-100 text-red-700' :
-                  event.severity.includes('Moderate') ? 'bg-yellow-100 text-yellow-700' :
-                  'bg-green-100 text-green-700'
-                }`} style={{fontFamily: 'Inter, sans-serif'}}>
-                  {event.severity}
-                </span>
+                {event.severity && (
+                  <span className={`text-xs px-2 py-1 rounded-[12px] ${
+                    event.severity.includes('High') ? 'bg-red-100 text-red-700' :
+                    event.severity.includes('Moderate') ? 'bg-yellow-100 text-yellow-700' :
+                    'bg-green-100 text-green-700'
+                  }`} style={{fontFamily: 'Inter, sans-serif'}}>
+                    {event.severity}
+                  </span>
+                )}
                 <span className="text-xs bg-[#FFD480] text-[#6C3000] px-2 py-1 rounded-[12px]" style={{fontFamily: 'Inter, sans-serif'}}>{event.prevalence}</span>
               </div>
               {!isExpanded && (
