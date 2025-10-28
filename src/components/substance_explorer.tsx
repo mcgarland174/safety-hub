@@ -3691,6 +3691,31 @@ const SubstanceExplorer = () => {
         erVisits: '1% of users (2020)',
         emergencyRate: '0.6% seeking emergency care'
       },
+      safetySummary: {
+        title: 'Safety Overview',
+        keyPoints: [
+          {
+            icon: '✓',
+            label: 'Physiological Safety',
+            content: 'Psilocybin has exceptionally low physiological toxicity with no documented lethal overdose in humans. The estimated lethal dose is orders of magnitude higher than therapeutic or recreational doses.'
+          },
+          {
+            icon: '⚠️',
+            label: 'Primary Risks',
+            content: 'Most adverse events are psychological in nature, including acute anxiety, dysphoria, panic reactions, and transient perceptual disturbances. These are typically manageable with appropriate psychological support and rarely result in lasting harm when proper protocols are followed.'
+          },
+          {
+            icon: '🚫',
+            label: 'Key Contraindications',
+            content: 'Medical contraindications include uncontrolled hypertension, recent myocardial infarction (within 6 months), and serious cardiac arrhythmias. Psychiatric contraindications include active psychosis, personal history of schizophrenia, and active mania. Drug interactions with MAOIs and some SSRIs require careful consideration.'
+          },
+          {
+            icon: '🛡️',
+            label: 'Risk Mitigation',
+            content: 'Comprehensive medical and psychiatric screening, optimization of set and setting, trauma-informed preparation, continuous monitoring during sessions, and structured integration support substantially reduce the risk of serious complications. Context matters profoundly—the same substance can have dramatically different safety profiles depending on screening, preparation, therapeutic support, and environmental factors.'
+          }
+        ]
+      },
       riskFactors: [
         { 
           category: 'Cardiovascular',
@@ -4552,6 +4577,29 @@ const SubstanceExplorer = () => {
                     </div>
                   </div>
                 </div>
+
+                {data.safetySummary && (
+                  <div id="safety-summary" className="bg-gradient-to-br from-blue-50 to-green-50 rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-6 scroll-mt-24 border-2 border-blue-200">
+                    <div className="flex items-center space-x-3 mb-4 pb-3 border-b-2 border-blue-200">
+                      <div className="w-1 h-8 bg-blue-600 rounded"></div>
+                      <Shield className="w-6 h-6 text-blue-600" />
+                      <h3 className="font-bold text-2xl text-[#2C1B11]" style={{fontFamily: 'Satoshi, sans-serif'}}>{data.safetySummary.title}</h3>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {data.safetySummary.keyPoints.map((point, idx) => (
+                        <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-[12px] p-4 border border-blue-200">
+                          <div className="flex items-start space-x-3">
+                            <span className="text-2xl flex-shrink-0">{point.icon}</span>
+                            <div>
+                              <h4 className="font-semibold text-[#2C1B11] mb-2" style={{fontFamily: 'Satoshi, sans-serif'}}>{point.label}</h4>
+                              <p className="text-sm text-[#4E4E4E] leading-relaxed" style={{fontFamily: 'Inter, sans-serif'}}>{point.content}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <div id="risk-factors" className="bg-white rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] scroll-mt-24">
                   <div className="p-6 pb-4 border-b-2 border-[#E8D9C8]">
