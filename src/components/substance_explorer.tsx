@@ -472,7 +472,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Challenging Experiences ("Bad Trips")',
             timeframe: 'During session',
-            severity: 'Moderate to High',
             prevalence: 'Dose-dependent: 9% at 50mcg, 27% at 100mcg, 31% at 200mcg',
             description: 'Unpleasant emotional states including dysphoria, confusion, fear, sense of doom, emotional pain, confrontation with difficult emotions. Clear dose-response relationship.',
             management: 'Non-directive support, acceptance, avoiding resistance. Reminder that experience is temporary. These experiences can be therapeutically valuable when properly supported.',
@@ -487,7 +486,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Ego Dissolution',
             timeframe: 'During session',
-            severity: 'Variable',
             prevalence: 'Common at 200+ mcg doses',
             description: 'Loss of sense of self or identity. Can be profoundly positive (mystical experience, unity consciousness, transformative insights) or terrifying (panic, confusion, fear of death or insanity).',
             management: 'Preparation critical. During experience: reassurance that sense of self will return. Non-directive support.',
@@ -517,7 +515,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Cardiovascular Effects',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: '25% >100bpm heart rate and 34% >38°C temperature at 200mcg',
             description: 'Increased heart rate, blood pressure, and body temperature. Typically benign in healthy individuals but can be problematic in those with cardiovascular disease.',
             management: 'Monitoring, reassurance. Medical intervention if sustained elevation in at-risk individuals. Ensure adequate hydration and temperature control.',
@@ -531,7 +528,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Other Physical Symptoms',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Common: sweating (26.5%), palpitations (25.5%), difficulty breathing (20.6%), nausea (17.6%)',
             description: 'Various somatic symptoms including sweating, palpitations, difficulty breathing, nausea/vomiting, headache, mydriasis (pupil dilation).',
             management: 'Supportive care. Usually self-limiting. Reassurance that symptoms are temporary and related to drug effects.',
@@ -560,7 +556,6 @@ const SubstanceExplorer = () => {
           {
             name: 'HPPD (Hallucinogen Persisting Perception Disorder)',
             timeframe: 'Long-term',
-            severity: 'Variable',
             prevalence: '15-77% across studies (wide variation); 25-40% report some changes',
             description: 'Persistent visual disturbances (visual snow, trails, afterimages, geometric patterns, halos, palinopsia) and dissociative symptoms (depersonalization, derealization) lasting beyond session.',
             management: 'Reassurance. Benzodiazepines (anecdotal). Lamotrigine (case reports). Often improves with time.',
@@ -574,7 +569,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Flashbacks',
             timeframe: 'Long-term',
-            severity: 'Variable',
             prevalence: '10-69% report flashbacks (wide range)',
             description: 'Spontaneous, brief recurrence of aspects of LSD experience. Triggered by stress, fatigue, cannabis, dark environments, exercise. Duration typically seconds to minutes.',
             management: 'Reassurance that they are temporary. Identify and avoid triggers if distressing.',
@@ -899,7 +893,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Acute Anxiety',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Specific data not available; presumed common based on general psychedelic use',
             description: 'Anxiety experienced during 2C-B experience. May range from mild unease to significant distress.',
             management: 'Reassurance typically sufficient. Breathing exercises, grounding techniques, environmental adjustment. Benzodiazepines if reassurance insufficient.',
@@ -1030,7 +1023,6 @@ const SubstanceExplorer = () => {
           {
             name: 'HPPD (Hallucinogen Persisting Perception Disorder)',
             timeframe: 'Long-term',
-            severity: 'Variable',
             prevalence: 'NBOMes: 67% regular use, 20% single use. 2C-B: presumed lower but unknown',
             description: 'Persistent visual disturbances (visual snow, trails, afterimages, geometric patterns) lasting beyond session. NBOMe compounds carry dramatically elevated HPPD risk.',
             management: 'Reassurance. Benzodiazepines (anecdotal). Lamotrigine (case reports). Often improves with time.',
@@ -1427,7 +1419,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Acute Anxiety',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Most common psychological adverse event in acute phase',
             description: 'Anxiety during or shortly after MDMA administration. Can range from mild apprehensiveness to fear of losing control, panic, fear of death.',
             management: 'Reassurance, calm environment, breathing exercises. Usually sufficient. Benzodiazepines if severe.',
@@ -1545,7 +1536,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Neurotoxicity',
             timeframe: 'Long-term',
-            severity: 'Variable',
             prevalence: 'Documented in animals; extent in humans debated',
             description: 'Potential persistent damage to serotonergic neurons. May contribute to long-term cognitive and psychiatric problems.',
             management: 'Prevention through minimizing use, avoiding high doses and frequent use.',
@@ -1888,7 +1878,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Flashbacks / Reactivations',
             timeframe: 'Days to weeks post-use',
-            severity: 'Variable',
             prevalence: '25-73% experience brief reactivations',
             description: 'Spontaneous, brief (seconds) re-experiencing of visual, auditory, or emotional aspects of DMT experience. Can occur at night or when drifting to sleep. Most positive/neutral but minority find distressing.',
             management: 'Psychoeducation, reassurance of brevity and temporary nature. Integration support if distressing.',
@@ -1903,7 +1892,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Cardiovascular Effects',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Common',
             description: 'Increases in blood pressure and heart rate. Generally mild and transient in healthy individuals.',
             management: 'Monitoring essential. Medical evaluation if sustained elevation.',
@@ -1916,7 +1904,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Physical Symptoms',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Common',
             description: 'Respiratory irritation from smoking (coughing, airway hyperresponsiveness), nausea, increased body temperature, muscle jerking, twitching.',
             management: 'Generally self-limiting. Supportive care.',
@@ -2281,7 +2268,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Flashbacks / Reactivations',
             timeframe: 'Days to weeks post-use',
-            severity: 'Variable',
             prevalence: '27-73% experience reactivations',
             description: 'MORE COMMON with 5-MeO-DMT than typical psychedelics. Brief spontaneous re-experiences. Visual, auditory, emotional. Most positive/neutral but 4-7% report distressing reactivations.',
             management: 'Psychoeducation, integration support, reassurance of brevity.',
@@ -2296,7 +2282,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Cardiovascular Effects',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Common',
             description: 'Transient increases in blood pressure and heart rate.',
             management: 'Monitoring essential.',
@@ -2309,7 +2294,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Nausea & Vomiting',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Common',
             description: 'Nausea, vomiting, headache. Nasal discomfort with intranasal route.',
             management: 'Supportive care. Generally self-limiting.',
@@ -2614,7 +2598,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Vomiting & Purging',
             timeframe: 'During ceremony',
-            severity: 'Mild to Moderate',
             prevalence: 'Very common - expected part of experience',
             description: 'Nausea and vomiting. In traditional contexts, this is "la purga" (the purge) and integrated as cleansing/healing process rather than purely adverse.',
             management: 'Expected and accepted. Bucket provided. Supportive environment. Dehydration prevention.',
@@ -2627,7 +2610,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Cardiovascular Effects',
             timeframe: 'During ceremony',
-            severity: 'Mild to Moderate',
             prevalence: 'Common',
             description: 'Transient increases in blood pressure and heart rate. Generally well-tolerated in healthy individuals.',
             management: 'Monitoring. Medical intervention if severe or in those with cardiovascular disease.',
@@ -2986,7 +2968,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Cognitive Impairment (Chronic Use)',
             timeframe: 'Long-term',
-            severity: 'Moderate to High',
             prevalence: 'Well-documented in chronic users',
             description: 'Memory deficits, verbal learning impairment, spatial memory problems, slowed task completion. Functional impairment.',
             management: 'Cessation of use. Cognitive rehabilitation. May improve with abstinence.',
@@ -3001,7 +2982,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Cardiovascular Effects',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Common',
             description: 'Increased blood pressure and heart rate. Small changes generally well-tolerated but higher peaks in hypertensive patients.',
             management: 'Monitoring. Medical intervention if severe or in vulnerable individuals.',
@@ -3435,7 +3415,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Acute Anxiety',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Frequently reported; 87-93% experienced anxiety worsening among those with negative responses',
             description: 'Transient anxiety during ibogaine experience. Among those with negative psychological responses lasting 72+ hours, anxiety worsening or onset is nearly universal.',
             management: 'Reassurance, calming presence, supportive environment. Benzodiazepines if severe.',
@@ -3463,7 +3442,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Persistent Psychological Effects',
             timeframe: 'Long-term (weeks to months)',
-            severity: 'Variable',
             prevalence: '8.9% functional impairment, 2.6% sought medical help (psychedelic users general); 37.5% psychiatric diagnosis post-use among negative responders',
             description: 'Small percentage experience persistent anxiety, depression, or HPPD (visual disturbances, geometric patterns, halos, trails) lasting weeks to months after ibogaine.',
             management: 'Integration therapy, psychiatric follow-up, trauma-informed care if needed.',
@@ -3539,7 +3517,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Nausea and Vomiting',
             timeframe: 'Early in experience',
-            severity: 'Mild to Moderate',
             prevalence: '62% (most common acute adverse effect)',
             description: 'Gastrointestinal distress including nausea, vomiting, and diarrhea. Most common non-cardiac adverse effect.',
             management: 'Antiemetics may be considered. Hydration. Supportive care. Positioning to prevent aspiration.',
@@ -3581,7 +3558,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Hypertension',
             timeframe: 'During session',
-            severity: 'Moderate to High',
             prevalence: 'Some develop systolic >160 mmHg and diastolic >100 mmHg',
             description: 'Elevated blood pressure during ibogaine effects. Higher risk in older patients or those with underlying conditions.',
             management: 'Blood pressure monitoring. Antihypertensive medication if severe.',
@@ -3595,7 +3571,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Other Autonomic Effects',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: 'Common',
             description: 'Feeling cold, motor agitation/restlessness, excessive sweating (hyperhidrosis), urinary incontinence, orthostatic hypotension (low BP on standing), tremor, dizziness.',
             management: 'Supportive care, temperature regulation, hydration, assistance with movement.',
@@ -3611,7 +3586,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Introspective Visions',
             timeframe: 'During session',
-            severity: 'Variable',
             prevalence: 'Common in therapeutic context',
             description: 'Altered perceptions and introspective visions during experience, often related to trauma, addiction patterns, or life events. Visual disturbances. Moderate intensity compared to classical psychedelics like DMT or high-dose psilocybin.',
             management: 'Supportive presence, integration therapy post-session.',
@@ -3625,7 +3599,6 @@ const SubstanceExplorer = () => {
           {
             name: 'HPPD (Hallucinogen Persisting Perception Disorder)',
             timeframe: 'Long-term (persistent)',
-            severity: 'Variable',
             prevalence: 'Unknown; documented cases exist but less studied than HPPD from classical psychedelics',
             description: 'Persistent perceptual disturbances after ibogaine including visual disturbances, geometric patterns, halos, trails. Can last weeks to months or longer.',
             management: 'Psychiatric follow-up, reassurance, avoid further psychedelic use. Some cases resolve spontaneously.',
@@ -4090,7 +4063,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Acute Anxiety',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: '15-31% in clinical trials',
             description: 'Most common psychological adverse event. Anxiety during or shortly after administration. Usually resolves during or shortly after session, though may last hours beyond peak in some cases.',
             management: 'Reassurance typically sufficient; benzodiazepines if severe',
@@ -4105,7 +4077,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Panic Reactions',
             timeframe: 'During session',
-            severity: 'Moderate to High',
             prevalence: 'Variable, dose-dependent',
             description: 'Intense fear, overwhelming anxiety, sense of losing control or dying. More severe than general anxiety.',
             management: 'Calm presence, verbal reassurance, breathing guidance, grounding techniques. Benzodiazepines if non-pharmacological insufficient.',
@@ -4118,7 +4089,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Dysphoria & Challenging Experiences',
             timeframe: 'During session',
-            severity: 'Moderate to High',
             prevalence: 'Common but highly variable',
             description: 'Unpleasant emotional states including dysphoria, confusion, fear, sense of doom, emotional pain. The classic "bad trip." Can include confrontation with difficult emotions or trauma.',
             management: 'Non-directive support, acceptance, avoiding resistance. These experiences are often therapeutically valuable when properly supported.',
@@ -4134,7 +4104,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Nausea & Vomiting',
             timeframe: 'Onset to peak',
-            severity: 'Mild to Moderate',
             prevalence: 'Common, especially at higher doses',
             description: 'Gastrointestinal distress is expected with psilocybin, particularly with whole mushrooms. More pronounced than synthetic psilocybin.',
             management: 'Anti-nausea medication, ginger, fasting beforehand (4-6 hours), reassurance that it typically passes',
@@ -4146,7 +4115,6 @@ const SubstanceExplorer = () => {
           {
             name: 'Cardiovascular Effects',
             timeframe: 'During session',
-            severity: 'Mild to Moderate',
             prevalence: '7% experience tachycardia >100bpm',
             description: 'Increased heart rate and blood pressure. Systolic BP >160mmHg and diastolic >100mmHg reported, especially in older patients.',
             management: 'Monitoring, reassurance. Medical intervention if sustained elevation in at-risk individuals.',
@@ -4160,7 +4128,6 @@ const SubstanceExplorer = () => {
           {
             name: 'HPPD',
             timeframe: 'Long-term',
-            severity: 'Variable',
             prevalence: '25-40% report some changes; 4% clinically significant',
             description: 'Persistent visual disturbances (visual snow, trails, afterimages, geometric patterns) lasting beyond session.',
             management: 'Reassurance, benzodiazepines (anecdotal), lamotrigine (case reports)',
