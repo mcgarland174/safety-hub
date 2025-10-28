@@ -147,19 +147,19 @@ const SubstanceExplorer = () => {
               }
             },
             {
-              name: 'Dosage Uncertainty (Blotter Variability)',
+              name: 'Dosage uncertainty (blotter variability)',
               level: 'Caution',
               notes: 'Uneven LSD distribution creates hot/cold spots',
               details: {
                 description: 'Illicit LSD on blotter paper often has highly uneven distribution, creating "hot spots" with much higher concentrations and "cold spots" with little to no LSD. This makes accurate dosing nearly impossible.',
-                mechanism: 'During manufacture, LSD solution may not be evenly applied to paper. When users cut blotters, they may receive vastly different doses than intended.',
+                mechanism: 'During manufacture, LSD solution may be unevenly applied to blotter paper. As a result, users who cut or divide blotters can receive doses far higher or lower than intended, which can lead to unintentional overdose.',
                 prevalence: 'Common problem in illicit market. Particularly problematic for microdosing where precision is important.',
                 harmReduction: [
                   { name: 'Volumetric Dosing', link: null },
                   { name: 'Test Dose', link: 'hrp_start_low_go_slow_001' },
                   { name: 'Substance Testing', link: null }
                 ],
-                citations: 'Miller et al. 2024; Abraham et al. 1993'
+                citations: 'Miller et al. 2024; Abraham & Aldridge, 1993; Lea et al., 2020'
               }
             }
           ]
@@ -173,15 +173,15 @@ const SubstanceExplorer = () => {
               level: 'Absolute',
               notes: 'Can severely worsen symptoms and trigger prolonged episodes',
               details: {
-                description: 'Active psychotic symptoms or manic episodes are absolute contraindications for LSD. The drug can severely intensify hallucinations, delusions, paranoia, and disorganized thinking.',
+                description: 'Active psychotic symptoms or manic episodes are absolute contraindications for LSD. The drug has the potential to severely exacerbate hallucinations, delusions, paranoia, and disorganized thinking.',
                 mechanism: 'LSD amplifies existing alterations in perception and thought. In active psychosis, this can push symptoms to dangerous levels. In mania, it can worsen impulsivity, grandiosity, and loss of judgment.',
-                prevalence: '1.3% experience persistent psychotic symptoms after LSD use. 57% of those with bad experiences developed extended psychosis.',
+                prevalence: 'Prevalence of persistent psychotic symptoms averages 1-2% across studies. Risk is substantially higher in individuals with psychiatric vulnerabilities.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Psychiatric evaluation before use', link: null },
                   { name: 'Never use during active episodes', link: null }
                 ],
-                citations: 'Fuentes et al. 2020; Carhart-Harris et al. 2010; Rosenblat'
+                citations: 'Carhart-Harris & Nutt, 2010; Simonsson et al., 2023'
               }
             },
             {
@@ -191,12 +191,12 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'Personal history of schizophrenia or schizoaffective disorder is typically an absolute contraindication. Even when stable on medication, individuals remain vulnerable to psychotic decompensation.',
                 mechanism: 'Individuals with psychotic disorder history have fundamental vulnerabilities in dopamine and serotonin systems that LSD can destabilize, triggering relapse.',
-                prevalence: 'Higher rates of prolonged adverse reactions. Historic studies show 0.08-4.6% develop prolonged psychotic reactions, with higher rates in psychiatric populations.',
+                prevalence: 'Psychedelic-induced psychosis is extremely rare, with incidences below 1% in general populations. However, in studies including individuals with histories of psychotic disorders, up to 3.8% developed long-lasting psychotic symptoms, indicating a substantially higher risk in psychiatric populations.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Avoid use entirely if personal history present', link: null }
                 ],
-                citations: 'Kopra et al. 2022; White et al. 2024; Johnson et al. 2008'
+                citations: 'Kopra et al. 2022; White et al. 2024; Johnson et al. 2008; Sabé et al., 2024'
               }
             },
             {
@@ -205,7 +205,7 @@ const SubstanceExplorer = () => {
               notes: 'Genetic vulnerability requires careful assessment',
               details: {
                 description: 'Family history increases risk of psychotic or manic reactions but is not an absolute contraindication. Requires thorough screening and extra caution.',
-                mechanism: 'Genetic vulnerability to psychotic or bipolar disorders may be triggered by LSD even without personal history. First-degree relatives have significantly elevated risk.',
+                mechanism: 'Genetic vulnerability to psychotic or bipolar disorders may be triggered by LSD even without personal history. First-degree relatives have significantly elevated risk. Psychedelic use is linked to greater manic symptoms in individuals with higher genetic vulnerability to schizophrenia or bipolar I disorder, indicating a significant role of genetic factors in psychiatric outcomes.',
                 prevalence: 'Risk varies based on closeness of relationship and number of affected relatives. Closer family connections carry higher risk.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
@@ -213,7 +213,7 @@ const SubstanceExplorer = () => {
                   { name: 'Lower doses recommended', link: 'hrp_start_low_go_slow_001' },
                   { name: 'Close monitoring during and after session', link: 'hrp_continuous_monitoring_001' }
                 ],
-                citations: 'Honk et al. 2024; Henningfield et al. 2023'
+                citations: 'Honk et al. 2024; Henningfield et al. 2023; Simonsson et al., 2023; Strassman, 1984'
               }
             },
             {
@@ -223,14 +223,14 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'Personality disorders significantly increase risk of negative outcomes. Not absolute contraindication but requires enhanced support and careful monitoring.',
                 mechanism: 'Difficulty with emotional regulation, interpersonal relationships, and self-concept can be dramatically amplified during LSD experiences.',
-                prevalence: '31% of those with personality disorders experience negative responses vs general population. 4-fold increased risk of adverse psychological responses.',
+                prevalence: 'About 31% of individuals with personality disorders in the study experienced negative responses to psychedelics, compared to 16% of participants without personality disorders.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Enhanced therapeutic support', link: null },
                   { name: 'Extended Integration', link: 'hrp_integration_therapy_001' },
                   { name: 'Careful monitoring for destabilization', link: 'hrp_continuous_monitoring_001' }
                 ],
-                citations: 'Marrocu et al.; Bremler et al. 2023'
+                citations: 'Marrocu et al., 2024; Bremler et al. 2023'
               }
             },
             {
@@ -325,7 +325,7 @@ const SubstanceExplorer = () => {
                   { name: 'Blood pressure control before any use', link: null },
                   { name: 'Continuous vital sign monitoring', link: null }
                 ],
-                citations: 'Holze et al. 2022; Fuentes et al. 2020; Bender et al. 2022'
+                citations: 'Holze et al. 2022; Fuentes et al. 2020; Bender & Hellerstein, 2022'
               }
             },
             {
@@ -462,7 +462,7 @@ const SubstanceExplorer = () => {
             prevalence: '1.3% experience persistent psychotic symptoms',
             description: 'Paranoia, hallucinations beyond typical effects, delusions, derealization, disorganized thinking, loss of reality testing. May overlap with severe "bad trip."',
             management: 'Supportive care, benzodiazepines, antipsychotics if severe and unresponsive. Medical evaluation required.',
-            notes: 'Usually acute but can become prolonged, especially in those with psychiatric vulnerabilities. 57% of those with bad experiences developed extended psychosis.',
+            notes: 'Usually acute but can become prolonged, especially in those with psychiatric vulnerabilities. Prevalence averages 1-2% across studies.',
             harmReduction: [
               { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Exclude high-risk individuals', link: null },
@@ -2835,7 +2835,7 @@ const SubstanceExplorer = () => {
                   { name: 'Enhanced support', link: null },
                   { name: 'Integration therapy', link: 'hrp_integration_therapy_001' }
                 ],
-                citations: 'Collins et al. 2024; Marrocu'
+                citations: 'Collins et al. 2024; Marrocu et al., 2024'
               }
             }
           ]
@@ -3377,7 +3377,7 @@ const SubstanceExplorer = () => {
                   { name: 'Bed rest recommended', link: null },
                   { name: 'Medical supervision', link: null }
                 ],
-                citations: 'Knuijver 2022; Bender 2022; Rocha 2023'
+                citations: 'Knuijver 2022; Bender & Hellerstein, 2022; Rocha 2023'
               }
             }
           ]
@@ -3697,11 +3697,11 @@ const SubstanceExplorer = () => {
         legalStatus: 'Schedule I (USA)',
       },
       dosing: {
-        microdose: '0.1-0.5g dried mushrooms (0.8-5mg synthetic)',
+        microdose: '0.1-0.4g dried mushrooms (0.8-5mg synthetic)',
         threshold: '2mg',
         light: '3-6mg',
         common: '6-15mg', 
-        therapeutic: '25mg (typical)',
+        therapeutic: '10-30mg (typical 15-20mg)',
         strong: '15-30mg',
         heavy: '30mg+',
         recreational: '1-5g dried mushrooms'
@@ -3724,11 +3724,11 @@ const SubstanceExplorer = () => {
           severity: 'high',
           conditions: [
             { 
-              name: 'Uncontrolled hypertension', 
-              level: 'Absolute', 
+              name: 'Uncontrolled hypertension',
+              level: 'Relative',
               notes: 'Psilocybin increases BP and HR',
               details: {
-                description: 'Uncontrolled high blood pressure is an absolute contraindication for psilocybin use. Psilocybin causes sympathomimetic cardiovascular effects that can dangerously elevate already high blood pressure.',
+                description: 'Uncontrolled high blood pressure is a relative contraindication for psilocybin use. Psilocybin causes sympathomimetic cardiovascular effects that can dangerously elevate already high blood pressure.',
                 mechanism: 'Psilocybin acts on serotonin receptors that regulate cardiovascular function, leading to moderate increases in blood pressure and heart rate. In those with uncontrolled hypertension, this can push systolic BP above 160mmHg and diastolic above 100mmHg.',
                 prevalence: '7% of administrations resulted in tachycardia (HR >100bpm). Older patients particularly at risk.',
                 harmReduction: [
@@ -3736,11 +3736,11 @@ const SubstanceExplorer = () => {
                   { name: 'Continuous vital sign monitoring', link: null },
                   { name: 'ECG monitoring if indicated', link: null }
                 ],
-                citations: 'Anderson et al. 2020; Wsol et al. 2023; Bender et al. 2022'
+                citations: 'Petranker et al., 2020; Wsol et al. 2023; Bender & Hellerstein, 2022; Straumann et al., 2024; Nahlawi et al., 2025'
               }
             },
             { 
-              name: 'Recent MI (within 6 months)', 
+              name: 'Recent heart attack/MI (within 6 months)', 
               level: 'Absolute', 
               notes: 'Increased cardiac demand poses serious risk',
               details: {
@@ -3765,10 +3765,10 @@ const SubstanceExplorer = () => {
                   { name: 'Comprehensive Medical Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'ECG screening before any psychedelic use', link: null }
                 ],
-                citations: 'Anderson et al. 2020; Marazziti et al. 2024'
+                citations: 'Petranker et al., 2020; Marazziti et al. 2024; Neumann et al., 2024'
               }
             },
-            { 
+            {
               name: 'Coronary artery disease', 
               level: 'Relative', 
               notes: 'Requires medical monitoring',
@@ -3780,7 +3780,7 @@ const SubstanceExplorer = () => {
                   { name: 'Continuous Monitoring', link: 'hrp_continuous_monitoring_001' },
                   { name: 'Medical supervision required throughout session', link: null }
                 ],
-                citations: 'Anderson et al. 2020'
+                citations: 'Petranker et al., 2020'
               }
             }
           ]
@@ -3794,15 +3794,15 @@ const SubstanceExplorer = () => {
               level: 'Absolute', 
               notes: 'Can trigger prolonged episodes',
               details: {
-                description: 'Active psychotic symptoms or manic episodes are absolute contraindications. Psychedelics can severely worsen these conditions.',
-                mechanism: 'Psychedelics can intensify delusional thinking, hallucinations, and disorganized thought patterns. In mania, they can amplify dangerous impulsivity and grandiosity.',
+                description: 'Active psychotic symptoms or manic episodes are absolute contraindications. Psilocybin has the potential to severely exacerbate these conditions.',
+                mechanism: 'Psilocybin can intensify delusional thinking, hallucinations, and disorganized thought patterns. In mania, it can amplify dangerous impulsivity and grandiosity.',
                 prevalence: 'Prolonged psychotic reactions documented in literature, though rare in screened populations.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Psychiatric evaluation before use', link: null },
                   { name: 'Never use during active episodes', link: null }
                 ],
-                citations: 'Honk et al. 2024; Johnson et al. 2008; Breeksema et al. 2022'
+                citations: 'Honk et al. 2024; Johnson et al. 2008; Breeksema et al. 2022; Amsterdam et al., 2011; Rosenblat et al., 2023'
               }
             },
             { 
@@ -3811,29 +3811,29 @@ const SubstanceExplorer = () => {
               notes: 'High risk of triggering episodes',
               details: {
                 description: 'Personal history of schizophrenia or schizoaffective disorder is typically an absolute contraindication.',
-                mechanism: 'Even when stable, individuals with psychotic disorder history have vulnerable neurotransmitter systems that psychedelics can destabilize.',
-                prevalence: 'Higher rates of prolonged adverse reactions in naturalistic use among those with psychiatric histories.',
+                mechanism: 'Individuals with a history of psychotic disorders, even when stable, possess vulnerable neurotransmitter systems that psychedelics may destabilize',
+                prevalence: 'Individuals with pre-existing psychotic disorders are at elevated risk for symptom exacerbation and prolonged adverse reactions. Clinical trials typically exclude this population due to safety concerns.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Avoid use entirely if personal history present', link: null }
                 ],
-                citations: 'Henningfield et al. 2023; Carbonaro et al. 2016'
+                citations: 'Henningfield et al. 2023; Carbonaro et al. 2016; MacCallum et al., 2022'
               }
             },
-            { 
+            {
               name: 'Family history of psychosis/bipolar', 
               level: 'Relative', 
               notes: 'Elevated risk',
               details: {
                 description: 'Family history increases risk but is not an absolute contraindication. Requires careful assessment.',
-                mechanism: 'Genetic vulnerability to psychotic or bipolar disorders may be triggered by psychedelic use, even without personal history.',
+                mechanism: 'Genetic vulnerability to psychotic or bipolar disorders may be triggered by psychedelic use, even without personal history. Psychedelic use was linked to greater manic symptoms in individuals with higher genetic vulnerability to schizophrenia or bipolar I disorder, indicating a significant role of genetic factors in psychiatric outcomes.',
                 prevalence: 'Risk multiplier varies based on closeness of family relationship and number of affected relatives.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Enhanced Preparation', link: 'hrp_psychoeducation_comprehensive_001' },
                   { name: 'Close monitoring during and after session', link: 'hrp_continuous_monitoring_001' }
                 ],
-                citations: 'Honk et al. 2024'
+                citations: 'Honk et al. 2024; Simonsson et al., 2023'
               }
             },
             { 
@@ -3841,7 +3841,7 @@ const SubstanceExplorer = () => {
               level: 'Relative', 
               notes: 'Emerging evidence shows safety in controlled settings',
               details: {
-                description: 'Recent research suggests bipolar disorder may not be absolute contraindication in controlled therapeutic settings with proper protocols.',
+                description: 'Despite psilocybin use being linked to the onset of mania, in individuals with bipolar disorder, it is not an absolute contraindication. Recent research suggests that, in controlled therapeutic settings with appropriate screening and monitoring protocols, psilocybin may be administered safely under supervision.',
                 mechanism: 'Risk of manic episode induction exists, but appears manageable with comprehensive screening, preparation, and monitoring.',
                 prevalence: 'Study of Bipolar II treatment-resistant depression with psilocybin showed no increases in mania/hypomania.',
                 harmReduction: [
@@ -3850,7 +3850,7 @@ const SubstanceExplorer = () => {
                   { name: 'Continuous Monitoring', link: 'hrp_continuous_monitoring_001' },
                   { name: 'Integration Support', link: 'hrp_integration_support_001' }
                 ],
-                citations: 'Honk et al. 2024; Marrocu et al. (nd); Sabe et al. 2024'
+                citations: 'Honk et al. 2024; Marrocu et al., 2024; Sabe et al. 2024'
               }
             },
             { 
@@ -3860,14 +3860,14 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'Personality disorders significantly increase risk of negative outcomes. Not absolute contraindication but requires enhanced support.',
                 mechanism: 'Difficulty with emotional regulation, interpersonal relationships, and self-concept can be amplified during psychedelic experiences.',
-                prevalence: '31% of those with personality disorders experience negative responses vs general population. 4-fold increased risk of adverse psychological responses.',
+                prevalence: 'About 31% of individuals with personality disorders in the study experienced negative responses to psychedelics, compared to 16% of participants without personality disorders.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Enhanced therapeutic support', link: null },
                   { name: 'Extended Integration', link: 'hrp_integration_therapy_001' },
                   { name: 'Careful monitoring for destabilization', link: 'hrp_continuous_monitoring_001' }
                 ],
-                citations: 'Marrocu et al. (nd); Bremler et al. 2023'
+                citations: 'Marrocu et al., 2024; Bremler et al. 2023'
               }
             }
           ]
@@ -3881,9 +3881,9 @@ const SubstanceExplorer = () => {
               level: 'Relative', 
               notes: 'Can reactivate trauma; needs specialized support',
               details: {
-                description: 'Trauma history is not a contraindication but requires specialized trauma-informed support. Can be therapeutically valuable with proper preparation.',
+                description: 'A history of trauma is not a contraindication for psychedelic use but requires specialized, trauma-informed support. With appropriate preparation and integration, psychedelic experiences can be therapeutically valuable for individuals who have experienced trauma. ',
                 mechanism: 'Psychedelics can bring traumatic memories and emotions to consciousness, leading to reexperiencing. This can be healing or destabilizing depending on support available.',
-                prevalence: '37.5% of PTSD participants in ayahuasca ceremonies experienced trauma reexperiencing. High rates for women with sexual assault history.',
+                prevalence: 'In a 2023 Scientific Reports study of ayahuasca retreat participants, people with a self-reported lifetime PTSD diagnosis had "more than 60%" prevalence of re-experiencing adverse life events during ceremony (vs. lower rates in those without PTSD)',
                 harmReduction: [
                   { name: 'Trauma-informed screening and preparation', link: null },
                   { name: 'Specialized trauma therapy support', link: null },
@@ -3900,7 +3900,7 @@ const SubstanceExplorer = () => {
               notes: '87% with negative responses report worsening anxiety',
               details: {
                 description: 'Pre-existing anxiety or depression can be both a therapeutic target and risk factor. Paradoxically, it can worsen or improve symptoms.',
-                mechanism: 'Anxiety can be amplified during psychedelic states. However, with proper support, addressing anxiety is a common therapeutic goal.',
+                mechanism: 'Anxiety and depressive symptoms may be amplified during psychedelic states. However, with proper support and guidance, addressing both anxiety and depression is a common therapeutic goal.',
                 prevalence: '87% of those experiencing negative psychological responses reported anxiety worsening.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
@@ -3909,7 +3909,7 @@ const SubstanceExplorer = () => {
                   { name: 'Set and Setting Optimization', link: 'hrp_physical_environment_001' },
                   { name: 'Non-pharmacological Crisis Management', link: 'hrp_crisis_nonpharm_001' }
                 ],
-                citations: 'Bremler et al. 2023'
+                citations: 'Bremler et al. 2023; Simonsson et al., 2023'
               }
             }
           ]
@@ -3919,11 +3919,11 @@ const SubstanceExplorer = () => {
           severity: 'critical',
           conditions: [
             { 
-              name: 'MAOIs', 
-              level: 'Absolute', 
+              name: 'MAOIs',
+              level: 'Relative',
               notes: 'Can cause life-threatening serotonin syndrome',
               details: {
-                description: 'MAO inhibitors combined with psychedelics can cause potentially fatal serotonin syndrome. This is an absolute contraindication.',
+                description: 'MAO inhibitors combined with psilocybin can cause potentially fatal serotonin syndrome. This is a relative contraindication due to the increased risk of serotonin syndrome.',
                 mechanism: 'MAOIs prevent breakdown of serotonin, and psychedelics increase serotonin activity. Together they cause dangerous serotonin accumulation leading to hyperthermia, seizures, and potentially death.',
                 prevalence: 'Deaths documented with MAOI + psychedelic combinations, particularly 5-MeO-DMT.',
                 harmReduction: [
@@ -3931,7 +3931,7 @@ const SubstanceExplorer = () => {
                   { name: 'Never combine - wait 2+ weeks after stopping MAOIs', link: null },
                   { name: 'Know serotonin syndrome symptoms', link: null }
                 ],
-                citations: 'Malcolm & Thomas 2022; Gomez-Escolar et al. 2024'
+                citations: 'Malcolm & Thomas 2022'
               }
             },
             { 
@@ -3941,14 +3941,37 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'SSRIs increase serotonin syndrome risk and may blunt psychedelic effects. Not absolute contraindication but requires caution.',
                 mechanism: 'SSRIs increase serotonin levels and can potentiate psychedelic effects on serotonin system. They also downregulate 5-HT2A receptors which may reduce psychedelic effects.',
-                prevalence: 'Common in clinical populations. Effects vary - some experience reduced psychedelic effects, others normal responses.',
+                prevalence: 'SSRI use is common among individuals seeking psychedelic therapy. Effects vary - some experience reduced psychedelic effects, others normal responses. In rare instances, more severe symptoms such as cardiac events, seizures, and even fatalities are documented in individuals on SSRIs.',
                 harmReduction: [
                   { name: 'Comprehensive Medication Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Consider tapering under medical supervision', link: null },
                   { name: 'Monitor for serotonin syndrome symptoms', link: null },
                   { name: 'May need higher doses but proceed cautiously', link: 'hrp_start_low_go_slow_001' }
                 ],
-                citations: 'Breeksema et al. 2022; Malcolm & Thomas 2022'
+                citations: 'Sakai et al. 2024; Malcolm & Thomas 2022; Bender & Hellerstein, 2022'
+              }
+            }
+          ]
+        },
+        {
+          category: 'Dosing & Preparation',
+          severity: 'moderate',
+          conditions: [
+            {
+              name: 'Dosage uncertainty (mushroom variability)',
+              level: 'Caution',
+              notes: 'Mushroom potency varies significantly',
+              details: {
+                description: 'One of the primary risks of psilocybin consumption is the variability in potency, which can result from differences in mushroom species, growing conditions, and preservation methods. Even within the same species, psilocybin content can fluctuate significantly, making it difficult to achieve consistent and predictable dosing.',
+                mechanism: 'Variable psilocybin content in mushrooms makes accurate dosing challenging. Different species, growing conditions, and preservation methods all affect potency. This variability increases risk of unintended high doses or challenging psychological experiences.',
+                prevalence: 'Common issue with natural mushrooms. Less problematic with pharmaceutical-grade synthetic psilocybin used in clinical trials.',
+                harmReduction: [
+                  { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
+                  { name: 'Test dose with small amount first', link: null },
+                  { name: 'Substance testing when available', link: null },
+                  { name: 'Consider synthetic psilocybin in clinical settings', link: null }
+                ],
+                citations: 'Kopra et al., 2022; Cavanna et al., 2022; Johnson et al., 2018'
               }
             }
           ]
@@ -3957,21 +3980,21 @@ const SubstanceExplorer = () => {
           category: 'Demographics',
           severity: 'moderate',
           conditions: [
-            { 
+            {
               name: 'Age under 25', 
               level: 'Caution', 
               notes: '53% of negative effects occur in this age group',
               details: {
                 description: 'Younger individuals, especially under 25, show higher rates of negative effects and emergency treatment seeking.',
                 mechanism: 'Developing brain is more vulnerable to disruption. Neurotransmitter systems are still maturing. Lower risk aversion and higher impulsivity increase behavioral risks.',
-                prevalence: '53% of those experiencing negative effects were under 25. Younger users have higher rates of emergency department visits.',
+                prevalence: 'Research suggests that younger individuals, particularly those under 25, may be more likely to experience adverse psychological reactions following psychedelic use. Individuals under 25 are also more likely to experience challenging experiences than those 25+ (Iseger et al., 2024). Young psychedelic users have higher rates of emergency department visits.',
                 harmReduction: [
                   { name: 'Enhanced education about risks', link: 'hrp_public_harm_reduction_001' },
                   { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
                   { name: 'Mandatory supervision for adolescents', link: 'hrp_continuous_monitoring_001' },
                   { name: 'Consider delaying use until brain fully developed (age 25+)', link: null }
                 ],
-                citations: 'Marazziti et al. 2024; Breeksema et al. 2022; Bremler et al. 2023'
+                citations: 'Marazziti et al. 2024; Iseger et al., 2024; Breeksema et al. 2022; Bremler et al. 2023'
               }
             }
           ]
@@ -4053,7 +4076,7 @@ const SubstanceExplorer = () => {
             name: 'HPPD',
             timeframe: 'Long-term',
             severity: 'Variable',
-            prevalence: '25-40% report some changes; small minority clinically significant',
+            prevalence: '25-40% report some changes; 4% clinically significant',
             description: 'Persistent visual disturbances (visual snow, trails, afterimages, geometric patterns) lasting beyond session.',
             management: 'Reassurance, benzodiazepines (anecdotal), lamotrigine (case reports)',
             notes: 'No cases in modern clinical trials. More associated with frequent use.',

@@ -316,7 +316,7 @@ const Navigation: React.FC = () => {
             </div>
             <div className="p-6 space-y-4">
               <div className="bg-red-50 border-l-4 border-red-500 p-4">
-                <h3 className="font-bold text-red-900 mb-2">First Line: Non-Pharmacological</h3>
+                <h3 className="font-bold text-red-900 mb-2">First Line</h3>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <Check size={16} className="mt-1 text-red-500 flex-shrink-0" />
