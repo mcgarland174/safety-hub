@@ -122,7 +122,7 @@ const SubstanceExplorer = () => {
         crossTolerance: 'Psilocybin, mescaline, other 5-HT2A agonists'
       },
       prevalenceData: {
-        lifetimeUse: 'Increased 200% from early 2000s to late 2010s',
+        lifetimeUse: '~10% of US adults (approximately 23 million Americans)',
         erVisits: '1% of users (2020)',
         emergencyRate: '0.5% of first-time users seek emergency treatment'
       },
@@ -182,7 +182,7 @@ const SubstanceExplorer = () => {
                   { name: 'Psychiatric evaluation before use', link: null },
                   { name: 'Never use during active episodes', link: null }
                 ],
-                citations: 'Carhart-Harris & Nutt, 2010; Simonsson et al., 2023'
+                citations: 'Carhart-Harris & Nutt, 2010; Simonsson et al., 2023; Sabé et al., 2025'
               }
             },
             {
@@ -224,7 +224,7 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'Personality disorders significantly increase risk of negative outcomes. Not absolute contraindication but requires enhanced support and careful monitoring.',
                 mechanism: 'Difficulty with emotional regulation, interpersonal relationships, and self-concept can be dramatically amplified during LSD experiences.',
-                prevalence: 'About 31% of individuals with personality disorders in the study experienced negative responses to psychedelics, compared to 16% of participants without personality disorders.',
+                prevalence: '31% of individuals with personality disorders experienced negative responses to psychedelics, compared to 16% of participants without personality disorders in the same study cohort.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Enhanced therapeutic support', link: null },
@@ -265,13 +265,13 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'Lithium combined with LSD is an absolute contraindication. This combination creates severe and potentially life-threatening reactions.',
                 mechanism: 'Unknown mechanism but well-documented dangerous interaction. Can cause seizures, severe confusion, and delirium.',
-                prevalence: 'Documented cases of severe adverse reactions. Consistently cited as one of the most dangerous psychedelic combinations.',
+                prevalence: 'A review of online reports found that 47% of individuals who combined lithium with psychedelics experienced seizures. Additionally, 18% reported other adverse psychological effects, and 39% required medical attention.',
                 harmReduction: [
                   { name: 'Comprehensive Medication Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Never combine - absolute prohibition', link: null },
                   { name: 'Medical consultation required', link: null }
                 ],
-                citations: 'Ghaznavi et al. 2025'
+                citations: 'Ghaznavi et al. 2025; Nayak et al. 2021'
               }
             },
             {
@@ -280,14 +280,14 @@ const SubstanceExplorer = () => {
               notes: 'Can cause life-threatening serotonin syndrome',
               details: {
                 description: 'MAO inhibitors combined with LSD can cause potentially fatal serotonin syndrome. This is an absolute contraindication.',
-                mechanism: 'MAOIs prevent breakdown of serotonin, and LSD increases serotonin activity. Together they cause dangerous serotonin accumulation leading to hyperthermia, seizures, and potentially death.',
-                prevalence: 'Deaths documented with MAOI + psychedelic combinations.',
+                mechanism: 'MAOIs prevent breakdown of serotonin, and LSD increases serotonin activity. Together they cause dangerous serotonin accumulation leading to hyperthermia, seizures, and potentially death. MAOIs can increase psychedelic exposure significantly (up to sixfold for 5-MeO-DMT).',
+                prevalence: 'Deaths documented with MAOI + psychedelic combinations, particularly 5-MeO-DMT.',
                 harmReduction: [
                   { name: 'Comprehensive Medication Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Never combine - wait 2+ weeks after stopping MAOIs', link: null },
                   { name: 'Know serotonin syndrome symptoms', link: null }
                 ],
-                citations: 'Breeksema et al. 2022; Ghaznavi et al. 2025'
+                citations: 'Breeksema et al. 2022; Ghaznavi et al. 2025; Malcolm & Thomas 2022'
               }
             },
             {
@@ -297,7 +297,7 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'SSRIs increase serotonin syndrome risk and may blunt LSD effects. Not absolute contraindication but requires caution.',
                 mechanism: 'SSRIs increase serotonin levels and can potentiate LSD effects on serotonin system. They also downregulate 5-HT2A receptors which may reduce psychedelic effects.',
-                prevalence: 'Common in clinical populations. Effects vary - some experience reduced psychedelic effects, others normal responses.',
+                prevalence: 'SSRI use is common among individuals seeking psychedelic therapy for depression and anxiety. Effects vary - some experience reduced psychedelic effects, others normal responses.',
                 harmReduction: [
                   { name: 'Comprehensive Medication Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Consider tapering under medical supervision', link: null },
@@ -340,16 +340,16 @@ const SubstanceExplorer = () => {
                   { name: 'Comprehensive Medical Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'ECG screening before any psychedelic use', link: null }
                 ],
-                citations: 'Fuentes et al. 2020; Holze et al. 2021'
+                citations: 'Fuentes et al. 2020; Holze et al. 2021; Ghaznavi et al. 2025'
               }
             },
             {
-              name: 'Recent MI or heart failure',
+              name: 'Recent heart attack/MI (within 6 months)',
               level: 'Absolute',
               notes: 'Increased cardiac demand poses serious risk',
               details: {
-                description: 'Recent myocardial infarction or heart failure are absolute contraindications. The cardiovascular stress from LSD could trigger another cardiac event.',
-                mechanism: 'Increased heart rate and blood pressure place additional demand on compromised cardiac tissue.',
+                description: 'Recent heart attack or myocardial infarction (MI) is an absolute contraindication. The cardiovascular stress from LSD could trigger another cardiac event.',
+                mechanism: 'Increased heart rate and blood pressure place additional demand on compromised cardiac tissue that is still healing from myocardial infarction.',
                 prevalence: 'Typically an exclusion criterion in clinical trials.',
                 harmReduction: [
                   { name: 'Comprehensive Medical Screening', link: 'hrp_screening_comprehensive_001' },
@@ -448,7 +448,8 @@ const SubstanceExplorer = () => {
             prevalence: '64.1% of first-time users experience fear (generally mild); 69.6% of emergency seekers had anxiety/panic',
             description: 'Most commonly reported adverse effect. Anxiety and panic reactions during LSD experience ranging from mild unease to overwhelming terror. Intense fear, racing heart, sense of impending doom, inability to calm down.',
             management: 'Reassurance, breathing exercises, grounding techniques, environmental adjustment. Benzodiazepines if severe and unresponsive to non-pharmacological approaches.',
-            notes: 'Usually resolves during or shortly after session. Can escalate without proper support. Non-pharmacological interventions effective in majority of cases.',
+            notes: 'Usually resolves during or shortly after session. Can escalate without proper support. Non-pharmacological interventions effective in majority of cases. Anxiety symptoms may arise or intensify in the aftermath of an LSD experience, especially for individuals who experience a "bad trip" or have pre-existing vulnerability.',
+            citations: 'Baxter et al., 2024',
             harmReduction: [
               { name: 'Comprehensive Psychoeducation', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Coping Skills Training', link: 'hrp_coping_skills_training_001' },
@@ -463,7 +464,8 @@ const SubstanceExplorer = () => {
             prevalence: '1.3% experience persistent psychotic symptoms',
             description: 'Paranoia, hallucinations beyond typical effects, delusions, derealization, disorganized thinking, loss of reality testing. May overlap with severe "bad trip."',
             management: 'Supportive care, benzodiazepines, antipsychotics if severe and unresponsive. Medical evaluation required.',
-            notes: 'Usually acute but can become prolonged, especially in those with psychiatric vulnerabilities. Prevalence averages 1-2% across studies.',
+            notes: 'Usually acute but can become prolonged, especially in those with psychiatric vulnerabilities. Prevalence averages 1-2% across studies. Among individuals who experienced psychedelic-induced psychosis, about 13% later went on to develop a persistent psychotic disorder.',
+            citations: 'Simonsson et al. 2023; Carhart-Harris & Nutt 2010',
             harmReduction: [
               { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Exclude high-risk individuals', link: null },
@@ -473,10 +475,11 @@ const SubstanceExplorer = () => {
           {
             name: 'Challenging Experiences ("Bad Trips")',
             timeframe: 'During session',
-            prevalence: 'Dose-dependent: 9% at 50mcg, 27% at 100mcg, 31% at 200mcg',
+            prevalence: 'Dose-dependent adverse effects: 9% at 50mcg, 27% at 100mcg, 31% at 200mcg',
             description: 'Unpleasant emotional states including dysphoria, confusion, fear, sense of doom, emotional pain, confrontation with difficult emotions. Clear dose-response relationship.',
             management: 'Non-directive support, acceptance, avoiding resistance. Reminder that experience is temporary. These experiences can be therapeutically valuable when properly supported.',
             notes: 'Risk increases significantly with dose. Higher doses produce more intense and overwhelming experiences.',
+            citations: 'Holze et al. 2022; Carbonaro et al. 2016; Gashi et al. 2021; Evans et al. 2023',
             harmReduction: [
               { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
               { name: 'Multiple Preparation Meetings', link: 'hrp_preparation_meetings_001' },
@@ -491,6 +494,7 @@ const SubstanceExplorer = () => {
             description: 'Loss of sense of self or identity. Can be profoundly positive (mystical experience, unity consciousness, transformative insights) or terrifying (panic, confusion, fear of death or insanity).',
             management: 'Preparation critical. During experience: reassurance that sense of self will return. Non-directive support.',
             notes: 'Highly dependent on preparation, set, setting, and support. Can be most valued or most frightening aspect of experience.',
+            citations: 'Holze et al., 2022',
             harmReduction: [
               { name: 'Enhanced Preparation for High Doses', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Set Clear Intentions', link: null },
@@ -501,7 +505,7 @@ const SubstanceExplorer = () => {
             name: 'Suicidal Ideation and Self-Harm',
             timeframe: 'Acute and long-term',
             severity: 'Critical',
-            prevalence: '20.6% of emergency treatment seekers; 1.2/1000 attempts, 0.4/1000 completed in historic data',
+            prevalence: '20.6% of emergency treatment seekers; 0.12% attempt suicide, 0.04% die by suicide in historic data',
             description: 'Thoughts or acts of self-harm during or after experience. More common in those with pre-existing mental health issues, history of suicidal ideation, or depression.',
             management: 'Immediate support, continuous monitoring, safety measures, emergency services if needed, psychiatric evaluation.',
             notes: 'Direct causal link unclear; may reflect underlying issues exacerbated by experience. Screening essential.',
@@ -509,7 +513,8 @@ const SubstanceExplorer = () => {
               { name: 'Thorough Screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Exclude active suicidality', link: null },
               { name: 'Close monitoring during and after session', link: 'hrp_continuous_monitoring_001' }
-            ]
+            ],
+            citations: 'Kopra et al., 2022'
           }
         ],
         physiological: [
@@ -520,6 +525,7 @@ const SubstanceExplorer = () => {
             description: 'Increased heart rate, blood pressure, and body temperature. Typically benign in healthy individuals but can be problematic in those with cardiovascular disease.',
             management: 'Monitoring, reassurance. Medical intervention if sustained elevation in at-risk individuals. Ensure adequate hydration and temperature control.',
             notes: 'Effects dose-dependent. At 200 mcg, significant portion experience tachycardia and elevated temperature.',
+            citations: 'Holze et al. 2022',
             harmReduction: [
               { name: 'Comprehensive Medical Screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Continuous vital sign monitoring', link: 'hrp_continuous_monitoring_001' },
@@ -529,10 +535,11 @@ const SubstanceExplorer = () => {
           {
             name: 'Other Physical Symptoms',
             timeframe: 'During session',
-            prevalence: 'Common: sweating (26.5%), palpitations (25.5%), difficulty breathing (20.6%), nausea (17.6%)',
+            prevalence: 'Sweating (26.5%), palpitations (25.5%), difficulty breathing (20.6%), nausea (17.6%)',
             description: 'Various somatic symptoms including sweating, palpitations, difficulty breathing, nausea/vomiting, headache, mydriasis (pupil dilation).',
             management: 'Supportive care. Usually self-limiting. Reassurance that symptoms are temporary and related to drug effects.',
             notes: 'Typically subside as drug effects wear off. Less common than psychological effects but can contribute to anxiety.',
+            citations: 'Bremler et al. 2023',
             harmReduction: [
               { name: 'Prepare for physical symptoms', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Comfortable environment', link: 'hrp_physical_environment_001' }
@@ -550,22 +557,24 @@ const SubstanceExplorer = () => {
               { name: 'Accurate dosing', link: null },
               { name: 'Start low', link: 'hrp_start_low_go_slow_001' },
               { name: 'Test substances', link: null }
-            ]
+            ],
+            citations: 'Leonard et al. 2018; Kopra et al. 2022'
           }
         ],
         perceptual: [
           {
             name: 'HPPD (Hallucinogen Persisting Perception Disorder)',
             timeframe: 'Long-term',
-            prevalence: '15-77% across studies (wide variation); 25-40% report some changes',
+            prevalence: 'Prevalence uncertain; varies widely across studies',
             description: 'Persistent visual disturbances (visual snow, trails, afterimages, geometric patterns, halos, palinopsia) and dissociative symptoms (depersonalization, derealization) lasting beyond session.',
             management: 'Reassurance. Benzodiazepines (anecdotal). Lamotrigine (case reports). Often improves with time.',
-            notes: 'No cases in modern clinical trials. More associated with frequent, high-dose, or long-term use. Some experience as non-harmful; others find distressing. Methodological concerns may inflate prevalence rates.',
+            notes: 'No cases in modern clinical trials. More associated with frequent, high-dose, or long-term use. Some experience as non-harmful; others find distressing. Methodological concerns may inflate prevalence rates. NBOMe adulteration is a critical concern, as studies show that NBOMe use, particularly regular use, is associated with an increased risk of HPPD. If a substance consumed as LSD is actually NBOMe, the risk of HPPD could increase substantially.',
             harmReduction: [
               { name: 'Avoid frequent use', link: null },
               { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
               { name: 'Avoid polydrug use', link: null }
-            ]
+            ],
+            citations: 'Hermle et al. 2012; Martinotti et al. 2018; Aday et al. 2020; Halpern & Pope 2003'
           },
           {
             name: 'Flashbacks',
@@ -574,6 +583,7 @@ const SubstanceExplorer = () => {
             description: 'Spontaneous, brief recurrence of aspects of LSD experience. Triggered by stress, fatigue, cannabis, dark environments, exercise. Duration typically seconds to minutes.',
             management: 'Reassurance that they are temporary. Identify and avoid triggers if distressing.',
             notes: 'Related to but distinct from HPPD. Not all distressing or harmful. Some find them interesting or benign.',
+            citations: 'Halpern & Pope 2003; Aday et al. 2020',
             harmReduction: [
               { name: 'Manage stress', link: null },
               { name: 'Adequate sleep', link: null },
@@ -610,7 +620,7 @@ const SubstanceExplorer = () => {
         {
           title: 'NBOMes: The Hidden Killer',
           icon: '☠️',
-          content: 'NBOMe compounds (25I-NBOMe, 25C-NBOMe, 25B-NBOMe) sold as LSD have caused multiple deaths. They produce severe vasoconstriction, hyperthermia, and seizures. The critical harm reduction message: if a blotter tastes bitter, spit it out immediately. Real LSD is tasteless. This simple action can save lives.',
+          content: 'NBOMe compounds (25I-NBOMe, 25C-NBOMe, 25B-NBOMe) sold as LSD have caused multiple deaths. They produce severe vasoconstriction, hyperthermia, and seizures. Studies suggest that the use of 25I-NBOMe is associated with an increased risk of HPPD. The critical harm reduction message: if a blotter tastes bitter, spit it out immediately. Real LSD is tasteless. This simple action can save lives.',
           citations: ['hirschfeld_2021', 'malcolm_2022']
         },
         {
@@ -622,7 +632,7 @@ const SubstanceExplorer = () => {
         {
           title: 'HPPD: Prevalence Unclear, Impact Variable',
           icon: '👁️',
-          content: 'HPPD prevalence estimates range wildly from 15% to 77% depending on the study, likely reflecting methodological differences and subjective interpretation. Importantly, no cases have been reported in contemporary clinical trials with screened populations. Many who experience persistent perceptual changes do not find them distressing or harmful. For those who do, the condition appears more associated with frequent, high-dose, or polydrug use.',
+          content: 'HPPD prevalence estimates range wildly from 15% to 77% depending on the study, likely reflecting methodological differences and subjective interpretation. Importantly, no cases have been reported in contemporary clinical trials with screened populations. Many who experience persistent perceptual changes do not find them distressing or harmful. For those who do, the condition appears more associated with frequent, high-dose, or polydrug use. NBOMe adulteration makes this a critical concern. If the substance is actually NBOMe and not LSD, HPPD risk is extremely high.',
           citations: ['halpern_2003', 'carhart-harris_2010', 'ortiz_bernal_2022']
         },
         {
@@ -658,33 +668,11 @@ const SubstanceExplorer = () => {
         crossTolerance: 'LSD, mescaline, other phenethylamines'
       },
       prevalenceData: {
-        lifetimeUse: 'Limited data - found in illicit markets',
+        lifetimeUse: 'Limited data',
         erVisits: 'Rare but documented severe reactions',
         emergencyRate: 'Very high co-use with MDMA (common combination)'
       },
       riskFactors: [
-        {
-          category: 'Route of Administration - CRITICAL',
-          severity: 'critical',
-          conditions: [
-            {
-              name: 'Insufflation (Snorting)',
-              level: 'Absolute',
-              notes: 'SEVERE NEUROLOGICAL RISKS - Never insufflate 2C-B',
-              details: {
-                description: 'Insufflation (snorting) of 2C-B is associated with severe, potentially life-threatening neurological complications. This route of administration dramatically increases risk compared to oral use and has NO safety benefit.',
-                mechanism: 'Intranasal administration causes direct neurological impact, possibly through rapid absorption or local tissue effects. The mechanism is not fully understood but complications are well-documented.',
-                prevalence: 'Documented cases of cerebral edema, epileptic seizures, and cerebral vasculopathy specifically with insufflation. These are NOT seen with oral administration.',
-                harmReduction: [
-                  { name: 'ORAL ADMINISTRATION ONLY', link: null },
-                  { name: 'Never insufflate 2C-X compounds', link: null },
-                  { name: 'Education about neurological risks', link: 'hrp_psychoeducation_comprehensive_001' }
-                ],
-                citations: 'Hirschfeld et al. 2021'
-              }
-            }
-          ]
-        },
         {
           category: 'Contamination & Adulteration',
           severity: 'critical',
@@ -696,7 +684,7 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'NBOMe compounds (25I-NBOMe, 25C-NBOMe, 25B-NBOMe) are frequently sold as 2C-B or LSD. These substances are FAR more dangerous than 2C-B, causing seizures, severe adverse reactions, and deaths.',
                 mechanism: 'NBOMes have different pharmacology with much higher toxicity. They cause severe vasoconstriction, hyperthermia, seizures, and can be fatal at doses that fit on blotter or in capsules.',
-                prevalence: 'Common problem in illicit markets. Multiple documented deaths. 67% of regular NBOMe users develop HPPD; 20% risk from single use.',
+                prevalence: 'Common problem in illicit markets. Multiple documented deaths.',
                 harmReduction: [
                   { name: 'Reagent testing essential (Ehrlich, Marquis reagents)', link: null },
                   { name: 'If bitter taste, spit it out (2C-B has minimal taste)', link: null },
@@ -717,10 +705,32 @@ const SubstanceExplorer = () => {
                 harmReduction: [
                   { name: 'Volumetric dosing for powder', link: null },
                   { name: 'Precision milligram scale (0.001g minimum)', link: null },
-                  { name: 'Never eyeball doses', link: null },
+                  { name: 'Don\'t estimate doses by eye', link: null },
                   { name: 'Start very low with new batches', link: 'hrp_start_low_go_slow_001' }
                 ],
-                citations: 'Hirschfeld et al. 2021; Bremler et al. 2023'
+                citations: 'Hirschfeld et al. 2021'
+              }
+            }
+          ]
+        },
+        {
+          category: 'Route of Administration',
+          severity: 'critical',
+          conditions: [
+            {
+              name: 'Insufflation (Snorting)',
+              level: 'Absolute',
+              notes: 'SEVERE NEUROLOGICAL RISKS - Never insufflate 2C-B',
+              details: {
+                description: 'Insufflation (snorting) of 2C-B is associated with severe, potentially life-threatening neurological complications. This route of administration dramatically increases risk compared to oral use and has NO safety benefit.',
+                mechanism: 'Intranasal administration causes direct neurological impact, possibly through rapid absorption or local tissue effects. The mechanism is not fully understood but complications are well-documented.',
+                prevalence: 'Documented cases of cerebral edema, epileptic seizures, and cerebral vasculopathy specifically with insufflation. These are not seen with oral administration.',
+                harmReduction: [
+                  { name: 'ORAL ADMINISTRATION ONLY', link: null },
+                  { name: 'Never insufflate 2C-X compounds', link: null },
+                  { name: 'Education about neurological risks', link: 'hrp_psychoeducation_comprehensive_001' }
+                ],
+                citations: 'Hirschfeld et al. 2021'
               }
             }
           ]
@@ -743,7 +753,7 @@ const SubstanceExplorer = () => {
                   { name: 'Know serotonin syndrome symptoms', link: null },
                   { name: 'Wait appropriate washout period after stopping medications', link: null }
                 ],
-                citations: 'Hirschfeld et al. 2021'
+                citations: 'Hirschfeld et al. 2021; Malcolm & Thomas 2022'
               }
             },
             {
@@ -753,7 +763,7 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'Lithium combined with psychedelics including 2C-B dramatically increases seizure risk. This is an absolute contraindication.',
                 mechanism: 'Unknown mechanism but well-documented dangerous interaction that significantly elevates seizure risk.',
-                prevalence: 'Documented cases of seizures with lithium + psychedelic combinations.',
+                prevalence: 'A review of online reports found that 47% of individuals who combined lithium with psychedelics experienced seizures. Additionally, 18% reported other adverse psychological effects, and 39% required medical attention.',
                 harmReduction: [
                   { name: 'Comprehensive Medication Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Never combine', link: null },
@@ -768,6 +778,22 @@ const SubstanceExplorer = () => {
           category: 'Psychiatric',
           severity: 'critical',
           conditions: [
+            {
+              name: 'Active psychosis or mania',
+              level: 'Absolute',
+              notes: 'Can severely worsen symptoms and trigger prolonged episodes',
+              details: {
+                description: 'Active psychotic symptoms or manic episodes are absolute contraindications for 2C-B. The drug has the potential to severely exacerbate hallucinations, delusions, paranoia, and disorganized thinking.',
+                mechanism: '2C-B amplifies existing alterations in perception and thought. In active psychosis, this can push symptoms to dangerous levels. In mania, it can worsen impulsivity, grandiosity, and loss of judgment.',
+                prevalence: 'Risk is substantially higher in individuals with active psychiatric symptoms.',
+                harmReduction: [
+                  { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+                  { name: 'Psychiatric evaluation before use', link: null },
+                  { name: 'Never use during active episodes', link: null }
+                ],
+                citations: 'Baumeister et al. 2015'
+              }
+            },
             {
               name: 'Personal or family history of psychosis',
               level: 'Absolute',
@@ -796,7 +822,7 @@ const SubstanceExplorer = () => {
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Absolute avoidance recommended', link: null }
                 ],
-                citations: 'Aday et al. 2021; Ghaznavi et al. 2025'
+                citations: 'Ghaznavi et al. 2025'
               }
             },
             {
@@ -838,6 +864,23 @@ const SubstanceExplorer = () => {
                 ],
                 citations: 'Aday et al. 2020; Fonzo et al. 2025; Baumeister et al. 2015'
               }
+            },
+            {
+              name: 'Recent myocardial infarction',
+              level: 'Absolute',
+              notes: 'Increased cardiovascular strain during healing period',
+              details: {
+                description: 'Recent myocardial infarction is a contraindication for 2C-B use. Following an MI, the heart undergoes a healing process and the myocardium may be more susceptible to ischemic events. The cardiovascular stimulation induced by 2C-B could potentially exacerbate this risk.',
+                mechanism: '2C-B increases heart rate and blood pressure, placing additional strain on the heart. This cardiovascular stimulation can increase oxygen demand and potentially trigger ischemic events in vulnerable myocardium.',
+                prevalence: 'While specific data on 2C-B use post-MI are lacking, 2C-B has been reported to increase heart rate and blood pressure in emergency presentations.',
+                harmReduction: [
+                  { name: 'Comprehensive Medical Screening', link: 'hrp_screening_comprehensive_001' },
+                  { name: 'Exclude individuals with recent MI', link: null },
+                  { name: 'Cardiology clearance required if considering use', link: null },
+                  { name: 'Continuous cardiac monitoring if use occurs', link: 'hrp_continuous_monitoring_001' }
+                ],
+                citations: ''
+              }
             }
           ]
         },
@@ -861,6 +904,30 @@ const SubstanceExplorer = () => {
                   { name: 'Substance testing for both', link: null }
                 ],
                 citations: 'Caudevilla et al. 2012; Kopra et al. 2025'
+              }
+            }
+          ]
+        },
+        {
+          category: 'Experience Level',
+          severity: 'medium',
+          conditions: [
+            {
+              name: 'First-time psychedelic use',
+              level: 'Caution',
+              notes: 'Increased vulnerability due to unfamiliarity',
+              details: {
+                description: 'First-time users are particularly vulnerable due to unfamiliarity with dosing, unpredictability of effects, and inability to manage intense altered states. General psychedelic research shows first-time users experience more fear and distress.',
+                mechanism: 'Lack of experience creates anxiety about the unknown. Users may not recognize normal psychedelic effects, leading to panic. Dosing errors more common with 2C-B due to powder variability.',
+                prevalence: 'First-time psychedelic users across substances show elevated distress. 64.1% of first-time LSD users experienced fear, though generally mild.',
+                harmReduction: [
+                  { name: 'Comprehensive education beforehand', link: 'hrp_psychoeducation_comprehensive_001' },
+                  { name: 'Start with very low doses (10-15mg oral)', link: 'hrp_start_low_go_slow_001' },
+                  { name: 'Experienced trip sitter present', link: null },
+                  { name: 'Safe, familiar setting', link: 'hrp_physical_environment_001' },
+                  { name: 'Substance testing essential', link: null }
+                ],
+                citations: 'Baxter et al. 2024'
               }
             }
           ]
@@ -892,12 +959,13 @@ const SubstanceExplorer = () => {
       adverseEvents: {
         psychological: [
           {
-            name: 'Acute Anxiety',
+            name: 'Acute Anxiety and Panic',
             timeframe: 'During session',
             prevalence: 'Specific data not available; presumed common based on general psychedelic use',
             description: 'Anxiety experienced during 2C-B experience. May range from mild unease to significant distress.',
             management: 'Reassurance typically sufficient. Breathing exercises, grounding techniques, environmental adjustment. Benzodiazepines if reassurance insufficient.',
             notes: 'Limited specific data for 2C-B. Evidence extrapolated from other psychedelics.',
+            citations: 'Baumeister et al. 2015; Schetz et al. 2022',
             harmReduction: [
               { name: 'Set and Setting Optimization', link: 'hrp_physical_environment_001' },
               { name: 'Coping Skills Training', link: 'hrp_coping_skills_training_001' },
@@ -912,6 +980,7 @@ const SubstanceExplorer = () => {
             description: 'Paranoid ideation, suspiciousness, confusion, and disorientation. 2C-I specifically associated with paranoia and aggression.',
             management: 'Calm environment, reassurance, avoid confrontation. Benzodiazepines first-line. Antipsychotics if severe and unresponsive.',
             notes: '2C-I has documented paranoia and aggression in emergency presentations.',
+            citations: 'Baumeister et al. 2015',
             harmReduction: [
               { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Supportive Environment', link: 'hrp_physical_environment_001' },
@@ -926,6 +995,7 @@ const SubstanceExplorer = () => {
             description: 'Psychotic symptoms persisting beyond acute drug effects. Higher risk in those with psychiatric vulnerabilities.',
             management: 'Psychiatric evaluation, antipsychotic medication, supportive therapy, hospitalization if severe.',
             notes: 'More common in uncontrolled settings and vulnerable individuals.',
+            citations: 'Spoelder et al. 2019',
             harmReduction: [
               { name: 'Comprehensive Psychiatric Screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Exclude high-risk individuals', link: null },
@@ -942,6 +1012,7 @@ const SubstanceExplorer = () => {
             description: 'Tachycardia, hypertension, risk of cardiac events. 2C-I specifically documented with cardiac arrest and respiratory arrest.',
             management: 'Vital signs monitoring, supportive care. Beta-blockers if indicated. Emergency medical services for severe cardiac symptoms.',
             notes: '2C-I appears particularly dangerous for cardiovascular system. All 2C-X should be considered to carry cardiovascular risk.',
+            citations: 'Baumeister et al. 2015',
             harmReduction: [
               { name: 'Comprehensive Medical Screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Continuous Vital Sign Monitoring', link: 'hrp_continuous_monitoring_001' },
@@ -954,14 +1025,15 @@ const SubstanceExplorer = () => {
             severity: 'Severe to Critical',
             prevalence: 'Risk elevated with medication combinations',
             description: 'Potentially life-threatening condition from excessive serotonin. Symptoms: hyperthermia, agitation, muscle rigidity, tremor, hyperreflexia, confusion. Severe cases: seizures, rhabdomyolysis, death.',
-            management: 'EMERGENCY. Discontinue all serotonergic agents. Benzodiazepines, cooling measures, IV fluids, vital sign monitoring. ICU admission for severe cases. Cyproheptadine (serotonin antagonist).',
+            management: 'EMERGENCY. Discontinue all serotonergic agents. Benzodiazepines, cooling measures, IV fluids, vital sign monitoring. ICU admission for severe cases. Cyproheptadine (serotonin antagonist) may be used as an adjunct for persistent symptoms; no RCTs but successful use documented in case studies.',
             notes: 'Can be fatal without treatment. Especially with SSRI, MAOI, or triptan combinations.',
             harmReduction: [
               { name: 'Comprehensive Medication Review', link: 'hrp_screening_comprehensive_001' },
               { name: 'Absolute avoidance of serotonergic drug combinations', link: null },
               { name: 'Know serotonin syndrome symptoms', link: null },
-              { name: 'Emergency protocol prepared', link: null }
-            ]
+              { name: 'Have an emergency plan in place', link: null }
+            ],
+            citations: 'Spoelder et al. 2019'
           },
           {
             name: 'Seizures',
@@ -972,11 +1044,12 @@ const SubstanceExplorer = () => {
             management: 'Immediate medical attention. Benzodiazepines. Airway protection. Emergency services.',
             notes: 'Insufflation of 2C-B specifically associated with epileptic seizures. Lithium combination significantly increases risk.',
             harmReduction: [
-              { name: 'ORAL administration only', link: null },
-              { name: 'Never insufflate', link: null },
+              { name: 'Oral administration only', link: null },
+              { name: 'Never insufflate (snort)', link: null },
               { name: 'Never combine with lithium', link: null },
               { name: 'Medical screening', link: 'hrp_screening_comprehensive_001' }
-            ]
+            ],
+            citations: 'Nayak et al. 2021'
           },
           {
             name: 'Cerebral Edema',
@@ -985,12 +1058,12 @@ const SubstanceExplorer = () => {
             prevalence: 'Documented with insufflation',
             description: 'Brain swelling. Life-threatening emergency. Associated specifically with intranasal administration of 2C-B.',
             management: 'IMMEDIATE emergency services. Hospital admission. Intensive care. Neurosurgical consultation.',
-            notes: 'Insufflation dramatically increases this risk. NOT seen with oral administration.',
+            notes: 'Insufflation dramatically increases this risk. Not seen with oral administration.',
             harmReduction: [
-              { name: 'ORAL administration only', link: null },
-              { name: 'Never insufflate 2C-X compounds', link: null },
-              { name: 'Strong education about route risks', link: 'hrp_psychoeducation_comprehensive_001' }
-            ]
+              { name: 'Oral administration only', link: null },
+              { name: 'Never insufflate (snort) 2C-X compounds', link: null }
+            ],
+            citations: 'Spoelder et al. 2019'
           },
           {
             name: 'Cerebral Vasculopathy',
@@ -1001,9 +1074,10 @@ const SubstanceExplorer = () => {
             management: 'Immediate medical attention. Neurological assessment. Imaging. Specialist consultation.',
             notes: 'Specific to insufflation route. Another reason intranasal administration is absolutely contraindicated.',
             harmReduction: [
-              { name: 'ORAL administration only', link: null },
-              { name: 'Never insufflate', link: null }
-            ]
+              { name: 'Oral administration only', link: null },
+              { name: 'Never insufflate (snort)', link: null }
+            ],
+            citations: 'Ambrose et al. 2010'
           },
           {
             name: 'Renal Failure',
@@ -1017,17 +1091,19 @@ const SubstanceExplorer = () => {
               { name: 'Medical screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Avoid 2C-I specifically', link: null },
               { name: 'Hydration', link: null }
-            ]
+            ],
+            citations: 'Hill & Thomas 2011'
           }
         ],
         perceptual: [
           {
             name: 'HPPD (Hallucinogen Persisting Perception Disorder)',
             timeframe: 'Long-term',
-            prevalence: 'NBOMes: 67% regular use, 20% single use. 2C-B: presumed lower but unknown',
+            prevalence: '2C-B: 25-40% report visual changes; under 5% experience HPPD-like symptoms',
             description: 'Persistent visual disturbances (visual snow, trails, afterimages, geometric patterns) lasting beyond session. NBOMe compounds carry dramatically elevated HPPD risk.',
             management: 'Reassurance. Benzodiazepines (anecdotal). Lamotrigine (case reports). Often improves with time.',
             notes: 'NBOMe adulteration makes this a critical concern. If substance is actually NBOMe and not 2C-B, HPPD risk is extremely high.',
+            citations: 'Schetz et al. 2022; Hadley et al. 2025',
             harmReduction: [
               { name: 'Substance testing to avoid NBOMes', link: null },
               { name: 'Avoid frequent use', link: null },
@@ -1040,26 +1116,26 @@ const SubstanceExplorer = () => {
         {
           title: 'The Research Void',
           icon: '❌',
-          content: 'There is virtually NO clinical research on 2C-B. Unlike psilocybin and LSD which have dozens of modern clinical trials, 2C-B has essentially zero controlled studies. Everything we know comes from case reports, emergency room presentations, and user surveys. This means the safety profile is highly uncertain, proper dosing is not established, and drug interactions are poorly understood. Users are essentially conducting uncontrolled experiments on themselves.',
+          content: 'There is virtually no clinical research on 2C-B. Unlike psilocybin and LSD which have dozens of modern clinical trials, 2C-B has essentially zero controlled studies. Everything we know comes from case reports, emergency room presentations, and user surveys. This means the safety profile is highly uncertain, proper dosing is not established, and drug interactions are poorly understood. Users are essentially conducting uncontrolled experiments on themselves.',
           citations: ['metadata_2cx']
         },
         {
           title: 'Insufflation is Uniquely Dangerous',
           icon: '💀',
-          content: 'Snorting 2C-B is associated with severe neurological complications NOT seen with oral administration: cerebral edema (brain swelling), epileptic seizures, and cerebral vasculopathy (blood vessel abnormalities in the brain). The mechanism is unknown, but the risk is documented. There is NO safety benefit to insufflation. This is an absolute contraindication - oral administration only.',
+          content: 'Snorting 2C-B is associated with severe neurological complications not seen with oral administration: cerebral edema (brain swelling), epileptic seizures, and cerebral vasculopathy (blood vessel abnormalities in the brain). The mechanism is unknown, but the risk is documented. There is no safety benefit to insufflation. This is an absolute contraindication - oral administration only.',
           citations: ['hirschfeld_2021']
         },
         {
           title: 'NBOMe: The Deadly Impostor',
           icon: '☠️',
-          content: 'NBOMe compounds (25I-NBOMe and others) are frequently sold as 2C-B or LSD. These are FAR more dangerous: multiple deaths documented, seizures, severe vasoconstriction, hyperthermia. The HPPD risk is staggering - 67% of regular users and 20% from SINGLE use. NBOMes have a bitter taste; 2C-B does not. If it tastes bitter, spit it out immediately. Reagent testing is not optional—it\'s lifesaving.',
+          content: 'NBOMe compounds (25I-NBOMe and others) are frequently sold as 2C-B or LSD. These are FAR more dangerous: multiple deaths documented, seizures, severe vasoconstriction, hyperthermia. NBOMes have a bitter taste; 2C-B does not. If it tastes bitter, spit it out immediately. Reagent testing is not optional—it\'s lifesaving.',
           citations: ['hirschfeld_2021', 'malcolm_2022', 'retrospective_analysis']
         },
         {
           title: 'The MDMA Combination',
           icon: '💊',
           content: '2C-B is very commonly combined with MDMA in party and festival settings. While this combination is popular, it creates unpredictable interactions, increased physiological burden (both affect serotonin and cardiovascular system), and makes it difficult to determine which substance is causing effects. The combination amplifies risks and complicates emergency response. If combining despite risks, use significantly lower doses of both substances.',
-          citations: ['caudevilla_2012']
+          citations: ['caudevilla_2012', 'papaseit_2018']
         },
         {
           title: 'Serotonin Syndrome is Real and Fatal',
@@ -1418,12 +1494,13 @@ const SubstanceExplorer = () => {
       adverseEvents: {
         psychological: [
           {
-            name: 'Acute Anxiety',
+            name: 'Acute Anxiety and Panic',
             timeframe: 'During session',
             prevalence: 'Most common psychological adverse event in acute phase',
             description: 'Anxiety during or shortly after MDMA administration. Can range from mild apprehensiveness to fear of losing control, panic, fear of death.',
             management: 'Reassurance, calm environment, breathing exercises. Usually sufficient. Benzodiazepines if severe.',
             notes: 'More frequent and intense in women.',
+            citations: 'Liechti et al. 2001; Verheyden et al. 2003',
             harmReduction: [
               { name: 'Set and Setting Optimization', link: 'hrp_physical_environment_001' },
               { name: 'Psychoeducation', link: 'hrp_psychoeducation_comprehensive_001' },
@@ -1438,6 +1515,7 @@ const SubstanceExplorer = () => {
             description: 'Transient memory impairment during effects. Primarily affects memory while executive functions and attention mostly unaffected. Includes false memories for similar details and decreased accuracy of true memories.',
             management: 'Document dose and timing in writing. Trip sitter to help track.',
             notes: 'CRITICAL CONCERN: May lead to dangerous redosing due to forgetting amount already consumed.',
+            citations: 'Kuypers et al. 2016; Lamers et al. 2003',
             harmReduction: [
               { name: 'Write down dose and time', link: null },
               { name: 'Trip sitter present', link: null },
@@ -1452,6 +1530,7 @@ const SubstanceExplorer = () => {
             description: 'Period of neurochemical depletion following MDMA use. Symptoms: anhedonia, lethargy, anger, depression, low mood, impaired concentration (80%).',
             management: 'Supportive care, adequate rest, nutrition, integration therapy. Usually resolves within days.',
             notes: 'Women report more adverse mood effects than men. Can trigger suicidal ideation in vulnerable individuals.',
+            citations: 'Parrott et al. 2001; Sumnall et al. 2004',
             harmReduction: [
               { name: 'Prepare for comedown', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Clear schedule for recovery period', link: null },
@@ -1467,6 +1546,7 @@ const SubstanceExplorer = () => {
             description: 'Memory deficits, attention problems, verbal and non-verbal learning impairment, psychomotor function deficits, executive function deficits. Can persist up to two years after cessation.',
             management: 'Cessation of use, cognitive rehabilitation, time.',
             notes: 'Extent in humans debated. More likely with high doses, frequent use, and polydrug use.',
+            citations: 'Morgan 2000; McCann et al. 2008',
             harmReduction: [
               { name: 'Avoid frequent use', link: null },
               { name: 'Minimize total lifetime exposure', link: null },
@@ -1483,6 +1563,7 @@ const SubstanceExplorer = () => {
             description: 'Dangerous increase in body temperature. Can occur even with modest doses when combined with hot environments and physical exertion.',
             management: 'EMERGENCY. Immediate cooling measures, IV fluids, ice packs, cold water, fan. Emergency medical services. Can be fatal without rapid treatment.',
             notes: 'Mechanism: MDMA inhibits brain\'s temperature regulation center. Exacerbated by dancing, hot environments, dehydration.',
+            citations: 'Parrott 2012; Capela et al. 2009',
             harmReduction: [
               { name: 'Cool environment essential', link: 'hrp_physical_environment_001' },
               { name: 'Regular breaks from activity', link: null },
@@ -1498,6 +1579,7 @@ const SubstanceExplorer = () => {
             description: 'Dangerously low sodium levels (<135 mEq/L). Severe cases documented with sodium 101-130 mEq/L. Symptoms: nausea, headache, confusion (mild); vomiting, muscle weakness (moderate); seizures, coma, death (severe).',
             management: 'EMERGENCY if severe. Hospital admission, hypertonic saline, fluid restriction. Can be FATAL.',
             notes: 'Caused by inappropriate ADH secretion + excessive water intake. Higher risk in women with low BMI.',
+            citations: 'Fallon et al. 2002; Rosenson et al. 2007',
             harmReduction: [
               { name: 'FLUID RESTRICTION - maximum ~500ml/hour', link: null },
               { name: 'Sip, don\'t chug', link: null },
@@ -1513,6 +1595,7 @@ const SubstanceExplorer = () => {
             description: 'Potentially life-threatening condition from excessive serotonin. Symptoms: hyperthermia, tachycardia, hypertension, muscle rigidity, tremor, hyperreflexia, agitation, confusion. Severe: seizures, death.',
             management: 'EMERGENCY. Discontinue all serotonergic agents. Benzodiazepines, cooling, IV fluids, ICU admission for severe cases. Cyproheptadine (serotonin antagonist).',
             notes: 'Especially with MAOI or SSRI combinations. Can be FATAL without treatment.',
+            citations: 'Boyer & Shannon 2005; Gillman 2005',
             harmReduction: [
               { name: 'Comprehensive medication screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Never combine with MAOIs', link: null },
@@ -1528,6 +1611,7 @@ const SubstanceExplorer = () => {
             description: 'Increased heart rate and blood pressure. Severe cases: hypertensive crisis, myocardial infarction, arrhythmia, sudden cardiac death.',
             management: 'Vital signs monitoring. Medical intervention if sustained elevation. Emergency services for severe symptoms.',
             notes: 'Particularly dangerous in those with pre-existing cardiovascular disease.',
+            citations: 'Schifano et al. 2003; Pilgrim et al. 2013',
             harmReduction: [
               { name: 'Cardiac screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Vital sign monitoring', link: 'hrp_continuous_monitoring_001' },
@@ -1541,6 +1625,7 @@ const SubstanceExplorer = () => {
             description: 'Potential persistent damage to serotonergic neurons. May contribute to long-term cognitive and psychiatric problems.',
             management: 'Prevention through minimizing use, avoiding high doses and frequent use.',
             notes: 'Particularly concerning with heavy, repeated use over time.',
+            citations: 'Ricaurte et al. 2000; McCann et al. 2008; Capela et al. 2009',
             harmReduction: [
               { name: 'Minimize lifetime exposure', link: null },
               { name: 'Avoid high doses', link: 'hrp_start_low_go_slow_001' },
@@ -1614,15 +1699,15 @@ const SubstanceExplorer = () => {
         threshold: '1 mg',
         light: '5-10 mg (inhaled)',
         common: '10-20 mg (inhaled)',
-        therapeutic: '0.1-0.4 mg/kg IV (research)',
+        therapeutic: '0.1-0.4 mg/kg IV (bolus; historic method); 9-21.5 mg IV (fixed infusion; modern method)',
         strong: '20-40 mg (inhaled)',
         heavy: '40+ mg (inhaled)',
-        recreational: '6-20 mg (typical inhaled)'
+        recreational: '6-40 mg (typical inhaled)'
       },
       pharmacokinetics: {
         onset: 'Seconds (inhaled/IV), 30-60 min (oral with MAOI)',
         peak: '2 minutes (inhaled/IV)',
-        duration: '10-30 minutes (inhaled/IV), 4-6 hours (oral with MAOI)',
+        duration: '10-30 minutes (inhaled/IV), 3-6 hours (oral with MAOI)',
         tolerance: 'Minimal - may sensitize with repeated use',
         crossTolerance: 'Psilocybin, LSD, mescaline'
       },
@@ -1650,7 +1735,7 @@ const SubstanceExplorer = () => {
                   { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
                   { name: 'Substance testing for purity', link: null }
                 ],
-                citations: 'Bremler et al. 2023; Malcolm & Thomas 2022; Lancelotta & Daws 2020; Engel et al. 2024'
+                citations: 'Bremler et al. 2023; Malcolm & Thomas 2022; Engel et al. 2024'
               }
             },
             {
@@ -1668,7 +1753,7 @@ const SubstanceExplorer = () => {
                   { name: 'Oral use: only in controlled ceremonial/clinical setting', link: null },
                   { name: 'MAOI combinations require medical supervision', link: 'hrp_continuous_monitoring_001' }
                 ],
-                citations: 'Barker et al. 2022; Falchi-Carvalho & Baker 2024; Engel et al. 2024; Dos Santos et al. 2024'
+                citations: 'Barker et al. 2022; Engel et al. 2024'
               }
             }
           ]
@@ -1855,6 +1940,7 @@ const SubstanceExplorer = () => {
             description: 'Extreme alterations in spatiotemporal perception, sense of transportation to alternate dimensions, entity encounters, ego death, mystical experiences. Can be overwhelming and terrifying despite being subjectively valuable.',
             management: 'Preparation essential. During experience: reassurance, non-directive support, safe environment. Integration support after.',
             notes: 'DMT produces uniquely intense experiences distinct from other psychedelics. Rapid onset leaves little time for psychological adjustment.',
+            citations: 'Strassman 1994; Lancelotta et al. 2020; Engel et al. 2024',
             harmReduction: [
               { name: 'Enhanced preparation for extreme intensity', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Start with lower doses', link: 'hrp_start_low_go_slow_001' },
@@ -1870,6 +1956,7 @@ const SubstanceExplorer = () => {
             description: 'Intense fear, anxiety, sense of dying, terror, panic. The rapid, overwhelming onset and extreme nature of DMT experiences can be profoundly frightening.',
             management: 'Reassurance, grounding (though often ineffective during peak), reminders that effects are temporary. Preparation is key.',
             notes: 'More likely with high doses, unprepared users, unsafe settings.',
+            citations: 'Dourron & Saiz 2023; Engel et al. 2024',
             harmReduction: [
               { name: 'Comprehensive preparation', link: 'hrp_preparation_meetings_001' },
               { name: 'Appropriate set and setting', link: 'hrp_physical_environment_001' },
@@ -1883,6 +1970,7 @@ const SubstanceExplorer = () => {
             description: 'Spontaneous, brief (seconds) re-experiencing of visual, auditory, or emotional aspects of DMT experience. Can occur at night or when drifting to sleep. Most positive/neutral but minority find distressing.',
             management: 'Psychoeducation, reassurance of brevity and temporary nature. Integration support if distressing.',
             notes: 'More common with DMT than typical psychedelics. May be more common after vaporized administration.',
+            citations: 'Dourron & Saiz 2023; Ortiz-Bernal et al. 2022; Ramaekers et al. 2025',
             harmReduction: [
               { name: 'Prepare users for possibility', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Integration support', link: 'hrp_integration_therapy_001' }
@@ -1897,6 +1985,7 @@ const SubstanceExplorer = () => {
             description: 'Increases in blood pressure and heart rate. Generally mild and transient in healthy individuals.',
             management: 'Monitoring essential. Medical evaluation if sustained elevation.',
             notes: 'Sympathomimetic effects. Dangerous in those with cardiovascular disease.',
+            citations: 'Strassman 1994; Ramaekers et al. 2025; Falchi-Carvalho & Baker 2024',
             harmReduction: [
               { name: 'Cardiovascular screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Vital sign monitoring', link: 'hrp_continuous_monitoring_001' }
@@ -1909,6 +1998,7 @@ const SubstanceExplorer = () => {
             description: 'Respiratory irritation from smoking (coughing, airway hyperresponsiveness), nausea, increased body temperature, muscle jerking, twitching.',
             management: 'Generally self-limiting. Supportive care.',
             notes: 'Smoking/vaporizing harsh on airways.',
+            citations: 'Strassman 1994; Dourron & Saiz 2023',
             harmReduction: [
               { name: 'Use electric combustion over flame', link: null },
               { name: 'Inhale while seated', link: null }
@@ -1983,7 +2073,7 @@ const SubstanceExplorer = () => {
         therapeutic: '1-12 mg (intranasal, research)',
         strong: '12-20 mg (inhaled)',
         heavy: '20+ mg (inhaled)',
-        recreational: '6-20 mg (typical inhaled)'
+        recreational: '6-40 mg (typical inhaled)'
       },
       pharmacokinetics: {
         onset: 'Seconds (inhaled/IV), 5-7 min (intranasal)',
@@ -1993,7 +2083,7 @@ const SubstanceExplorer = () => {
         crossTolerance: 'Unclear - different from classical psychedelics'
       },
       prevalenceData: {
-        lifetimeUse: '1.2% US adults (2009-2013) for psychedelic tryptamines group',
+        lifetimeUse: 'Around 1% (U.S. adults); much lower than LSD or psilocybin',
         erVisits: 'Strongest association with perceived need for care among psychedelics',
         emergencyRate: 'Elevated risk of contraindications'
       },
@@ -2260,6 +2350,7 @@ const SubstanceExplorer = () => {
             description: 'Intense fear, anxiety, feeling like dying, panic, pressure on chest, body shaking. Particularly common during onset.',
             management: 'Reassurance, calm presence, reminders that experience is temporary.',
             notes: 'More intense than other psychedelics.',
+            citations: 'Lancelotta et al. 2020; Dourron & Saiz 2023; Rucker et al. 2024',
             harmReduction: [
               { name: 'Comprehensive preparation', link: 'hrp_preparation_meetings_001' },
               { name: 'Start with lower doses', link: 'hrp_start_low_go_slow_001' },
@@ -2273,6 +2364,7 @@ const SubstanceExplorer = () => {
             description: 'MORE COMMON with 5-MeO-DMT than typical psychedelics. Brief spontaneous re-experiences. Visual, auditory, emotional. Most positive/neutral but 4-7% report distressing reactivations.',
             management: 'Psychoeducation, integration support, reassurance of brevity.',
             notes: 'Vaporized route more likely than intramuscular. May persist for months (anecdotal).',
+            citations: 'Lancelotta et al. 2020; Dourron & Saiz 2023',
             harmReduction: [
               { name: 'Prepare users for high likelihood', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Integration support', link: 'hrp_integration_therapy_001' }
@@ -2287,6 +2379,7 @@ const SubstanceExplorer = () => {
             description: 'Transient increases in blood pressure and heart rate.',
             management: 'Monitoring essential.',
             notes: 'Generally mild and transient but not well characterized.',
+            citations: 'Lancelotta et al. 2020; Dourron & Saiz 2023',
             harmReduction: [
               { name: 'Cardiovascular screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Vital sign monitoring', link: 'hrp_continuous_monitoring_001' }
@@ -2299,6 +2392,7 @@ const SubstanceExplorer = () => {
             description: 'Nausea, vomiting, headache. Nasal discomfort with intranasal route.',
             management: 'Supportive care. Generally self-limiting.',
             notes: 'Part of purging process in ceremonial contexts.',
+            citations: 'Lancelotta et al. 2020; Dourron & Saiz 2023',
             harmReduction: [
               { name: 'Prepare users for possibility', link: 'hrp_psychoeducation_comprehensive_001' }
             ]
@@ -2567,13 +2661,14 @@ const SubstanceExplorer = () => {
       adverseEvents: {
         psychological: [
           {
-            name: 'Challenging Experiences',
+            name: 'Challenging Experiences ("Bad Trips")',
             timeframe: 'During ceremony (4-6 hours)',
             severity: 'Moderate to Severe',
             prevalence: 'Common - inherent to ayahuasca experience',
             description: 'Intense fear, anxiety, confrontation with difficult emotions/memories, existential distress, sense of dying. Traditional context frames these as healing/purging rather than purely adverse.',
             management: 'Experienced facilitator guidance, non-directive support, integration of challenging content, reframing as therapeutic process.',
             notes: 'Traditional ceremonial context essential for managing intensity.',
+            citations: 'Bouso et al. 2022; Evans et al. 2023; Dos Santos et al. 2024',
             harmReduction: [
               { name: 'Multiple preparation meetings', link: 'hrp_preparation_meetings_001' },
               { name: 'Experienced facilitator', link: null },
@@ -2588,6 +2683,7 @@ const SubstanceExplorer = () => {
             description: 'Spontaneous re-experiencing of traumatic memories, particularly sexual trauma. Can be re-traumatizing without proper support.',
             management: 'Trauma-informed facilitation, safety protocols, integration support, therapeutic processing.',
             notes: 'Women at particularly high risk. Requires trauma-informed approach.',
+            citations: 'Bouso et al. 2022; Weiss et al. 2023',
             harmReduction: [
               { name: 'Trauma-informed screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Clear safety protocols', link: null },
@@ -2603,6 +2699,7 @@ const SubstanceExplorer = () => {
             description: 'Nausea and vomiting. In traditional contexts, this is "la purga" (the purge) and integrated as cleansing/healing process rather than purely adverse.',
             management: 'Expected and accepted. Bucket provided. Supportive environment. Dehydration prevention.',
             notes: 'Cultural framing as therapeutic purging changes experience. Still physically uncomfortable.',
+            citations: 'Dos Santos et al. 2024; White et al. 2024',
             harmReduction: [
               { name: 'Prepare participants for likelihood', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Appropriate facilities', link: 'hrp_physical_environment_001' }
@@ -2615,6 +2712,7 @@ const SubstanceExplorer = () => {
             description: 'Transient increases in blood pressure and heart rate. Generally well-tolerated in healthy individuals.',
             management: 'Monitoring. Medical intervention if severe or in those with cardiovascular disease.',
             notes: 'Dangerous in those with uncontrolled hypertension or cardiovascular disease.',
+            citations: 'Dos Santos et al. 2024; Bouso et al. 2022',
             harmReduction: [
               { name: 'Cardiovascular screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Vital sign monitoring', link: 'hrp_continuous_monitoring_001' }
@@ -2628,6 +2726,7 @@ const SubstanceExplorer = () => {
             description: 'Seizure activity during ayahuasca experience.',
             management: 'Emergency protocols, medical personnel, seizure first aid.',
             notes: 'History of seizures is relative contraindication.',
+            citations: 'Bouso et al. 2022; White et al. 2024',
             harmReduction: [
               { name: 'Screen for seizure history', link: 'hrp_screening_comprehensive_001' },
               { name: 'Medical personnel present', link: null }
@@ -2973,6 +3072,7 @@ const SubstanceExplorer = () => {
             description: 'Memory deficits, verbal learning impairment, spatial memory problems, slowed task completion. Functional impairment.',
             management: 'Cessation of use. Cognitive rehabilitation. May improve with abstinence.',
             notes: 'Linked to frequency and duration of use.',
+            citations: 'Morgan & Curran 2012; Morgan et al. 2010',
             harmReduction: [
               { name: 'Avoid chronic use', link: null },
               { name: 'Infrequent use only', link: null }
@@ -2987,6 +3087,7 @@ const SubstanceExplorer = () => {
             description: 'Increased blood pressure and heart rate. Small changes generally well-tolerated but higher peaks in hypertensive patients.',
             management: 'Monitoring. Medical intervention if severe or in vulnerable individuals.',
             notes: 'Dangerous in those with cardiovascular disease.',
+            citations: 'Jonkman et al. 2017',
             harmReduction: [
               { name: 'Cardiovascular screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Vital sign monitoring', link: 'hrp_continuous_monitoring_001' }
@@ -3000,6 +3101,7 @@ const SubstanceExplorer = () => {
             description: 'Painful urination, frequent urination, blood in urine, bladder dysfunction. Can progress to permanent damage requiring surgery (contracted bladder, hydronephrosis).',
             management: 'Cessation of ketamine. Urological evaluation. Symptomatic treatment. Surgery if severe.',
             notes: 'Dose and frequency dependent. Potentially irreversible.',
+            citations: 'Middela & Pearce 2011; Mason et al. 2010',
             harmReduction: [
               { name: 'AVOID chronic use', link: null },
               { name: 'Monitor for urinary symptoms', link: null },
@@ -3014,6 +3116,7 @@ const SubstanceExplorer = () => {
             description: 'Abdominal pain, cramps. More common with frequent use and high doses.',
             management: 'Supportive care. Cessation of use.',
             notes: 'Associated with chronic use patterns.',
+            citations: 'Wood et al. 2012',
             harmReduction: [
               { name: 'Limit frequency', link: null },
               { name: 'Avoid high doses', link: 'hrp_start_low_go_slow_001' }
@@ -3027,6 +3130,7 @@ const SubstanceExplorer = () => {
             description: 'Potentially FATAL respiratory depression when combined with alcohol, benzodiazepines, or other CNS depressants.',
             management: 'EMERGENCY. Respiratory support. Emergency services.',
             notes: 'Leading cause of ketamine-related fatalities.',
+            citations: 'Dillon et al. 2003; Kalsi et al. 2011',
             harmReduction: [
               { name: 'NEVER combine with CNS depressants', link: null }
             ]
@@ -3414,12 +3518,13 @@ const SubstanceExplorer = () => {
       adverseEvents: {
         psychological: [
           {
-            name: 'Acute Anxiety',
+            name: 'Acute Anxiety and Panic',
             timeframe: 'During session',
             prevalence: 'Frequently reported; 87-93% experienced anxiety worsening among those with negative responses',
             description: 'Transient anxiety during ibogaine experience. Among those with negative psychological responses lasting 72+ hours, anxiety worsening or onset is nearly universal.',
             management: 'Reassurance, calming presence, supportive environment. Benzodiazepines if severe.',
             notes: 'Generally transient and resolves during or after session. More common than with classical psychedelics.',
+            citations: 'Schenberg et al. 2017; Koenig et al. 2015',
             harmReduction: [
               { name: 'Comprehensive psychiatric screening', link: null },
               { name: 'Experienced medical supervision', link: null },
@@ -3447,6 +3552,7 @@ const SubstanceExplorer = () => {
             description: 'Small percentage experience persistent anxiety, depression, or HPPD (visual disturbances, geometric patterns, halos, trails) lasting weeks to months after ibogaine.',
             management: 'Integration therapy, psychiatric follow-up, trauma-informed care if needed.',
             notes: 'Risk increased in those with pre-existing mental health conditions or challenging traumatic experiences during session.',
+            citations: 'Schenberg et al. 2017; Malcolm & Thomas 2022; Koenig et al. 2015',
             harmReduction: [
               { name: 'Comprehensive psychiatric screening', link: null },
               { name: 'Integration therapy post-session', link: null },
@@ -3462,6 +3568,7 @@ const SubstanceExplorer = () => {
             description: 'Psychotic episodes, manic episodes, or severe mood destabilization in vulnerable individuals. Can trigger or exacerbate underlying psychiatric conditions.',
             management: 'Immediate psychiatric intervention, medication if needed, hospitalization if severe.',
             notes: 'Absolute contraindication if actively psychotic or manic. Relative contraindication with psychiatric history.',
+            citations: 'Schenberg et al. 2017; Koenig et al. 2015',
             harmReduction: [
               { name: 'Comprehensive psychiatric screening mandatory', link: null },
               { name: 'Exclude active psychiatric conditions', link: null },
@@ -3508,6 +3615,7 @@ const SubstanceExplorer = () => {
             description: 'Universal loss of coordination and balance during ibogaine effects. Difficulty with movement, unsteady gait, inability to walk safely.',
             management: 'Ensure safe environment with no fall hazards. Assistance with any movement. Bed rest strongly recommended.',
             notes: 'Universal effect. Plan for complete immobility during session.',
+            citations: 'Mash et al. 2018; Alper et al. 2008',
             harmReduction: [
               { name: 'Safe environment with no fall hazards', link: null },
               { name: 'Bed rest mandatory', link: null },
@@ -3522,6 +3630,7 @@ const SubstanceExplorer = () => {
             description: 'Gastrointestinal distress including nausea, vomiting, and diarrhea. Most common non-cardiac adverse effect.',
             management: 'Antiemetics may be considered. Hydration. Supportive care. Positioning to prevent aspiration.',
             notes: 'Usually manageable but can be distressing. Similar to ayahuasca purging.',
+            citations: 'Malcolm & Thomas 2022; Mash et al. 2018',
             harmReduction: [
               { name: 'Antiemetics available', link: null },
               { name: 'Hydration', link: null },
@@ -3549,6 +3658,7 @@ const SubstanceExplorer = () => {
             description: 'Generalized seizures. Risk increased with very high doses, history of seizure disorder, or unknown purity/content.',
             management: 'Protect from injury, maintain airway, benzodiazepines if prolonged, medical evaluation.',
             notes: 'History of seizures is relative contraindication.',
+            citations: 'Alper et al. 2008; Malcolm & Thomas 2022',
             harmReduction: [
               { name: 'Disclose seizure history during screening', link: null },
               { name: 'Pharmaceutical-grade ibogaine only', link: null },
@@ -3604,6 +3714,7 @@ const SubstanceExplorer = () => {
             description: 'Persistent perceptual disturbances after ibogaine including visual disturbances, geometric patterns, halos, trails. Can last weeks to months or longer.',
             management: 'Psychiatric follow-up, reassurance, avoid further psychedelic use. Some cases resolve spontaneously.',
             notes: 'Less studied than HPPD from LSD/psilocybin. Prevalence unclear.',
+            citations: 'Schenberg et al. 2017; Malcolm & Thomas 2022',
             harmReduction: [
               { name: 'Comprehensive screening', link: null },
               { name: 'Avoid if history of HPPD', link: null },
@@ -3688,7 +3799,7 @@ const SubstanceExplorer = () => {
         crossTolerance: 'LSD, mescaline'
       },
       prevalenceData: {
-        lifetimeUse: '8.7% of US adults (22.9 million people)',
+        lifetimeUse: '8.7% (22.9 million people)',
         erVisits: '1% of users (2020)',
         emergencyRate: '0.6% seeking emergency care'
       },
@@ -3708,7 +3819,7 @@ const SubstanceExplorer = () => {
           {
             icon: '🚫',
             label: 'Key Contraindications',
-            content: 'Medical contraindications include uncontrolled hypertension, recent myocardial infarction (within 6 months), and serious cardiac arrhythmias. Psychiatric contraindications include active psychosis, personal history of schizophrenia, and active mania. Drug interactions with MAOIs and some SSRIs require careful consideration.'
+            content: 'Medical contraindications include uncontrolled hypertension, recent myocardial infarction (within 6 months), and serious cardiac arrhythmias. Psychiatric contraindications include active psychosis, personal history of schizophrenia, and active mania. Drug interactions with MAOIs, Lithium, and some SSRIs require careful consideration - MAOIs and Lithium are absolute contraindications.'
           },
           {
             icon: '🛡️',
@@ -3735,7 +3846,7 @@ const SubstanceExplorer = () => {
                   { name: 'Continuous vital sign monitoring', link: null },
                   { name: 'ECG monitoring if indicated', link: null }
                 ],
-                citations: 'Petranker et al., 2020; Wsol et al. 2023; Bender & Hellerstein, 2022; Straumann et al., 2024; Nahlawi et al., 2025'
+                citations: 'Wsol et al. 2023; Bender & Hellerstein, 2022; Straumann et al., 2024; Nahlawi et al., 2025'
               }
             },
             { 
@@ -3849,12 +3960,12 @@ const SubstanceExplorer = () => {
                   { name: 'Enhanced Preparation', link: 'hrp_psychoeducation_comprehensive_001' },
                   { name: 'Close monitoring during and after session', link: 'hrp_continuous_monitoring_001' }
                 ],
-                citations: 'Honk et al. 2024; Simonsson et al., 2023'
+                citations: 'Honk et al. 2024; Simonsson et al., 2023; Strassman, 1984'
               }
             },
-            { 
-              name: 'Bipolar disorder (stable)', 
-              level: 'Relative', 
+            {
+              name: 'Bipolar disorder',
+              level: 'Relative',
               notes: 'Emerging evidence shows safety in controlled settings',
               details: {
                 description: 'Despite psilocybin use being linked to the onset of mania, in individuals with bipolar disorder, it is not an absolute contraindication. Recent research suggests that, in controlled therapeutic settings with appropriate screening and monitoring protocols, psilocybin may be administered safely under supervision.',
@@ -3876,7 +3987,7 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'Personality disorders significantly increase risk of negative outcomes. Not absolute contraindication but requires enhanced support.',
                 mechanism: 'Difficulty with emotional regulation, interpersonal relationships, and self-concept can be amplified during psychedelic experiences.',
-                prevalence: 'About 31% of individuals with personality disorders in the study experienced negative responses to psychedelics, compared to 16% of participants without personality disorders.',
+                prevalence: '31% of individuals with personality disorders experienced negative responses to psychedelics, compared to 16% of participants without personality disorders in the same study cohort.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Enhanced therapeutic support', link: null },
@@ -3905,13 +4016,13 @@ const SubstanceExplorer = () => {
               }
             },
             {
-              name: 'Active anxiety/depression',
+              name: 'Anxiety and Depression',
               level: 'Moderate',
-              notes: '87% with negative responses report worsening anxiety',
+              notes: 'Among people who have negative responses, 87% report worsening anxiety',
               details: {
                 description: 'Pre-existing anxiety or depression can be both a therapeutic target and risk factor. Paradoxically, it can worsen or improve symptoms.',
                 mechanism: 'Anxiety and depressive symptoms may be amplified during psychedelic states. However, with proper support and guidance, addressing both anxiety and depression is a common therapeutic goal.',
-                prevalence: '87% of those experiencing negative psychological responses reported anxiety worsening.',
+                prevalence: 'Among those who experience negative psychological responses, 87% reported their anxiety worsening.',
                 harmReduction: [
                   { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Psychoeducation about challenging experiences', link: 'hrp_psychoeducation_comprehensive_001' },
@@ -3921,6 +4032,23 @@ const SubstanceExplorer = () => {
                 ],
                 citations: 'Bremler et al. 2023; Simonsson et al., 2023'
               }
+            },
+            {
+              name: 'History of substance use disorders',
+              level: 'Caution',
+              notes: 'Increased vulnerability to adverse reactions',
+              details: {
+                description: 'Individuals with a history of substance use disorders may be more vulnerable to adverse reactions during psilocybin experiences.',
+                mechanism: 'Past substance use patterns and underlying vulnerabilities that contributed to addiction may interact with psilocybin effects, potentially leading to challenging psychological experiences or relapse triggers.',
+                prevalence: 'Substance use disorder history is associated with increased risk of adverse physical and psychological effects.',
+                harmReduction: [
+                  { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+                  { name: 'Enhanced therapeutic support', link: null },
+                  { name: 'Integration therapy to process experiences', link: 'hrp_integration_therapy_001' },
+                  { name: 'Careful assessment of readiness and stability', link: null }
+                ],
+                citations: 'Studerus et al., 2011; Bennett et al., 2023'
+              }
             }
           ]
         },
@@ -3928,20 +4056,36 @@ const SubstanceExplorer = () => {
           category: 'Medications',
           severity: 'critical',
           conditions: [
-            { 
+            {
               name: 'MAOIs',
-              level: 'Relative',
+              level: 'Absolute',
               notes: 'Can cause life-threatening serotonin syndrome',
               details: {
-                description: 'MAO inhibitors combined with psilocybin can cause potentially fatal serotonin syndrome. This is a relative contraindication due to the increased risk of serotonin syndrome.',
-                mechanism: 'MAOIs prevent breakdown of serotonin, and psychedelics increase serotonin activity. Together they cause dangerous serotonin accumulation leading to hyperthermia, seizures, and potentially death.',
+                description: 'MAO inhibitors combined with psilocybin can cause potentially fatal serotonin syndrome. This is an absolute contraindication due to the increased risk of severe serotonin syndrome.',
+                mechanism: 'MAOIs prevent breakdown of serotonin, and psychedelics increase serotonin activity. Together they cause dangerous serotonin accumulation leading to hyperthermia, seizures, and potentially death. MAOIs can increase psychedelic exposure significantly (up to sixfold for 5-MeO-DMT).',
                 prevalence: 'Deaths documented with MAOI + psychedelic combinations, particularly 5-MeO-DMT.',
                 harmReduction: [
                   { name: 'Comprehensive Medication Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Never combine - wait 2+ weeks after stopping MAOIs', link: null },
                   { name: 'Know serotonin syndrome symptoms', link: null }
                 ],
-                citations: 'Malcolm & Thomas 2022'
+                citations: 'Breeksema et al. 2022; Ghaznavi et al. 2025; Malcolm & Thomas 2022'
+              }
+            },
+            {
+              name: 'Lithium',
+              level: 'Absolute',
+              notes: 'Dangerous interaction - seizure risk',
+              details: {
+                description: 'Lithium combined with psilocybin is an absolute contraindication. This combination significantly increases risk of seizures, severe confusion, and delirium through an unknown but well-documented mechanism.',
+                mechanism: 'Unknown mechanism but well-documented dangerous interaction. Can cause seizures, severe confusion, delirium, and other serious adverse reactions.',
+                prevalence: 'Multiple documented cases of severe adverse reactions including seizures when lithium is combined with psychedelics.',
+                harmReduction: [
+                  { name: 'Comprehensive Medication Screening', link: 'hrp_screening_comprehensive_001' },
+                  { name: 'Never combine - absolute avoidance required', link: null },
+                  { name: 'Consult prescribing physician before any psychedelic use', link: null }
+                ],
+                citations: 'Nayak et al. 2021'
               }
             },
             { 
@@ -3951,7 +4095,7 @@ const SubstanceExplorer = () => {
               details: {
                 description: 'SSRIs increase serotonin syndrome risk and may blunt psychedelic effects. Not absolute contraindication but requires caution.',
                 mechanism: 'SSRIs increase serotonin levels and can potentiate psychedelic effects on serotonin system. They also downregulate 5-HT2A receptors which may reduce psychedelic effects.',
-                prevalence: 'SSRI use is common among individuals seeking psychedelic therapy. Effects vary - some experience reduced psychedelic effects, others normal responses. In rare instances, more severe symptoms such as cardiac events, seizures, and even fatalities are documented in individuals on SSRIs.',
+                prevalence: 'SSRI use is common among individuals seeking psychedelic therapy for depression and anxiety. Effects vary - some experience reduced psychedelic effects, others normal responses. In rare instances, more severe symptoms such as cardiac events, seizures, and even fatalities are documented in individuals on SSRIs.',
                 harmReduction: [
                   { name: 'Comprehensive Medication Screening', link: 'hrp_screening_comprehensive_001' },
                   { name: 'Consider tapering under medical supervision', link: null },
@@ -4010,29 +4154,6 @@ const SubstanceExplorer = () => {
           ]
         },
         {
-          category: 'Substance Use & Addiction',
-          severity: 'moderate',
-          conditions: [
-            {
-              name: 'History of substance use disorders',
-              level: 'Caution',
-              notes: 'Increased vulnerability to adverse reactions',
-              details: {
-                description: 'Individuals with a history of substance use disorders may be more vulnerable to adverse reactions during psilocybin experiences.',
-                mechanism: 'Past substance use patterns and underlying vulnerabilities that contributed to addiction may interact with psilocybin effects, potentially leading to challenging psychological experiences or relapse triggers.',
-                prevalence: 'Substance use disorder history is associated with increased risk of adverse physical and psychological effects.',
-                harmReduction: [
-                  { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
-                  { name: 'Enhanced therapeutic support', link: null },
-                  { name: 'Integration therapy to process experiences', link: 'hrp_integration_therapy_001' },
-                  { name: 'Careful assessment of readiness and stability', link: null }
-                ],
-                citations: 'Studerus et al., 2011; Roberts et al., 2020; Bennett et al., 2023'
-              }
-            }
-          ]
-        },
-        {
           category: 'Cognitive & Neurological',
           severity: 'high',
           conditions: [
@@ -4049,7 +4170,7 @@ const SubstanceExplorer = () => {
                   { name: 'Cognitive assessment before any psychedelic use', link: null },
                   { name: 'Avoid use entirely in dementia/delirium', link: null }
                 ],
-                citations: 'Bennett et al., 2023'
+                citations: 'Bennett et al., 2023; Soylemez et al., 2025'
               }
             }
           ]
@@ -4081,44 +4202,68 @@ const SubstanceExplorer = () => {
       adverseEvents: {
         psychological: [
           {
-            name: 'Acute Anxiety',
+            name: 'Acute Anxiety and Panic',
             timeframe: 'During session',
-            prevalence: '15-31% in clinical trials',
-            description: 'Most common psychological adverse event. Anxiety during or shortly after administration. Usually resolves during or shortly after session, though may last hours beyond peak in some cases. There is evidence of anxiety as an enduring or "extended difficulty" in some cases (Simonsson et al., 2023; Evans et al., 2023).',
-            management: 'Reassurance typically sufficient; benzodiazepines if severe',
-            notes: '87% of those with negative psychological responses experienced anxiety worsening. Often manageable with calm presence and breathing guidance.',
+            severity: 'Mild to Severe',
+            prevalence: '15-31% in clinical trials; variable and dose-dependent for panic reactions',
+            description: 'Most common psychological adverse event. Anxiety and panic reactions during psilocybin experience ranging from mild unease to overwhelming terror. Intense fear, racing heart, sense of losing control or dying. More severe panic reactions involve intense fear, overwhelming anxiety, and sense of losing control.',
+            management: 'Calm presence, verbal reassurance, breathing guidance, grounding techniques. Benzodiazepines if severe and unresponsive to non-pharmacological approaches.',
+            notes: 'Among those who experience negative psychological responses, 87% reported their anxiety worsening. Usually resolves during or shortly after session, though may last hours beyond peak in some cases. There is evidence of anxiety as an enduring or "extended difficulty" in some cases. Severe reactions (e.g., psychosis with intense anxiety/panic) tend to occur primarily in people with predisposing factors (prior diagnoses, family history, heavy/repeated dosing, or polysubstance use). Higher neuroticism and related baseline factors predict more challenging experiences.',
+            citations: 'Forstmann & Sagioglou, 2021; Freitas et al., 2024; Simonsson et al., 2023; Evans et al., 2023; Morris et al., 2024; Studerus et al., 2012',
             harmReduction: [
               { name: 'Comprehensive Psychoeducation', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Coping Skills Training', link: 'hrp_coping_skills_training_001' },
               { name: 'Set and Setting Optimization', link: 'hrp_physical_environment_001' },
+              { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
+              { name: 'Continuous Monitoring', link: 'hrp_continuous_monitoring_001' },
               { name: 'Non-pharmacological Crisis Management', link: 'hrp_crisis_nonpharm_001' }
             ]
           },
           {
-            name: 'Panic Reactions',
+            name: 'Challenging Experiences ("Bad Trips")',
             timeframe: 'During session',
-            prevalence: 'Variable, dose-dependent',
-            description: 'Intense fear, overwhelming anxiety, sense of losing control or dying. More severe than general anxiety.',
-            management: 'Calm presence, verbal reassurance, breathing guidance, grounding techniques. Benzodiazepines if non-pharmacological insufficient.',
-            notes: 'Recent case reports and case series note that severe reactions (e.g., psychosis with intense anxiety/panic) tend to occur primarily in people with predisposing factors (prior diagnoses, family history, heavy/repeated dosing, or polysubstance use) (Morris et al., 2024). Prospective and review work finds that higher neuroticism and related baseline factors predict more challenging experiences during psilocybin use, which often present as acute anxiety or panic (Studerus et al., 2012).',
-            harmReduction: [
-              { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
-              { name: 'Coping Skills Training', link: 'hrp_coping_skills_training_001' },
-              { name: 'Continuous Monitoring', link: 'hrp_continuous_monitoring_001' }
-            ]
-          },
-          {
-            name: 'Dysphoria & Challenging Experiences',
-            timeframe: 'During session',
+            severity: 'Variable',
             prevalence: 'Common but highly variable',
-            description: 'Unpleasant emotional states including dysphoria, confusion, fear, sense of doom, emotional pain. The classic "bad trip." Can include confrontation with difficult emotions or trauma.',
+            description: 'Unpleasant emotional states including dysphoria, confusion, fear, sense of doom, emotional pain. Can include confrontation with difficult emotions or trauma.',
             management: 'Non-directive support, acceptance, avoiding resistance. These experiences are often therapeutically valuable when properly supported.',
             notes: 'Paradoxically, difficult experiences often rated as meaningful and valuable in retrospect with proper integration.',
             harmReduction: [
               { name: 'Multiple Preparation Meetings', link: 'hrp_preparation_meetings_001' },
               { name: 'Non-directive Support', link: 'hrp_nondirective_support_001' },
               { name: 'Integration Therapy', link: 'hrp_integration_therapy_001' }
+            ],
+            citations: 'Carbonaro et al. 2016; Gashi et al. 2021; Evans et al. 2023'
+          },
+          {
+            name: 'Prolonged Psychotic Reactions',
+            timeframe: 'Extended (days to weeks)',
+            severity: 'Severe',
+            prevalence: 'Rare but documented',
+            description: 'Psychotic symptoms persisting beyond acute drug effects. Includes paranoia, hallucinosis, derealization, disorganized thinking, delusions, loss of reality testing.',
+            management: 'Psychiatric evaluation, antipsychotic medication, supportive therapy, hospitalization if severe.',
+            notes: 'Rare but serious adverse event. Risk factors include personal or family history of psychosis, high doses, and unsupported settings. (Baumeister et al., 2015; Barnett et al., 2021)',
+            harmReduction: [
+              { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+              { name: 'Exclude High Risk Individuals', link: null },
+              { name: 'Dose Moderation', link: 'hrp_start_low_go_slow_001' },
+              { name: 'Supportive Environment', link: 'hrp_physical_environment_001' }
             ]
+          },
+          {
+            name: 'Suicidal Ideation and Self-Harm',
+            timeframe: 'Acute and long-term',
+            severity: 'Critical',
+            prevalence: 'Lower than general population in epidemiological studies',
+            description: 'Thoughts or acts of self-harm during or after psilocybin experience. Research evidence suggests psilocybin use is associated with reduced suicide risk in population studies.',
+            management: 'Immediate safety assessment, psychiatric evaluation, crisis intervention, hospitalization if imminent risk.',
+            notes: 'Hendricks et al. (2015) found lifetime psilocybin use was associated with reduced odds of past-year suicidal thinking and planning. However, acute distress during sessions can include suicidal thoughts requiring immediate intervention.',
+            harmReduction: [
+              { name: 'Comprehensive Mental Health Screening', link: 'hrp_screening_comprehensive_001' },
+              { name: 'Continuous Monitoring During Session', link: 'hrp_continuous_monitoring_001' },
+              { name: 'Crisis Response Protocol', link: null },
+              { name: 'Integration Support', link: 'hrp_integration_therapy_001' }
+            ],
+            citations: 'Hendricks et al. 2015'
           }
         ],
         physiological: [
@@ -4131,7 +4276,8 @@ const SubstanceExplorer = () => {
             harmReduction: [
               { name: 'Fasting before session', link: null },
               { name: 'Ginger or anti-nausea medication', link: null }
-            ]
+            ],
+            citations: 'Bender & Hellerstein 2022'
           },
           {
             name: 'Cardiovascular Effects',
@@ -4142,21 +4288,35 @@ const SubstanceExplorer = () => {
             harmReduction: [
               { name: 'Comprehensive Medical Screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Continuous vital sign monitoring', link: 'hrp_continuous_monitoring_001' }
+            ],
+            citations: 'Straumann et al. 2024'
+          },
+          {
+            name: 'Other Physical Symptoms',
+            timeframe: 'During session',
+            prevalence: 'Documented in clinical trials and surveys',
+            description: 'Various somatic symptoms including headache, muscle tension, sweating, tremor, mydriasis (pupil dilation), temperature dysregulation.',
+            management: 'Supportive care. Usually self-limiting. Reassurance that symptoms are temporary and related to drug effects.',
+            notes: 'Typically subside as drug effects wear off. Less prominent than psychological effects but can contribute to discomfort.',
+            harmReduction: [
+              { name: 'Prepare for physical symptoms', link: 'hrp_psychoeducation_comprehensive_001' },
+              { name: 'Comfortable environment', link: 'hrp_physical_environment_001' }
             ]
           }
         ],
         perceptual: [
           {
-            name: 'HPPD',
+            name: 'HPPD (Hallucinogen Persisting Perception Disorder)',
             timeframe: 'Long-term',
-            prevalence: '25-40% report some changes; 4% clinically significant',
+            prevalence: '25-40% report visual changes; 4% develop clinically significant HPPD',
             description: 'Persistent visual disturbances (visual snow, trails, afterimages, geometric patterns) lasting beyond session.',
             management: 'Reassurance, benzodiazepines (anecdotal), lamotrigine (case reports)',
             notes: 'No cases in modern clinical trials. More associated with frequent use.',
             harmReduction: [
               { name: 'Avoid frequent use', link: null },
               { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' }
-            ]
+            ],
+            citations: 'Hermle et al. 2012; Martinotti et al. 2018; Aday et al. 2020; Halpern & Pope 2003'
           }
         ]
       },
@@ -4280,11 +4440,11 @@ const SubstanceExplorer = () => {
                     <li key={idx} className="text-sm text-green-900 flex items-start">
                       <span className="text-green-600 mr-2">→</span>
                       {hr.link ? (
-                        <a href={`#${hr.link}`} className="flex-1 hover:underline text-green-700 font-medium" style={{fontFamily: 'Inter, sans-serif'}}>
+                        <a href={`#${hr.link}`} className="flex-1 hover:underline text-green-700 font-medium cursor-pointer" style={{fontFamily: 'Inter, sans-serif'}}>
                           {hr.name}
                         </a>
                       ) : (
-                        <span className="flex-1" style={{fontFamily: 'Inter, sans-serif'}}>{hr.name}</span>
+                        <span className="flex-1 cursor-default opacity-90" style={{fontFamily: 'Inter, sans-serif'}}>{hr.name}</span>
                       )}
                     </li>
                   ))}
@@ -4362,11 +4522,11 @@ const SubstanceExplorer = () => {
                     <li key={idx} className="text-sm text-green-900 flex items-start">
                       <Shield className="w-3 h-3 text-green-600 mr-2 mt-1 flex-shrink-0" />
                       {hr.link ? (
-                        <a href={`#${hr.link}`} className="flex-1 hover:underline text-green-700 font-medium" style={{fontFamily: 'Inter, sans-serif'}}>
+                        <a href={`#${hr.link}`} className="flex-1 hover:underline text-green-700 font-medium cursor-pointer" style={{fontFamily: 'Inter, sans-serif'}}>
                           {hr.name}
                         </a>
                       ) : (
-                        <span className="flex-1" style={{fontFamily: 'Inter, sans-serif'}}>{hr.name}</span>
+                        <span className="flex-1 cursor-default opacity-90" style={{fontFamily: 'Inter, sans-serif'}}>{hr.name}</span>
                       )}
                     </li>
                   ))}
@@ -4765,13 +4925,15 @@ const SubstanceExplorer = () => {
                       </div>
 
                       <div className="space-y-4">
-                        {data.clinicalContext.map((context, idx) => (
-                          <div key={idx} className="bg-[#FDE9D6] border-l-4 border-[#FCA300] p-5 rounded-r-[12px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.1)] transition-shadow">
+                        {data.clinicalContext.map((context, idx) => {
+                          const isDangerWarning = context.title.includes('Insufflation') || context.title.includes('Snorting') || context.title.includes('NBOMe');
+                          return (
+                          <div key={idx} className={`${isDangerWarning ? 'bg-red-50 border-red-600' : 'bg-[#FDE9D6] border-[#FCA300]'} border-l-4 p-5 rounded-r-[12px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.1)] transition-shadow`}>
                             <div className="flex items-start space-x-3">
                               <div className="text-3xl flex-shrink-0">{context.icon}</div>
                               <div className="flex-1 space-y-3">
                                 <div className="flex items-start justify-between gap-2">
-                                  <h4 className="font-bold text-[#6C3000] text-base flex-1" style={{fontFamily: 'Satoshi, sans-serif'}}>{context.title}</h4>
+                                  <h4 className={`font-bold text-base flex-1 ${isDangerWarning ? 'text-red-900' : 'text-[#6C3000]'}`} style={{fontFamily: 'Satoshi, sans-serif'}}>{context.title}</h4>
                                   <button
                                     onClick={() => openFeedbackModal(`Clinical Insight: ${context.title}`)}
                                     className="p-1.5 hover:bg-[#FCA300] hover:bg-opacity-30 rounded-[8px] transition-colors text-[#6C3000] flex-shrink-0"
@@ -4780,23 +4942,24 @@ const SubstanceExplorer = () => {
                                     <Edit3 className="w-3.5 h-3.5" />
                                   </button>
                                 </div>
-                                <p className="text-sm text-[#2C1B11] leading-relaxed" style={{fontFamily: 'Inter, sans-serif'}}>{context.content}</p>
+                                <p className={`text-sm leading-relaxed ${isDangerWarning ? 'text-red-900' : 'text-[#2C1B11]'}`} style={{fontFamily: 'Inter, sans-serif'}}>{context.content}</p>
 
-                                <div className="pt-2 border-t border-[#E8D9C8] flex flex-wrap items-center gap-2">
-                                  <span className="text-xs text-[#D26600] font-semibold" style={{fontFamily: 'Inter, sans-serif'}}>Sources:</span>
+                                <div className={`pt-2 border-t flex flex-wrap items-center gap-2 ${isDangerWarning ? 'border-red-200' : 'border-[#E8D9C8]'}`}>
+                                  <span className={`text-xs font-semibold ${isDangerWarning ? 'text-red-700' : 'text-[#D26600]'}`} style={{fontFamily: 'Inter, sans-serif'}}>Sources:</span>
                                   {context.citations.map((citation, cidx) => (
                                     <CitationLink
                                       key={cidx}
                                       citationKey={citation}
                                       showIcon={true}
-                                      className="text-xs bg-[#FFD480] hover:bg-[#FCA300] text-[#6C3000] px-2.5 py-1 rounded-[12px] transition-colors font-medium"
+                                      className={`text-xs px-2.5 py-1 rounded-[12px] transition-colors font-medium ${isDangerWarning ? 'bg-red-200 hover:bg-red-300 text-red-900' : 'bg-[#FFD480] hover:bg-[#FCA300] text-[#6C3000]'}`}
                                     />
                                   ))}
                                 </div>
                               </div>
                             </div>
                           </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     </div>
                   )}
