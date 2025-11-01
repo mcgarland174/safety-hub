@@ -65,10 +65,10 @@ const SubstanceExplorer = () => {
     '2cb': '#007F6E',
     dmt: '#003B73',
     '5meodmt': '#47A8E0',
-    ibogaine: '#A33D2C',
-    mdma: '#F7DCC3',
-    ketamine: '#E9D5B8',
-    ayahuasca: '#000000',
+    ibogaine: '#8B4513',
+    mdma: '#D2691E',
+    ketamine: '#B8860B',
+    ayahuasca: '#4B0082',
   };
 
   const contraindicationLegend = [
@@ -1805,13 +1805,13 @@ const SubstanceExplorer = () => {
                 mechanism: 'Extreme alteration in consciousness creates dissociation from physical body and surroundings. Users cannot control or remember their actions.',
                 prevalence: 'Common. Odd behaviors very frequent during DMT experiences.',
                 harmReduction: [
-                  { name: 'NEVER use DMT alone', link: null },
+                  { name: 'Never use DMT alone', link: null },
                   { name: 'Trained facilitator or experienced sitter essential', link: null },
                   { name: 'Safe physical environment', link: 'hrp_physical_environment_001' },
                   { name: 'Remove hazards from setting', link: null },
                   { name: 'Continuous monitoring', link: 'hrp_continuous_monitoring_001' }
                 ],
-                citations: 'Dourron & Saiz 2023'
+                citations: 'Dourron et al. 2023'
               }
             },
             {
@@ -1827,7 +1827,7 @@ const SubstanceExplorer = () => {
                   { name: 'Integration support if distressing', link: 'hrp_integration_therapy_001' },
                   { name: 'Reassurance they are brief and temporary', link: null }
                 ],
-                citations: 'Dourron & Saiz 2023; Ortiz-Bernal et al. 2022; Ramaekers et al. 2025'
+                citations: 'Dourron et al. 2023; Ortiz-Bernal et al. 2022; Ramaekers et al. 2025'
               }
             }
           ]
@@ -1845,7 +1845,7 @@ const SubstanceExplorer = () => {
                 mechanism: 'Both affect serotonin system. Combined effects create unpredictable and potentially fatal serotonin toxicity and cardiovascular stress.',
                 prevalence: 'Deaths documented. Absolute contraindication.',
                 harmReduction: [
-                  { name: 'NEVER combine DMT with MDMA', link: null },
+                  { name: 'Never combine DMT with MDMA', link: null },
                   { name: 'Education about lethal combinations', link: 'hrp_public_harm_reduction_001' }
                 ],
                 citations: 'Malcolm & Thomas 2022; Kopra et al. 2025'
@@ -1860,7 +1860,7 @@ const SubstanceExplorer = () => {
                 mechanism: 'Both are powerful tryptamines affecting serotonin. Combined effects unpredictable and dangerous.',
                 prevalence: 'Deaths documented.',
                 harmReduction: [
-                  { name: 'NEVER combine DMT with 5-MeO-DMT', link: null }
+                  { name: 'Never combine DMT with 5-MeO-DMT', link: null }
                 ],
                 citations: 'Malcolm & Thomas 2022; Kopra et al. 2025'
               }
@@ -1983,14 +1983,14 @@ const SubstanceExplorer = () => {
             ]
           },
           {
-            name: 'Challenging Experiences / Fear',
+            name: 'Challenging or Distressing Experiences / Fear',
             timeframe: 'During session',
             severity: 'Moderate to Severe',
             prevalence: 'Common, especially with insufficient preparation',
             description: 'Intense fear, anxiety, sense of dying, terror, panic. The rapid, overwhelming onset and extreme nature of DMT experiences can be profoundly frightening.',
             management: 'Reassurance, grounding (though often ineffective during peak), reminders that effects are temporary. Preparation is key.',
             notes: 'More likely with high doses, unprepared users, unsafe settings.',
-            citations: 'Dourron & Saiz 2023; Engel et al. 2024',
+            citations: 'Dourron et al. 2023; Engel et al. 2024',
             harmReduction: [
               { name: 'Comprehensive preparation', link: 'hrp_preparation_meetings_001' },
               { name: 'Appropriate set and setting', link: 'hrp_physical_environment_001' },
@@ -2004,7 +2004,7 @@ const SubstanceExplorer = () => {
             description: 'Spontaneous, brief (seconds) re-experiencing of visual, auditory, or emotional aspects of DMT experience. Can occur at night or when drifting to sleep. Most positive/neutral but minority find distressing.',
             management: 'Psychoeducation, reassurance of brevity and temporary nature. Integration support if distressing.',
             notes: 'More common with DMT than typical psychedelics. May be more common after vaporized administration.',
-            citations: 'Dourron & Saiz 2023; Ortiz-Bernal et al. 2022; Ramaekers et al. 2025',
+            citations: 'Dourron et al. 2023; Ortiz-Bernal et al. 2022; Ramaekers et al. 2025',
             harmReduction: [
               { name: 'Prepare users for possibility', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Integration support', link: 'hrp_integration_therapy_001' }
@@ -2049,7 +2049,7 @@ const SubstanceExplorer = () => {
             description: 'Respiratory irritation from smoking (coughing, airway hyperresponsiveness), nausea, increased body temperature, muscle jerking, twitching.',
             management: 'Generally self-limiting. Supportive care.',
             notes: 'Smoking/vaporizing harsh on airways.',
-            citations: 'Strassman 1994; Dourron & Saiz 2023',
+            citations: 'Strassman 1994; Dourron et al. 2023',
             harmReduction: [
               { name: 'Use electric combustion over flame', link: null },
               { name: 'Inhale while seated', link: null }
@@ -2080,7 +2080,7 @@ const SubstanceExplorer = () => {
         {
           title: 'Behavioral Unpredictability',
           icon: '🤸',
-          content: 'During DMT experiences, users frequently exhibit behaviors they have no awareness of or memory of: muscle jerking, twitching, vomiting, screaming, removing clothes, abnormal vocalizations. Rare but documented: self-injurious behavior. Users are completely dissociated from their physical body and surroundings. This is why you should NEVER use DMT alone. An experienced sitter is not optional—it\'s essential for safety.',
+          content: 'During DMT experiences, users frequently exhibit behaviors they have no awareness of or memory of: muscle jerking, twitching, vomiting, screaming, removing clothes, abnormal vocalizations. Rare but documented: self-injurious behavior. Users are completely dissociated from their physical body and surroundings. This is why you should never use DMT alone. An experienced sitter is not optional—it\'s essential for safety.',
           citations: ['dourron_2023']
         },
         {
@@ -2157,7 +2157,7 @@ const SubstanceExplorer = () => {
                   { name: 'Experienced facilitator required', link: null },
                   { name: 'Expect overwhelming intensity', link: null }
                 ],
-                citations: 'Dourron & Saiz 2023; Lancelotta & Daws 2020; Rucker et al. 2024'
+                citations: 'Dourron et al. 2023; Lancelotta & Daws 2020; Rucker et al. 2024'
               }
             },
             {
@@ -2192,12 +2192,12 @@ const SubstanceExplorer = () => {
                 mechanism: 'Profound ego dissolution and loss of bodily awareness.',
                 prevalence: 'Behavioral unpredictability very common.',
                 harmReduction: [
-                  { name: 'NEVER use alone', link: null },
+                  { name: 'Never use alone', link: null },
                   { name: 'Experienced trip sitter essential', link: null },
                   { name: 'Safe physical environment', link: 'hrp_physical_environment_001' },
                   { name: 'Remove hazards', link: null }
                 ],
-                citations: 'Dourron & Saiz 2023'
+                citations: 'Dourron et al. 2023'
               }
             },
             {
@@ -2213,7 +2213,7 @@ const SubstanceExplorer = () => {
                   { name: 'Integration support', link: 'hrp_integration_therapy_001' },
                   { name: 'Consider IM over inhalation to reduce risk', link: null }
                 ],
-                citations: 'Dourron & Saiz 2023; Ortiz-Bernal et al. 2022; Ramaekers et al. 2025'
+                citations: 'Dourron et al. 2023; Ortiz-Bernal et al. 2022; Ramaekers et al. 2025'
               }
             }
           ]
@@ -2235,7 +2235,7 @@ const SubstanceExplorer = () => {
                   { name: 'May need lower doses after previous exposure', link: null },
                   { name: 'Unpredictable outcomes with frequent use', link: null }
                 ],
-                citations: 'Dourron & Saiz 2003'
+                citations: 'Dourron et al. 2023'
               }
             },
             {
@@ -2250,7 +2250,7 @@ const SubstanceExplorer = () => {
                   { name: 'Start with very low doses', link: 'hrp_start_low_go_slow_001' },
                   { name: 'Expect individual variability', link: null }
                 ],
-                citations: 'Dourron & Saiz 2023'
+                citations: 'Dourron et al. 2023'
               }
             },
             {
@@ -2265,7 +2265,7 @@ const SubstanceExplorer = () => {
                   { name: 'Absolute contraindication if seizure history', link: null },
                   { name: 'Family history of epilepsy warrants caution', link: null }
                 ],
-                citations: 'Dourron & Saiz 2023'
+                citations: 'Dourron et al. 2023'
               }
             }
           ]
@@ -2371,7 +2371,7 @@ const SubstanceExplorer = () => {
                   { name: 'Avoid toad-derived for ethical and safety reasons', link: null },
                   { name: 'Substance testing', link: null }
                 ],
-                citations: 'Neumann et al. 2024; Dourron & Saiz 2023; Ortiz-Bernal et al. 2022'
+                citations: 'Neumann et al. 2024; Dourron et al. 2023; Ortiz-Bernal et al. 2022'
               }
             }
           ]
@@ -2401,7 +2401,7 @@ const SubstanceExplorer = () => {
             description: 'Intense fear, anxiety, feeling like dying, panic, pressure on chest, body shaking. Particularly common during onset.',
             management: 'Reassurance, calm presence, reminders that experience is temporary.',
             notes: 'More intense than other psychedelics.',
-            citations: 'Lancelotta et al. 2020; Dourron & Saiz 2023; Rucker et al. 2024',
+            citations: 'Lancelotta et al. 2020; Dourron et al. 2023; Rucker et al. 2024',
             harmReduction: [
               { name: 'Comprehensive preparation', link: 'hrp_preparation_meetings_001' },
               { name: 'Start with lower doses', link: 'hrp_start_low_go_slow_001' },
@@ -2415,7 +2415,7 @@ const SubstanceExplorer = () => {
             description: 'MORE COMMON with 5-MeO-DMT than typical psychedelics. Brief spontaneous re-experiences. Visual, auditory, emotional. Most positive/neutral but 4-7% report distressing reactivations.',
             management: 'Psychoeducation, integration support, reassurance of brevity.',
             notes: 'Vaporized route more likely than intramuscular. May persist for months (anecdotal).',
-            citations: 'Lancelotta et al. 2020; Dourron & Saiz 2023',
+            citations: 'Lancelotta et al. 2020; Dourron et al. 2023',
             harmReduction: [
               { name: 'Prepare users for high likelihood', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Integration support', link: 'hrp_integration_therapy_001' }
@@ -2430,7 +2430,7 @@ const SubstanceExplorer = () => {
             description: 'Transient increases in blood pressure and heart rate.',
             management: 'Monitoring essential.',
             notes: 'Generally mild and transient but not well characterized.',
-            citations: 'Lancelotta et al. 2020; Dourron & Saiz 2023',
+            citations: 'Lancelotta et al. 2020; Dourron et al. 2023',
             harmReduction: [
               { name: 'Cardiovascular screening', link: 'hrp_screening_comprehensive_001' },
               { name: 'Vital sign monitoring', link: 'hrp_continuous_monitoring_001' }
@@ -2443,7 +2443,7 @@ const SubstanceExplorer = () => {
             description: 'Nausea, vomiting, headache. Nasal discomfort with intranasal route.',
             management: 'Supportive care. Generally self-limiting.',
             notes: 'Part of purging process in ceremonial contexts.',
-            citations: 'Lancelotta et al. 2020; Dourron & Saiz 2023',
+            citations: 'Lancelotta et al. 2020; Dourron et al. 2023',
             harmReduction: [
               { name: 'Prepare users for possibility', link: 'hrp_psychoeducation_comprehensive_001' }
             ]
@@ -4680,7 +4680,7 @@ const SubstanceExplorer = () => {
                           }`}
                           style={selectedSubstance === sub.id ? {
                             backgroundColor: substanceColor,
-                            color: substanceColor === '#000000' || substanceColor === '#003B73' || substanceColor === '#007F6E' || substanceColor === '#A33D2C' || substanceColor === '#E6543E' ? 'white' : '#2C1B11'
+                            color: 'white'
                           } : {}}
                         >
                           <span>{sub.name}</span>
