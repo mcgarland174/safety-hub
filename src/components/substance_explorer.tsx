@@ -515,6 +515,23 @@ const SubstanceExplorer = () => {
               { name: 'Close monitoring during and after session', link: 'hrp_continuous_monitoring_001' }
             ],
             citations: 'Kopra et al., 2022'
+          },
+          {
+            name: 'Extended Psychological Difficulties',
+            timeframe: 'Long-term (weeks to years)',
+            severity: 'Variable',
+            prevalence: '25% of Evans et al. 2023 sample; one-third reported problems >1 year; one-sixth >3 years',
+            description: 'Persistent psychological difficulties following LSD use, including: emotional problems (anxiety, depression, panic attacks - 67%), self-perception issues (depersonalization, diminished self-esteem - 58%), cognitive difficulties (confusion, intrusive thoughts, memory/concentration problems - 52%), existential/ontological struggles (meaning-making difficulties, derealization - 42%), social difficulties (isolation, communication problems - 27%), perceptual changes (visual distortions, flashbacks - 21%), and somatic symptoms (sleep problems, breathing/heart issues - 19%). Distinct from but may overlap with HPPD.',
+            management: 'Integration therapy, psychiatric support, trauma-informed care. Address underlying risk factors. Supportive psychotherapy focused on meaning-making and processing the experience.',
+            notes: 'Risk factors for longer duration include higher trip challengingness and unknown dose. Risk factors for broader range of difficulties include more challenging experiences and unguided settings (without specialist guide). Prior mental illness (45.9%) and childhood trauma (40%) commonly reported as contributing factors. LSD showed significantly longer difficulty duration compared to psilocybin and MDMA in this study.',
+            harmReduction: [
+              { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+              { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
+              { name: 'Professional Guidance and Support', link: 'hrp_trained_facilitators_001' },
+              { name: 'Integration Therapy', link: 'hrp_integration_therapy_001' },
+              { name: 'Avoid High Doses', link: null }
+            ],
+            citations: 'Evans et al. 2023'
           }
         ],
         physiological: [
@@ -1552,6 +1569,23 @@ const SubstanceExplorer = () => {
               { name: 'Minimize total lifetime exposure', link: null },
               { name: 'Avoid high doses', link: 'hrp_start_low_go_slow_001' }
             ]
+          },
+          {
+            name: 'Extended Psychological Difficulties',
+            timeframe: 'Long-term (weeks to years)',
+            severity: 'Variable',
+            prevalence: '7% of Evans et al. 2023 sample; one-third reported problems >1 year; one-sixth >3 years',
+            description: 'Persistent psychological difficulties following MDMA use, including: emotional problems (anxiety, depression, panic attacks - 67%), self-perception issues (depersonalization, diminished self-esteem - 58%), cognitive difficulties (confusion, intrusive thoughts, memory/concentration problems - 52%), existential/ontological struggles (meaning-making difficulties, derealization - 42%), social difficulties (isolation, communication problems - 27%), perceptual changes (visual distortions, flashbacks - 21%), and somatic symptoms (sleep problems, breathing/heart issues - 19%). Distinct from but may overlap with HPPD.',
+            management: 'Integration therapy, psychiatric support, trauma-informed care. Address underlying risk factors. Supportive psychotherapy focused on meaning-making and processing the experience.',
+            notes: 'MDMA showed shorter difficulty duration compared to LSD, ayahuasca, and DMT in this study. However, extended difficulties can still occur, particularly with frequent use or in vulnerable individuals.',
+            harmReduction: [
+              { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+              { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
+              { name: 'Professional Guidance and Support', link: 'hrp_trained_facilitators_001' },
+              { name: 'Integration Therapy', link: 'hrp_integration_therapy_001' },
+              { name: 'Avoid High Doses', link: null }
+            ],
+            citations: 'Evans et al. 2023'
           }
         ],
         physiological: [
@@ -1975,6 +2009,23 @@ const SubstanceExplorer = () => {
               { name: 'Prepare users for possibility', link: 'hrp_psychoeducation_comprehensive_001' },
               { name: 'Integration support', link: 'hrp_integration_therapy_001' }
             ]
+          },
+          {
+            name: 'Extended Psychological Difficulties',
+            timeframe: 'Long-term (weeks to years)',
+            severity: 'Variable',
+            prevalence: '5% of Evans et al. 2023 sample; one-third reported problems >1 year; one-sixth >3 years',
+            description: 'Persistent psychological difficulties following DMT use, including: emotional problems (anxiety, depression, panic attacks - 67%), self-perception issues (depersonalization, diminished self-esteem - 58%), cognitive difficulties (confusion, intrusive thoughts, memory/concentration problems - 52%), existential/ontological struggles (meaning-making difficulties, derealization - 42%), social difficulties (isolation, communication problems - 27%), perceptual changes (visual distortions, flashbacks - 21%), and somatic symptoms (sleep problems, breathing/heart issues - 19%). Distinct from but may overlap with HPPD.',
+            management: 'Integration therapy, psychiatric support, trauma-informed care. Address underlying risk factors. Supportive psychotherapy focused on meaning-making and processing the experience.',
+            notes: 'DMT showed significantly longer difficulty duration compared to psilocybin and MDMA in this study. Brief duration of acute effects contrasts with potential for extended psychological impact.',
+            harmReduction: [
+              { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+              { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
+              { name: 'Professional Guidance and Support', link: 'hrp_trained_facilitators_001' },
+              { name: 'Integration Therapy', link: 'hrp_integration_therapy_001' },
+              { name: 'Avoid High Doses', link: null }
+            ],
+            citations: 'Evans et al. 2023'
           }
         ],
         physiological: [
@@ -2689,6 +2740,22 @@ const SubstanceExplorer = () => {
               { name: 'Clear safety protocols', link: null },
               { name: 'Trauma integration support', link: 'hrp_integration_therapy_001' }
             ]
+          },
+          {
+            name: 'Extended Psychological Difficulties',
+            timeframe: 'Long-term (weeks to years)',
+            severity: 'Variable',
+            prevalence: '10% of Evans et al. 2023 sample; one-third reported problems >1 year; one-sixth >3 years',
+            description: 'Persistent psychological difficulties following ayahuasca use, including: emotional problems (anxiety, depression, panic attacks - 67%), self-perception issues (depersonalization, diminished self-esteem - 58%), cognitive difficulties (confusion, intrusive thoughts, memory/concentration problems - 52%), existential/ontological struggles (meaning-making difficulties, derealization - 42%), social difficulties (isolation, communication problems - 27%), perceptual changes (visual distortions, flashbacks - 21%), and somatic symptoms (sleep problems, breathing/heart issues - 19%). Distinct from but may overlap with HPPD.',
+            management: 'Integration therapy, psychiatric support, trauma-informed care. Address underlying risk factors. Culturally-sensitive support that respects ceremonial context while addressing difficulties. Supportive psychotherapy focused on meaning-making and processing the experience.',
+            notes: 'Risk factors for longer duration include higher trip challengingness and unknown dose. Risk factors for broader range of difficulties include more challenging experiences and unguided settings (without specialist guide). Prior mental illness (45.9%) and childhood trauma (40%) commonly reported as contributing factors. Ayahuasca showed significantly longer difficulty duration compared to psilocybin and MDMA in this study. Cultural context and integration support particularly important given traditional/ceremonial use.',
+            harmReduction: [
+              { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+              { name: 'Professional Guidance and Support', link: 'hrp_trained_facilitators_001' },
+              { name: 'Integration Therapy', link: 'hrp_integration_therapy_001' },
+              { name: 'Culturally-appropriate support', link: null }
+            ],
+            citations: 'Evans et al. 2023; Bouso et al. 2023'
           }
         ],
         physiological: [
@@ -2737,9 +2804,9 @@ const SubstanceExplorer = () => {
       },
       clinicalContext: [
         {
-          title: 'Traditional Context is NOT Optional',
+          title: 'Supervised Context Reduces Risk',
           icon: '🌿',
-          content: 'Ayahuasca use in non-traditional, unsupervised settings dramatically increases risk of adverse effects. Traditional ceremonial contexts provide essential safety structures: comprehensive screening (dietary, medication, psychiatric), experienced facilitation by shamans/curanderos who understand ayahuasca\'s effects, emergency protocols, dietary preparation (MAOI restrictions), integration support, and cultural frameworks that help process challenging experiences. These are not optional extras—they are medical necessities for safety. Recreational or casual use outside these contexts is dangerous.',
+          content: 'Research shows that ayahuasca use in unsupervised settings significantly increases risk of adverse effects (Bouso et al. 2023). However, "supervised" and "traditional/shamanic" are not synonymous and carry different considerations. Supervised settings (whether traditional or modern clinical) reduce risks through: comprehensive screening (dietary, medication, psychiatric), experienced facilitation by trained practitioners who understand ayahuasca\'s effects, emergency protocols, dietary preparation (MAOI restrictions), and integration support. Traditional shamanic contexts can provide valuable cultural frameworks for processing experiences, but also introduce specific risks including: cultural clash and ontological shock for those unfamiliar with indigenous frameworks, variable practitioner training and ethics, potential for boundary violations, travel to remote locations with limited medical access, and challenges with follow-up care. Modern supervised clinical or retreat settings provide medical safety structures but may lack traditional meaning-making frameworks. The key evidence-based safety factor is professional supervision with proper screening and protocols—not necessarily indigenous tradition.',
           citations: ['bouso_2022', 'evans_2023', 'white_2024']
         },
         {
@@ -3077,6 +3144,23 @@ const SubstanceExplorer = () => {
               { name: 'Avoid chronic use', link: null },
               { name: 'Infrequent use only', link: null }
             ]
+          },
+          {
+            name: 'Extended Psychological Difficulties',
+            timeframe: 'Long-term (weeks to years)',
+            severity: 'Variable',
+            prevalence: '4% of Evans et al. 2023 sample; one-third reported problems >1 year; one-sixth >3 years',
+            description: 'Persistent psychological difficulties following ketamine use, including: emotional problems (anxiety, depression, panic attacks - 67%), self-perception issues (depersonalization, diminished self-esteem - 58%), cognitive difficulties (confusion, intrusive thoughts, memory/concentration problems - 52%), existential/ontological struggles (meaning-making difficulties, derealization - 42%), social difficulties (isolation, communication problems - 27%), perceptual changes (visual distortions, flashbacks - 21%), and somatic symptoms (sleep problems, breathing/heart issues - 19%). Distinct from but may overlap with HPPD.',
+            management: 'Integration therapy, psychiatric support, trauma-informed care. Address underlying risk factors. Supportive psychotherapy focused on meaning-making and processing the experience.',
+            notes: 'Ketamine-related extended difficulties less studied than classical psychedelics. Dissociative properties may contribute to unique phenomenology of extended difficulties.',
+            harmReduction: [
+              { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+              { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
+              { name: 'Professional Guidance and Support', link: 'hrp_trained_facilitators_001' },
+              { name: 'Integration Therapy', link: 'hrp_integration_therapy_001' },
+              { name: 'Avoid High Doses', link: null }
+            ],
+            citations: 'Evans et al. 2023'
           }
         ],
         physiological: [
@@ -4264,6 +4348,23 @@ const SubstanceExplorer = () => {
               { name: 'Integration Support', link: 'hrp_integration_therapy_001' }
             ],
             citations: 'Hendricks et al. 2015'
+          },
+          {
+            name: 'Extended Psychological Difficulties',
+            timeframe: 'Long-term (weeks to years)',
+            severity: 'Variable',
+            prevalence: '27% of Evans et al. 2023 sample; one-third reported problems >1 year; one-sixth >3 years',
+            description: 'Persistent psychological difficulties following psilocybin use, including: emotional problems (anxiety, depression, panic attacks - 67%), self-perception issues (depersonalization, diminished self-esteem - 58%), cognitive difficulties (confusion, intrusive thoughts, memory/concentration problems - 52%), existential/ontological struggles (meaning-making difficulties, derealization - 42%), social difficulties (isolation, communication problems - 27%), perceptual changes (visual distortions, flashbacks - 21%), and somatic symptoms (sleep problems, breathing/heart issues - 19%). Distinct from but may overlap with HPPD.',
+            management: 'Integration therapy, psychiatric support, trauma-informed care. Address underlying risk factors. Supportive psychotherapy focused on meaning-making and processing the experience.',
+            notes: 'Risk factors for longer duration include higher trip challengingness and unknown dose. Risk factors for broader range of difficulties include more challenging experiences and unguided settings (without specialist guide). Prior mental illness (45.9%) and childhood trauma (40%) commonly reported as contributing factors. Psilocybin showed shorter difficulty duration compared to ayahuasca, DMT, and LSD in this study.',
+            harmReduction: [
+              { name: 'Comprehensive Screening', link: 'hrp_screening_comprehensive_001' },
+              { name: 'Start Low, Go Slow', link: 'hrp_start_low_go_slow_001' },
+              { name: 'Professional Guidance and Support', link: 'hrp_trained_facilitators_001' },
+              { name: 'Integration Therapy', link: 'hrp_integration_therapy_001' },
+              { name: 'Avoid High Doses', link: null }
+            ],
+            citations: 'Evans et al. 2023'
           }
         ],
         physiological: [

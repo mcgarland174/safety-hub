@@ -9,10 +9,12 @@ import ReferencesExplorer from './components/references-explorer'
 import { FeedbackProvider } from './contexts/FeedbackContext'
 import FeedbackButton from './components/FeedbackButton'
 import FeedbackModal from './components/FeedbackModal'
+import MedicalDisclaimerModal from './components/MedicalDisclaimerModal'
 
 function App() {
   return (
     <FeedbackProvider>
+      <MedicalDisclaimerModal />
       <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />
